@@ -1,0 +1,788 @@
+{
+    "name":  "SignVox Competition ASL Vocabulary",
+    "version":  "1.0.0",
+    "status":  "FROZEN",
+    "total_classes":  100,
+    "classes":  [
+                    {
+                        "id":  "ASL_001",
+                        "name":  "HELLO",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core greeting; visually simple"
+                    },
+                    {
+                        "id":  "ASL_002",
+                        "name":  "GOOD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful but can visually overlap with THANK-YOU"
+                    },
+                    {
+                        "id":  "ASL_003",
+                        "name":  "BAD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Basic polarity pair with GOOD"
+                    },
+                    {
+                        "id":  "ASL_004",
+                        "name":  "PLEASE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Politeness; validate exact regional production"
+                    },
+                    {
+                        "id":  "ASL_005",
+                        "name":  "THANK-YOU",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core politeness; directional nuance"
+                    },
+                    {
+                        "id":  "ASL_006",
+                        "name":  "SORRY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common social repair"
+                    },
+                    {
+                        "id":  "ASL_007",
+                        "name":  "HELP",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Directional; movement can encode participants"
+                    },
+                    {
+                        "id":  "ASL_008",
+                        "name":  "STOP",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Strong practical/safety value"
+                    },
+                    {
+                        "id":  "ASL_009",
+                        "name":  "WAIT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Repeated finger movement; easy temporal signature"
+                    },
+                    {
+                        "id":  "ASL_010",
+                        "name":  "UNDERSTAND",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important communication-state concept"
+                    },
+                    {
+                        "id":  "ASL_011",
+                        "name":  "YES",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core confirmation"
+                    },
+                    {
+                        "id":  "ASL_012",
+                        "name":  "NO",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core negation"
+                    },
+                    {
+                        "id":  "ASL_013",
+                        "name":  "AGAIN",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful repair signal"
+                    },
+                    {
+                        "id":  "ASL_014",
+                        "name":  "SLOW",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful for communication repair"
+                    },
+                    {
+                        "id":  "ASL_015",
+                        "name":  "DON\u0027T-UNDERSTAND",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Critical repair phrase/concept"
+                    },
+                    {
+                        "id":  "ASL_016",
+                        "name":  "NAME",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core introduction sign"
+                    },
+                    {
+                        "id":  "ASL_017",
+                        "name":  "ME",
+                        "aliases": [ "PRO1" ],
+                        "description":  "Usually produced by pointing; spatial indexing"
+                    },
+                    {
+                        "id":  "ASL_018",
+                        "name":  "YOU",
+                        "aliases": [ "PRO2" ],
+                        "description":  "Spatially directed; context-dependent"
+                    },
+                    {
+                        "id":  "ASL_019",
+                        "name":  "FAMILY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High conversational value"
+                    },
+                    {
+                        "id":  "ASL_020",
+                        "name":  "FRIEND",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common social vocabulary"
+                    },
+                    {
+                        "id":  "ASL_021",
+                        "name":  "MOTHER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common family term"
+                    },
+                    {
+                        "id":  "ASL_022",
+                        "name":  "FATHER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common family term"
+                    },
+                    {
+                        "id":  "ASL_023",
+                        "name":  "BROTHER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Two-handed/compound structure; validate"
+                    },
+                    {
+                        "id":  "ASL_024",
+                        "name":  "SISTER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Two-handed/compound structure; validate"
+                    },
+                    {
+                        "id":  "ASL_025",
+                        "name":  "CHILD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common family/social term"
+                    },
+                    {
+                        "id":  "ASL_026",
+                        "name":  "BABY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Visually distinctive; useful"
+                    },
+                    {
+                        "id":  "ASL_027",
+                        "name":  "TEACHER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful in school/learning contexts"
+                    },
+                    {
+                        "id":  "ASL_028",
+                        "name":  "GO",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Directional movement; important for continuous signing"
+                    },
+                    {
+                        "id":  "ASL_029",
+                        "name":  "COME",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Directional counterpart to GO"
+                    },
+                    {
+                        "id":  "ASL_030",
+                        "name":  "GIVE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Directional verb; excellent test of spatial meaning"
+                    },
+                    {
+                        "id":  "ASL_031",
+                        "name":  "TAKE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Context-sensitive movement"
+                    },
+                    {
+                        "id":  "ASL_032",
+                        "name":  "WANT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common functional verb"
+                    },
+                    {
+                        "id":  "ASL_033",
+                        "name":  "NEED",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High-value request/need concept"
+                    },
+                    {
+                        "id":  "ASL_034",
+                        "name":  "HAVE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Core possession/existence concept"
+                    },
+                    {
+                        "id":  "ASL_035",
+                        "name":  "KNOW",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common cognitive verb"
+                    },
+                    {
+                        "id":  "ASL_036",
+                        "name":  "LIKE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common preference/emotion concept"
+                    },
+                    {
+                        "id":  "ASL_037",
+                        "name":  "SEE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common perception verb"
+                    },
+                    {
+                        "id":  "ASL_038",
+                        "name":  "THINK",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important but face/location/context can matter"
+                    },
+                    {
+                        "id":  "ASL_039",
+                        "name":  "LEARN",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful for education and SignVox context"
+                    },
+                    {
+                        "id":  "ASL_040",
+                        "name":  "TEACH",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful counterpart to LEARN"
+                    },
+                    {
+                        "id":  "ASL_041",
+                        "name":  "STUDY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Practical student vocabulary"
+                    },
+                    {
+                        "id":  "ASL_042",
+                        "name":  "SCHOOL",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Distinctive movement; common context"
+                    },
+                    {
+                        "id":  "ASL_043",
+                        "name":  "WORK",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Very common concept"
+                    },
+                    {
+                        "id":  "ASL_044",
+                        "name":  "HOME",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High-frequency location"
+                    },
+                    {
+                        "id":  "ASL_045",
+                        "name":  "STORE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful everyday location"
+                    },
+                    {
+                        "id":  "ASL_046",
+                        "name":  "CHURCH",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Locally relevant but culturally specific"
+                    },
+                    {
+                        "id":  "ASL_047",
+                        "name":  "HOSPITAL",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important health/safety context"
+                    },
+                    {
+                        "id":  "ASL_048",
+                        "name":  "DOCTOR",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important health context"
+                    },
+                    {
+                        "id":  "ASL_049",
+                        "name":  "BATHROOM",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High practical value"
+                    },
+                    {
+                        "id":  "ASL_050",
+                        "name":  "HERE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Spatial/deictic; useful but context-sensitive"
+                    },
+                    {
+                        "id":  "ASL_051",
+                        "name":  "THERE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Spatial/deictic; context-sensitive"
+                    },
+                    {
+                        "id":  "ASL_052",
+                        "name":  "IN",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Spatial relation; better as later-stage language feature"
+                    },
+                    {
+                        "id":  "ASL_053",
+                        "name":  "OUT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Spatial relation; better as later-stage language feature"
+                    },
+                    {
+                        "id":  "ASL_054",
+                        "name":  "TODAY",
+                        "aliases": [ "NOW" ],
+                        "description":  "ASL time concepts can overlap; model as canonical concept with variants"
+                    },
+                    {
+                        "id":  "ASL_055",
+                        "name":  "YESTERDAY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Temporal movement"
+                    },
+                    {
+                        "id":  "ASL_056",
+                        "name":  "TOMORROW",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Temporal movement"
+                    },
+                    {
+                        "id":  "ASL_057",
+                        "name":  "MORNING",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful everyday time"
+                    },
+                    {
+                        "id":  "ASL_058",
+                        "name":  "NIGHT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful everyday time"
+                    },
+                    {
+                        "id":  "ASL_059",
+                        "name":  "DAY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Broad temporal concept"
+                    },
+                    {
+                        "id":  "ASL_060",
+                        "name":  "WHAT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Requires correct WH non-manual marker"
+                    },
+                    {
+                        "id":  "ASL_061",
+                        "name":  "WHO",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Handshape + facial marker"
+                    },
+                    {
+                        "id":  "ASL_062",
+                        "name":  "WHERE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Movement + WH facial marker"
+                    },
+                    {
+                        "id":  "ASL_063",
+                        "name":  "WHEN",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Movement + WH facial marker"
+                    },
+                    {
+                        "id":  "ASL_064",
+                        "name":  "WHY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Handshape/location + WH facial marker"
+                    },
+                    {
+                        "id":  "ASL_065",
+                        "name":  "HOW",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Two-hand movement; question facial marker"
+                    },
+                    {
+                        "id":  "ASL_066",
+                        "name":  "FOOD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High practical value"
+                    },
+                    {
+                        "id":  "ASL_067",
+                        "name":  "EAT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High practical value"
+                    },
+                    {
+                        "id":  "ASL_068",
+                        "name":  "DRINK",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High practical value"
+                    },
+                    {
+                        "id":  "ASL_069",
+                        "name":  "WATER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High practical value"
+                    },
+                    {
+                        "id":  "ASL_070",
+                        "name":  "HUNGRY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful everyday need"
+                    },
+                    {
+                        "id":  "ASL_071",
+                        "name":  "SLEEP",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common everyday need"
+                    },
+                    {
+                        "id":  "ASL_072",
+                        "name":  "PAIN",
+                        "aliases": [ "HURT" ],
+                        "description":  "Important health communication"
+                    },
+                    {
+                        "id":  "ASL_073",
+                        "name":  "SICK",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important health communication"
+                    },
+                    {
+                        "id":  "ASL_074",
+                        "name":  "EMERGENCY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High importance; verify exact ASL production"
+                    },
+                    {
+                        "id":  "ASL_075",
+                        "name":  "DANGER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "High safety value"
+                    },
+                    {
+                        "id":  "ASL_076",
+                        "name":  "FIRE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful emergency concept"
+                    },
+                    {
+                        "id":  "ASL_077",
+                        "name":  "CALL",
+                        "aliases": [ "PHONE" ],
+                        "description":  "Useful bridge to spoken communication"
+                    },
+                    {
+                        "id":  "ASL_078",
+                        "name":  "PHONE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Very practical"
+                    },
+                    {
+                        "id":  "ASL_079",
+                        "name":  "COMPUTER",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful digital vocabulary"
+                    },
+                    {
+                        "id":  "ASL_080",
+                        "name":  "SIGN",
+                        "aliases": [ "SIGN-LANGUAGE" ],
+                        "description":  "Core SignVox concept"
+                    },
+                    {
+                        "id":  "ASL_081",
+                        "name":  "LANGUAGE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful meta-language concept"
+                    },
+                    {
+                        "id":  "ASL_082",
+                        "name":  "COMMUNICATE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Conceptually important; exact production needs expert validation"
+                    },
+                    {
+                        "id":  "ASL_083",
+                        "name":  "DEAF",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important to SignVox domain"
+                    },
+                    {
+                        "id":  "ASL_084",
+                        "name":  "HEARING",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important counterpart to DEAF"
+                    },
+                    {
+                        "id":  "ASL_085",
+                        "name":  "SPEAK",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Useful for speechâ†”sign interaction"
+                    },
+                    {
+                        "id":  "ASL_086",
+                        "name":  "MEET",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Directional/spatial; good test of participant encoding"
+                    },
+                    {
+                        "id":  "ASL_087",
+                        "name":  "FINE",
+                        "aliases": [ "OKAY" ],
+                        "description":  "Common conversational response"
+                    },
+                    {
+                        "id":  "ASL_088",
+                        "name":  "MORE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common request/quantity concept"
+                    },
+                    {
+                        "id":  "ASL_089",
+                        "name":  "FINISH",
+                        "aliases": [ "DONE" ],
+                        "description":  "Conversation control and completion"
+                    },
+                    {
+                        "id":  "ASL_090",
+                        "name":  "LOVE",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common emotional/social concept"
+                    },
+                    {
+                        "id":  "ASL_091",
+                        "name":  "HAPPY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common emotional state"
+                    },
+                    {
+                        "id":  "ASL_092",
+                        "name":  "SAD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common emotional state"
+                    },
+                    {
+                        "id":  "ASL_093",
+                        "name":  "ANGRY",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Common emotional state"
+                    },
+                    {
+                        "id":  "ASL_094",
+                        "name":  "AFRAID",
+                        "aliases": [ "SCARED" ],
+                        "description":  "Useful emotional state; validate exact production"
+                    },
+                    {
+                        "id":  "ASL_095",
+                        "name":  "FEEL",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Important but context-dependent"
+                    },
+                    {
+                        "id":  "ASL_096",
+                        "name":  "NICE",
+                        "aliases": [ "CLEAN" ],
+                        "description":  "Useful but potentially ambiguous across meanings"
+                    },
+                    {
+                        "id":  "ASL_097",
+                        "name":  "BIG",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Good early visual adjective"
+                    },
+                    {
+                        "id":  "ASL_098",
+                        "name":  "SMALL",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Good contrast pair with BIG"
+                    },
+                    {
+                        "id":  "ASL_099",
+                        "name":  "HOT",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Everyday/environmental concept"
+                    },
+                    {
+                        "id":  "ASL_100",
+                        "name":  "COLD",
+                        "aliases":  {
+
+                                    },
+                        "description":  "Everyday/environmental concept"
+                    }
+                ]
+}

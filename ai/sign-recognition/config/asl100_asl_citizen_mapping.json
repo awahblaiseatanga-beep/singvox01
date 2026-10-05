@@ -1,0 +1,863 @@
+[
+  {
+    "asl_id": "ASL_001",
+    "canonical_name": "HELLO",
+    "source_glosses": [
+      "HELLO"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_002",
+    "canonical_name": "GOOD",
+    "source_glosses": [
+      "GOOD"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_003",
+    "canonical_name": "BAD",
+    "source_glosses": [
+      "BAD"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_004",
+    "canonical_name": "PLEASE",
+    "source_glosses": [
+      "PLEASE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_005",
+    "canonical_name": "THANK-YOU",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_006",
+    "canonical_name": "SORRY",
+    "source_glosses": [
+      "SORRY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_007",
+    "canonical_name": "HELP",
+    "source_glosses": [
+      "HELP"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_008",
+    "canonical_name": "STOP",
+    "source_glosses": [
+      "STOP"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_009",
+    "canonical_name": "WAIT",
+    "source_glosses": [
+      "WAIT"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_010",
+    "canonical_name": "UNDERSTAND",
+    "source_glosses": [
+      "UNDERSTAND"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_011",
+    "canonical_name": "YES",
+    "source_glosses": [
+      "YES"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_012",
+    "canonical_name": "NO",
+    "source_glosses": [
+      "NO"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_013",
+    "canonical_name": "AGAIN",
+    "source_glosses": [
+      "AGAIN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_014",
+    "canonical_name": "SLOW",
+    "source_glosses": [
+      "SLOW"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_015",
+    "canonical_name": "DON'T-UNDERSTAND",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_016",
+    "canonical_name": "NAME",
+    "source_glosses": [
+      "NAME"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_017",
+    "canonical_name": "ME",
+    "source_glosses": [
+      "ME"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_018",
+    "canonical_name": "YOU",
+    "source_glosses": [
+      "YOU"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_019",
+    "canonical_name": "FAMILY",
+    "source_glosses": [
+      "FAMILY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_020",
+    "canonical_name": "FRIEND",
+    "source_glosses": [
+      "FRIEND"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_021",
+    "canonical_name": "MOTHER",
+    "source_glosses": [
+      "MOTHER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_022",
+    "canonical_name": "FATHER",
+    "source_glosses": [
+      "FATHER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_023",
+    "canonical_name": "BROTHER",
+    "source_glosses": [
+      "BROTHER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_024",
+    "canonical_name": "SISTER",
+    "source_glosses": [
+      "SISTER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_025",
+    "canonical_name": "CHILD",
+    "source_glosses": [
+      "CHILD"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_026",
+    "canonical_name": "BABY",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_027",
+    "canonical_name": "TEACHER",
+    "source_glosses": [
+      "TEACHER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_028",
+    "canonical_name": "GO",
+    "source_glosses": [
+      "GO"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_029",
+    "canonical_name": "COME",
+    "source_glosses": [
+      "COME"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_030",
+    "canonical_name": "GIVE",
+    "source_glosses": [
+      "GIVE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_031",
+    "canonical_name": "TAKE",
+    "source_glosses": [
+      "TAKE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_032",
+    "canonical_name": "WANT",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_033",
+    "canonical_name": "NEED",
+    "source_glosses": [
+      "NEED"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_034",
+    "canonical_name": "HAVE",
+    "source_glosses": [
+      "HAVE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_035",
+    "canonical_name": "KNOW",
+    "source_glosses": [
+      "KNOW"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_036",
+    "canonical_name": "LIKE",
+    "source_glosses": [
+      "LIKE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_037",
+    "canonical_name": "SEE",
+    "source_glosses": [
+      "SEE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_038",
+    "canonical_name": "THINK",
+    "source_glosses": [
+      "THINK"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_039",
+    "canonical_name": "LEARN",
+    "source_glosses": [
+      "LEARN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_040",
+    "canonical_name": "TEACH",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_041",
+    "canonical_name": "STUDY",
+    "source_glosses": [
+      "STUDY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_042",
+    "canonical_name": "SCHOOL",
+    "source_glosses": [
+      "SCHOOL"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_043",
+    "canonical_name": "WORK",
+    "source_glosses": [
+      "WORK"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_044",
+    "canonical_name": "HOME",
+    "source_glosses": [
+      "HOME"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_045",
+    "canonical_name": "STORE",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_046",
+    "canonical_name": "CHURCH",
+    "source_glosses": [
+      "CHURCH"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_047",
+    "canonical_name": "HOSPITAL",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_048",
+    "canonical_name": "DOCTOR",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_049",
+    "canonical_name": "BATHROOM",
+    "source_glosses": [
+      "BATHROOM"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_050",
+    "canonical_name": "HERE",
+    "source_glosses": [
+      "HERE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_051",
+    "canonical_name": "THERE",
+    "source_glosses": [
+      "THERE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_052",
+    "canonical_name": "IN",
+    "source_glosses": [
+      "IN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_053",
+    "canonical_name": "OUT",
+    "source_glosses": [
+      "OUT"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_054",
+    "canonical_name": "TODAY",
+    "source_glosses": [
+      "NOW",
+      "TODAY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_055",
+    "canonical_name": "YESTERDAY",
+    "source_glosses": [
+      "YESTERDAY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_056",
+    "canonical_name": "TOMORROW",
+    "source_glosses": [
+      "TOMORROW"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_057",
+    "canonical_name": "MORNING",
+    "source_glosses": [
+      "MORNING"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_058",
+    "canonical_name": "NIGHT",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_059",
+    "canonical_name": "DAY",
+    "source_glosses": [
+      "DAY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_060",
+    "canonical_name": "WHAT",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_061",
+    "canonical_name": "WHO",
+    "source_glosses": [
+      "WHO"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_062",
+    "canonical_name": "WHERE",
+    "source_glosses": [
+      "WHERE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_063",
+    "canonical_name": "WHEN",
+    "source_glosses": [
+      "WHEN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_064",
+    "canonical_name": "WHY",
+    "source_glosses": [
+      "WHY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_065",
+    "canonical_name": "HOW",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_066",
+    "canonical_name": "FOOD",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_067",
+    "canonical_name": "EAT",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_068",
+    "canonical_name": "DRINK",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_069",
+    "canonical_name": "WATER",
+    "source_glosses": [
+      "WATER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_070",
+    "canonical_name": "HUNGRY",
+    "source_glosses": [
+      "HUNGRY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_071",
+    "canonical_name": "SLEEP",
+    "source_glosses": [
+      "SLEEP"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_072",
+    "canonical_name": "PAIN",
+    "source_glosses": [
+      "HURT",
+      "PAIN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_073",
+    "canonical_name": "SICK",
+    "source_glosses": [
+      "SICK"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_074",
+    "canonical_name": "EMERGENCY",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_075",
+    "canonical_name": "DANGER",
+    "source_glosses": [
+      "DANGER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_076",
+    "canonical_name": "FIRE",
+    "source_glosses": [
+      "FIRE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_077",
+    "canonical_name": "CALL",
+    "source_glosses": [],
+    "mapping_type": "review",
+    "notes": "Collision on gloss(es): ['PHONE']"
+  },
+  {
+    "asl_id": "ASL_078",
+    "canonical_name": "PHONE",
+    "source_glosses": [],
+    "mapping_type": "review",
+    "notes": "Collision on gloss(es): ['PHONE']"
+  },
+  {
+    "asl_id": "ASL_079",
+    "canonical_name": "COMPUTER",
+    "source_glosses": [
+      "COMPUTER"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_080",
+    "canonical_name": "SIGN",
+    "source_glosses": [
+      "SIGN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_081",
+    "canonical_name": "LANGUAGE",
+    "source_glosses": [
+      "LANGUAGE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_082",
+    "canonical_name": "COMMUNICATE",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_083",
+    "canonical_name": "DEAF",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_084",
+    "canonical_name": "HEARING",
+    "source_glosses": [
+      "HEARING"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_085",
+    "canonical_name": "SPEAK",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_086",
+    "canonical_name": "MEET",
+    "source_glosses": [
+      "MEET"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_087",
+    "canonical_name": "FINE",
+    "source_glosses": [],
+    "mapping_type": "unavailable",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_088",
+    "canonical_name": "MORE",
+    "source_glosses": [
+      "MORE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_089",
+    "canonical_name": "FINISH",
+    "source_glosses": [
+      "FINISH"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_090",
+    "canonical_name": "LOVE",
+    "source_glosses": [
+      "LOVE"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_091",
+    "canonical_name": "HAPPY",
+    "source_glosses": [
+      "HAPPY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_092",
+    "canonical_name": "SAD",
+    "source_glosses": [
+      "SAD"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_093",
+    "canonical_name": "ANGRY",
+    "source_glosses": [
+      "ANGRY"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_094",
+    "canonical_name": "AFRAID",
+    "source_glosses": [
+      "SCARED"
+    ],
+    "mapping_type": "alias",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_095",
+    "canonical_name": "FEEL",
+    "source_glosses": [
+      "FEEL"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_096",
+    "canonical_name": "NICE",
+    "source_glosses": [
+      "NICE",
+      "CLEAN"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_097",
+    "canonical_name": "BIG",
+    "source_glosses": [
+      "BIG"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_098",
+    "canonical_name": "SMALL",
+    "source_glosses": [
+      "SMALL"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_099",
+    "canonical_name": "HOT",
+    "source_glosses": [
+      "HOT"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  },
+  {
+    "asl_id": "ASL_100",
+    "canonical_name": "COLD",
+    "source_glosses": [
+      "COLD"
+    ],
+    "mapping_type": "exact",
+    "notes": ""
+  }
+]

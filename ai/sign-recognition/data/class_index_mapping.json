@@ -1,0 +1,397 @@
+{
+  "0": {
+    "class_index": 0,
+    "asl_id": "ASL_001",
+    "canonical_name": "HELLO"
+  },
+  "1": {
+    "class_index": 1,
+    "asl_id": "ASL_002",
+    "canonical_name": "GOOD"
+  },
+  "2": {
+    "class_index": 2,
+    "asl_id": "ASL_003",
+    "canonical_name": "BAD"
+  },
+  "3": {
+    "class_index": 3,
+    "asl_id": "ASL_004",
+    "canonical_name": "PLEASE"
+  },
+  "4": {
+    "class_index": 4,
+    "asl_id": "ASL_006",
+    "canonical_name": "SORRY"
+  },
+  "5": {
+    "class_index": 5,
+    "asl_id": "ASL_007",
+    "canonical_name": "HELP"
+  },
+  "6": {
+    "class_index": 6,
+    "asl_id": "ASL_008",
+    "canonical_name": "STOP"
+  },
+  "7": {
+    "class_index": 7,
+    "asl_id": "ASL_009",
+    "canonical_name": "WAIT"
+  },
+  "8": {
+    "class_index": 8,
+    "asl_id": "ASL_010",
+    "canonical_name": "UNDERSTAND"
+  },
+  "9": {
+    "class_index": 9,
+    "asl_id": "ASL_011",
+    "canonical_name": "YES"
+  },
+  "10": {
+    "class_index": 10,
+    "asl_id": "ASL_012",
+    "canonical_name": "NO"
+  },
+  "11": {
+    "class_index": 11,
+    "asl_id": "ASL_013",
+    "canonical_name": "AGAIN"
+  },
+  "12": {
+    "class_index": 12,
+    "asl_id": "ASL_014",
+    "canonical_name": "SLOW"
+  },
+  "13": {
+    "class_index": 13,
+    "asl_id": "ASL_016",
+    "canonical_name": "NAME"
+  },
+  "14": {
+    "class_index": 14,
+    "asl_id": "ASL_017",
+    "canonical_name": "ME"
+  },
+  "15": {
+    "class_index": 15,
+    "asl_id": "ASL_018",
+    "canonical_name": "YOU"
+  },
+  "16": {
+    "class_index": 16,
+    "asl_id": "ASL_019",
+    "canonical_name": "FAMILY"
+  },
+  "17": {
+    "class_index": 17,
+    "asl_id": "ASL_020",
+    "canonical_name": "FRIEND"
+  },
+  "18": {
+    "class_index": 18,
+    "asl_id": "ASL_021",
+    "canonical_name": "MOTHER"
+  },
+  "19": {
+    "class_index": 19,
+    "asl_id": "ASL_022",
+    "canonical_name": "FATHER"
+  },
+  "20": {
+    "class_index": 20,
+    "asl_id": "ASL_023",
+    "canonical_name": "BROTHER"
+  },
+  "21": {
+    "class_index": 21,
+    "asl_id": "ASL_024",
+    "canonical_name": "SISTER"
+  },
+  "22": {
+    "class_index": 22,
+    "asl_id": "ASL_025",
+    "canonical_name": "CHILD"
+  },
+  "23": {
+    "class_index": 23,
+    "asl_id": "ASL_027",
+    "canonical_name": "TEACHER"
+  },
+  "24": {
+    "class_index": 24,
+    "asl_id": "ASL_028",
+    "canonical_name": "GO"
+  },
+  "25": {
+    "class_index": 25,
+    "asl_id": "ASL_029",
+    "canonical_name": "COME"
+  },
+  "26": {
+    "class_index": 26,
+    "asl_id": "ASL_030",
+    "canonical_name": "GIVE"
+  },
+  "27": {
+    "class_index": 27,
+    "asl_id": "ASL_031",
+    "canonical_name": "TAKE"
+  },
+  "28": {
+    "class_index": 28,
+    "asl_id": "ASL_033",
+    "canonical_name": "NEED"
+  },
+  "29": {
+    "class_index": 29,
+    "asl_id": "ASL_034",
+    "canonical_name": "HAVE"
+  },
+  "30": {
+    "class_index": 30,
+    "asl_id": "ASL_035",
+    "canonical_name": "KNOW"
+  },
+  "31": {
+    "class_index": 31,
+    "asl_id": "ASL_036",
+    "canonical_name": "LIKE"
+  },
+  "32": {
+    "class_index": 32,
+    "asl_id": "ASL_037",
+    "canonical_name": "SEE"
+  },
+  "33": {
+    "class_index": 33,
+    "asl_id": "ASL_038",
+    "canonical_name": "THINK"
+  },
+  "34": {
+    "class_index": 34,
+    "asl_id": "ASL_039",
+    "canonical_name": "LEARN"
+  },
+  "35": {
+    "class_index": 35,
+    "asl_id": "ASL_041",
+    "canonical_name": "STUDY"
+  },
+  "36": {
+    "class_index": 36,
+    "asl_id": "ASL_042",
+    "canonical_name": "SCHOOL"
+  },
+  "37": {
+    "class_index": 37,
+    "asl_id": "ASL_043",
+    "canonical_name": "WORK"
+  },
+  "38": {
+    "class_index": 38,
+    "asl_id": "ASL_044",
+    "canonical_name": "HOME"
+  },
+  "39": {
+    "class_index": 39,
+    "asl_id": "ASL_046",
+    "canonical_name": "CHURCH"
+  },
+  "40": {
+    "class_index": 40,
+    "asl_id": "ASL_049",
+    "canonical_name": "BATHROOM"
+  },
+  "41": {
+    "class_index": 41,
+    "asl_id": "ASL_050",
+    "canonical_name": "HERE"
+  },
+  "42": {
+    "class_index": 42,
+    "asl_id": "ASL_051",
+    "canonical_name": "THERE"
+  },
+  "43": {
+    "class_index": 43,
+    "asl_id": "ASL_052",
+    "canonical_name": "IN"
+  },
+  "44": {
+    "class_index": 44,
+    "asl_id": "ASL_053",
+    "canonical_name": "OUT"
+  },
+  "45": {
+    "class_index": 45,
+    "asl_id": "ASL_054",
+    "canonical_name": "TODAY"
+  },
+  "46": {
+    "class_index": 46,
+    "asl_id": "ASL_055",
+    "canonical_name": "YESTERDAY"
+  },
+  "47": {
+    "class_index": 47,
+    "asl_id": "ASL_056",
+    "canonical_name": "TOMORROW"
+  },
+  "48": {
+    "class_index": 48,
+    "asl_id": "ASL_057",
+    "canonical_name": "MORNING"
+  },
+  "49": {
+    "class_index": 49,
+    "asl_id": "ASL_059",
+    "canonical_name": "DAY"
+  },
+  "50": {
+    "class_index": 50,
+    "asl_id": "ASL_061",
+    "canonical_name": "WHO"
+  },
+  "51": {
+    "class_index": 51,
+    "asl_id": "ASL_062",
+    "canonical_name": "WHERE"
+  },
+  "52": {
+    "class_index": 52,
+    "asl_id": "ASL_063",
+    "canonical_name": "WHEN"
+  },
+  "53": {
+    "class_index": 53,
+    "asl_id": "ASL_064",
+    "canonical_name": "WHY"
+  },
+  "54": {
+    "class_index": 54,
+    "asl_id": "ASL_069",
+    "canonical_name": "WATER"
+  },
+  "55": {
+    "class_index": 55,
+    "asl_id": "ASL_070",
+    "canonical_name": "HUNGRY"
+  },
+  "56": {
+    "class_index": 56,
+    "asl_id": "ASL_071",
+    "canonical_name": "SLEEP"
+  },
+  "57": {
+    "class_index": 57,
+    "asl_id": "ASL_072",
+    "canonical_name": "PAIN"
+  },
+  "58": {
+    "class_index": 58,
+    "asl_id": "ASL_073",
+    "canonical_name": "SICK"
+  },
+  "59": {
+    "class_index": 59,
+    "asl_id": "ASL_075",
+    "canonical_name": "DANGER"
+  },
+  "60": {
+    "class_index": 60,
+    "asl_id": "ASL_076",
+    "canonical_name": "FIRE"
+  },
+  "61": {
+    "class_index": 61,
+    "asl_id": "ASL_079",
+    "canonical_name": "COMPUTER"
+  },
+  "62": {
+    "class_index": 62,
+    "asl_id": "ASL_080",
+    "canonical_name": "SIGN"
+  },
+  "63": {
+    "class_index": 63,
+    "asl_id": "ASL_081",
+    "canonical_name": "LANGUAGE"
+  },
+  "64": {
+    "class_index": 64,
+    "asl_id": "ASL_084",
+    "canonical_name": "HEARING"
+  },
+  "65": {
+    "class_index": 65,
+    "asl_id": "ASL_086",
+    "canonical_name": "MEET"
+  },
+  "66": {
+    "class_index": 66,
+    "asl_id": "ASL_088",
+    "canonical_name": "MORE"
+  },
+  "67": {
+    "class_index": 67,
+    "asl_id": "ASL_089",
+    "canonical_name": "FINISH"
+  },
+  "68": {
+    "class_index": 68,
+    "asl_id": "ASL_090",
+    "canonical_name": "LOVE"
+  },
+  "69": {
+    "class_index": 69,
+    "asl_id": "ASL_091",
+    "canonical_name": "HAPPY"
+  },
+  "70": {
+    "class_index": 70,
+    "asl_id": "ASL_092",
+    "canonical_name": "SAD"
+  },
+  "71": {
+    "class_index": 71,
+    "asl_id": "ASL_093",
+    "canonical_name": "ANGRY"
+  },
+  "72": {
+    "class_index": 72,
+    "asl_id": "ASL_094",
+    "canonical_name": "AFRAID"
+  },
+  "73": {
+    "class_index": 73,
+    "asl_id": "ASL_095",
+    "canonical_name": "FEEL"
+  },
+  "74": {
+    "class_index": 74,
+    "asl_id": "ASL_096",
+    "canonical_name": "NICE"
+  },
+  "75": {
+    "class_index": 75,
+    "asl_id": "ASL_097",
+    "canonical_name": "BIG"
+  },
+  "76": {
+    "class_index": 76,
+    "asl_id": "ASL_098",
+    "canonical_name": "SMALL"
+  },
+  "77": {
+    "class_index": 77,
+    "asl_id": "ASL_099",
+    "canonical_name": "HOT"
+  },
+  "78": {
+    "class_index": 78,
+    "asl_id": "ASL_100",
+    "canonical_name": "COLD"
+  }
+}

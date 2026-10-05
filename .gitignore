@@ -1,0 +1,75 @@
+# General
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Build artifacts
+dist/
+build/
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE & OS Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# AI & Data
+models/cache/
+datasets/raw/
+*.h5
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pb
+
+# Logs & Temp
+*.log
+tmp/
+temp/
+
+# SignVox generated datasets and outputs
+ai/sign-recognition/data/dataset_extracted/
+ai/sign-recognition/data/processed_pilot/
+ai/sign-recognition/data/asl100_training_manifest.csv
+ai/sign-recognition/evaluation/
+output/
+.pip_cache/
+.tmp/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+
+# Generated experiment outputs; preserve source scripts and documentation
+ai/sign-recognition/training/*_parsed.txt
+ai/sign-recognition/training/*_logs.txt
+ai/sign-recognition/training/diagnostic_output.md
+exp*_logs.txt
+
+# Temporary files
+*.orig
+*.rej
+*.bak
+*~
+
+# Generated diagnostic output
+hand_pipeline_results.json
