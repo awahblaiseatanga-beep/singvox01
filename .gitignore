@@ -73,3 +73,78 @@ exp*_logs.txt
 
 # Generated diagnostic output
 hand_pipeline_results.json
+
+# Local Android signing keys
+*.keystore
+
+# Local MediaPipe Tasks model bundles
+*.task
+
+# ===========================================================================
+# Migration hygiene (2026-10-16) — added while preparing the move to the new
+# canonical repository. Nothing here deletes or moves a local file; these rules
+# only keep local-only content out of Git. Rationale for every rule is recorded
+# in docs/REPOSITORY_MIGRATION_2026-10-16.md.
+# ===========================================================================
+
+# Python virtual environments of any name/variant (includes .venv_pilot)
+.venv*/
+venv*/
+
+# Locally downloaded third-party datasets (How2Sign validation video, sandboxes).
+# Redistribution is not permitted and the size is unmanageable in Git.
+# Anchored to the repository root deliberately: an unanchored `data/` also
+# matched ai/sign-recognition/data/, silently hiding the required class
+# mappings. Verified with `git check-ignore ai/sign-recognition/data/pilot_class_mapping.json`.
+/data/
+
+# Stale installs, local backups, build metadata, Vercel link state
+node_modules_old/
+*.backup
+*.tsbuildinfo
+.vercel/
+
+# Local agent state, not part of the shipped project
+.agents/
+
+# Blender/FBX sources and every exported avatar EXCEPT the single production GLB
+# the application loads (mirrors the keep-list in web/.vercelignore)
+*.blend
+*.blend1
+*.fbx
+*.glb
+!web/public/avatar/SignVox_Female_Competition_Prototype.glb
+
+# ONNX external weight sidecars (two ~179 MiB files; GitHub hard-blocks files
+# over 100 MiB). Host them externally and point VITE_SPOTER_V2_URL /
+# VITE_SPOTER_PILOT_URL at the host: the app fetches the graph from that URL and
+# its weights from `${modelUrl}.data`, so the two must stay side by side.
+*.onnx.data
+*.ckpt
+
+# Scratch diagnostics
+tmp_*
+
+# Generated intermediate arrays (landmark .npy dumps produced by the extraction
+# scripts, e.g. experiments/continuous-asl/**/features/). Regenerable, hundreds
+# of MiB. Source scripts and their JSON/CSV metrics stay tracked.
+*.npy
+
+# Gradle/Android build state
+.gradle/
+*.apk
+*.aab
+
+# Secrets and credentials — never commit these; keep templates as *.example
+# (the production .env contract is the tracked ../.env.example)
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.npmrc
+
+# Tool caches and local CLI scratch state (regenerable, machine-specific)
+.eslintcache
+.vite/
