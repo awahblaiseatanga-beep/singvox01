@@ -1,0 +1,337 @@
+
+
+--- PAGE 1 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+1
+ SIGNVOX
+ 
+BLENDER FROM FIRST PRINCIPLES
+Rigging  Anatomy  Landmarking  Web
+ Integration
+ A research-backed training and rebuild guide for Antigravity, grounded in SignVox’s real failure modes.
+Goal: rebuild a trustworthy Blender baseline before authoring more sign animations. Preserve originals, isolate changes, and
+validate each stage in Blender and the browser.
+A valid skeleton, successful GLB export, or playing animation is not proof of a correct sign. Every gate requires
+technical evidence and visual review.
+Blender 5.2.x  React / Three.js GLB target  Prepared 9 October 2026
+
+
+--- PAGE 2 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+2
+1. Executive decision: reset the workflow, not the evidence
+The screenshot shows forearms/hands overlapping in front of the torso. The UI explicitly reports Manual mode / No Clip, Master IK
+Enabled, and Show IK Geometry enabled; magenta markers appear near the hands. This is a presentation/runtime failure, but it does
+not by itself prove whether the root cause is weights, rest pose, bone-local rotations, action selection, or controller ownership.
+Earlier work changed too many layers at once: rest/pose assumptions, IK targets/pole angles, Euler rotations, animation baking, GLB
+graph cleanup, and browser controller behavior. Rebuild by testing one layer at a time.
+Non-negotiable reset policy
+
+Archive, do not destroy: keep original FBX and earliest unmodified GLB read-only; record hashes.
+
+Clean baseline: import the untouched source FBX into a new .blend; do not continue from modified RigWork/V2/V3/V4/V5 files.
+
+One variable at a time: verify mesh/rig, then manual posing, then keyframes, then export, then browser integration.
+
+No arbitrary offsets: no unexplained Euler constants, coordinate nudges, or pole angles.
+
+Evidence before PASS: require screenshots, reproducible scripts, or test output.
+SignVox context
+The character originated from a Mixamo female FBX (`Ch41_nonPBR`) with an armature and finger chains. Earlier GLBs were about
+49.5 MB. Blender MCP was connected to Blender 5.2.2; the app uses React/Three.js and GLB animation clips. Verify the exact
+loaded asset URL and clip before judging a candidate.
+First action: inventory/hash untouched source assets, then import the original FBX into a new .blend. Do not use
+the modified RigWork file as the clean baseline.
+
+
+--- PAGE 3 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+3
+2. Blender fundamentals Antigravity must understand
+Mesh, armature, skinning. The mesh is visible geometry; the armature is a bone hierarchy. An Armature modifier and vertex groups
+bind vertices to bones. A correct hierarchy does not prove good weights, and a clean neutral pose does not prove joint deformation.
+Rest pose vs pose position. The rest pose is the reference configuration defined in Edit Mode. Pose Mode applies offsets.
+Changing rest pose can alter existing animation behavior. Never alter it just to align the character without testing on a duplicate.
+Bone roll/local axes. Bone roll rotates the local frame around the head-to-tail axis. Similar-looking bones may have different local
+axes. An Euler value such as Z=-1.2 radians has no universal anatomical meaning without the bone's local frame, parent transform,
+rotation mode, and rest pose.
+Transform spaces. Blender distinguishes bone/channel, pose/armature, and world transforms. Every retargeting conversion must
+state source and target spaces and account for the armature object's transform. Do not copy world-space landmark positions directly
+into pose-bone Euler values.
+IK and constraints. IK is a solver, not a guarantee of natural motion. It depends on chain, target, pole, constraints, and rest pose.
+Test isolated chains before relying on IK.
+Actions and glTF. Actions contain animation curves; export depends on action/NLA configuration. Matching clip names does not
+prove tracks are complete or correctly bound. Re-import and play the GLB in a clean scene.
+Official Blender docs should govern technical behavior. Videos are learning aids, not normative specifications.
+3. Anatomy: the arm is a connected chain
+A signing pose depends on shoulder girdle → upper arm → elbow → forearm → wrist → palm → finger joints. The wrist does not
+teleport independently; arm joint rotations determine the hand's reachable path.
+Shoulder
+Elbow
+Wrist
+Palm
+Upper arm / humerus
+Forearm
+Palm / metacarpals
+Finger phalanges
+Schematic only — not to scale.
+
+Neutral: shoulders level, arms relaxed, palms neutral.
+
+Shoulder-only test: rotate upper arm modestly; inspect shoulder deformation.
+
+Elbow-only test: bend forearm while upper arm stays fixed.
+
+Wrist-only test: rotate hand; inspect wrist transition and forearm twist.
+
+Finger tests: curl thumb, index, middle, ring, and pinky independently.
+If an isolated test fails, stop and fix that layer before authoring a sign.
+
+
+--- PAGE 4 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+4
+4. Landmarking: MediaPipe’s 21 hand points
+MediaPipe Hands uses 21 landmarks per hand: wrist (0), thumb (1–4), index (5–8), middle (9–12), ring (13–16), and pinky (17–20).
+Landmark positions are not bone rotations.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+MediaPipe hand landmarks
+0 wrist
+1–4 thumb
+5–8 index
+9–12 middle
+13–16 ring
+17–20 pinky
+MCP: knuckle/base
+PIP: middle joint
+DIP: distal joint
+Tip: fingertip
+Schematic only; landmark indices follow MediaPipe Hands.
+Landmark-to-rig rules
+
+Draw landmarks/connections over source video first; verify handedness and index ordering.
+
+Keep image-normalized landmarks separate from world landmarks; document normalization and units.
+
+Estimate palm orientation from multiple non-collinear points; validate axes with known poses.
+
+Calculate finger joint bends from appropriate consecutive phalanx vectors; test straight and curled synthetic poses.
+
+Convert desired orientations into bone-local rotations relative to the actual rest pose.
+
+Use confidence/visibility where available. Missing/all-zero hands must be marked invalid or handled explicitly.
+
+If depth was flattened during preprocessing, cross products cannot recover lost depth motion.
+SignVox tensor caution
+The reported 366 values were described as 126 hand values, 165 pose values, and 75 face values. The supplied
+code assumes [0:63] and [63:126] are 3D hand landmarks and [126:291] is a (33,5) pose block. Confirm this
+against `extract_dataset.py` and real array values; dimensions adding up does not prove semantic correctness.
+
+
+--- PAGE 5 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+5
+5. ASL HELLO: define the sign before animating
+The avatar is a communication interface, not just a rigging demo. A plausible arm wave may still be the wrong sign. Choose one
+documented reference variant and keep it fixed.
+Strong ASL describes one HELLO variant as starting with the side of the index finger against the forehead, then moving the hand up
+and away. Other dictionaries list a distinct palm-out side-to-side greeting. Do not mix the variants.
+Stage
+Pose goal
+Review question
+1 Neutral
+Natural resting pose.
+Is baseline clean?
+2 Approach
+Dominant hand moves toward forehead; shoulder/elbow coordinate.
+Does path avoid torso crossing?
+3 Near contact
+Index-side near forehead; fingers together, thumb folded across palm
+for this variant.
+Is handshape readable from front/side?
+4 Outward
+Hand moves up and away; wrist/forearm follow coherently.
+Is path smooth and stable?
+5 Settle
+Hold or return as product requires.
+Any snap or controller reset?
+Require a valid reference and, ideally, an ASL-competent reviewer before calling the sign correct. The browser
+screenshot is evidence of failure, not a correct signing reference.
+6. Rebuild sequence: gates, not guesses
+Gate
+Work
+Pass evidence
+0 Preserve
+Hash originals; record Blender version.
+Inventory + hashes.
+1 Clean import
+Import untouched FBX; inspect mesh, scale, materials.
+Screenshots + object report.
+2 Rig audit
+Report bones, parents, axes, weights, modifiers, actions.
+Hierarchy/weight report.
+3 Pose tests
+Isolated shoulder/elbow/wrist/finger tests, no IK first.
+Before/after views.
+4 Test action
+Simple three-pose keyframed action.
+Dope Sheet + playback.
+5 HELLO
+Animate against fixed reference.
+Front/side preview + review.
+6 Export/web
+Export, clean re-import, then browser playback.
+Clip report + browser capture.
+
+
+--- PAGE 6 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+6
+7. Curated YouTube curriculum
+Watch in this order. These videos match SignVox’s failure modes: rig fundamentals, Mixamo animation, finger chains, weights, and
+keyframe craft. Antigravity should record the principles in its skills and test them on a duplicate scene.
+1. Rigging for beginners — Joey Carlino
+Watch tutorial
+https://www.youtube.com/watch?v=m-Obo_nC3SM
+Armature setup, automatic weights, IK, face bones, posing, and weight painting. Start with armature setup and weights.
+2. Mixamo rig, retargeting, animation fixes — Knit Motion
+Watch tutorial
+https://www.youtube.com/watch?v=mwfid9CcUsQ
+Import/retarget concepts and animation overlap fixes. It targets Blender 3/4; verify UI/add-on steps against Blender 5.2.
+3. Rig a Hand in Blender (Rigify) — Poly Field Blender
+Watch tutorial
+https://www.youtube.com/watch?v=bbehoFsQJ-M
+Finger-bone alignment, bending direction, symmetry, weights, and hand controls.
+4. Finger modeling, armature, IK, weight paint — Dane Sigua
+Watch tutorial
+https://www.youtube.com/watch?v=lU2KKZqeKfs
+Beginner walkthrough of finger joints, weight painting, IK and auto-keyframing.
+5. Weight paint characters — Crashsune Academy
+Watch tutorial
+https://www.youtube.com/watch?v=Xooago2F8h8
+Weight influence, auto-normalize, and deformation repair. Do not repaint everything unless tests identify defects.
+6. Animation/keyframes/Graph Editor — Ryan King Art
+Watch tutorial
+https://www.youtube.com/watch?v=xACMr9nFELU
+Timeline, keyframes, transform channels, interpolation, Graph Editor and handles.
+
+
+--- PAGE 7 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+7
+8. Official documentation and reference links
+Blender
+Armatures manual
+https://docs.blender.org/manual/en/latest/animation/armatures/index.html
+Posing manual
+https://docs.blender.org/manual/en/latest/animation/armatures/posing/index.html
+Skinning introduction
+https://docs.blender.org/manual/en/latest/animation/armatures/skinning/introduction.html
+Bone transforms and roll
+https://docs.blender.org/manual/en/5.0/animation/armatures/bones/properties/transform.html
+Developer docs: bone transform spaces
+https://developer.blender.org/docs/features/animation/armatures/
+glTF export, Actions and NLA
+https://docs.blender.org/manual/en/5.0/addons/import_export/scene_gltf2.html
+FBX import/export
+https://docs.blender.org/manual/en/5.0/addons/import_export/scene_fbx.html
+MediaPipe and browser
+HandLandmarkerResult: image/world landmark outputs
+https://ai.google.dev/edge/api/mediapipe/python/mp/tasks/vision/HandLandmarkerResult
+Hand landmark connections
+https://ai.google.dev/edge/api/mediapipe/python/mp/tasks/vision/HandLandmarksConnections
+33 pose landmark indices
+https://ai.google.dev/edge/api/mediapipe/python/mp/tasks/vision/PoseLandmark
+Three.js animation system
+https://threejs.org/manual/pages/animation-system.html
+Three.js AnimationMixer API
+https://threejs.org/docs/pages/AnimationMixer.html
+ASL reference
+Strong ASL — HELLO sequential instructions
+https://strongasl.com/american-sign-language-dictionary/words/hello
+SignASL — HELLO dictionary / alternatives
+https://www.signasl.org/sign/hello
+Official documentation governs technical behavior. YouTube videos are learning aids; when an older tutorial conflicts with current Blender documentation,
+follow the current manual.
+
+
+--- PAGE 8 ---
+
+SIGNVOX | Blender rebuild guide | 9 Oct 2026
+8
+9. Master instruction to paste into Antigravity
+PROJECT: SignVox — Blender rebuild from first principles. Blender: 5.2.x. Goal: reliable hand/body animation exported as GLB for
+React/Three.js.
+
+Read this guide and official references before editing assets.
+
+Hash/inventory original FBX/GLB assets; preserve originals read-only.
+
+Import untouched source FBX into a new .blend. Do not use modified RigWork/V2/V3/V4/V5 as the clean baseline.
+
+Create `.agents/skills/signvox-blender-baseline/SKILL.md`, `signvox-rig-audit/SKILL.md`, `signvox-hand-landmarking/SKILL.md`,
+and `signvox-gltf-validation/SKILL.md`, each with a reference checklist.
+
+Stage 1 is read-only: report meshes, armatures, bone parents, deform flags, local axes/rolls, vertex groups, modifiers, actions,
+constraints, transforms, materials, and scene objects.
+
+Generate bone/hand report and screenshots; map Mixamo finger bones to MediaPipe landmarks.
+
+Do not change rest pose, bone rolls, weights, constraints, actions, or front-end code during Stage 1.
+
+After review, test isolated shoulder/elbow/wrist/finger poses on a duplicate. Repair only demonstrated defects.
+
+Create a simple test action before authoring HELLO against one fixed reference variant.
+
+Export only after visual approval; re-import into a clean scene and compare browser playback.
+
+Deliver `asset_inventory.md`, `baseline_rig_audit.md`, `bone_map.csv`, `hand_landmark_map.md`, screenshots, and a pass/fail
+report. Stop after read-only audit and await approval.
+Do not write arbitrary Euler constants as a substitute for understanding bone axes; do not overwrite original
+assets; do not batch-generate the vocabulary; do not claim sign correctness without a valid reference.
+Final acceptance checklist
+
+Original source hashes recorded and untouched.
+
+Fresh import inspected; bone hierarchy/finger chains mapped.
+
+Neutral, shoulder, elbow, wrist and individual-finger tests pass.
+
+No unexplained mesh penetration, twisting, or cross-driving fingers.
+
+Chosen ASL reference variant documented and reviewed.
+
+GLB re-import retains the intended clip.
+
+Browser playback matches Blender; manual controller does not stomp clip.
+
+Every PASS has evidence; otherwise status remains FAIL/BLOCKED.
+Research basis: SignVox project context, the uploaded browser screenshot, public Blender/MediaPipe/Three.js documentation, and the curated tutorials
+above. Tutorial availability and UI may change; official docs take precedence.

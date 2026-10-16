@@ -1,0 +1,55 @@
+{
+  "name": "ASL_GOOD",
+  "asl_id": "ASL_002",
+  "label": "GOOD",
+  "fps": 30,
+  "frame_start": 0,
+  "frame_end": 40,
+  "convention": "Bone names 'mixamorig4:<Bone>' matching tools/author_hello.py; euler XYZ radians. Map to boneMap.ts by stripping ':' (e.g. 'mixamorig4:RightArm' -> 'mixamorig4RightArm'). playSignByLabel('GOOD') resolves clip 'ASL_GOOD' (AvatarController.ts).",
+  "handshape": {
+    "note": "Flat/open right hand, straight finger joints; left hand neutral.",
+    "right": { "thumb_curl": 0.1, "index_curl": 0, "middle_curl": 0, "ring_curl": 0, "pinky_curl": 0, "spread": 0.1 },
+    "left": { "all_curl": 0, "spread": 0 }
+  },
+  "tracks": [
+    { "bone": "mixamorig4:LeftArm", "property": "rotation_euler_xyz", "keys": [[0, [0, 0, -1.2]], [10, [0, 0, -1.2]], [20, [0, 0, -1.2]], [40, [0, 0, -1.2]]] },
+    { "bone": "mixamorig4:LeftForeArm", "property": "rotation_euler_xyz", "keys": [[0, [0, 0, 0]], [40, [0, 0, 0]]] },
+    { "bone": "mixamorig4:LeftHand", "property": "rotation_euler_xyz", "keys": [[0, [0, 0, 0]], [40, [0, 0, 0]]] },
+    {
+      "bone": "mixamorig4:RightArm",
+      "property": "rotation_euler_xyz",
+      "keys": [
+        [0, [0, 0, 1.2]],
+        [10, [0.55, 0.35, 0.55]],
+        [20, [0.9, 0.1, 0.45]],
+        [40, [0, 0, 1.2]]
+      ]
+    },
+    {
+      "bone": "mixamorig4:RightForeArm",
+      "property": "rotation_euler_xyz",
+      "keys": [
+        [0, [0, 0, 0]],
+        [10, [0, -0.5, 1.9]],
+        [20, [0, -0.1, 0.7]],
+        [40, [0, 0, 0]]
+      ]
+    },
+    {
+      "bone": "mixamorig4:RightHand",
+      "property": "rotation_euler_xyz",
+      "keys": [
+        [0, [0, 0, 0]],
+        [10, [0.4, -0.4, -0.4]],
+        [20, [0.1, -0.15, -0.15]],
+        [40, [0, 0, 0]]
+      ]
+    }
+  ],
+  "pose_semantics": {
+    "f0": "Neutral, arms down.",
+    "f10": "Dominant flat hand at lips/lower face (GOOD onset per SV-ASL-002).",
+    "f20": "Hand moves away/down-forward, opening outward (GOOD stroke).",
+    "f40": "Return to neutral so AvatarController 'finished' -> ASL_NEUTRAL crossfade stays clean."
+  }
+}

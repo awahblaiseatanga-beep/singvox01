@@ -1,0 +1,4191 @@
+[
+  {
+    "idx": 1,
+    "asl_id": "ASL_001",
+    "canonical_name": "HELLO",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HELLO"
+    ],
+    "candidates_found": [
+      "HELLO"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "0022932153577568393-HELLO.mp4",
+        "gloss": "HELLO",
+        "norm_gloss": "HELLO",
+        "code": "D_02_055",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8486809407942575-HELLO.mp4",
+        "gloss": "HELLO",
+        "norm_gloss": "HELLO",
+        "code": "D_02_055",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7613696736100914-HELLO.mp4",
+        "gloss": "HELLO",
+        "norm_gloss": "HELLO",
+        "code": "D_02_055",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 2,
+    "asl_id": "ASL_002",
+    "canonical_name": "GOOD",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "GOOD"
+    ],
+    "candidates_found": [
+      "GOOD"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5199177562877719-GOOD.mp4",
+        "gloss": "GOOD",
+        "norm_gloss": "GOOD",
+        "code": "B_01_052",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7085041042230886-GOOD.mp4",
+        "gloss": "GOOD",
+        "norm_gloss": "GOOD",
+        "code": "B_01_052",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5948912677856568-GOOD.mp4",
+        "gloss": "GOOD",
+        "norm_gloss": "GOOD",
+        "code": "B_01_052",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 3,
+    "asl_id": "ASL_003",
+    "canonical_name": "BAD",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "BAD"
+    ],
+    "candidates_found": [
+      "BAD"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8500068040222597-BAD.mp4",
+        "gloss": "BAD",
+        "norm_gloss": "BAD",
+        "code": "B_02_082",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "16659435197682293-BAD.mp4",
+        "gloss": "BAD",
+        "norm_gloss": "BAD",
+        "code": "B_02_082",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5312089456577771-BAD.mp4",
+        "gloss": "BAD",
+        "norm_gloss": "BAD",
+        "code": "B_02_082",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 4,
+    "asl_id": "ASL_004",
+    "canonical_name": "PLEASE",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "PLEASE"
+    ],
+    "candidates_found": [
+      "PLEASE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4782730717831809-PLEASE.mp4",
+        "gloss": "PLEASE",
+        "norm_gloss": "PLEASE",
+        "code": "B_02_007",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "04515307711600891-PLEASE.mp4",
+        "gloss": "PLEASE",
+        "norm_gloss": "PLEASE",
+        "code": "B_02_007",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "31545854783740124-PLEASE.mp4",
+        "gloss": "PLEASE",
+        "norm_gloss": "PLEASE",
+        "code": "B_02_007",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 5,
+    "asl_id": "ASL_005",
+    "canonical_name": "THANK-YOU",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 6,
+    "asl_id": "ASL_006",
+    "canonical_name": "SORRY",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SORRY"
+    ],
+    "candidates_found": [
+      "SORRY"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7256673521593155-SORRY.mp4",
+        "gloss": "SORRY",
+        "norm_gloss": "SORRY",
+        "code": "C_01_020",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8989337086309281-SORRY.mp4",
+        "gloss": "SORRY",
+        "norm_gloss": "SORRY",
+        "code": "C_01_020",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "62778761952392-SORRY.mp4",
+        "gloss": "SORRY",
+        "norm_gloss": "SORRY",
+        "code": "C_01_020",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 7,
+    "asl_id": "ASL_007",
+    "canonical_name": "HELP",
+    "category": "Communication",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HELP"
+    ],
+    "candidates_found": [
+      "HELP"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "12979829347320937-HELP.mp4",
+        "gloss": "HELP",
+        "norm_gloss": "HELP",
+        "code": "D_01_042",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9437772948180145-HELP.mp4",
+        "gloss": "HELP",
+        "norm_gloss": "HELP",
+        "code": "D_01_042",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "4206186890939383-HELP.mp4",
+        "gloss": "HELP",
+        "norm_gloss": "HELP",
+        "code": "D_01_042",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 8,
+    "asl_id": "ASL_008",
+    "canonical_name": "STOP",
+    "category": "Safety",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "STOP"
+    ],
+    "candidates_found": [
+      "STOP"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "16617331553945736-STOP.mp4",
+        "gloss": "STOP",
+        "norm_gloss": "STOP",
+        "code": "D_01_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "07893366237759558-STOP.mp4",
+        "gloss": "STOP",
+        "norm_gloss": "STOP",
+        "code": "D_01_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8893256597213444-STOP.mp4",
+        "gloss": "STOP",
+        "norm_gloss": "STOP",
+        "code": "D_01_010",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 9,
+    "asl_id": "ASL_009",
+    "canonical_name": "WAIT",
+    "category": "Conversation",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WAIT"
+    ],
+    "candidates_found": [
+      "WAIT"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "6807479789190645-WAIT.mp4",
+        "gloss": "WAIT",
+        "norm_gloss": "WAIT",
+        "code": "B_02_016",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "0863524332460317-WAIT.mp4",
+        "gloss": "WAIT",
+        "norm_gloss": "WAIT",
+        "code": "B_02_016",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "524881037999334-WAIT.mp4",
+        "gloss": "WAIT",
+        "norm_gloss": "WAIT",
+        "code": "B_02_016",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 10,
+    "asl_id": "ASL_010",
+    "canonical_name": "UNDERSTAND",
+    "category": "Conversation",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "UNDERSTAND"
+    ],
+    "candidates_found": [
+      "UNDERSTAND"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4687993210650012-UNDERSTAND.mp4",
+        "gloss": "UNDERSTAND",
+        "norm_gloss": "UNDERSTAND",
+        "code": "C_01_006",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "2999107393441156-UNDERSTAND.mp4",
+        "gloss": "UNDERSTAND",
+        "norm_gloss": "UNDERSTAND",
+        "code": "C_01_006",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "6593382490905721-UNDERSTAND.mp4",
+        "gloss": "UNDERSTAND",
+        "norm_gloss": "UNDERSTAND",
+        "code": "C_01_006",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 11,
+    "asl_id": "ASL_011",
+    "canonical_name": "YES",
+    "category": "Conversation",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "YES"
+    ],
+    "candidates_found": [
+      "YES"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 26,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "1555998439795525-YES.mp4",
+        "gloss": "YES",
+        "norm_gloss": "YES",
+        "code": "G_03_074",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "44146024789241256-YES.mp4",
+        "gloss": "YES",
+        "norm_gloss": "YES",
+        "code": "G_03_074",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "16728596536749274-YES.mp4",
+        "gloss": "YES",
+        "norm_gloss": "YES",
+        "code": "G_03_074",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 12,
+    "asl_id": "ASL_012",
+    "canonical_name": "NO",
+    "category": "Conversation",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "NO"
+    ],
+    "candidates_found": [
+      "NO"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5082858473744953-NO.mp4",
+        "gloss": "NO",
+        "norm_gloss": "NO",
+        "code": "C_03_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "5372668319999747-NO.mp4",
+        "gloss": "NO",
+        "norm_gloss": "NO",
+        "code": "C_03_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "09714329486323847-NO.mp4",
+        "gloss": "NO",
+        "norm_gloss": "NO",
+        "code": "C_03_041",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 13,
+    "asl_id": "ASL_013",
+    "canonical_name": "AGAIN",
+    "category": "Conversation",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "AGAIN"
+    ],
+    "candidates_found": [
+      "AGAIN"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5586971735005972-AGAIN.mp4",
+        "gloss": "AGAIN",
+        "norm_gloss": "AGAIN",
+        "code": "J_02_013",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "3428061938829572-AGAIN.mp4",
+        "gloss": "AGAIN",
+        "norm_gloss": "AGAIN",
+        "code": "J_02_013",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7811004078473247-AGAIN.mp4",
+        "gloss": "AGAIN",
+        "norm_gloss": "AGAIN",
+        "code": "J_02_013",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 14,
+    "asl_id": "ASL_014",
+    "canonical_name": "SLOW",
+    "category": "Conversation",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SLOW"
+    ],
+    "candidates_found": [
+      "SLOW"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "6781008345337096-SLOW.mp4",
+        "gloss": "SLOW",
+        "norm_gloss": "SLOW",
+        "code": "B_02_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4821487626510894-SLOW.mp4",
+        "gloss": "SLOW",
+        "norm_gloss": "SLOW",
+        "code": "B_02_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "735841728723114-SLOW.mp4",
+        "gloss": "SLOW",
+        "norm_gloss": "SLOW",
+        "code": "B_02_041",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 15,
+    "asl_id": "ASL_015",
+    "canonical_name": "DON'T-UNDERSTAND",
+    "category": "Conversation",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 16,
+    "asl_id": "ASL_016",
+    "canonical_name": "NAME",
+    "category": "Identity",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "NAME"
+    ],
+    "candidates_found": [
+      "NAME"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "45850991964011034-NAME.mp4",
+        "gloss": "NAME",
+        "norm_gloss": "NAME",
+        "code": "D_01_021",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9125300798453833-NAME.mp4",
+        "gloss": "NAME",
+        "norm_gloss": "NAME",
+        "code": "D_01_021",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "20739960328931106-NAME.mp4",
+        "gloss": "NAME",
+        "norm_gloss": "NAME",
+        "code": "D_01_021",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 17,
+    "asl_id": "ASL_017",
+    "canonical_name": "ME/PRO1",
+    "category": "Indexing",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "ME"
+    ],
+    "candidates_found": [
+      "ME"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P37",
+        "video_file": "6411588958209695-ME.mp4",
+        "gloss": "ME",
+        "norm_gloss": "ME",
+        "code": "B_01_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "22192344699736766-ME.mp4",
+        "gloss": "ME",
+        "norm_gloss": "ME",
+        "code": "B_01_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P36",
+        "video_file": "6421087005073287-ME.mp4",
+        "gloss": "ME",
+        "norm_gloss": "ME",
+        "code": "B_01_068",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 18,
+    "asl_id": "ASL_018",
+    "canonical_name": "YOU/PRO2",
+    "category": "Indexing",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "YOU"
+    ],
+    "candidates_found": [
+      "YOU"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7590157290604365-YOU.mp4",
+        "gloss": "YOU",
+        "norm_gloss": "YOU",
+        "code": "D_02_065",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "08882787638193945-YOU.mp4",
+        "gloss": "YOU",
+        "norm_gloss": "YOU",
+        "code": "D_02_065",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5547769757240029-YOU.mp4",
+        "gloss": "YOU",
+        "norm_gloss": "YOU",
+        "code": "D_02_065",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 19,
+    "asl_id": "ASL_019",
+    "canonical_name": "FAMILY",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FAMILY"
+    ],
+    "candidates_found": [
+      "FAMILY"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "23627306204455656-FAMILY.mp4",
+        "gloss": "FAMILY",
+        "norm_gloss": "FAMILY",
+        "code": "C_01_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "6333838161696508-FAMILY.mp4",
+        "gloss": "FAMILY",
+        "norm_gloss": "FAMILY",
+        "code": "C_01_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5231117289015388-FAMILY.mp4",
+        "gloss": "FAMILY",
+        "norm_gloss": "FAMILY",
+        "code": "C_01_025",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 20,
+    "asl_id": "ASL_020",
+    "canonical_name": "FRIEND",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FRIEND"
+    ],
+    "candidates_found": [
+      "FRIEND"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3845231217942484-FRIEND.mp4",
+        "gloss": "FRIEND",
+        "norm_gloss": "FRIEND",
+        "code": "D_03_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "3115705696578963-FRIEND.mp4",
+        "gloss": "FRIEND",
+        "norm_gloss": "FRIEND",
+        "code": "D_03_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "06432011024096629-FRIEND.mp4",
+        "gloss": "FRIEND",
+        "norm_gloss": "FRIEND",
+        "code": "D_03_010",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 21,
+    "asl_id": "ASL_021",
+    "canonical_name": "MOTHER",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "MOTHER"
+    ],
+    "candidates_found": [
+      "MOTHER"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3624106996012926-MOTHER.mp4",
+        "gloss": "MOTHER",
+        "norm_gloss": "MOTHER",
+        "code": "B_02_008",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9303557889829679-MOTHER.mp4",
+        "gloss": "MOTHER",
+        "norm_gloss": "MOTHER",
+        "code": "B_02_008",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "594799660772781-MOTHER.mp4",
+        "gloss": "MOTHER",
+        "norm_gloss": "MOTHER",
+        "code": "B_02_008",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 22,
+    "asl_id": "ASL_022",
+    "canonical_name": "FATHER",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FATHER"
+    ],
+    "candidates_found": [
+      "FATHER"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "9265869776877644-FATHER.mp4",
+        "gloss": "FATHER",
+        "norm_gloss": "FATHER",
+        "code": "B_01_077",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "3512784023936262-FATHER.mp4",
+        "gloss": "FATHER",
+        "norm_gloss": "FATHER",
+        "code": "B_01_077",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5683249939832291-FATHER.mp4",
+        "gloss": "FATHER",
+        "norm_gloss": "FATHER",
+        "code": "B_01_077",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 23,
+    "asl_id": "ASL_023",
+    "canonical_name": "BROTHER",
+    "category": "People",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "BROTHER"
+    ],
+    "candidates_found": [
+      "BROTHER"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "13498585088047066-BROTHER.mp4",
+        "gloss": "BROTHER",
+        "norm_gloss": "BROTHER",
+        "code": "B_01_065",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4649907997271234-BROTHER.mp4",
+        "gloss": "BROTHER",
+        "norm_gloss": "BROTHER",
+        "code": "B_01_065",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5300191533671401-BROTHER.mp4",
+        "gloss": "BROTHER",
+        "norm_gloss": "BROTHER",
+        "code": "B_01_065",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 24,
+    "asl_id": "ASL_024",
+    "canonical_name": "SISTER",
+    "category": "People",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SISTER"
+    ],
+    "candidates_found": [
+      "SISTER"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5230904219364878-SISTER.mp4",
+        "gloss": "SISTER",
+        "norm_gloss": "SISTER",
+        "code": "D_03_050",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "697764467890001-SISTER.mp4",
+        "gloss": "SISTER",
+        "norm_gloss": "SISTER",
+        "code": "D_03_050",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "5049858314243783-SISTER.mp4",
+        "gloss": "SISTER",
+        "norm_gloss": "SISTER",
+        "code": "D_03_050",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 25,
+    "asl_id": "ASL_025",
+    "canonical_name": "CHILD",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "CHILD"
+    ],
+    "candidates_found": [
+      "CHILD"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7310198714610268-CHILD.mp4",
+        "gloss": "CHILD",
+        "norm_gloss": "CHILD",
+        "code": "F_03_101",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8750457609054456-CHILD.mp4",
+        "gloss": "CHILD",
+        "norm_gloss": "CHILD",
+        "code": "F_03_101",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "06754700554069304-CHILD.mp4",
+        "gloss": "CHILD",
+        "norm_gloss": "CHILD",
+        "code": "F_03_101",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 26,
+    "asl_id": "ASL_026",
+    "canonical_name": "BABY",
+    "category": "People",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "BABY1",
+      "BABY2"
+    ],
+    "num_candidate_videos": 61,
+    "num_unique_videos": 61,
+    "num_unique_signers": 32,
+    "sample_records": [
+      {
+        "participant_id": "P37",
+        "video_file": "5285250146241007-BABY.mp4",
+        "gloss": "BABY1",
+        "norm_gloss": "BABY1",
+        "code": "C_01_017",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "9276367687372418-BABY.mp4",
+        "gloss": "BABY1",
+        "norm_gloss": "BABY1",
+        "code": "C_01_017",
+        "split": "train"
+      },
+      {
+        "participant_id": "P51",
+        "video_file": "8611009401896237-BABY.mp4",
+        "gloss": "BABY1",
+        "norm_gloss": "BABY1",
+        "code": "C_01_017",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 27,
+    "asl_id": "ASL_027",
+    "canonical_name": "TEACHER",
+    "category": "Education",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "TEACHER"
+    ],
+    "candidates_found": [
+      "TEACHER"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P37",
+        "video_file": "8852853673281356-TEACHER.mp4",
+        "gloss": "TEACHER",
+        "norm_gloss": "TEACHER",
+        "code": "A_02_033",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "05517664563791591-TEACHER.mp4",
+        "gloss": "TEACHER",
+        "norm_gloss": "TEACHER",
+        "code": "A_02_033",
+        "split": "train"
+      },
+      {
+        "participant_id": "P51",
+        "video_file": "47124841081350866-TEACHER.mp4",
+        "gloss": "TEACHER",
+        "norm_gloss": "TEACHER",
+        "code": "A_02_033",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 28,
+    "asl_id": "ASL_028",
+    "canonical_name": "GO",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "GO"
+    ],
+    "candidates_found": [
+      "GO"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5363852654946244-GO.mp4",
+        "gloss": "GO",
+        "norm_gloss": "GO",
+        "code": "C_03_056",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "2290456408074184-GO.mp4",
+        "gloss": "GO",
+        "norm_gloss": "GO",
+        "code": "C_03_056",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "47175728440552755-GO.mp4",
+        "gloss": "GO",
+        "norm_gloss": "GO",
+        "code": "C_03_056",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 29,
+    "asl_id": "ASL_029",
+    "canonical_name": "COME",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "COME"
+    ],
+    "candidates_found": [
+      "COME"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 26,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8761272343943907-COME.mp4",
+        "gloss": "COME",
+        "norm_gloss": "COME",
+        "code": "C_03_074",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "9733473831041732-COME.mp4",
+        "gloss": "COME",
+        "norm_gloss": "COME",
+        "code": "C_03_074",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "3537345851274545-COME.mp4",
+        "gloss": "COME",
+        "norm_gloss": "COME",
+        "code": "C_03_074",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 30,
+    "asl_id": "ASL_030",
+    "canonical_name": "GIVE",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "GIVE"
+    ],
+    "candidates_found": [
+      "GIVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "6761534511903275-GIVE.mp4",
+        "gloss": "GIVE",
+        "norm_gloss": "GIVE",
+        "code": "F_01_023",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8799499585540838-GIVE.mp4",
+        "gloss": "GIVE",
+        "norm_gloss": "GIVE",
+        "code": "F_01_023",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "5657005340369723-GIVE.mp4",
+        "gloss": "GIVE",
+        "norm_gloss": "GIVE",
+        "code": "F_01_023",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 31,
+    "asl_id": "ASL_031",
+    "canonical_name": "TAKE",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "TAKE"
+    ],
+    "candidates_found": [
+      "TAKE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "515981894493013-TAKE.mp4",
+        "gloss": "TAKE",
+        "norm_gloss": "TAKE",
+        "code": "G_01_093",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "1072225635555093-TAKE.mp4",
+        "gloss": "TAKE",
+        "norm_gloss": "TAKE",
+        "code": "G_01_093",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "9368256240098554-TAKE.mp4",
+        "gloss": "TAKE",
+        "norm_gloss": "TAKE",
+        "code": "G_01_093",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 32,
+    "asl_id": "ASL_032",
+    "canonical_name": "WANT",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "WANT1",
+      "WANT2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 34,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3076721990283171-WANT 2.mp4",
+        "gloss": "WANT1",
+        "norm_gloss": "WANT1",
+        "code": "E_01_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8635216593391397-WANT 2.mp4",
+        "gloss": "WANT1",
+        "norm_gloss": "WANT1",
+        "code": "E_01_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7637262020700946-WANT 2.mp4",
+        "gloss": "WANT1",
+        "norm_gloss": "WANT1",
+        "code": "E_01_025",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 33,
+    "asl_id": "ASL_033",
+    "canonical_name": "NEED",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "NEED"
+    ],
+    "candidates_found": [
+      "NEED"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8848744369087989-NEED.mp4",
+        "gloss": "NEED",
+        "norm_gloss": "NEED",
+        "code": "C_02_034",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "2957896307414234-NEED.mp4",
+        "gloss": "NEED",
+        "norm_gloss": "NEED",
+        "code": "C_02_034",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "28071486967073533-NEED.mp4",
+        "gloss": "NEED",
+        "norm_gloss": "NEED",
+        "code": "C_02_034",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 34,
+    "asl_id": "ASL_034",
+    "canonical_name": "HAVE",
+    "category": "Actions",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HAVE"
+    ],
+    "candidates_found": [
+      "HAVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7513104867958282-HAVE.mp4",
+        "gloss": "HAVE",
+        "norm_gloss": "HAVE",
+        "code": "B_03_057",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9470368146172135-HAVE.mp4",
+        "gloss": "HAVE",
+        "norm_gloss": "HAVE",
+        "code": "B_03_057",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "017661498365253214-HAVE.mp4",
+        "gloss": "HAVE",
+        "norm_gloss": "HAVE",
+        "code": "B_03_057",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 35,
+    "asl_id": "ASL_035",
+    "canonical_name": "KNOW",
+    "category": "Actions",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "KNOW"
+    ],
+    "candidates_found": [
+      "KNOW"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "11994695058883398-KNOW.mp4",
+        "gloss": "KNOW",
+        "norm_gloss": "KNOW",
+        "code": "C_01_048",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8723506669377621-KNOW.mp4",
+        "gloss": "KNOW",
+        "norm_gloss": "KNOW",
+        "code": "C_01_048",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "44287895160245094-KNOW.mp4",
+        "gloss": "KNOW",
+        "norm_gloss": "KNOW",
+        "code": "C_01_048",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 36,
+    "asl_id": "ASL_036",
+    "canonical_name": "LIKE",
+    "category": "Actions",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "LIKE"
+    ],
+    "candidates_found": [
+      "LIKE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "48852938778695965-LIKE.mp4",
+        "gloss": "LIKE",
+        "norm_gloss": "LIKE",
+        "code": "F_03_063",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "2935343968735329-LIKE.mp4",
+        "gloss": "LIKE",
+        "norm_gloss": "LIKE",
+        "code": "F_03_063",
+        "split": "train"
+      },
+      {
+        "participant_id": "P38",
+        "video_file": "7921297303573938-LIKE.mp4",
+        "gloss": "LIKE",
+        "norm_gloss": "LIKE",
+        "code": "F_03_063",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 37,
+    "asl_id": "ASL_037",
+    "canonical_name": "SEE",
+    "category": "Actions",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SEE"
+    ],
+    "candidates_found": [
+      "SEE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "427530694463526-SEE.mp4",
+        "gloss": "SEE",
+        "norm_gloss": "SEE",
+        "code": "C_02_030",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "4342737241901915-SEE.mp4",
+        "gloss": "SEE",
+        "norm_gloss": "SEE",
+        "code": "C_02_030",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "01973467612046309-SEE.mp4",
+        "gloss": "SEE",
+        "norm_gloss": "SEE",
+        "code": "C_02_030",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 38,
+    "asl_id": "ASL_038",
+    "canonical_name": "THINK",
+    "category": "Actions",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "THINK"
+    ],
+    "candidates_found": [
+      "THINK"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5942910381149817-THINK.mp4",
+        "gloss": "THINK",
+        "norm_gloss": "THINK",
+        "code": "C_03_053",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "5977762842020984-THINK.mp4",
+        "gloss": "THINK",
+        "norm_gloss": "THINK",
+        "code": "C_03_053",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "32286789380855874-THINK.mp4",
+        "gloss": "THINK",
+        "norm_gloss": "THINK",
+        "code": "C_03_053",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 39,
+    "asl_id": "ASL_039",
+    "canonical_name": "LEARN",
+    "category": "Education",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "LEARN"
+    ],
+    "candidates_found": [
+      "LEARN"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "6433677117622094-LEARN.mp4",
+        "gloss": "LEARN",
+        "norm_gloss": "LEARN",
+        "code": "B_01_042",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "003104967374903289-LEARN.mp4",
+        "gloss": "LEARN",
+        "norm_gloss": "LEARN",
+        "code": "B_01_042",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "2918614747304418-LEARN.mp4",
+        "gloss": "LEARN",
+        "norm_gloss": "LEARN",
+        "code": "B_01_042",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 40,
+    "asl_id": "ASL_040",
+    "canonical_name": "TEACH",
+    "category": "Education",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "TEACH1",
+      "TEACH2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8976250668024572-TEACH 2.mp4",
+        "gloss": "TEACH2",
+        "norm_gloss": "TEACH2",
+        "code": "K_02_055",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "867932343918542-TEACH 2.mp4",
+        "gloss": "TEACH2",
+        "norm_gloss": "TEACH2",
+        "code": "K_02_055",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "9512087645828464-TEACH 2.mp4",
+        "gloss": "TEACH2",
+        "norm_gloss": "TEACH2",
+        "code": "K_02_055",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 41,
+    "asl_id": "ASL_041",
+    "canonical_name": "STUDY",
+    "category": "Education",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "STUDY"
+    ],
+    "candidates_found": [
+      "STUDY"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8582421156380451-STUDY.mp4",
+        "gloss": "STUDY",
+        "norm_gloss": "STUDY",
+        "code": "G_01_090",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "7872066695539279-STUDY.mp4",
+        "gloss": "STUDY",
+        "norm_gloss": "STUDY",
+        "code": "G_01_090",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "21500738701557953-STUDY.mp4",
+        "gloss": "STUDY",
+        "norm_gloss": "STUDY",
+        "code": "G_01_090",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 42,
+    "asl_id": "ASL_042",
+    "canonical_name": "SCHOOL",
+    "category": "Places",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SCHOOL"
+    ],
+    "candidates_found": [
+      "SCHOOL"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3380520143388104-SCHOOL.mp4",
+        "gloss": "SCHOOL",
+        "norm_gloss": "SCHOOL",
+        "code": "C_03_089",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "09891286692753609-SCHOOL.mp4",
+        "gloss": "SCHOOL",
+        "norm_gloss": "SCHOOL",
+        "code": "C_03_089",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8638262994392436-SCHOOL.mp4",
+        "gloss": "SCHOOL",
+        "norm_gloss": "SCHOOL",
+        "code": "C_03_089",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 43,
+    "asl_id": "ASL_043",
+    "canonical_name": "WORK",
+    "category": "Places/Activities",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WORK"
+    ],
+    "candidates_found": [
+      "WORK"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "06423831579431782-WORK.mp4",
+        "gloss": "WORK",
+        "norm_gloss": "WORK",
+        "code": "B_03_059",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4444176110924285-WORK.mp4",
+        "gloss": "WORK",
+        "norm_gloss": "WORK",
+        "code": "B_03_059",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "6287775786430216-WORK.mp4",
+        "gloss": "WORK",
+        "norm_gloss": "WORK",
+        "code": "B_03_059",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 44,
+    "asl_id": "ASL_044",
+    "canonical_name": "HOME",
+    "category": "Places",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HOME"
+    ],
+    "candidates_found": [
+      "HOME"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3758646722492833-HOME.mp4",
+        "gloss": "HOME",
+        "norm_gloss": "HOME",
+        "code": "B_03_063",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9565332233790493-HOME.mp4",
+        "gloss": "HOME",
+        "norm_gloss": "HOME",
+        "code": "B_03_063",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "4911600925607411-HOME.mp4",
+        "gloss": "HOME",
+        "norm_gloss": "HOME",
+        "code": "B_03_063",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 45,
+    "asl_id": "ASL_045",
+    "canonical_name": "STORE",
+    "category": "Places",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 46,
+    "asl_id": "ASL_046",
+    "canonical_name": "CHURCH",
+    "category": "Places",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "CHURCH"
+    ],
+    "candidates_found": [
+      "CHURCH"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5149945846466999-CHURCH.mp4",
+        "gloss": "CHURCH",
+        "norm_gloss": "CHURCH",
+        "code": "C_02_018",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "34194595854850096-CHURCH.mp4",
+        "gloss": "CHURCH",
+        "norm_gloss": "CHURCH",
+        "code": "C_02_018",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "2564743607263267-CHURCH.mp4",
+        "gloss": "CHURCH",
+        "norm_gloss": "CHURCH",
+        "code": "C_02_018",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 47,
+    "asl_id": "ASL_047",
+    "canonical_name": "HOSPITAL",
+    "category": "Health",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "HOSPITAL1",
+      "HOSPITAL2"
+    ],
+    "num_candidate_videos": 63,
+    "num_unique_videos": 63,
+    "num_unique_signers": 31,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7900722949705501-HOSPITAL.mp4",
+        "gloss": "HOSPITAL1",
+        "norm_gloss": "HOSPITAL1",
+        "code": "B_02_026",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "9571221473356939-HOSPITAL.mp4",
+        "gloss": "HOSPITAL1",
+        "norm_gloss": "HOSPITAL1",
+        "code": "B_02_026",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "6865453372883275-HOSPITAL.mp4",
+        "gloss": "HOSPITAL1",
+        "norm_gloss": "HOSPITAL1",
+        "code": "B_02_026",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 48,
+    "asl_id": "ASL_048",
+    "canonical_name": "DOCTOR",
+    "category": "Health",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "DOCTOR1",
+      "DOCTOR2"
+    ],
+    "num_candidate_videos": 61,
+    "num_unique_videos": 61,
+    "num_unique_signers": 31,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "2977445528211726-DOCTOR.mp4",
+        "gloss": "DOCTOR1",
+        "norm_gloss": "DOCTOR1",
+        "code": "A_03_020",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4458794912357702-DOCTOR.mp4",
+        "gloss": "DOCTOR1",
+        "norm_gloss": "DOCTOR1",
+        "code": "A_03_020",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "2634628546208524-DOCTOR.mp4",
+        "gloss": "DOCTOR1",
+        "norm_gloss": "DOCTOR1",
+        "code": "A_03_020",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 49,
+    "asl_id": "ASL_049",
+    "canonical_name": "BATHROOM",
+    "category": "Needs",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "BATHROOM"
+    ],
+    "candidates_found": [
+      "BATHROOM"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8819170852454765-BATHROOM.mp4",
+        "gloss": "BATHROOM",
+        "norm_gloss": "BATHROOM",
+        "code": "A_02_051",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8131544680721032-BATHROOM.mp4",
+        "gloss": "BATHROOM",
+        "norm_gloss": "BATHROOM",
+        "code": "A_02_051",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "4262461376364133-BATHROOM.mp4",
+        "gloss": "BATHROOM",
+        "norm_gloss": "BATHROOM",
+        "code": "A_02_051",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 50,
+    "asl_id": "ASL_050",
+    "canonical_name": "HERE",
+    "category": "Spatial",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HERE"
+    ],
+    "candidates_found": [
+      "HERE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "9222877904777216-HERE.mp4",
+        "gloss": "HERE",
+        "norm_gloss": "HERE",
+        "code": "D_01_089",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "03248616809009186-HERE.mp4",
+        "gloss": "HERE",
+        "norm_gloss": "HERE",
+        "code": "D_01_089",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "7553779633092266-HERE.mp4",
+        "gloss": "HERE",
+        "norm_gloss": "HERE",
+        "code": "D_01_089",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 51,
+    "asl_id": "ASL_051",
+    "canonical_name": "THERE",
+    "category": "Spatial",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "THERE"
+    ],
+    "candidates_found": [
+      "THERE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8201419379634209-THERE.mp4",
+        "gloss": "THERE",
+        "norm_gloss": "THERE",
+        "code": "D_02_060",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "38015177391211163-THERE.mp4",
+        "gloss": "THERE",
+        "norm_gloss": "THERE",
+        "code": "D_02_060",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "4665161320096789-THERE.mp4",
+        "gloss": "THERE",
+        "norm_gloss": "THERE",
+        "code": "D_02_060",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 52,
+    "asl_id": "ASL_052",
+    "canonical_name": "IN",
+    "category": "Spatial",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "IN"
+    ],
+    "candidates_found": [
+      "IN"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4953060380876644-IN.mp4",
+        "gloss": "IN",
+        "norm_gloss": "IN",
+        "code": "E_03_062",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7886376577929948-IN.mp4",
+        "gloss": "IN",
+        "norm_gloss": "IN",
+        "code": "E_03_062",
+        "split": "train"
+      },
+      {
+        "participant_id": "P32",
+        "video_file": "7190341808730427-IN.mp4",
+        "gloss": "IN",
+        "norm_gloss": "IN",
+        "code": "E_03_062",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 53,
+    "asl_id": "ASL_053",
+    "canonical_name": "OUT",
+    "category": "Spatial",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "OUT"
+    ],
+    "candidates_found": [
+      "OUT"
+    ],
+    "num_candidate_videos": 28,
+    "num_unique_videos": 28,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4445119407271021-OUT.mp4",
+        "gloss": "OUT",
+        "norm_gloss": "OUT",
+        "code": "E_02_066",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "12543635438423562-OUT.mp4",
+        "gloss": "OUT",
+        "norm_gloss": "OUT",
+        "code": "E_02_066",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "08758415349864745-OUT.mp4",
+        "gloss": "OUT",
+        "norm_gloss": "OUT",
+        "code": "E_02_066",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 54,
+    "asl_id": "ASL_054",
+    "canonical_name": "TODAY/NOW",
+    "category": "Time",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "NOW",
+      "TODAY"
+    ],
+    "candidates_found": [
+      "NOW",
+      "TODAY"
+    ],
+    "num_candidate_videos": 60,
+    "num_unique_videos": 60,
+    "num_unique_signers": 32,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4614534315577101-NOW.mp4",
+        "gloss": "NOW",
+        "norm_gloss": "NOW",
+        "code": "C_03_062",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "945060415448846-NOW.mp4",
+        "gloss": "NOW",
+        "norm_gloss": "NOW",
+        "code": "C_03_062",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "404670456586959-NOW.mp4",
+        "gloss": "NOW",
+        "norm_gloss": "NOW",
+        "code": "C_03_062",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 55,
+    "asl_id": "ASL_055",
+    "canonical_name": "YESTERDAY",
+    "category": "Time",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "YESTERDAY"
+    ],
+    "candidates_found": [
+      "YESTERDAY"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7815897175027569-YESTERDAY.mp4",
+        "gloss": "YESTERDAY",
+        "norm_gloss": "YESTERDAY",
+        "code": "D_01_024",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "24193734646812537-YESTERDAY.mp4",
+        "gloss": "YESTERDAY",
+        "norm_gloss": "YESTERDAY",
+        "code": "D_01_024",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "5250104606145489-YESTERDAY.mp4",
+        "gloss": "YESTERDAY",
+        "norm_gloss": "YESTERDAY",
+        "code": "D_01_024",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 56,
+    "asl_id": "ASL_056",
+    "canonical_name": "TOMORROW",
+    "category": "Time",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "TOMORROW"
+    ],
+    "candidates_found": [
+      "TOMORROW"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "22231383812312244-TOMORROW.mp4",
+        "gloss": "TOMORROW",
+        "norm_gloss": "TOMORROW",
+        "code": "F_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4362793797127771-TOMORROW.mp4",
+        "gloss": "TOMORROW",
+        "norm_gloss": "TOMORROW",
+        "code": "F_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P34",
+        "video_file": "8749149490186505-TOMORROW.mp4",
+        "gloss": "TOMORROW",
+        "norm_gloss": "TOMORROW",
+        "code": "F_02_040",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 57,
+    "asl_id": "ASL_057",
+    "canonical_name": "MORNING",
+    "category": "Time",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "MORNING"
+    ],
+    "candidates_found": [
+      "MORNING"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5674449625615106-MORNING.mp4",
+        "gloss": "MORNING",
+        "norm_gloss": "MORNING",
+        "code": "C_02_012",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7444758043561372-MORNING.mp4",
+        "gloss": "MORNING",
+        "norm_gloss": "MORNING",
+        "code": "C_02_012",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "26793005953024407-MORNING.mp4",
+        "gloss": "MORNING",
+        "norm_gloss": "MORNING",
+        "code": "C_02_012",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 58,
+    "asl_id": "ASL_058",
+    "canonical_name": "NIGHT",
+    "category": "Time",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "NIGHT1",
+      "NIGHT2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 32,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "09459364825922179-NIGHT.mp4",
+        "gloss": "NIGHT1",
+        "norm_gloss": "NIGHT1",
+        "code": "A_01_003",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "864908228939657-NIGHT.mp4",
+        "gloss": "NIGHT1",
+        "norm_gloss": "NIGHT1",
+        "code": "A_01_003",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "31514063915992985-NIGHT.mp4",
+        "gloss": "NIGHT1",
+        "norm_gloss": "NIGHT1",
+        "code": "A_01_003",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 59,
+    "asl_id": "ASL_059",
+    "canonical_name": "DAY",
+    "category": "Time",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "DAY"
+    ],
+    "candidates_found": [
+      "DAY"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "22682052489427296-DAY.mp4",
+        "gloss": "DAY",
+        "norm_gloss": "DAY",
+        "code": "C_01_044",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "5240267173967887-DAY.mp4",
+        "gloss": "DAY",
+        "norm_gloss": "DAY",
+        "code": "C_01_044",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "2127361825953915-DAY.mp4",
+        "gloss": "DAY",
+        "norm_gloss": "DAY",
+        "code": "C_01_044",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 60,
+    "asl_id": "ASL_060",
+    "canonical_name": "WHAT",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "WHAT1",
+      "WHAT2"
+    ],
+    "num_candidate_videos": 63,
+    "num_unique_videos": 63,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "011439809438488657-WHAT 2.mp4",
+        "gloss": "WHAT1",
+        "norm_gloss": "WHAT1",
+        "code": "D_02_094",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "027816838285841916-WHAT 2.mp4",
+        "gloss": "WHAT1",
+        "norm_gloss": "WHAT1",
+        "code": "D_02_094",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8405493387581946-WHAT 2.mp4",
+        "gloss": "WHAT1",
+        "norm_gloss": "WHAT1",
+        "code": "D_02_094",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 61,
+    "asl_id": "ASL_061",
+    "canonical_name": "WHO",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WHO"
+    ],
+    "candidates_found": [
+      "WHO"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "17383536861491344-WHO.mp4",
+        "gloss": "WHO",
+        "norm_gloss": "WHO",
+        "code": "C_01_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "22349971035391758-WHO.mp4",
+        "gloss": "WHO",
+        "norm_gloss": "WHO",
+        "code": "C_01_041",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "044977332478077336-WHO.mp4",
+        "gloss": "WHO",
+        "norm_gloss": "WHO",
+        "code": "C_01_041",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 62,
+    "asl_id": "ASL_062",
+    "canonical_name": "WHERE",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WHERE"
+    ],
+    "candidates_found": [
+      "WHERE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "9574229853297838-WHERE.mp4",
+        "gloss": "WHERE",
+        "norm_gloss": "WHERE",
+        "code": "B_02_035",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9824526442836845-WHERE.mp4",
+        "gloss": "WHERE",
+        "norm_gloss": "WHERE",
+        "code": "B_02_035",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7968041209479837-WHERE.mp4",
+        "gloss": "WHERE",
+        "norm_gloss": "WHERE",
+        "code": "B_02_035",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 63,
+    "asl_id": "ASL_063",
+    "canonical_name": "WHEN",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WHEN"
+    ],
+    "candidates_found": [
+      "WHEN"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5795834263184414-WHEN.mp4",
+        "gloss": "WHEN",
+        "norm_gloss": "WHEN",
+        "code": "C_03_086",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "01798723214383169-WHEN.mp4",
+        "gloss": "WHEN",
+        "norm_gloss": "WHEN",
+        "code": "C_03_086",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7524645430552388-WHEN.mp4",
+        "gloss": "WHEN",
+        "norm_gloss": "WHEN",
+        "code": "C_03_086",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 64,
+    "asl_id": "ASL_064",
+    "canonical_name": "WHY",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WHY"
+    ],
+    "candidates_found": [
+      "WHY"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7885296477376487-WHY.mp4",
+        "gloss": "WHY",
+        "norm_gloss": "WHY",
+        "code": "D_01_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8351529407222296-WHY.mp4",
+        "gloss": "WHY",
+        "norm_gloss": "WHY",
+        "code": "D_01_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "41986547104124017-WHY.mp4",
+        "gloss": "WHY",
+        "norm_gloss": "WHY",
+        "code": "D_01_067",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 65,
+    "asl_id": "ASL_065",
+    "canonical_name": "HOW",
+    "category": "Questions",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "HOW1",
+      "HOW2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7666802297995068-HOW.mp4",
+        "gloss": "HOW1",
+        "norm_gloss": "HOW1",
+        "code": "D_02_082",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "9117355925466168-HOW.mp4",
+        "gloss": "HOW1",
+        "norm_gloss": "HOW1",
+        "code": "D_02_082",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "9811460119529283-HOW.mp4",
+        "gloss": "HOW1",
+        "norm_gloss": "HOW1",
+        "code": "D_02_082",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 66,
+    "asl_id": "ASL_066",
+    "canonical_name": "FOOD",
+    "category": "Needs",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 67,
+    "asl_id": "ASL_067",
+    "canonical_name": "EAT",
+    "category": "Needs",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "EAT1",
+      "EAT2"
+    ],
+    "num_candidate_videos": 63,
+    "num_unique_videos": 63,
+    "num_unique_signers": 31,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5237431195885818-EAT.mp4",
+        "gloss": "EAT1",
+        "norm_gloss": "EAT1",
+        "code": "B_02_002",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "33555147348315106-EAT.mp4",
+        "gloss": "EAT1",
+        "norm_gloss": "EAT1",
+        "code": "B_02_002",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "3878260902223658-EAT.mp4",
+        "gloss": "EAT1",
+        "norm_gloss": "EAT1",
+        "code": "B_02_002",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 68,
+    "asl_id": "ASL_068",
+    "canonical_name": "DRINK",
+    "category": "Needs",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "DRINK1",
+      "DRINK2"
+    ],
+    "num_candidate_videos": 61,
+    "num_unique_videos": 61,
+    "num_unique_signers": 32,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "17063504743468516-DRINK 2.mp4",
+        "gloss": "DRINK2",
+        "norm_gloss": "DRINK2",
+        "code": "K_03_092",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "2789046705437668-DRINK 2.mp4",
+        "gloss": "DRINK2",
+        "norm_gloss": "DRINK2",
+        "code": "K_03_092",
+        "split": "train"
+      },
+      {
+        "participant_id": "P38",
+        "video_file": "27103389535111955-DRINK 2.mp4",
+        "gloss": "DRINK2",
+        "norm_gloss": "DRINK2",
+        "code": "K_03_092",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 69,
+    "asl_id": "ASL_069",
+    "canonical_name": "WATER",
+    "category": "Needs",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "WATER"
+    ],
+    "candidates_found": [
+      "WATER"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P37",
+        "video_file": "6216809763132565-WATER.mp4",
+        "gloss": "WATER",
+        "norm_gloss": "WATER",
+        "code": "A_02_031",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7449721965435019-WATER.mp4",
+        "gloss": "WATER",
+        "norm_gloss": "WATER",
+        "code": "A_02_031",
+        "split": "train"
+      },
+      {
+        "participant_id": "P51",
+        "video_file": "7276443456531434-WATER.mp4",
+        "gloss": "WATER",
+        "norm_gloss": "WATER",
+        "code": "A_02_031",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 70,
+    "asl_id": "ASL_070",
+    "canonical_name": "HUNGRY",
+    "category": "Needs",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HUNGRY"
+    ],
+    "candidates_found": [
+      "HUNGRY"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "08524949524247205-HUNGRY.mp4",
+        "gloss": "HUNGRY",
+        "norm_gloss": "HUNGRY",
+        "code": "C_01_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7518611049674775-HUNGRY.mp4",
+        "gloss": "HUNGRY",
+        "norm_gloss": "HUNGRY",
+        "code": "C_01_010",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "3031010038877062-HUNGRY.mp4",
+        "gloss": "HUNGRY",
+        "norm_gloss": "HUNGRY",
+        "code": "C_01_010",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 71,
+    "asl_id": "ASL_071",
+    "canonical_name": "SLEEP",
+    "category": "Needs",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SLEEP"
+    ],
+    "candidates_found": [
+      "SLEEP"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P37",
+        "video_file": "24289224539723375-SLEEP.mp4",
+        "gloss": "SLEEP",
+        "norm_gloss": "SLEEP",
+        "code": "B_03_037",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "6811391071349302-SLEEP.mp4",
+        "gloss": "SLEEP",
+        "norm_gloss": "SLEEP",
+        "code": "B_03_037",
+        "split": "train"
+      },
+      {
+        "participant_id": "P36",
+        "video_file": "9202711012693181-SLEEP.mp4",
+        "gloss": "SLEEP",
+        "norm_gloss": "SLEEP",
+        "code": "B_03_037",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 72,
+    "asl_id": "ASL_072",
+    "canonical_name": "PAIN/HURT",
+    "category": "Health",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HURT",
+      "PAIN"
+    ],
+    "candidates_found": [
+      "HURT",
+      "PAIN"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 31,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "16631130373956604-HURT.mp4",
+        "gloss": "HURT",
+        "norm_gloss": "HURT",
+        "code": "E_01_002",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9086920406108443-HURT.mp4",
+        "gloss": "HURT",
+        "norm_gloss": "HURT",
+        "code": "E_01_002",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7487799802593937-HURT.mp4",
+        "gloss": "HURT",
+        "norm_gloss": "HURT",
+        "code": "E_01_002",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 73,
+    "asl_id": "ASL_073",
+    "canonical_name": "SICK",
+    "category": "Health",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SICK"
+    ],
+    "candidates_found": [
+      "SICK"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "9005893183984361-SICK.mp4",
+        "gloss": "SICK",
+        "norm_gloss": "SICK",
+        "code": "B_01_072",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "689651243355925-SICK.mp4",
+        "gloss": "SICK",
+        "norm_gloss": "SICK",
+        "code": "B_01_072",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "7468545549250416-SICK.mp4",
+        "gloss": "SICK",
+        "norm_gloss": "SICK",
+        "code": "B_01_072",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 74,
+    "asl_id": "ASL_074",
+    "canonical_name": "EMERGENCY",
+    "category": "Safety",
+    "difficulty": "3",
+    "priority": "Medium",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 75,
+    "asl_id": "ASL_075",
+    "canonical_name": "DANGER",
+    "category": "Safety",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "DANGER"
+    ],
+    "candidates_found": [
+      "DANGER"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8773863329740939-DANGER.mp4",
+        "gloss": "DANGER",
+        "norm_gloss": "DANGER",
+        "code": "E_02_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "36756607109704476-DANGER.mp4",
+        "gloss": "DANGER",
+        "norm_gloss": "DANGER",
+        "code": "E_02_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "03883848686096014-DANGER.mp4",
+        "gloss": "DANGER",
+        "norm_gloss": "DANGER",
+        "code": "E_02_067",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 76,
+    "asl_id": "ASL_076",
+    "canonical_name": "FIRE",
+    "category": "Safety",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FIRE"
+    ],
+    "candidates_found": [
+      "FIRE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "6102473517691671-FIRE.mp4",
+        "gloss": "FIRE",
+        "norm_gloss": "FIRE",
+        "code": "B_03_090",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9670746241323227-FIRE.mp4",
+        "gloss": "FIRE",
+        "norm_gloss": "FIRE",
+        "code": "B_03_090",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "8731561028385924-FIRE.mp4",
+        "gloss": "FIRE",
+        "norm_gloss": "FIRE",
+        "code": "B_03_090",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 77,
+    "asl_id": "ASL_077",
+    "canonical_name": "CALL/PHONE",
+    "category": "Technology",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "review",
+    "old_glosses": [],
+    "candidates_found": [
+      "CALL1",
+      "CALL2",
+      "PHONE"
+    ],
+    "num_candidate_videos": 89,
+    "num_unique_videos": 89,
+    "num_unique_signers": 33,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "26154372036264695-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "6711235939417988-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "713197211004809-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 78,
+    "asl_id": "ASL_078",
+    "canonical_name": "PHONE",
+    "category": "Technology",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "review",
+    "old_glosses": [],
+    "candidates_found": [
+      "PHONE"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "26154372036264695-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "6711235939417988-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "713197211004809-PHONE.mp4",
+        "gloss": "PHONE",
+        "norm_gloss": "PHONE",
+        "code": "A_02_040",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 79,
+    "asl_id": "ASL_079",
+    "canonical_name": "COMPUTER",
+    "category": "Technology",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "COMPUTER"
+    ],
+    "candidates_found": [
+      "COMPUTER"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "2529267475456003-COMPUTER.mp4",
+        "gloss": "COMPUTER",
+        "norm_gloss": "COMPUTER",
+        "code": "A_01_054",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "00717587882424664-COMPUTER.mp4",
+        "gloss": "COMPUTER",
+        "norm_gloss": "COMPUTER",
+        "code": "A_01_054",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "047487125393855356-COMPUTER.mp4",
+        "gloss": "COMPUTER",
+        "norm_gloss": "COMPUTER",
+        "code": "A_01_054",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 80,
+    "asl_id": "ASL_080",
+    "canonical_name": "SIGN/SIGN-LANGUAGE",
+    "category": "Technology/Language",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SIGN"
+    ],
+    "candidates_found": [
+      "SIGN"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "9039030666503207-SIGN.mp4",
+        "gloss": "SIGN",
+        "norm_gloss": "SIGN",
+        "code": "E_03_050",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "05227033977936646-SIGN.mp4",
+        "gloss": "SIGN",
+        "norm_gloss": "SIGN",
+        "code": "E_03_050",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "8936148680464566-SIGN.mp4",
+        "gloss": "SIGN",
+        "norm_gloss": "SIGN",
+        "code": "E_03_050",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 81,
+    "asl_id": "ASL_081",
+    "canonical_name": "LANGUAGE",
+    "category": "Technology/Language",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "LANGUAGE"
+    ],
+    "candidates_found": [
+      "LANGUAGE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7540291860771398-LANGUAGE.mp4",
+        "gloss": "LANGUAGE",
+        "norm_gloss": "LANGUAGE",
+        "code": "A_01_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "43564942059450074-LANGUAGE.mp4",
+        "gloss": "LANGUAGE",
+        "norm_gloss": "LANGUAGE",
+        "code": "A_01_067",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "32857613945090347-LANGUAGE.mp4",
+        "gloss": "LANGUAGE",
+        "norm_gloss": "LANGUAGE",
+        "code": "A_01_067",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 82,
+    "asl_id": "ASL_082",
+    "canonical_name": "COMMUNICATE",
+    "category": "Technology/Language",
+    "difficulty": "3",
+    "priority": "Medium",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 83,
+    "asl_id": "ASL_083",
+    "canonical_name": "DEAF",
+    "category": "Identity",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "DEAF1",
+      "DEAF2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 31,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "7822434515793355-DEAF.mp4",
+        "gloss": "DEAF1",
+        "norm_gloss": "DEAF1",
+        "code": "F_03_038",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "8003732238675179-DEAF.mp4",
+        "gloss": "DEAF1",
+        "norm_gloss": "DEAF1",
+        "code": "F_03_038",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "07807851209534378-DEAF.mp4",
+        "gloss": "DEAF1",
+        "norm_gloss": "DEAF1",
+        "code": "F_03_038",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 84,
+    "asl_id": "ASL_084",
+    "canonical_name": "HEARING",
+    "category": "Identity",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HEARING"
+    ],
+    "candidates_found": [
+      "HEARING"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "213145928118734-HEARING.mp4",
+        "gloss": "HEARING",
+        "norm_gloss": "HEARING",
+        "code": "C_02_023",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "6711457475275806-HEARING.mp4",
+        "gloss": "HEARING",
+        "norm_gloss": "HEARING",
+        "code": "C_02_023",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "25452629111360814-HEARING.mp4",
+        "gloss": "HEARING",
+        "norm_gloss": "HEARING",
+        "code": "C_02_023",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 85,
+    "asl_id": "ASL_085",
+    "canonical_name": "SPEAK",
+    "category": "Communication",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [],
+    "num_candidate_videos": 0,
+    "num_unique_videos": 0,
+    "num_unique_signers": 0,
+    "sample_records": []
+  },
+  {
+    "idx": 86,
+    "asl_id": "ASL_086",
+    "canonical_name": "MEET",
+    "category": "Communication",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "MEET"
+    ],
+    "candidates_found": [
+      "MEET"
+    ],
+    "num_candidate_videos": 29,
+    "num_unique_videos": 29,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "09480001149764816-MEET.mp4",
+        "gloss": "MEET",
+        "norm_gloss": "MEET",
+        "code": "D_02_018",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "41405801734964043-MEET.mp4",
+        "gloss": "MEET",
+        "norm_gloss": "MEET",
+        "code": "D_02_018",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "22889612387878833-MEET.mp4",
+        "gloss": "MEET",
+        "norm_gloss": "MEET",
+        "code": "D_02_018",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 87,
+    "asl_id": "ASL_087",
+    "canonical_name": "FINE/OKAY",
+    "category": "Communication",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "unavailable",
+    "old_glosses": [],
+    "candidates_found": [
+      "FINE1",
+      "FINE2"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 32,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "23481071177880364-FINE.mp4",
+        "gloss": "FINE1",
+        "norm_gloss": "FINE1",
+        "code": "C_01_043",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "6741912564576187-FINE.mp4",
+        "gloss": "FINE1",
+        "norm_gloss": "FINE1",
+        "code": "C_01_043",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "7081997886148117-FINE.mp4",
+        "gloss": "FINE1",
+        "norm_gloss": "FINE1",
+        "code": "C_01_043",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 88,
+    "asl_id": "ASL_088",
+    "canonical_name": "MORE",
+    "category": "Quantity",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "MORE"
+    ],
+    "candidates_found": [
+      "MORE"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8385294089384643-MORE.mp4",
+        "gloss": "MORE",
+        "norm_gloss": "MORE",
+        "code": "B_03_032",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7168321371853796-MORE.mp4",
+        "gloss": "MORE",
+        "norm_gloss": "MORE",
+        "code": "B_03_032",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "19756865098292908-MORE.mp4",
+        "gloss": "MORE",
+        "norm_gloss": "MORE",
+        "code": "B_03_032",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 89,
+    "asl_id": "ASL_089",
+    "canonical_name": "FINISH/DONE",
+    "category": "Conversation",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FINISH"
+    ],
+    "candidates_found": [
+      "FINISH"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "1994115335737141-FINISH.mp4",
+        "gloss": "FINISH",
+        "norm_gloss": "FINISH",
+        "code": "B_03_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "5726531690314898-FINISH.mp4",
+        "gloss": "FINISH",
+        "norm_gloss": "FINISH",
+        "code": "B_03_025",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "6209651921836459-FINISH.mp4",
+        "gloss": "FINISH",
+        "norm_gloss": "FINISH",
+        "code": "B_03_025",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 90,
+    "asl_id": "ASL_090",
+    "canonical_name": "LOVE",
+    "category": "Emotion",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "LOVE"
+    ],
+    "candidates_found": [
+      "LOVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4194471454302029-LOVE.mp4",
+        "gloss": "LOVE",
+        "norm_gloss": "LOVE",
+        "code": "G_01_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "8291491506273367-LOVE.mp4",
+        "gloss": "LOVE",
+        "norm_gloss": "LOVE",
+        "code": "G_01_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "544773713165329-LOVE.mp4",
+        "gloss": "LOVE",
+        "norm_gloss": "LOVE",
+        "code": "G_01_068",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 91,
+    "asl_id": "ASL_091",
+    "canonical_name": "HAPPY",
+    "category": "Emotion",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HAPPY"
+    ],
+    "candidates_found": [
+      "HAPPY"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "4311917411154673-HAPPY.mp4",
+        "gloss": "HAPPY",
+        "norm_gloss": "HAPPY",
+        "code": "C_03_078",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "9858325161708861-HAPPY.mp4",
+        "gloss": "HAPPY",
+        "norm_gloss": "HAPPY",
+        "code": "C_03_078",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "3025077004187282-HAPPY.mp4",
+        "gloss": "HAPPY",
+        "norm_gloss": "HAPPY",
+        "code": "C_03_078",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 92,
+    "asl_id": "ASL_092",
+    "canonical_name": "SAD",
+    "category": "Emotion",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SAD"
+    ],
+    "candidates_found": [
+      "SAD"
+    ],
+    "num_candidate_videos": 30,
+    "num_unique_videos": 30,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "07426159684377254-SAD.mp4",
+        "gloss": "SAD",
+        "norm_gloss": "SAD",
+        "code": "B_02_053",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "2734240294538983-SAD.mp4",
+        "gloss": "SAD",
+        "norm_gloss": "SAD",
+        "code": "B_02_053",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "43734074730672057-SAD.mp4",
+        "gloss": "SAD",
+        "norm_gloss": "SAD",
+        "code": "B_02_053",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 93,
+    "asl_id": "ASL_093",
+    "canonical_name": "ANGRY",
+    "category": "Emotion",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "ANGRY"
+    ],
+    "candidates_found": [
+      "ANGRY"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "3709997507310303-ANGRY.mp4",
+        "gloss": "ANGRY",
+        "norm_gloss": "ANGRY",
+        "code": "B_01_070",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "15471453286217618-ANGRY.mp4",
+        "gloss": "ANGRY",
+        "norm_gloss": "ANGRY",
+        "code": "B_01_070",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "10954121875598655-ANGRY.mp4",
+        "gloss": "ANGRY",
+        "norm_gloss": "ANGRY",
+        "code": "B_01_070",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 94,
+    "asl_id": "ASL_094",
+    "canonical_name": "AFRAID/SCARED",
+    "category": "Emotion",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "alias",
+    "old_glosses": [
+      "SCARED"
+    ],
+    "candidates_found": [
+      "SCARED"
+    ],
+    "num_candidate_videos": 32,
+    "num_unique_videos": 32,
+    "num_unique_signers": 29,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "842528907363683-SCARED.mp4",
+        "gloss": "SCARED",
+        "norm_gloss": "SCARED",
+        "code": "B_03_079",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "6696729548384996-SCARED.mp4",
+        "gloss": "SCARED",
+        "norm_gloss": "SCARED",
+        "code": "B_03_079",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "34962471692183406-SCARED.mp4",
+        "gloss": "SCARED",
+        "norm_gloss": "SCARED",
+        "code": "B_03_079",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 95,
+    "asl_id": "ASL_095",
+    "canonical_name": "FEEL",
+    "category": "Emotion",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "FEEL"
+    ],
+    "candidates_found": [
+      "FEEL"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "16441722629236466-FEEL.mp4",
+        "gloss": "FEEL",
+        "norm_gloss": "FEEL",
+        "code": "C_02_001",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "4560608489469089-FEEL.mp4",
+        "gloss": "FEEL",
+        "norm_gloss": "FEEL",
+        "code": "C_02_001",
+        "split": "train"
+      },
+      {
+        "participant_id": "P7",
+        "video_file": "47007106825738343-FEEL.mp4",
+        "gloss": "FEEL",
+        "norm_gloss": "FEEL",
+        "code": "C_02_001",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 96,
+    "asl_id": "ASL_096",
+    "canonical_name": "NICE/CLEAN",
+    "category": "Description",
+    "difficulty": "2",
+    "priority": "Medium",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "NICE",
+      "CLEAN"
+    ],
+    "candidates_found": [
+      "CLEAN",
+      "NICE"
+    ],
+    "num_candidate_videos": 62,
+    "num_unique_videos": 62,
+    "num_unique_signers": 34,
+    "sample_records": [
+      {
+        "participant_id": "P1",
+        "video_file": "14154575310664197-NICE.mp4",
+        "gloss": "NICE",
+        "norm_gloss": "NICE",
+        "code": "G_03_059",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "18199086230023087-NICE.mp4",
+        "gloss": "NICE",
+        "norm_gloss": "NICE",
+        "code": "G_03_059",
+        "split": "train"
+      },
+      {
+        "participant_id": "P43",
+        "video_file": "3597949009905055-NICE.mp4",
+        "gloss": "NICE",
+        "norm_gloss": "NICE",
+        "code": "G_03_059",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 97,
+    "asl_id": "ASL_097",
+    "canonical_name": "BIG",
+    "category": "Description",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "BIG"
+    ],
+    "candidates_found": [
+      "BIG"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 30,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "0010547472856581308-BIG.mp4",
+        "gloss": "BIG",
+        "norm_gloss": "BIG",
+        "code": "F_02_054",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "62983148818386-BIG.mp4",
+        "gloss": "BIG",
+        "norm_gloss": "BIG",
+        "code": "F_02_054",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "5984958993020424-BIG.mp4",
+        "gloss": "BIG",
+        "norm_gloss": "BIG",
+        "code": "F_02_054",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 98,
+    "asl_id": "ASL_098",
+    "canonical_name": "SMALL",
+    "category": "Description",
+    "difficulty": "1",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "SMALL"
+    ],
+    "candidates_found": [
+      "SMALL"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "5278443932118966-SMALL.mp4",
+        "gloss": "SMALL",
+        "norm_gloss": "SMALL",
+        "code": "D_01_030",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "5446958870984302-SMALL.mp4",
+        "gloss": "SMALL",
+        "norm_gloss": "SMALL",
+        "code": "D_01_030",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "43505759423144474-SMALL.mp4",
+        "gloss": "SMALL",
+        "norm_gloss": "SMALL",
+        "code": "D_01_030",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 99,
+    "asl_id": "ASL_099",
+    "canonical_name": "HOT",
+    "category": "Description",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "HOT"
+    ],
+    "candidates_found": [
+      "HOT"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 27,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "241335509121118-HOT.mp4",
+        "gloss": "HOT",
+        "norm_gloss": "HOT",
+        "code": "F_02_093",
+        "split": "train"
+      },
+      {
+        "participant_id": "P40",
+        "video_file": "13316006185127205-HOT.mp4",
+        "gloss": "HOT",
+        "norm_gloss": "HOT",
+        "code": "F_02_093",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "7416561706981699-HOT.mp4",
+        "gloss": "HOT",
+        "norm_gloss": "HOT",
+        "code": "F_02_093",
+        "split": "train"
+      }
+    ]
+  },
+  {
+    "idx": 100,
+    "asl_id": "ASL_100",
+    "canonical_name": "COLD",
+    "category": "Description",
+    "difficulty": "2",
+    "priority": "High",
+    "old_mapping_type": "exact",
+    "old_glosses": [
+      "COLD"
+    ],
+    "candidates_found": [
+      "COLD"
+    ],
+    "num_candidate_videos": 31,
+    "num_unique_videos": 31,
+    "num_unique_signers": 28,
+    "sample_records": [
+      {
+        "participant_id": "P40",
+        "video_file": "8701465924878977-COLD.mp4",
+        "gloss": "COLD",
+        "norm_gloss": "COLD",
+        "code": "C_02_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P37",
+        "video_file": "27259190630226193-COLD.mp4",
+        "gloss": "COLD",
+        "norm_gloss": "COLD",
+        "code": "C_02_068",
+        "split": "train"
+      },
+      {
+        "participant_id": "P14",
+        "video_file": "11466999035726255-COLD.mp4",
+        "gloss": "COLD",
+        "norm_gloss": "COLD",
+        "code": "C_02_068",
+        "split": "train"
+      }
+    ]
+  }
+]

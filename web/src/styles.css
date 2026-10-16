@@ -1,0 +1,562 @@
+/* SignVox web design layer
+ * ---------------------------------------------------------------
+ * Tailwind v4 is loaded through the `@tailwindcss/vite` plugin, so this
+ * file only needs the import below; no postcss.config.js is involved.
+ * Source detection is pinned to the app sources so Tailwind never walks
+ * the vendored directories that live beside this package.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@source "../index.html";
+
+/* Shared design tokens (Material 3 + Claymorphic palette from the
+ * SingVox mobile design layer). `@theme` turns each token into real
+ * Tailwind utilities, e.g. `bg-surface`, `text-on-surface-variant`,
+ * `rounded-clay`. */
+@theme {
+  /* Light / clay surfaces (product UI) */
+  --color-surface: #faf8ff;
+  --color-surface-dim: #f2f4ff;
+  --color-on-surface: #031846;
+  --color-on-surface-variant: #52658d;
+  --color-primary: #005cae;
+  --color-primary-bright: #0074da;
+  --color-secondary-container: #40c2fd;
+  --color-hairline: #e3ebfa;
+
+  /* Dark "instrument" surfaces used by the engineering diagnostics */
+  --color-ink-900: #0a0f1d;
+  --color-ink-800: #0b1120;
+  --color-ink-700: #111827;
+  --color-ink-600: #1e293b;
+  --color-ink-500: #334155;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --radius-clay: 1.75rem;
+  --radius-clay-sm: 1.25rem;
+}
+
+@layer base {
+  :root {
+    --surface: #faf8ff;
+    --on-surface: #031846;
+    --primary: #005cae;
+    --secondary-container: #40c2fd;
+  }
+
+  /* One fluid scale for the whole design: every rem-based size (Tailwind
+   * spacing, radii and text utilities) grows and shrinks with the viewport, so
+   * the same composition fits a phone and a desktop without a separate mobile
+   * layout. 14px on a narrow phone, 16px from a small laptop upwards. */
+  html {
+    font-size: clamp(15px, 0.35vw + 13.2px, 16px);
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Remove the default outline only where a visible focus ring is provided. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-bright);
+    outline-offset: 2px;
+  }
+
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+  }
+
+  .pt-safe {
+    padding-top: max(env(safe-area-inset-top, 0px), 8px);
+  }
+
+  .px-safe {
+    padding-left: max(env(safe-area-inset-left, 0px), 16px);
+    padding-right: max(env(safe-area-inset-right, 0px), 16px);
+  }
+}
+
+@layer components {
+  /* Material Symbols icon font.
+   * Deliberately NOT named `.material-symbols-outlined`: the Google Fonts
+   * stylesheet defines that helper class as an unlayered third-party rule,
+   * and unlayered CSS beats every Tailwind layer, so `text-[13px]` utilities
+   * could never override its 24px. This equivalent local class keeps icon
+   * sizes overridable by utilities. */
+  .svx-icon {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------------------------------------------------------------
+   * Product shell (light clay surfaces)
+   * --------------------------------------------------------------- */
+  .svx-appbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    margin-bottom: 0;
+    background: rgba(250, 248, 255, 0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(227, 235, 250, 0.95);
+    box-shadow: rgba(3, 24, 70, 0.06) 0 10px 22px -18px;
+  }
+
+  /* Same bar, used by the internal diagnostics screen. */
+  .svx-appbar-dark {
+    background: rgba(7, 21, 26, 0.86);
+    border-bottom-color: rgba(64, 194, 253, 0.14);
+    box-shadow:
+      rgba(0, 0, 0, 0.38) 0 10px 26px -14px,
+      rgba(255, 255, 255, 0.05) 0 1px 0 inset;
+  }
+
+  .svx-brand-mark {
+    background: linear-gradient(135deg, #38bdf8 0%, #0878ff 100%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+      rgba(22, 139, 255, 0.35) 0 8px 18px -8px,
+      rgba(255, 255, 255, 0.45) 0 1.5px 2px inset;
+    color: #ffffff;
+  }
+
+  .svx-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(227, 235, 250, 0.9);
+    box-shadow:
+      rgba(11, 31, 77, 0.07) 0px 14px 28px -14px,
+      rgba(11, 31, 77, 0.03) 0px 4px 10px,
+      rgba(255, 255, 255, 0.95) 0px 2px 3px inset;
+  }
+
+  .svx-card-muted {
+    background: #f6f8fd;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(227, 235, 250, 0.95);
+  }
+
+  .svx-chip {
+    background: rgba(0, 92, 174, 0.07);
+    border: 1px solid rgba(0, 92, 174, 0.16);
+    color: #005cae;
+  }
+
+  .svx-chip-ok {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #047857;
+  }
+
+  .svx-chip-warn {
+    background: rgba(180, 83, 9, 0.1);
+    border-color: rgba(180, 83, 9, 0.28);
+    color: #b45309;
+  }
+
+  /* Chip tones on the dark diagnostics bar. */
+  .svx-appbar-dark .svx-chip {
+    background: rgba(64, 194, 253, 0.1);
+    border-color: rgba(64, 194, 253, 0.28);
+    color: #8fdcff;
+  }
+
+  .svx-appbar-dark .svx-chip-ok {
+    background: rgba(16, 185, 129, 0.14);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #6ee7b7;
+  }
+
+  .svx-appbar-dark .svx-chip-warn {
+    background: rgba(245, 158, 11, 0.14);
+    border-color: rgba(245, 158, 11, 0.4);
+    color: #fcd34d;
+  }
+
+  /* 44px minimum touch targets for the primary controls. */
+  .svx-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #38bdf8 0%, #0878ff 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+      rgba(22, 139, 255, 0.4) 0px 12px 24px -8px,
+      rgba(255, 255, 255, 0.45) 0px 2px 3px inset;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  }
+
+  .svx-btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .svx-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .svx-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #005cae;
+    background: #ffffff;
+    border: 1px solid rgba(0, 92, 174, 0.18);
+    box-shadow: rgba(11, 31, 77, 0.05) 0px 6px 14px -8px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+
+  .svx-btn-ghost:hover:not(:disabled) {
+    background: #f2f6ff;
+  }
+
+  .svx-btn-ghost:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+
+  .svx-btn-ghost:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .svx-btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #b42318;
+    background: #fff5f4;
+    border: 1px solid rgba(180, 35, 24, 0.25);
+    box-shadow: rgba(180, 35, 24, 0.12) 0px 8px 18px -10px;
+    cursor: pointer;
+  }
+
+  .svx-btn-danger:active {
+    transform: scale(0.97);
+  }
+
+  .svx-btn-danger:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .svx-sign-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 2.75rem;
+    padding: 0.55rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #005cae;
+    background: #ffffff;
+    border: 1px solid rgba(0, 92, 174, 0.18);
+    box-shadow: rgba(11, 31, 77, 0.06) 0 6px 14px -10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+
+  .svx-sign-chip:hover:not(:disabled) {
+    background: #f2f6ff;
+  }
+
+  .svx-sign-chip:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .svx-sign-chip:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .svx-sign-chip-unsupported {
+    color: #8a6d1f;
+    background: #fffaef;
+    border-color: rgba(180, 138, 9, 0.24);
+    border-style: dashed;
+    cursor: default;
+  }
+
+  .svx-input {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: #031846;
+    background: #ffffff;
+    border: 1px solid rgba(0, 92, 174, 0.18);
+    box-shadow: rgba(11, 31, 77, 0.05) 0px 2px 6px inset;
+  }
+
+  .svx-input::placeholder {
+    color: #8b9ab8;
+  }
+
+  .svx-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    /* Equal, shrinkable tabs: the floating island always fits the screen it is
+     * shown on instead of overflowing into a hidden scroll strip. */
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 3rem;
+    padding: 0.35rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #52658d;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .svx-nav-item-active {
+    color: #005cae;
+    background: rgba(0, 92, 174, 0.09);
+  }
+
+  .svx-floating-bar {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(227, 235, 250, 0.95);
+    box-shadow:
+      rgba(3, 24, 70, 0.14) 0 16px 34px -14px,
+      rgba(3, 24, 70, 0.05) 0 4px 12px;
+  }
+
+  /* ---------------------------------------------------------------
+   * Internal diagnostics root: keeps the original dark instrument look
+   * now that the product shell is light. Element-level rules for this
+   * screen live at the bottom of this file, scoped to `.svx-diag`.
+   * --------------------------------------------------------------- */
+  .svx-diag {
+    min-height: 100dvh;
+    background-color: #07151a;
+    color: #e9f5f5;
+  }
+
+  /* Claymorphic surfaces (light theme) - shared with the SingVox mobile
+   * design layer and available to the product pages. */
+  .clay-card-light {
+    background: #ffffff;
+    border-radius: 1.75rem;
+    border: 1px solid rgba(227, 235, 250, 0.7);
+    box-shadow:
+      rgba(11, 31, 77, 0.08) 0px 14px 28px -8px,
+      rgba(11, 31, 77, 0.04) 0px 4px 10px,
+      rgba(255, 255, 255, 0.95) 0px 2px 3px inset,
+      rgba(11, 31, 77, 0.02) 0px -1px 2px inset;
+  }
+
+  .clay-card-low {
+    background: #f6f8fd;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(227, 235, 250, 0.85);
+    box-shadow:
+      rgba(11, 31, 77, 0.06) 0px 8px 18px -4px,
+      rgba(255, 255, 255, 1) 0px 2px 3px inset,
+      rgba(11, 31, 77, 0.03) 0px -1px 2px inset;
+  }
+
+  .clay-btn-gradient {
+    background: linear-gradient(135deg, #38bdf8 0%, #0878ff 100%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+      rgba(22, 139, 255, 0.45) 0px 10px 20px -4px,
+      rgba(64, 194, 253, 0.3) 0px 4px 8px,
+      rgba(255, 255, 255, 0.5) 0px 2.5px 3.5px inset,
+      rgba(0, 77, 150, 0.4) 0px -3px 5px inset;
+    transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .clay-btn-gradient:active {
+    transform: scale(0.96);
+    box-shadow:
+      rgba(22, 139, 255, 0.25) 0px 4px 10px -2px,
+      rgba(0, 0, 0, 0.25) 0px 2px 4px inset;
+  }
+
+  .clay-chip {
+    background: #f1f4fe;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+      rgba(11, 31, 77, 0.06) 0px 3px 8px,
+      rgba(255, 255, 255, 1) 0px 1px 2px inset,
+      rgba(11, 31, 77, 0.04) 0px -1px 2px inset;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+}
+
+/* The app draws no scrollbars at all. Scrolling itself is untouched: wheel,
+ * trackpad, touch, keyboard, focus scrolling and programmatic scrolling all
+ * behave exactly as before, there is simply no bar to look at.
+ *
+ * `overflow-x: clip` (deliberately not `hidden`) also rules out any sideways
+ * page scroll without creating a new scroll container, so the sticky app bar
+ * and the fixed island bar keep working normally. */
+html {
+  overflow-x: clip;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Kept for explicit opt-in on a single element if ever needed again. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer components {
+  /* Icon button (app bar actions), light + dark variants. */
+  .svx-icon-btn {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: #005cae;
+    background: #ffffff;
+    border: 1px solid rgba(0, 92, 174, 0.16);
+    box-shadow: rgba(11, 31, 77, 0.06) 0px 6px 14px -10px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .svx-icon-btn:hover {
+    background: #f2f6ff;
+  }
+
+  .svx-icon-btn:active {
+    transform: scale(0.94);
+  }
+
+  .svx-appbar-dark .svx-icon-btn {
+    color: #cfe9f2;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.09);
+    box-shadow: none;
+  }
+
+  .svx-appbar-dark .svx-icon-btn:hover {
+    background: rgba(64, 194, 253, 0.14);
+    color: #ffffff;
+  }
+
+  .clay-chip:hover {
+    background: #e8eefd;
+  }
+
+  .clay-chip:active {
+    transform: scale(0.96);
+  }
+
+  .clay-floating-bar {
+    background: rgba(28, 46, 92, 0.82);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow:
+      rgba(0, 0, 0, 0.28) 0px 6px 16px,
+      rgba(255, 255, 255, 0.22) 0px 1px 1px inset;
+  }
+}
+
+/* ------------------------------------------------------------------
+ * Internal diagnostics screen (the former dense dark dashboard).
+ * The original element-level rules are preserved verbatim but scoped to
+ * `.svx-diag`, so the product pages are unaffected by them.
+ * ------------------------------------------------------------------ */
+.svx-diag main { max-width: 1040px; margin: auto; padding: 24px; }
+.svx-diag header { margin-bottom: 20px; }
+.svx-diag h1 { font-size: clamp(2rem, 6vw, 3.6rem); }
+.svx-diag h2 { font-size: 1rem; margin-bottom: 12px; }
+.svx-diag h1, .svx-diag h2, .svx-diag p { margin: 0; }
+.svx-diag header p:last-child, .svx-diag footer { color: #9bb2b5; margin-top: 8px; }
+.svx-diag video { display: block; width: 100%; aspect-ratio: 16/9; background: #000; object-fit: cover; }
+.svx-diag button { border: 0; border-radius: 8px; padding: 11px 15px; background: #197d72; color: white; font-weight: 700; cursor: pointer; }
+.svx-diag button:disabled { opacity: .5; cursor: not-allowed; }
+.svx-diag article, .svx-diag .snapshot { border: 1px solid #28555a; border-radius: 12px; padding: 16px; background: #0b2127; }
+.svx-diag article p { font-family: ui-monospace, monospace; font-size: .85rem; padding: 3px 0; }
+.svx-diag pre { overflow: auto; white-space: pre-wrap; color: #b7f3df; font-size: .8rem; }
+.svx-diag footer { font-size: .8rem; }
+
+/* Shared diagnostics class hooks (used by the scoped screen). */
+.eyebrow { color: #74dfc4; font-weight: 700; letter-spacing: .12em; }
+.camera-panel { background: #020607; border: 1px solid #28555a; border-radius: 16px; overflow: hidden; }
+.camera-note { padding: 10px 14px; font-size: .85rem; color: #a9c4c6; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+/* Scoped to the diagnostics screen: an unscoped `.grid` rule would outrank the
+   Tailwind grid utilities used by the product pages. */
+.svx-diag .grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.snapshot { margin-top: 14px; }
+.error { color: #ff9b9b; margin: 12px 0; }
+
+/* Mirror the preview only; MediaPipe still receives unmirrored raw frames. */
+.mirrored-preview { transform: scaleX(-1); }
+
+@media (max-width: 700px) {
+  .svx-diag main { padding: 16px; }
+  .svx-diag .grid { grid-template-columns: 1fr; }
+}

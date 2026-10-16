@@ -479,6 +479,12 @@ web/src/tests/camera_pipeline.test.ts
 web/src/tests/check_onnx.ts
 web/src/tests/consistency_diagnosis.test.ts
 web/src/tests/fingertipTracking.test.ts
+web/src/tests/fixtures/generate_fixtures.mjs
+web/src/tests/fixtures/signvox_synth_rig.glb
+web/src/tests/fixtures/synth_3.onnx
+web/src/tests/fixtures/synth_3.onnx.data
+web/src/tests/fixtures/synth_79.onnx
+web/src/tests/fixtures/synth_79.onnx.data
 web/src/tests/glbPlayback.test.ts
 web/src/tests/goodCandidate.test.ts
 web/src/tests/latencyProfiler.test.ts
@@ -493,6 +499,7 @@ web/src/tests/speech.test.ts
 web/src/tests/speechRecognition.test.ts
 web/src/tests/stabilizer.test.ts
 web/src/tests/stabilizer_confidence_filter.test.ts
+web/src/tests/syntheticFixtures.test.ts
 web/src/tests/targetFollowsIK.test.ts
 web/src/tests/targetResolution.test.ts
 web/src/tests/temporal_sampling_parity.test.ts

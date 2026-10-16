@@ -1,0 +1,15 @@
+{
+  "val_samples_total": 306,
+  "val_majority": {
+    "class_index": 57,
+    "class_asl_id": "ASL_072",
+    "count": 8,
+    "accuracy": 0.026143790849673203
+  },
+  "train_majority_applied_to_val": {
+    "train_majority_class_index": 74,
+    "train_majority_class_asl_id": "ASL_096",
+    "val_support_count": 7,
+    "accuracy": 0.02287581699346405
+  }
+}

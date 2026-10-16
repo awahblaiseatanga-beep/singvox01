@@ -1,0 +1,20 @@
+{
+  "train": {
+    "samples": 61,
+    "exact_match_acc": 0.01639344262295082,
+    "avg_bleu": 0.01639344262295082,
+    "prediction": "We're going to work on a arm drill that will help you have graceful hand movements in front of you."
+  },
+  "val": {
+    "samples": 24,
+    "exact_match_acc": 0.0,
+    "avg_bleu": 0.0,
+    "prediction": "We're going to work on a arm drill that will help you have graceful hand movements in front of you."
+  },
+  "test": {
+    "samples": 15,
+    "exact_match_acc": 0.0,
+    "avg_bleu": 0.0,
+    "prediction": "We're going to work on a arm drill that will help you have graceful hand movements in front of you."
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "c1_original": {
+    "bleu": {
+      "bleu1": 13.9,
+      "bleu2": 2.21,
+      "bleu4": 0.0,
+      "bp": 0.8757,
+      "total_hyp_len": 4008,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 15.53
+    },
+    "repetition_pct": 58.91
+  },
+  "c2_zeroed": {
+    "bleu": {
+      "bleu1": 14.2,
+      "bleu2": 3.71,
+      "bleu4": 0.52,
+      "bp": 0.6882,
+      "total_hyp_len": 3305,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 12.81
+    },
+    "repetition_pct": 0.0
+  },
+  "c3_shuffled": {
+    "bleu": {
+      "bleu1": 13.96,
+      "bleu2": 2.21,
+      "bleu4": 0.0,
+      "bp": 0.8755,
+      "total_hyp_len": 4007,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 15.53
+    },
+    "repetition_pct": 57.75,
+    "identical_to_orig_pct": 91.86
+  },
+  "c4_rolled_1": {
+    "bleu": {
+      "bleu1": 13.5,
+      "bleu2": 2.02,
+      "bleu4": 0.0,
+      "bp": 0.8757,
+      "total_hyp_len": 4008,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 15.53
+    },
+    "repetition_pct": 58.91,
+    "identical_to_orig_pct": 26.36
+  },
+  "c5_seeded_derangements": [
+    {
+      "seed": 101,
+      "accidental_text_matches": 1,
+      "bleu": {
+        "bleu1": 13.52,
+        "bleu2": 2.38,
+        "bleu4": 0.0,
+        "bp": 0.8757,
+        "total_hyp_len": 4008,
+        "total_ref_len": 4540,
+        "avg_hyp_len": 15.53
+      },
+      "repetition_pct": 58.91,
+      "wins": 104,
+      "ties": 103,
+      "losses": 51,
+      "win_rate_pct": 40.31,
+      "tie_rate_pct": 39.92,
+      "loss_rate_pct": 19.77,
+      "mean_bleu1_diff": 1.1644,
+      "std_bleu1_diff": 4.5765,
+      "ci95_bleu1_diff": 0.5584,
+      "mean_edit_dist_orig": 18.05,
+      "mean_edit_dist_perm": 19.22,
+      "identical_hypotheses_pct": 23.26
+    },
+    {
+      "seed": 202,
+      "accidental_text_matches": 1,
+      "bleu": {
+        "bleu1": 13.52,
+        "bleu2": 2.58,
+        "bleu4": 0.0,
+        "bp": 0.8757,
+        "total_hyp_len": 4008,
+        "total_ref_len": 4540,
+        "avg_hyp_len": 15.53
+      },
+      "repetition_pct": 58.91,
+      "wins": 109,
+      "ties": 92,
+      "losses": 57,
+      "win_rate_pct": 42.25,
+      "tie_rate_pct": 35.66,
+      "loss_rate_pct": 22.09,
+      "mean_bleu1_diff": 1.1977,
+      "std_bleu1_diff": 4.4643,
+      "ci95_bleu1_diff": 0.5447,
+      "mean_edit_dist_orig": 18.05,
+      "mean_edit_dist_perm": 19.15,
+      "identical_hypotheses_pct": 21.32
+    },
+    {
+      "seed": 303,
+      "accidental_text_matches": 0,
+      "bleu": {
+        "bleu1": 13.44,
+        "bleu2": 2.31,
+        "bleu4": 0.0,
+        "bp": 0.8757,
+        "total_hyp_len": 4008,
+        "total_ref_len": 4540,
+        "avg_hyp_len": 15.53
+      },
+      "repetition_pct": 58.91,
+      "wins": 122,
+      "ties": 88,
+      "losses": 48,
+      "win_rate_pct": 47.29,
+      "tie_rate_pct": 34.11,
+      "loss_rate_pct": 18.6,
+      "mean_bleu1_diff": 1.4975,
+      "std_bleu1_diff": 4.6165,
+      "ci95_bleu1_diff": 0.5633,
+      "mean_edit_dist_orig": 18.05,
+      "mean_edit_dist_perm": 19.42,
+      "identical_hypotheses_pct": 18.22
+    },
+    {
+      "seed": 404,
+      "accidental_text_matches": 1,
+      "bleu": {
+        "bleu1": 13.63,
+        "bleu2": 1.95,
+        "bleu4": 0.0,
+        "bp": 0.8757,
+        "total_hyp_len": 4008,
+        "total_ref_len": 4540,
+        "avg_hyp_len": 15.53
+      },
+      "repetition_pct": 58.91,
+      "wins": 113,
+      "ties": 98,
+      "losses": 47,
+      "win_rate_pct": 43.8,
+      "tie_rate_pct": 37.98,
+      "loss_rate_pct": 18.22,
+      "mean_bleu1_diff": 1.2586,
+      "std_bleu1_diff": 4.0105,
+      "ci95_bleu1_diff": 0.4894,
+      "mean_edit_dist_orig": 18.05,
+      "mean_edit_dist_perm": 19.23,
+      "identical_hypotheses_pct": 20.54
+    },
+    {
+      "seed": 505,
+      "accidental_text_matches": 0,
+      "bleu": {
+        "bleu1": 13.57,
+        "bleu2": 2.25,
+        "bleu4": 0.0,
+        "bp": 0.8757,
+        "total_hyp_len": 4008,
+        "total_ref_len": 4540,
+        "avg_hyp_len": 15.53
+      },
+      "repetition_pct": 58.91,
+      "wins": 110,
+      "ties": 94,
+      "losses": 54,
+      "win_rate_pct": 42.64,
+      "tie_rate_pct": 36.43,
+      "loss_rate_pct": 20.93,
+      "mean_bleu1_diff": 1.2472,
+      "std_bleu1_diff": 4.1851,
+      "ci95_bleu1_diff": 0.5107,
+      "mean_edit_dist_orig": 18.05,
+      "mean_edit_dist_perm": 19.25,
+      "identical_hypotheses_pct": 19.77
+    }
+  ],
+  "c6_static_frame": {
+    "bleu": {
+      "bleu1": 14.19,
+      "bleu2": 2.37,
+      "bleu4": 0.0,
+      "bp": 0.859,
+      "total_hyp_len": 3941,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 15.28
+    },
+    "repetition_pct": 55.04,
+    "identical_to_orig_pct": 60.47
+  },
+  "c7_length_matched_swap": {
+    "bleu": {
+      "bleu1": 13.99,
+      "bleu2": 2.21,
+      "bleu4": 0.0,
+      "bp": 0.8772,
+      "total_hyp_len": 4014,
+      "total_ref_len": 4540,
+      "avg_hyp_len": 15.56
+    },
+    "repetition_pct": 58.91,
+    "identical_to_orig_pct": 48.45
+  },
+  "qualitative_samples": [
+    {
+      "idx": 0,
+      "sample_name": "f5EGPzGSCJs_0-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Today we're going to talk about how to diagnose an ailment of your fish.",
+      "hyp_orig": "and you you to to a to a little",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to a to a little",
+      "hyp_roll1": "and you you to to a to a little and the to the to the",
+      "hyp_static": "and you you to to a to a little",
+      "hyp_len_swap": "and you you to to a to a little",
+      "len_swap_partner_name": "bUFsn9GQsCg_0-8-rgb_front",
+      "len_swap_partner_len": 78,
+      "orig_len": 78
+    },
+    {
+      "idx": 1,
+      "sample_name": "f5EGPzGSCJs_1-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Part of keeping a fish is making sure that we visually inspect them everyday.",
+      "hyp_orig": "and you you to to a to a little and the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to a to a little and the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to a to a little and the to the",
+      "len_swap_partner_name": "a5yNwUSiYpA_2-5-rgb_front",
+      "len_swap_partner_len": 88,
+      "orig_len": 88
+    },
+    {
+      "idx": 2,
+      "sample_name": "f5EGPzGSCJs_10-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Simply follow directions and it tells you exactly how much to use, when you should do a water change.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the",
+      "hyp_static": "and you to to to the to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to to the to the to the to the to the to the to the",
+      "len_swap_partner_name": "dQJyDM9pKR8_0-8-rgb_front",
+      "len_swap_partner_len": 134,
+      "orig_len": 134
+    },
+    {
+      "idx": 3,
+      "sample_name": "f5EGPzGSCJs_11-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Another thing that you can put in your tank is aquarium salt.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to a to a little",
+      "len_swap_partner_name": "ETOZLBScxWY_5-5-rgb_front",
+      "len_swap_partner_len": 101,
+      "orig_len": 101
+    },
+    {
+      "idx": 4,
+      "sample_name": "f5EGPzGSCJs_12-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Aquarium salt raises the electrolytes in the tank and it also helps reduce stress.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to a to a little and the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to a to a little and the to the to the",
+      "len_swap_partner_name": "ETOZLBScxWY_0-5-rgb_front",
+      "len_swap_partner_len": 116,
+      "orig_len": 116
+    },
+    {
+      "idx": 5,
+      "sample_name": "f5EGPzGSCJs_13-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "My name is Michael and today we're talking about how to diagnose an ailment.",
+      "hyp_orig": "and you you to to a to a little and the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to a to a little and the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to a to a little and the to the to the",
+      "len_swap_partner_name": "cwLJfXFf9ks_0-8-rgb_front",
+      "len_swap_partner_len": 94,
+      "orig_len": 94
+    },
+    {
+      "idx": 6,
+      "sample_name": "f5EGPzGSCJs_2-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "When we feed them we want to make sure that they have a good appetite and that their fins are not torn, they're not in rough shape, they're not sitting at the bottom.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to a to a little",
+      "hyp_static": "and you you to to a to a little bit a little",
+      "hyp_len_swap": "and you you to to to the to the to the to the to the to the to the",
+      "len_swap_partner_name": "dKumOzqVk3M_1-8-rgb_front",
+      "len_swap_partner_len": 150,
+      "orig_len": 150
+    },
+    {
+      "idx": 7,
+      "sample_name": "f5EGPzGSCJs_3-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Once you've been keeping your fish for a while, you're going to know if they're acting different.",
+      "hyp_orig": "and you you to to a to a little",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to a to a little",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_static": "and you you to to the to the to the to the to the to the the",
+      "hyp_len_swap": "and you you to to a to a little and the to the",
+      "len_swap_partner_name": "dKumOzqVk3M_16-8-rgb_front",
+      "len_swap_partner_len": 77,
+      "orig_len": 77
+    },
+    {
+      "idx": 8,
+      "sample_name": "f5EGPzGSCJs_4-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "A common problem with fish is Ick which is tiny white spots over the entire fish itself.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to to the to the to the to the to the to the to the",
+      "len_swap_partner_name": "dKumOzqVk3M_11-8-rgb_front",
+      "len_swap_partner_len": 150,
+      "orig_len": 150
+    },
+    {
+      "idx": 9,
+      "sample_name": "f5EGPzGSCJs_5-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "A lot of ailments are caused by stress which can be water quality, temperature and fish stressing out other fish themselves.",
+      "hyp_orig": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_zero": "and you you to and if you have to and the to the",
+      "hyp_shuf": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_roll1": "and you you to to to the to the to the to the to the to the",
+      "hyp_static": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_len_swap": "and you you to to to the to the to the to the to the to the to the",
+      "len_swap_partner_name": "dKumOzqVk3M_14-8-rgb_front",
+      "len_swap_partner_len": 150,
+      "orig_len": 150
+    }
+  ]
+}

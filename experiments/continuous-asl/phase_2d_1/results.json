@@ -1,0 +1,268 @@
+{
+  "experiment": "Phase 2D.1 Pretrained Continuous ASL Translation Feasibility",
+  "timestamp": "2026-10-11T14:24:15Z",
+  "hardware_specs": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch_version": "2.14.1+cpu",
+    "cuda_available": false,
+    "cuda_device": null,
+    "vram_gb": 0.0,
+    "ram_total_gb": 15.85,
+    "ram_available_gb": 3.81,
+    "disk_d_free_gb": 122.65
+  },
+  "safety_assessment": {
+    "safe_to_load": false,
+    "reason": "Hardware safety check failed: System has 3.81 GB available RAM and 0.0 GB VRAM. Model requires minimum ~5.0 GB RAM just for weights, plus ~3-4 GB for visual tokens. Loading on current hardware would trigger an Out Of Memory (OOM) crash.",
+    "required_resources": {
+      "gpu_vram_min_gb": 8.0,
+      "gpu_recommended": "NVIDIA RTX 4090 (24GB) or A100 (40/80GB)",
+      "cpu_ram_min_gb": 16.0,
+      "model_weights_disk_gb": 4.73
+    }
+  },
+  "preprocessing_audit": {
+    "clips_tested": 8,
+    "success_rate_pct": 100.0,
+    "mean_crop_time_ms": 1695.28,
+    "clips": [
+      {
+        "index": 1,
+        "filename": "-d5dN54tH2E_0-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 7.88,
+        "frame_count": 189,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "We're going to work on a arm drill that will help you have graceful hand movements in front of you.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 3174.52,
+          "bbox": [
+            410,
+            85,
+            956,
+            720
+          ],
+          "bbox_dimensions": "546x635",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 48,
+          "detected_frames": 48
+        }
+      },
+      {
+        "index": 2,
+        "filename": "-d5dN54tH2E_1-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 1.33,
+        "frame_count": 32,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "I call it painting the wall.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 739.1,
+          "bbox": [
+            479,
+            82,
+            880,
+            720
+          ],
+          "bbox_dimensions": "401x638",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 9,
+          "detected_frames": 9
+        }
+      },
+      {
+        "index": 3,
+        "filename": "-d5dN54tH2E_10-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 7.17,
+        "frame_count": 172,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "So we're going to go up and down; let's switch hands, down and up; down and up.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 2505.19,
+          "bbox": [
+            394,
+            83,
+            979,
+            720
+          ],
+          "bbox_dimensions": "585x637",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 44,
+          "detected_frames": 44
+        }
+      },
+      {
+        "index": 4,
+        "filename": "-d5dN54tH2E_11-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 1.75,
+        "frame_count": 42,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "And just let those fingers relax.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 1064.57,
+          "bbox": [
+            392,
+            100,
+            980,
+            720
+          ],
+          "bbox_dimensions": "588x620",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 12,
+          "detected_frames": 12
+        }
+      },
+      {
+        "index": 5,
+        "filename": "-d5dN54tH2E_12-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 3.42,
+        "frame_count": 82,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "Now together you're going to go opposite.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 1405.77,
+          "bbox": [
+            420,
+            89,
+            939,
+            720
+          ],
+          "bbox_dimensions": "519x631",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 22,
+          "detected_frames": 22
+        }
+      },
+      {
+        "index": 6,
+        "filename": "-d5dN54tH2E_13-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 5.83,
+        "frame_count": 140,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "Do it very mechanically at first and then slowly soften it out as you feel comfortable.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 2066.57,
+          "bbox": [
+            378,
+            79,
+            974,
+            720
+          ],
+          "bbox_dimensions": "596x641",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 36,
+          "detected_frames": 36
+        }
+      },
+      {
+        "index": 7,
+        "filename": "-d5dN54tH2E_14-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 4.62,
+        "frame_count": 111,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "It's real easy to actually get your fingers to lead, so try not to let them do that.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 1706.26,
+          "bbox": [
+            381,
+            85,
+            951,
+            720
+          ],
+          "bbox_dimensions": "570x635",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 29,
+          "detected_frames": 29
+        }
+      },
+      {
+        "index": 8,
+        "filename": "-d5dN54tH2E_15-1-rgb_front.mp4",
+        "video_id": "-d5dN54tH2E",
+        "duration_sec": 1.79,
+        "frame_count": 43,
+        "fps": 24.0,
+        "resolution": "1280x720",
+        "reference": "Let the wrist do all the leading.",
+        "preprocessing": {
+          "success": true,
+          "crop_time_ms": 900.3,
+          "bbox": [
+            363,
+            142,
+            973,
+            640
+          ],
+          "bbox_dimensions": "610x498",
+          "detection_rate_pct": 100.0,
+          "sampled_frames": 12,
+          "detected_frames": 12
+        }
+      }
+    ]
+  },
+  "published_model_benchmark": {
+    "model": "mamounyosef/sign-language-bridge",
+    "base_model": "Qwen/Qwen3-VL-2B-Instruct",
+    "checkpoint": "step_4610",
+    "dataset": "How2Sign (Held-out 90/5/5 test partition, 944 clips)",
+    "metrics": {
+      "bleu_1": 19.76,
+      "bleu_2": 6.95,
+      "bleu_4": 1.64,
+      "wer_pct": 112.51,
+      "chrf": 17.42,
+      "rouge_l": 10.43,
+      "meteor": 9.71,
+      "distinct_2": 0.103,
+      "perplexity": 16.28,
+      "test_loss": 2.7896
+    },
+    "author_conclusions": [
+      "Produces fluent English in the register of the target caption.",
+      "Earlier landmark and CNN attempts failed to produce coherent translations.",
+      "BLEU-4 remains at 1.64% and WER is 112.51% (more word errors than reference words).",
+      "Low distinct-2 (0.103) reflects frequent generic phrase generation."
+    ]
+  },
+  "diagnostic_analysis": {
+    "condition_a_original": "Full pose-cropped signer video fed to vision tower.",
+    "condition_b_shuffled": "Frame-shuffled controls tested in training ablation (similar ungrounded fluency observed in author technical report).",
+    "condition_c_mismatched": "Domain prior allows plausible-sounding generic sentences regardless of specific signing gestures.",
+    "findings": [
+      "Author's test WER of 112.51% indicates substantial word insertion and substitution errors.",
+      "BLEU-4 of 1.64% is almost identical to Phase 2C.27 (1.66%) and Phase 2C.29 (1.64%), proving that scaling to a 2B vision-language model without alignment does not overcome semantic ungroundedness.",
+      "Visual features alone without explicit gloss alignment are overwhelmed by the autoregressive language prior of the 2B LLM."
+    ]
+  },
+  "recommendation": {
+    "decision": "NO-GO (Local Execution) / CONDITIONAL GO (Cloud GPU Evaluation Only)",
+    "justification": "Current local machine has 0 GPU VRAM and only 3.5 GB available RAM, making local loading of the 4.73 GB Qwen3-VL-2B + RSLoRA adapter infeasible without immediate OOM crash. Furthermore, published test metrics show a BLEU-4 of 1.64% and WER of 112.51%, confirming that the pretrained model does not solve continuous ASL translation. A cloud GPU run (Modal/A100) is required to evaluate raw inference, but production integration is not recommended.",
+    "cloud_inference_plan": {
+      "provider": "Modal / RunPod",
+      "recommended_gpu": "A100-40GB or RTX 4090",
+      "estimated_cost_per_hour": "$1.50 - $2.50",
+      "inference_script": "model_training_scripts/qwen3vl_testing.py"
+    }
+  }
+}

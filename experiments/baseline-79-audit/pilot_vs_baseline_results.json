@@ -1,0 +1,653 @@
+{
+  "models": {
+    "pilot": {
+      "input": [
+        "batch_size",
+        "sequence_length",
+        "366"
+      ],
+      "output": [
+        "1",
+        "3"
+      ]
+    },
+    "baseline": {
+      "input": [
+        "1",
+        "60",
+        "366"
+      ],
+      "output": [
+        "1",
+        "79"
+      ]
+    }
+  },
+  "signs": {
+    "HELLO": {
+      "total_samples": 18,
+      "window_true_present": 0,
+      "val": {
+        "n": 4,
+        "pilot_full": 3,
+        "baseline_full": 4,
+        "baseline_window": 0
+      },
+      "train": {
+        "n": 14,
+        "pilot_full": 14,
+        "baseline_full": 13,
+        "baseline_window": 0
+      },
+      "details": [
+        {
+          "file": "0022932153577568393-HELLO.mp4",
+          "split": "train",
+          "frames": 31,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8486809407942575-HELLO.mp4",
+          "split": "train",
+          "frames": 22,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "7613696736100914-HELLO.mp4",
+          "split": "train",
+          "frames": 26,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "25802117645943423-HELLO.mp4",
+          "split": "train",
+          "frames": 34,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "0755679379568106-HELLO.mp4",
+          "split": "train",
+          "frames": 19,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9008261925178431-HELLO.mp4",
+          "split": "train",
+          "frames": 22,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "7597723277213178-HELLO.mp4",
+          "split": "train",
+          "frames": 57,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "11225598264242453-HELLO.mp4",
+          "split": "train",
+          "frames": 23,
+          "pilot_full": "HELLO",
+          "baseline_full": "WHY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "1340650432799635-HELLO.mp4",
+          "split": "train",
+          "frames": 13,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8841964348021558-HELLO.mp4",
+          "split": "train",
+          "frames": 46,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "6448349493816601-HELLO.mp4",
+          "split": "train",
+          "frames": 15,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "081380748015633-HELLO.mp4",
+          "split": "train",
+          "frames": 22,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "5254351100197965-HELLO.mp4",
+          "split": "train",
+          "frames": 15,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "180739946524912-seedHELLO.mp4",
+          "split": "train",
+          "frames": 40,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "05614933522741539-HELLO.mp4",
+          "split": "val",
+          "frames": 18,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "20675411351630046-HELLO.mp4",
+          "split": "val",
+          "frames": 18,
+          "pilot_full": "NO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "16493550450776628-HELLO.mp4",
+          "split": "val",
+          "frames": 41,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "020030442376253177-HELLO.mp4",
+          "split": "val",
+          "frames": 17,
+          "pilot_full": "HELLO",
+          "baseline_full": "HELLO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        }
+      ]
+    },
+    "YES": {
+      "total_samples": 20,
+      "window_true_present": 2,
+      "val": {
+        "n": 5,
+        "pilot_full": 5,
+        "baseline_full": 0,
+        "baseline_window": 0
+      },
+      "train": {
+        "n": 15,
+        "pilot_full": 15,
+        "baseline_full": 6,
+        "baseline_window": 2,
+        "pilot_window": 2
+      },
+      "details": [
+        {
+          "file": "1555998439795525-YES.mp4",
+          "split": "train",
+          "frames": 27,
+          "pilot_full": "YES",
+          "baseline_full": "NEED",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "44146024789241256-YES.mp4",
+          "split": "train",
+          "frames": 19,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "16728596536749274-YES.mp4",
+          "split": "train",
+          "frames": 25,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8699610978899361-YES.mp4",
+          "split": "train",
+          "frames": 19,
+          "pilot_full": "YES",
+          "baseline_full": "BATHROOM",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "38970444942928073-YES.mp4",
+          "split": "train",
+          "frames": 19,
+          "pilot_full": "YES",
+          "baseline_full": "BATHROOM",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9953610281521326-YES.mp4",
+          "split": "train",
+          "frames": 222,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": "YES",
+          "baseline_window_top": "YES",
+          "baseline_window_true_present": true
+        },
+        {
+          "file": "7199140986089654-YES.mp4",
+          "split": "train",
+          "frames": 27,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9009854854743657-YES.mp4",
+          "split": "train",
+          "frames": 22,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "709429051156695-YES.mp4",
+          "split": "train",
+          "frames": 31,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "050364485120873326-YES.mp4",
+          "split": "train",
+          "frames": 89,
+          "pilot_full": "YES",
+          "baseline_full": "YES",
+          "pilot_window_top": "YES",
+          "baseline_window_top": "YES",
+          "baseline_window_true_present": true
+        },
+        {
+          "file": "15689453699180178-YES.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9092689562509508-YES.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "CHILD",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "15498675309554577-YES.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "32941176670637984-YES.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "6358167662084229-seedYES.mp4",
+          "split": "train",
+          "frames": 30,
+          "pilot_full": "YES",
+          "baseline_full": "COME",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9161842981344352-YES.mp4",
+          "split": "val",
+          "frames": 19,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9715589334909431-YES.mp4",
+          "split": "val",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "NEED",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "42327270691916885-YES.mp4",
+          "split": "val",
+          "frames": 40,
+          "pilot_full": "YES",
+          "baseline_full": "COME",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "26056519285644875-YES.mp4",
+          "split": "val",
+          "frames": 36,
+          "pilot_full": "YES",
+          "baseline_full": "COME",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8977694836593926-YES.mp4",
+          "split": "val",
+          "frames": 22,
+          "pilot_full": "YES",
+          "baseline_full": "YESTERDAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        }
+      ]
+    },
+    "NO": {
+      "total_samples": 19,
+      "window_true_present": 0,
+      "val": {
+        "n": 3,
+        "pilot_full": 1,
+        "baseline_full": 2,
+        "baseline_window": 0
+      },
+      "train": {
+        "n": 16,
+        "pilot_full": 5,
+        "baseline_full": 14,
+        "baseline_window": 0
+      },
+      "details": [
+        {
+          "file": "5082858473744953-NO.mp4",
+          "split": "train",
+          "frames": 32,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "5372668319999747-NO.mp4",
+          "split": "train",
+          "frames": 19,
+          "pilot_full": "HELLO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "09714329486323847-NO.mp4",
+          "split": "train",
+          "frames": 14,
+          "pilot_full": "HELLO",
+          "baseline_full": "DAY",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "3919396171653571-NO.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "HELLO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "7973429116215278-NO.mp4",
+          "split": "train",
+          "frames": 30,
+          "pilot_full": "HELLO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "2140134632834978-NO.mp4",
+          "split": "train",
+          "frames": 25,
+          "pilot_full": "HELLO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "6137110171725737-NO.mp4",
+          "split": "train",
+          "frames": 24,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "370678413428154-NO.mp4",
+          "split": "train",
+          "frames": 18,
+          "pilot_full": "HELLO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "5309657970849855-NO.mp4",
+          "split": "train",
+          "frames": 32,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9644130188424822-NO.mp4",
+          "split": "train",
+          "frames": 20,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9616432008129339-NO.mp4",
+          "split": "train",
+          "frames": 25,
+          "pilot_full": "YES",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "01379619951634381-NO.mp4",
+          "split": "train",
+          "frames": 29,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "7932042062420475-NO.mp4",
+          "split": "train",
+          "frames": 50,
+          "pilot_full": "YES",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "6901051427765104-NO.mp4",
+          "split": "train",
+          "frames": 16,
+          "pilot_full": "YES",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "9979731168048327-NO.mp4",
+          "split": "train",
+          "frames": 20,
+          "pilot_full": "YES",
+          "baseline_full": "TAKE",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "2688720555507844-seedNO.mp4",
+          "split": "train",
+          "frames": 35,
+          "pilot_full": "YES",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8323715285073319-NO.mp4",
+          "split": "val",
+          "frames": 20,
+          "pilot_full": "NO",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "4656606080155459-NO.mp4",
+          "split": "val",
+          "frames": 42,
+          "pilot_full": "YES",
+          "baseline_full": "NO",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        },
+        {
+          "file": "8079226457278508-NO.mp4",
+          "split": "val",
+          "frames": 23,
+          "pilot_full": "YES",
+          "baseline_full": "NEED",
+          "pilot_window_top": null,
+          "baseline_window_top": null,
+          "baseline_window_true_present": false
+        }
+      ]
+    }
+  }
+}

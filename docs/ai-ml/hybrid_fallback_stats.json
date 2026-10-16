@@ -1,0 +1,21 @@
+{
+  "total_frames": 100,
+  "holistic_left_accepted": 21,
+  "holistic_right_accepted": 27,
+  "left_fallback_invoked": 79,
+  "right_fallback_invoked": 73,
+  "left_recovered": 0,
+  "right_recovered": 0,
+  "left_still_missing": 79,
+  "right_still_missing": 73,
+  "both_hands_missing": 66,
+  "left_anchor_available": 0,
+  "right_anchor_available": 0,
+  "left_hands_detected": 0,
+  "right_hands_detected": 0,
+  "nan_count": 0,
+  "inf_count": 0,
+  "holistic_time_ms": 5045.689582824707,
+  "hybrid_time_ms": 5045.689582824707,
+  "videos_processed": 20
+}

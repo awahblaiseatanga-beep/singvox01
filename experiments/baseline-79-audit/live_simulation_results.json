@@ -1,0 +1,271 @@
+{
+  "config": {
+    "hold_frames": 45,
+    "fps": 10,
+    "seq_len": 60,
+    "baseline_stabilizer": {
+      "minimumCommitEvidence": 0.25,
+      "minimumStableEvidence": 0.15,
+      "dropThreshold": 0.1,
+      "minimumConfidence": 0.05
+    }
+  },
+  "per_class": {
+    "HELLO": {
+      "clips": 4,
+      "committed": 4,
+      "committed_correct": 4,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9982287287712097,
+      "pilot_committed_correct": 4,
+      "pilot_clips": 4
+    },
+    "NO": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "SLEEP": 1,
+        "YOU": 1
+      },
+      "max_conf": 0.997114896774292,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 3
+    },
+    "YES": {
+      "clips": 5,
+      "committed": 5,
+      "committed_correct": 4,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "NEED": 1
+      },
+      "max_conf": 0.9908828139305115,
+      "pilot_committed_correct": 5,
+      "pilot_clips": 5
+    }
+  },
+  "totals": {
+    "classes": 3,
+    "clips": 12,
+    "committed_correct": 10,
+    "committed_wrong": 2,
+    "no_commit": 0
+  },
+  "details": [
+    {
+      "file": "05614933522741539-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "KNOW",
+        "HELLO"
+      ],
+      "top_confidence": 0.9773,
+      "pilot_commits": [
+        "HELLO",
+        "YES",
+        "HELLO"
+      ]
+    },
+    {
+      "file": "8323715285073319-NO.mp4",
+      "true": "NO",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "YOU"
+      ],
+      "top_confidence": 0.9578,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "9161842981344352-YES.mp4",
+      "true": "YES",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YES"
+      ],
+      "top_confidence": 0.9884,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "20675411351630046-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO"
+      ],
+      "top_confidence": 0.9892,
+      "pilot_commits": [
+        "HELLO",
+        "YES",
+        "HELLO"
+      ]
+    },
+    {
+      "file": "9715589334909431-YES.mp4",
+      "true": "YES",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NEED"
+      ],
+      "top_confidence": 0.9225,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "42327270691916885-YES.mp4",
+      "true": "YES",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "YES"
+      ],
+      "top_confidence": 0.9884,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "16493550450776628-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 41,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO"
+      ],
+      "top_confidence": 0.9982,
+      "pilot_commits": [
+        "HELLO",
+        "YES",
+        "HELLO"
+      ]
+    },
+    {
+      "file": "4656606080155459-NO.mp4",
+      "true": "NO",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "NO"
+      ],
+      "top_confidence": 0.9971,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "26056519285644875-YES.mp4",
+      "true": "YES",
+      "frames": 36,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "YES"
+      ],
+      "top_confidence": 0.9909,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "8079226457278508-NO.mp4",
+      "true": "NO",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NO"
+      ],
+      "top_confidence": 0.9948,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    },
+    {
+      "file": "020030442376253177-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO"
+      ],
+      "top_confidence": 0.9959,
+      "pilot_commits": [
+        "HELLO",
+        "YES",
+        "HELLO"
+      ]
+    },
+    {
+      "file": "8977694836593926-YES.mp4",
+      "true": "YES",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YES",
+        "BATHROOM",
+        "YES"
+      ],
+      "top_confidence": 0.986,
+      "pilot_commits": [
+        "HELLO",
+        "YES"
+      ]
+    }
+  ]
+}

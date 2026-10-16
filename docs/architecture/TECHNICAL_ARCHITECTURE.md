@@ -1,5 +1,12 @@
 # SignVox Technical Architecture
 
+> **Current product direction:** the active competition implementation is the
+> browser application in `web/`. The React Native/Android material remains a
+> preserved prototype/reference path and must not drive active feature work.
+> See [WEB_LANDMARK_PIPELINE.md](WEB_LANDMARK_PIPELINE.md) for the Phase 1
+> browser landmark contract. Historical mobile recommendations below are kept
+> for provenance.
+
 ## 1. Product Architecture
 SignVox operates as a mobile-first intelligent communication bridge. The core loop consists of a continuous visual and audio input stream, localized spatial feature extraction, machine-learning-based temporal translation, and synthesized output (verbal or visual 3D avatar).
 

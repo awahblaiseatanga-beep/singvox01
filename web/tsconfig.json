@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    // `avatar/controller/*.ts` lives outside web/ and is pulled into this program by the Vercel
+    // "Include source files outside of the Root Directory in the Build Step" setting. Those
+    // files import `three`, which they resolved through the gitignored avatar/node_modules -
+    // absent in a clean clone, where `tsc -b` then failed with TS2307 before `vite build` could
+    // run. Map the bare specifier to the declaration package that IS installed here. This is a
+    // type-resolution map only: bundling is unaffected, and vite.config.ts already aliases
+    // `three` for the build.
+    "baseUrl": ".",
+    "paths": {
+      "three": ["./node_modules/@types/three"],
+      "three/*": ["./node_modules/@types/three/*", "./node_modules/three/*"]
+    },
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"]
+  },
+  "include": ["src", "vite.config.ts"],
+  // Node-only recognition audit scripts. They import `onnxruntime-node`, a
+  // native package that is deliberately not a dependency of this browser app
+  // (the app uses onnxruntime-web), and they are run separately with a Node
+  // runner as documented in docs/RECOGNITION_79_CLASS_RECOVERY_AUDIT.md.
+  // Type-checking them from the web build made `npm run build` depend on a
+  // library that is not installed, so they are excluded here rather than
+  // pretending the import resolves.
+  "exclude": [
+    "src/tests/analyze_baseline_drop.ts",
+    "src/tests/audit_baseline_accuracy.ts",
+    "src/tests/check_onnx.ts"
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "padding_mask_verification": {
+    "total_padded_elements_checked": 107302,
+    "max_padding_leakage_weight": 0.0,
+    "leakage_count_above_1e6": 0,
+    "mask_integrity_status": "PASSED - ZERO LEAKAGE"
+  },
+  "attention_entropy_and_concentration": {
+    "mean_normalized_entropy": 0.9999,
+    "std_normalized_entropy": 0.0,
+    "mean_temporal_coverage_pct": 99.96,
+    "std_temporal_coverage_pct": 0.01,
+    "interpretation": "DIFFUSE ATTENTION"
+  },
+  "temporal_progression_monotonicity": {
+    "mean_step_frame_correlation": 0.313,
+    "std_step_frame_correlation": 0.554,
+    "positive_monotonicity_pct": 48.84,
+    "near_zero_or_negative_pct": 51.16,
+    "interpretation": "MONOTONIC ALIGNMENT"
+  },
+  "representative_samples": [
+    {
+      "idx": 0,
+      "name": "f5EGPzGSCJs_0-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Today we're going to talk about how to diagnose an ailment of your fish.",
+      "hyp": "and you you to to a to a a little",
+      "valid_frames": 78,
+      "decoding_steps": 11,
+      "mean_norm_entropy": 0.9999,
+      "mean_coverage": 0.9996,
+      "center_of_mass_trajectory": [
+        37.98,
+        37.96,
+        37.87,
+        37.91,
+        37.92,
+        37.95,
+        37.97,
+        37.91,
+        37.98,
+        37.92,
+        37.91
+      ],
+      "attn_matrix_shape": [
+        11,
+        150
+      ],
+      "temporal_profile_5_buckets": [
+        0.0134,
+        0.0129,
+        0.0128,
+        0.0127,
+        0.0124
+      ]
+    },
+    {
+      "idx": 1,
+      "name": "f5EGPzGSCJs_1-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Part of keeping a fish is making sure that we visually inspect them everyday.",
+      "hyp": "and you you to to to a a little",
+      "valid_frames": 88,
+      "decoding_steps": 10,
+      "mean_norm_entropy": 0.9999,
+      "mean_coverage": 0.9996,
+      "center_of_mass_trajectory": [
+        42.92,
+        42.89,
+        42.79,
+        42.83,
+        42.84,
+        42.87,
+        42.89,
+        42.91,
+        42.83,
+        42.82
+      ],
+      "attn_matrix_shape": [
+        10,
+        150
+      ],
+      "temporal_profile_5_buckets": [
+        0.0119,
+        0.0114,
+        0.0113,
+        0.0112,
+        0.011
+      ]
+    },
+    {
+      "idx": 2,
+      "name": "f5EGPzGSCJs_10-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Simply follow directions and it tells you exactly how much to use, when you should do a water change.",
+      "hyp": "and you you to to to the to the to the to the to the to the to the",
+      "valid_frames": 134,
+      "decoding_steps": 20,
+      "mean_norm_entropy": 0.9999,
+      "mean_coverage": 0.9997,
+      "center_of_mass_trajectory": [
+        65.68,
+        65.68,
+        65.56,
+        65.61,
+        65.63,
+        65.7,
+        65.74,
+        65.76,
+        65.7,
+        65.78,
+        65.72,
+        65.79,
+        65.73,
+        65.81,
+        65.74,
+        65.82,
+        65.75,
+        65.82,
+        65.76,
+        65.83
+      ],
+      "attn_matrix_shape": [
+        20,
+        150
+      ],
+      "temporal_profile_5_buckets": [
+        0.0078,
+        0.0075,
+        0.0074,
+        0.0074,
+        0.0073
+      ]
+    },
+    {
+      "idx": 3,
+      "name": "f5EGPzGSCJs_11-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Another thing that you can put in your tank is aquarium salt.",
+      "hyp": "and you you to to to a to a little",
+      "valid_frames": 101,
+      "decoding_steps": 11,
+      "mean_norm_entropy": 0.9999,
+      "mean_coverage": 0.9996,
+      "center_of_mass_trajectory": [
+        49.39,
+        49.34,
+        49.23,
+        49.26,
+        49.27,
+        49.3,
+        49.33,
+        49.34,
+        49.26,
+        49.34,
+        49.26
+      ],
+      "attn_matrix_shape": [
+        11,
+        150
+      ],
+      "temporal_profile_5_buckets": [
+        0.0103,
+        0.0099,
+        0.0098,
+        0.0098,
+        0.0096
+      ]
+    },
+    {
+      "idx": 4,
+      "name": "f5EGPzGSCJs_12-8-rgb_front",
+      "video_id": "f5EGPzGSCJs",
+      "ref": "Aquarium salt raises the electrolytes in the tank and it also helps reduce stress.",
+      "hyp": "and you you to to to a to a little",
+      "valid_frames": 116,
+      "decoding_steps": 11,
+      "mean_norm_entropy": 0.9999,
+      "mean_coverage": 0.9996,
+      "center_of_mass_trajectory": [
+        56.75,
+        56.73,
+        56.61,
+        56.66,
+        56.67,
+        56.72,
+        56.75,
+        56.77,
+        56.67,
+        56.77,
+        56.68
+      ],
+      "attn_matrix_shape": [
+        11,
+        150
+      ],
+      "temporal_profile_5_buckets": [
+        0.009,
+        0.0087,
+        0.0086,
+        0.0085,
+        0.0084
+      ]
+    }
+  ]
+}

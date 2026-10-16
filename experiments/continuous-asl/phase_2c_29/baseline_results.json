@@ -1,0 +1,91 @@
+{
+  "checkpoint": "d:\\Singvox\\Singvox\\experiments\\continuous-asl\\phase_2c_27\\best_attention_model.pt",
+  "total_parameters": 2080872,
+  "validation_samples": 258,
+  "conditions": {
+    "normal": {
+      "bleu_1": 13.49,
+      "bleu_2": 3.66,
+      "bleu_4": 1.66,
+      "bp": 0.8742,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 15.53,
+      "repetition_rate_pct": 92.25,
+      "sample_count": 258
+    },
+    "zeroed": {
+      "bleu_1": 14.37,
+      "bleu_2": 4.68,
+      "bleu_4": 1.9,
+      "bp": 0.6867,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 12.81,
+      "repetition_rate_pct": 0.0,
+      "sample_count": 258
+    },
+    "shuffled": {
+      "bleu_1": 13.6,
+      "bleu_2": 3.67,
+      "bleu_4": 1.66,
+      "bp": 0.8737,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 15.53,
+      "repetition_rate_pct": 91.86,
+      "sample_count": 258
+    },
+    "mismatched": {
+      "bleu_1": 14.75,
+      "bleu_2": 4.17,
+      "bleu_4": 1.82,
+      "bp": 0.8742,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 15.53,
+      "repetition_rate_pct": 92.25,
+      "sample_count": 258
+    }
+  },
+  "temporal_dependence": {
+    "shuffled_identical_output_pct": 90.31
+  },
+  "sample_comparisons": [
+    {
+      "idx": 0,
+      "ref": "Today we're going to talk about how to diagnose an ailment of your fish.",
+      "hyp_normal": "and you you to to a to a little",
+      "hyp_shuffled": "and you you to to a to a little",
+      "hyp_zeroed": "and you you to and if you have to and the to the"
+    },
+    {
+      "idx": 1,
+      "ref": "Part of keeping a fish is making sure that we visually inspect them everyday.",
+      "hyp_normal": "and you you to to a to a little and the to the to the",
+      "hyp_shuffled": "and you you to to a to a little and the to the to the",
+      "hyp_zeroed": "and you you to and if you have to and the to the"
+    },
+    {
+      "idx": 2,
+      "ref": "Simply follow directions and it tells you exactly how much to use, when you should do a water change.",
+      "hyp_normal": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_shuffled": "and you you to to to the to the to the to the to the to the to the",
+      "hyp_zeroed": "and you you to and if you have to and the to the"
+    },
+    {
+      "idx": 3,
+      "ref": "Another thing that you can put in your tank is aquarium salt.",
+      "hyp_normal": "and you you to to to the to the to the to the to the to the",
+      "hyp_shuffled": "and you you to to to the to the to the to the to the to the",
+      "hyp_zeroed": "and you you to and if you have to and the to the"
+    },
+    {
+      "idx": 4,
+      "ref": "Aquarium salt raises the electrolytes in the tank and it also helps reduce stress.",
+      "hyp_normal": "and you you to to to the to the to the to the to the to the",
+      "hyp_shuffled": "and you you to to to the to the to the to the to the to the",
+      "hyp_zeroed": "and you you to and if you have to and the to the"
+    }
+  ]
+}

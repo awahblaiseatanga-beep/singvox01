@@ -1,9 +1,9 @@
 # SignVox — Safe migration to the new canonical GitHub repository
 
-**Date:** 2026-10-16
-**Local checkout:** `D:/Singvox/Singvox` · branch `main` · baseline `aeed61c6b7796b0201326be8c715861849142645`
-**Destination:** `https://github.com/awahblaiseatanga-beep/Singvox.git`
-**Status of this document:** plan + evidence. **Nothing has been staged, committed, pushed, deployed, or changed on any remote.** The only files this task created or edited are listed in §11.
+**Date:** 2026-10-16 (Batch B reconciliation revision)
+**Local checkout:** `D:/Singvox/Singvox` · branch `main` · local HEAD `c17f1c339ce1f065fc31d2ee909e79a15eca219b` · baseline commit `aeed61c6b7796b0201326be8c715861849142645`
+**Destination:** `https://github.com/awahblaiseatanga-beep/Singvox.git` — its `refs/heads/main` is still `aeed61c6…`; the two commits made locally after the baseline push (`7e0c741`, `c17f1c3`) have **not** been pushed.
+**Status of this document:** plan + evidence. **Nothing has been staged, committed, pushed, deployed, or changed on any remote, and no cloud resource has been created.** The index is empty. The files this task created or edited are listed in §11.
 
 > This document is the rationale referenced by the header comment of the new
 > `.gitignore` rules. It supersedes §9 of `docs/PRE_DEPLOYMENT_AUDIT_2026-10-16.md`
@@ -17,42 +17,47 @@
 1. **The destination repository exists, is empty, and is now PRIVATE** (re-verified 2026-10-16 after the owner changed its visibility). It was created `2026-10-16T02:45:34Z`, `size: 0`, default branch `main`, and `git ls-remote` returns **zero** refs. It is therefore safe to receive the existing history as an ordinary new-branch push — no force, no rewrite (§7, B1 — resolved).
 2. **This machine can now push to the destination** (re-verified 2026-10-16). The `gh` CLI is still signed in only as the old account `abonkweawah-png`, which now receives **404** on the private repository, but Windows Credential Manager holds a working credential for the new owner (`git:https://awahblaiseatanga-beep@github.com`). `git push --dry-run new-origin main` succeeds both pinned and unpinned — `* [new branch] main -> main`, exit 0 — and wrote nothing (§7, B2 — resolved). The earlier `manager` hang was that helper waiting to be told which of the two stored accounts to use.
 3. **The real risk was in the working tree, not the remote.** A naive `git add -A` with the pre-existing `.gitignore` would have attempted to stage every component the pre-deployment audit warned about — **1,839 generated `.npy` feature arrays (402 MiB)**, **1,970 MiB of training checkpoints (11 files)**, **512.1 MiB of avatar GLBs**, **381 MiB of Blender exports**, 216 MiB of `.blend`/`.blend1` sources, 88 MiB of third-party `.fbx`, **359.7 MiB of model weights**, the third-party video dataset (2.08 GiB) and a ~40,000-file Python virtualenv — i.e. the bulk of a 10.9 GiB checkout. The `.gitignore` was fixed **before anything was staged** (§3).
-4. **After the fix, the payload that carries the project is 144,223,874 bytes (137.54 MiB) over 504 pre-existing new files plus 6 modified tracked files — 510 entries.** The 3 documents this task itself created add a further ~70 KiB, bringing the full staging list to **513 entries**; because those three files include this one, their exact bytes change on every edit, so the size is quoted as the stable 510-entry subtotal (§4.1). Everything is far below GitHub's 100 MiB per-file hard block; the single largest file is the 47.4 MiB production avatar GLB and only five files exceed 10 MiB (§4).
+4. **After the fix, the payload that carries the project is 144,223,874 bytes (137.54 MiB) over 504 pre-existing new files plus 6 modified tracked files — 510 entries.** The 3 documents this task itself created add a further ~70 KiB, bringing the full staging list to **513 entries**; because those three files include this one, their exact bytes change on every edit, so the size is quoted as the stable 510-entry subtotal (§4.1). **After the Batch A commits the pending set is 508 entries / 137.53 MiB — §4.1 is authoritative for the current numbers.** Everything is far below GitHub's 100 MiB per-file hard block; the single largest file is the 47.4 MiB production avatar GLB and only five files exceed 10 MiB (§4).
 5. **The application source is complete and verified in place:** `npm run build` exit 0, `npx tsc -b --force` exit 0, `npx vitest run` 30 files / 198 tests passed exit 0 (§6). All 16 cross-directory imports that reach outside `web/` resolve to files that are either already tracked or inside the migration payload (§5.4).
 6. **The two ~179 MiB ONNX external-data sidecars cannot enter Git and cannot be CLI-uploaded to Vercel.** They must be hosted externally and referenced through the existing `VITE_SPOTER_V2_URL` / `VITE_SPOTER_PILOT_URL` overrides, which are implemented and verified in code (§8).
 7. **A recoverable backup exists outside the repository**: history bundle, 601-file source archive, the pre-change `.gitignore`, a git-state snapshot, and SHA-256 digests of the 28 large files that deliberately stay local (§2.5).
-8. **The baseline history is now pushed** (2026-10-16, owner-approved). `git push new-origin main` returned `* [new branch] main -> main`, exit 0; remote `refs/heads/main` is `aeed61c6b7796b0201326be8c715861849142645`, identical to local HEAD — and because Git objects are content-addressed, identical bytes. No force, no rewrite. **Batches A/B/C remain uncommitted and nothing is staged** (§2.3).
+8. **The baseline history is pushed; two later local commits are not.** `git push new-origin main` returned `* [new branch] main -> main`, exit 0; remote `refs/heads/main` is `aeed61c6b7796b0201326be8c715861849142645`. Since then two further commits were created locally — `7e0c741` (`.gitignore` + `.env.example` hygiene, this plan, the 513-entry manifest) and `c17f1c3` (the local-only asset ledger) — so **local HEAD is now `c17f1c3` and the destination is one push behind**. No force, no rewrite. Nothing is staged (§2.1, §2.3).
+9. **Four committed tests depend on gitignored local fixtures** and therefore cannot pass on a clean clone: `goodCandidate`, `reproduce_trace`, `baseline_threshold_eval` and `temporal_sampling_parity`. Guards that skip them **only when the fixture is absent** are prepared but **not applied** (§4.6).
 
-**This plan stops before staging. The private destination repository and working write credentials for `awahblaiseatanga-beep` are now in place (§7, B1/B2 resolved); the only remaining gate is the owner's explicit approval to push (§12).**
+**This plan stops before staging.** The private destination repository and working write credentials for `awahblaiseatanga-beep` are in place (§7, B1/B2 resolved), the baseline commit is live, and the pending set is classified in `docs/migration/batch-b-manifest-2026-10-16.txt` (**508 entries**). Four decisions still need the owner's approval before Batch B can be staged (§13).
 
 ---
 
 ## 2. Current state (measured)
 
-### 2.1 Git
+### 2.1 Git (as of the Batch B reconciliation, 2026-10-16)
 
 | Item | Value |
 |---|---|
-| `git rev-parse HEAD` | `aeed61c6b7796b0201326be8c715861849142645` |
+| `git rev-parse HEAD` | `c17f1c339ce1f065fc31d2ee909e79a15eca219b` |
 | Branch | `main` |
-| Commits in history | **1** (`git rev-list --count HEAD`) |
-| Tracked files | **98** |
+| Baseline (initial) commit | `aeed61c6b7796b0201326be8c715861849142645` |
+| Commits in history | **3** (`git rev-list --count HEAD`): `aeed61c6` → `7e0c741` → `c17f1c3` |
+| Tracked files | **101** |
 | Stashes | none |
 | Submodules | none (no `.gitmodules`) |
-| Modified tracked files | **6** |
-| New (untracked, non-ignored) files | **503** before this task's docs; see §4 |
-| Working-tree entries reported by `git status --porcelain` | 107 (6 modified + 101 untracked entries; Git collapses untracked directories) |
+| Modified tracked files | **5** (4 pre-existing owner changes + this plan) |
+| New (untracked, non-ignored) files | **505** = 504 pending payload files + this revision's revised manifest; see §4.1 |
+| Index (staged paths) | **0** — `git diff --cached --name-only` is empty |
+| Upstream | `main` tracks `origin/main` (unchanged, not pushed to by this task) |
+| Destination tip | `new-origin` `refs/heads/main` = `aeed61c6…` — **two commits behind local HEAD** |
 
-Modified tracked files (all pre-existing local work, preserved untouched):
+Modified tracked files:
 
 ```
- M .env.example
- M .gitignore                       <- this task added hygiene rules (§3)
- M ai/sign-recognition/training/dataloaders.py
- M app/App.tsx
- M app/package.json
- M docs/architecture/TECHNICAL_ARCHITECTURE.md
+ M ai/sign-recognition/training/dataloaders.py   <- pre-existing owner change (preserved, §4.7)
+ M app/App.tsx                                   <- pre-existing owner change (preserved, §4.7)
+ M app/package.json                              <- pre-existing owner change (preserved, §4.7)
+ M docs/REPOSITORY_MIGRATION_2026-10-16.md       <- this task's plan (committed in 7e0c741, edited again here)
+ M docs/architecture/TECHNICAL_ARCHITECTURE.md   <- pre-existing owner change (preserved, §4.7)
 ```
+
+`.gitignore` and `.env.example` are no longer listed: their hygiene edits were committed in `7e0c741` (§3.1.1).
 
 ### 2.2 Remotes (all three now present; the two pre-existing ones are untouched)
 
@@ -73,7 +78,7 @@ new-origin   https://github.com/awahblaiseatanga-beep/Singvox.git        (added 
 | Write access | `git push --dry-run new-origin main` → `* [new branch] main -> main`, exit 0. The `gh` CLI is signed in only as `abonkweawah-png`, which now gets `404`; the working credential is `git:https://awahblaiseatanga-beep@github.com` in Windows Credential Manager |
 | Authenticated account (gh CLI) | `abonkweawah-png` (keyring; scopes `gist`, `read:org`, `repo`, `workflow`) |
 
-**Post-push state (2026-10-16).** The destination was empty, so the "if it contains commits or files, stop and report" condition never triggered; it now holds exactly one commit — the baseline — and `refs/heads/main` matches local HEAD. Both original blockers, visibility and write access, are resolved (§7, B1/B2). **Nothing is staged; batches A/B/C are uncommitted.**
+**Post-push state (2026-10-16).** The destination was empty, so the "if it contains commits or files, stop and report" condition never triggered; it holds exactly one commit — the baseline — and `refs/heads/main` is `aeed61c6…`. Both original blockers, visibility and write access, are resolved (§7, B1/B2). Two further commits were then made **locally only** (`7e0c741` hygiene + manifest, `c17f1c3` asset ledger), so the destination is now two commits behind. **Nothing is staged.**
 
 ### 2.4 Local size inventory (the reason for §3)
 
@@ -221,13 +226,20 @@ Counts and sizes below are measured (`git ls-files --others --exclude-standard`,
 
 ### 4.1 Totals
 
+**As originally measured, before any staging:** 507 new files + 6 modified tracked files = **513 entries / 137.54 MiB**. That figure is kept because §1.4 and §2.5 quote it.
+
+**As of the Batch B reconciliation (current):** this plan, `docs/migration/planned-files-2026-10-16.txt`, `docs/migration/local-only-assets-sha256.txt`, `.gitignore` and `.env.example` were committed in `7e0c741` + `c17f1c3`, so they left the pending set.
+
 | Metric | Value |
 |---|---|
-| New files | **507** = 504 pre-existing + the 3 documents created by this task (§11) |
-| Payload bytes — 504 pre-existing new files **and** the 6 modified tracked files (510 entries) | **144,223,874 B = 137.54 MiB** |
-| Plus the 3 self-describing documents created by this task | ≈70 KiB — recursive: grows with every edit to this file, so the 510-entry subtotal above is the authoritative figure |
-| Full staging list | **513 entries** |
-| Modified tracked files | 6 |
+| Entries committed since the audit | **5** (`.gitignore`, `.env.example`, this plan, `planned-files-2026-10-16.txt`, `local-only-assets-sha256.txt`) — §2.1 |
+| **Pending entries** | **508** = 504 untracked new files + 4 modified tracked files |
+| **Pending payload bytes** | **144,218,206 B = 137.53 MiB** (measured with `stat` over the 508 paths) |
+| Batch B | **156** = 17 configuration + 139 application source |
+| Batch C | **340** |
+| Excluded from every batch | **8** (§4.5) |
+| Preserved, unstaged owner changes | **4** (§4.7) |
+| Plus this revision's revised manifest | `docs/migration/batch-b-manifest-2026-10-16.txt` — self-describing, grows with every edit (like this document) |
 | Largest single file | **47.40 MiB** — `web/public/avatar/SignVox_Female_Competition_Prototype.glb` (< GitHub's 50 MiB warning, well under the 100 MiB block) |
 | Files ≥ 50 MiB | **0** |
 | Files ≥ 10 MiB | **5** (the GLB and the four ort `.wasm` variants) |
@@ -263,19 +275,20 @@ Counts and sizes below are measured (`git ls-files --others --exclude-standard`,
 | 0.16 MiB | 27 | `app/android/` |
 | remainder | | `docs/*`, `avatar/controller/`, `ai/`, `supabase/`, `web/tests/`, `web/*.mjs`, `web/package-lock.json` |
 
-The **exact, complete, line-by-line file list** is `docs/migration/planned-files-2026-10-16.txt`: one repository-relative path per line, sorted, machine-readable, **513 entries = the 507 new files plus the 6 modified tracked files**. It includes itself.
+The **authoritative, line-by-line classification** is now `docs/migration/batch-b-manifest-2026-10-16.txt` (508 entries, one repository-relative path per line, sorted). `docs/migration/planned-files-2026-10-16.txt` is kept as the original 513-entry list; it is committed and describes the pre-commit set.
 
-### 4.4 Proposed commit batches (Phase 4.1–4.3)
+### 4.4 Proposed commit batches (Phase 4.1–4.3) — reconciled with the revised manifest
 
-Batches are ordered so that each one is independently reviewable and the repository is never left in a state where a documented command fails. **None of these is staged yet.**
+The line-by-line classification is `docs/migration/batch-b-manifest-2026-10-16.txt`; the batches below state the same result in prose. **None of it is staged.**
 
-**Batch A — repository hygiene and safe configuration templates**
-`.gitignore` (modified) · `.env.example` (modified) · `web/.vercelignore` · `web/vercel.json` · `web/tsconfig.json` · `web/package.json` · `web/package-lock.json` · `web/vite.config.ts` · `web/index.html` · `app/package.json` (modified) · `app/.eslintrc.js` · `app/.prettierrc.js` · `app/app.json` · `app/babel.config.js` · `app/index.js` · `app/metro.config.js` · `app/tsconfig.json` · `app/scripts/` · `avatar/package.json` · `avatar/package-lock.json` · `docs/migration/` (manifest + asset digests) · `docs/REPOSITORY_MIGRATION_2026-10-16.md`
-*Why first:* it establishes what may enter Git, and ships the configuration templates (including the `.env.example` contract) before any source lands.
+**Batch A — repository hygiene and safe configuration templates — ALREADY COMMITTED**
+Committed as `7e0c741` (`.gitignore`, `.env.example`, this plan, `docs/migration/planned-files-2026-10-16.txt`) and `c17f1c3` (`docs/migration/local-only-assets-sha256.txt`). Those five paths are therefore **no longer in any pending batch**, and `git status` no longer lists `.gitignore` or `.env.example`. The configuration templates that were originally grouped with them (`web/.vercelignore`, `web/vercel.json`, `web/tsconfig.json`, …) moved into Batch B by owner decision, recorded as Batch B manifest §1a.
 
-**Batch B — application source, avatar controller, model pipeline, required class map**
-`web/src/**` (application, `lib/`, `engine/`, `components/`, `pages/`, 37 `tests/`, `onnxruntime/` loaders) · `web/public/**` (production GLB + ort runtimes + favicons) · `web/bench/**` · `web/tests/**` · `web/*.mjs`, `web/*.cjs`, `web/*.ts`, `web/verify_assets.js`, `web/build-ico.mjs` · `avatar/controller/*.ts` (9 files, imported by the app) · `ai/sign-recognition/{models,preprocessing,training,data}/*` new files (`export_to_onnx.py`, `train_pilot_spoter.py`, `pilot_class_mapping.json`, `spoter_pilot_config.json`, `spoter_experiment_05b_scalars.json`) · `ai/sign-recognition/training/dataloaders.py` (modified) · `app/App.tsx` (modified) · `app/android/**` · `app/utils/`
+**Batch B — application source plus the configuration a reproducible build, test and deploy needs — 156 files**
+*1a. Configuration (17, manifest §1a):* `web/package.json`, `web/package-lock.json`, `web/tsconfig.json`, `web/vite.config.ts`, `web/vercel.json`, `web/.vercelignore`, `web/index.html`, `app/.eslintrc.js`, `app/.prettierrc.js`, `app/app.json`, `app/babel.config.js`, `app/index.js`, `app/metro.config.js`, `app/tsconfig.json`, `app/scripts/copy_mediapipe_models.py`, `avatar/package.json`, `avatar/package-lock.json`. Each inspected individually: manifests, lockfiles, TypeScript/Vite/Vercel config and the React Native entry/build config. No secret, no generated config, no unrelated scaffolding in any of them.
+*1b. Application source (139, manifest §1b):* `web/src/**` (application, `lib/`, `engine/`, `components/`, `pages/`, `tests/`), `web/public/**` (**only** the production GLB, the four ort runtimes and the favicons — every other asset under `public/` is gitignored), `web/bench/**`, `web/tests/**`, `web/*.mjs`, `web/verify_assets.js`, `avatar/controller/*.ts` (imported by the app), the five new `ai/sign-recognition/**` files and `app/android/**`.
 *Why second:* this is the deployable application plus everything it imports. Verified in §5.4 — no import target is missing. The frozen ASL-100 vocabulary, the SPOTER V2 feature contract (60 × 366), normalization, class mapping, temporal sampler and latency profiler are all carried unchanged.
+*Deliberately not in Batch B:* `app/package.json`, `ai/sign-recognition/training/dataloaders.py` and `app/App.tsx` — pre-existing owner changes, preserved and unstaged (§4.7). Note the consequence: Batch B carries the build configuration, so until the `app/package.json` decision (§13, D4) is made, a staging of Batch B alone would not be independently buildable.
 
 > **Batch B checklist — ignored model artifacts (carry-forward from Batch A).**
 > `web/public/spoter_v2_model.onnx`, `web/public/spoter_pilot.onnx` and their `.data` sidecars are **not** in the payload: the pre-existing `*.onnx` rule and the new `*.onnx.data` rule (§3.1) exclude them, and the two ~179 MiB sidecars would exceed GitHub's 100 MiB per-file block in any case. Batch B must therefore:
@@ -283,20 +296,66 @@ Batches are ordered so that each one is independently reviewable and the reposit
 > 2. confirm the production GLB `web/public/avatar/SignVox_Female_Competition_Prototype.glb` **is** included — it is the one negation under `*.glb` and the app's default avatar;
 > 3. **not** silently re-enable `*.onnx`: committing a graph without its external-data sidecar still cannot run (`inference.ts` derives the sidecar as `${modelUrl}.data`), so the graph and weights must stay side by side on the chosen host.
 
-**Batch C — documentation, tests, migrations, deployment configuration**
-`docs/**` (all new reports: launch, recovery audit, speed optimisation, pre-deployment audit, `ai-ml/`, `architecture/`, `avatar/`, `blender/`, `competition/`, `decisions/`, `research/`, `testing/`) · `supabase/migrations/20261016120000_create_waitlist_signups.sql` · `supabase/tests/waitlist_signups_rls_test.sql` · `docs/architecture/TECHNICAL_ARCHITECTURE.md` (modified)
-*Why third:* documentation and the (unapplied) Supabase migration describe the code that batch B lands.
+**Batch C — documentation, migrations, research and tooling — 340 files**
+`docs/**` (all new reports: launch, recovery audit, speed optimisation, pre-deployment audit, `ai-ml/`, `architecture/`, `avatar/`, `blender/`, `competition/`, `decisions/`, `research/`, `testing/`) · `supabase/migrations/20261016120000_create_waitlist_signups.sql` · `supabase/tests/waitlist_signups_rls_test.sql` · `tools/**` · `experiments/**`.
+*Why third:* documentation and the (unapplied) Supabase migration describe the code Batch B lands. `tools/**` and `experiments/**` ride along because no production dependency on them exists — verified by searching `web/src`, `web/tests`, `web/bench`, `ai/`, `avatar/controller/` and `app/` for imports; nothing matches. (The earlier counts of 46/50 for `tools/` and 192/222 for `experiments/` were both wrong; the manifest counts every path.)
+*Deliberately not in Batch C:* `docs/architecture/TECHNICAL_ARCHITECTURE.md` — a pre-existing owner change (§4.7).
 
-`tools/**` (50 files) and `experiments/**` (222 files) are distributed across batches B and C by file type — the diagnostic and rig-authoring scripts travel with the model pipeline, the phase reports with the documentation. The only paths excluded from every batch are the six root scratch files and `tools/extracted_guide.txt` (§3.3, §4.5).
+Reconciliation totals: Batch B 156 + Batch C 340 + excluded 8 + preserved 4 = **508**, exactly the pending set of §4.1, and no path appears in two batches. The excluded eight are §4.5, the preserved four are §4.7, the reproducibility gap is §4.6.
 
-### 4.5 Left untracked by design (owner decision, nothing was deleted)
+### 4.5 Scratch diagnostics — excluded from every batch (owner decision, nothing deleted)
 
-| Path | Why |
-|---|---|
-| `find_data.py`, `inspect_ch41.py`, `inspect_fbx.py`, `inspect_glb.py`, `inspect_onnx.py`, `check_hierarchy.py` | one-off diagnostics at the repository root |
-| `tools/extracted_guide.txt` | generated text dump extracted from a PDF |
+> **Correction (2026-10-16, Batch B reconciliation).** An earlier revision of this section claimed these seven paths were "not in the proposed payload either way". That was **wrong**: the manifest (`docs/migration/planned-files-2026-10-16.txt`) lists **all seven**, and all seven are untracked on disk. They are now excluded from every proposed batch by **decision**, recorded here, instead of being implied by the manifest.
 
-Recommended outcomes, in preference order: (a) commit them deliberately if they document a real procedure, or (b) add them to `.gitignore`. They are **not** in the proposed payload either way.
+| Path | Size | Purpose | Verdict |
+|---|---|---|---|
+| `find_data.py` | 298 B | one-off regex scan of a local `.onnx` for its `.data` reference; hardcodes `d:\Singvox\...` | exclude |
+| `inspect_ch41.py` | 354 B | one-off: prints `mixamorig` bones from `Ch41_nonPBR.fbx`; hardcoded path | exclude |
+| `inspect_fbx.py` | 1,194 B | one-off: bone/AnimStack strings from two FBX files; hardcoded paths | exclude |
+| `inspect_glb.py` | 1,520 B | GLB inspector, portable (argv) but a **duplicate** of `tools/inspect_glb.py` | exclude (duplicate) |
+| `inspect_onnx.py` | 676 B | one-off: prints the ONNX external-data location; hardcoded path | exclude |
+| `check_hierarchy.py` | 1,740 B | GLB hand-bone hierarchy check; no test or build references it | exclude |
+| `tools/extracted_guide.txt` | 14,672 B | **generated** by `tools/extract_pdf.py` from a PDF | exclude (generated) |
+
+**Required for reproducible tests, benchmarks or production functionality: none.** Verified by searching `web/src`, `web/tests`, `web/bench`, `tools/`, `ai/` and `avatar/controller/` for any reference — the only hits are documentation prose and `tools/extract_pdf.py` *writing* `tools/extracted_guide.txt`. All seven stay on disk; nothing was deleted.
+
+**Also excluded on the same grounds:** `tools/audit_out.txt` (402 B, mtime 2026-10-10). Verified **generated, not a fixture**: `tools/tmp_audit_asl.py:8` writes it (`out_path = r"d:\Singvox\Singvox\tools\audit_out.txt"`) by summarising `D:\ASL_Citizen\splits\{train,val,test}.csv` against `docs/ai-ml/asl100_vocabulary.json`, and that writer is itself ignored by the pre-existing `tmp_*` rule. No test, benchmark or production path reads the output — searching `web/src`, `web/tests`, `web/bench`, `docs` and `ai/` finds only prose. The claim elsewhere that it was ignored "via `*.out`" is **wrong** — `*.out` does not match `audit_out.txt`, which ends in `.txt`, and `git check-ignore tools/audit_out.txt` still reports no match (exit 1). It is therefore excluded by **decision**, exactly like the seven files above; the anchored rule `/tools/audit_out.txt` was **applied on 2026-10-16** (§13, D3; now `.gitignore` line 165) and re-confirmed with `git check-ignore -v`. The file has not been deleted or moved — it stays on disk, now ignored.
+
+---
+
+### 4.6 Reproducibility gap — gitignored fixtures required by four committed tests
+
+**Status: resolved by explicit skips on 2026-10-16** (§13, D1 applied). The 31-file / 206-test suite of §5.1 passes here because the fixtures exist on this machine. Four committed test files read local-only assets that the `.gitignore` rules keep out of the payload, so on a clean clone they cannot pass — they now report as *skipped* instead of failing or silently passing. Established by resolving every fixture path with `fs.existsSync`, confirming each with `git check-ignore -v`, and searching every test file under `web/src`, `web/tests` and `web/src/lib` for the asset patterns.
+
+| Test (all Batch B) | Required local fixture(s) | Rule that excludes it | Behaviour on a clean clone |
+|---|---|---|---|
+| `web/src/tests/goodCandidate.test.ts` | `experiments/avatar/pilot_good/SignVox_GOOD_Candidate.glb` (49,800,688 B) | `*.glb` | **fails** — `expect(fs.existsSync(CANDIDATE)).toBe(true)` |
+| `web/src/tests/reproduce_trace.test.ts` | `web/public/avatar/SignVox_Female.glb` (49,576,404 B) | `*.glb` (the negated production GLB is a different file) | **fails** in `beforeAll` (`ctrl.loadGLB`) |
+| `web/src/tests/baseline_threshold_eval.test.ts` | `ai/sign-recognition/data/asl100_training_manifest.csv` (143,079 B); `ai/sign-recognition/data/{dataset_extracted,processed_pilot}/**_features.npy`; `web/public/spoter_v2_model.onnx`; `web/public/spoter_pilot.onnx` | `/asl100_training_manifest.csv`, `*.npy` and the dataset dirs (pre-existing rules), `*.onnx` | **fails** — `fs.readFileSync(manifestPath)` |
+| `web/src/tests/temporal_sampling_parity.test.ts` | `ai/sign-recognition/data/dataset_extracted/{0022932153577568393-HELLO,9953610281521326-YES}_features.npy`; `web/public/spoter_v2_model.onnx` | as above | **silently no-ops** — `console.log('[parity] recorded features unavailable, skipping'); return;` |
+
+**Correction to the earlier reading.** The first pass in `docs/migration/batch-b-manifest-2026-10-16.txt` §7 said the two ONNX-dependent tests needed only the recorded dataset. They also need the graph files, which `*.onnx` keeps out of the repository. The `VITE_SPOTER_*_URL` overrides of §8.2 do **not** help here: both tests build an absolute filesystem path under `web/public/`, not an HTTP URL. The other **26** of the 30 test files vitest runs are unaffected — e.g. `modelRegistry.test.ts` reads `class_index_mapping.json` (tracked), `pilot_class_mapping.json` (payload §1b) and the production GLB (payload §1b), so it stays reproducible. (Vitest's `test.include` is `src/**/*.test.ts` + `tests/**/*.test.ts`, so `src/tests/avatarLifecycle.test.tsx` is outside the suite altogether — hence 30 of the 31 collected test files run.)
+
+**Applied 2026-10-16 (§13, D1).** For each of the four files a guard that skips **only when the fixture is absent** — `fs.existsSync` at module scope feeding vitest 2.1.8 `it.skipIf` / `describe.skipIf` (`ChainableTestAPI.skipIf` verified present in the installed `@vitest/runner`). When the fixture exists the test executes with **every** assertion unchanged; no assertion is relaxed, removed or wrapped, so a real failure can never become a skip. `temporal_sampling_parity.test.ts` additionally lost its silent `return` and now reports the missing inputs as an explicit skip, and `reproduce_trace.test.ts` had its GLB path hoisted to module scope so the guard can test it.
+
+**Added in the same change.** `web/src/tests/syntheticFixtures.test.ts` (8 always-on tests) covers the structural invariants that need no local asset: a tracked deterministic 46-bone rig GLB (8,692 B) and two 274-byte synthetic ONNX graphs with their zero-byte `.data` sidecars, all generated by the dependency-free `web/src/tests/fixtures/generate_fixtures.mjs` (30,865 B of fixtures in total), driven through the real `AvatarController.loadGLB`, the real `SpoterInferenceSession` and the real sampler/stabilizer classes. It makes **no** accuracy claim — that remains exclusive to the recorded-clip tests. Measured after the apply: **this checkout 31 files / 206 tests pass, 0 skipped, exit 0**; **a payload-only clone 27 files / 201 tests pass, 4 files / 5 tests skipped, 0 failed**.
+
+**What this does not claim.** With the guards applied the suite is still **not** reproducible on a clean clone: four test files report as *skipped* instead of passing, and this has not yet been validated in a genuine fresh clone (§13, D5). Real reproducibility needs the fixtures to ship, or the tests to leave the default suite (§13, D1).
+
+---
+
+### 4.7 Pre-existing owner changes — preserved exactly, unstaged
+
+These four tracked files carry work that predates this migration task. **Nothing in this task modified, staged, reverted or discarded any of them.**
+
+| File | State (`git diff --stat`) | Status |
+|---|---|---|
+| `ai/sign-recognition/training/dataloaders.py` | modified, 15 lines changed | preserved; whether it joins a batch is a **pending decision** (§13, D4). §4.4 previously listed it in Batch B — that listing is superseded. |
+| `app/App.tsx` | modified, 239 lines changed | preserved; pending decision (§13, D4) |
+| `app/package.json` | modified, 27 lines changed — full diff and analysis in §13.1 | preserved; pending decision (§13, D4) |
+| `docs/architecture/TECHNICAL_ARCHITECTURE.md` | modified, 7 lines added | preserved; §4.4 previously listed it in Batch C — superseded. |
+
+A fifth tracked file, `docs/REPOSITORY_MIGRATION_2026-10-16.md`, is this task's own plan: committed in `7e0c741` and modified again by the reconciliation edits recorded in §11.
 
 ---
 
@@ -308,9 +367,9 @@ Recommended outcomes, in preference order: (a) commit them deliberately if they 
 |---|---|---|
 | `npm run build` (i.e. `tsc -b && vite build`) | **exit 0** | `✓ 121 modules transformed`, `dist/assets/index-D3Faw0yY.js 1,717.44 kB │ gzip: 467.76 kB`, `dist/assets/index-DtwNF64Q.css 23.38 kB`, `✓ built in 1m 60s`; only the standard chunk-size advisory |
 | `npx tsc -b --force` | **exit 0** | no diagnostics |
-| `npx vitest run` | **exit 0** | `Test Files 30 passed (30)`, `Tests 198 passed (198)`, duration 146.00 s |
+| `npx vitest run` (2026-10-16, after the approved fixture fix) | **exit 0** | `Test Files 31 passed (31)`, `Tests 206 passed (206)`, **0 skipped**, duration 78.65 s. The pre-fix run in this same tree was `30 passed (30)` / `198 passed (198)` in 146.00 s; the delta is exactly the 8 synthetic tests in the new file. |
 
-The suite count grew from the 29 files / 164 tests recorded in the pre-deployment audit because the waitlist/Supabase work (`web/src/tests/waitlistFlow.test.ts`, 34 tests) has landed since. Two stderr blocks in the log are **intentional negative-path assertions**, not failures: `speech.test.ts` > "errors inside utterance/speak loop passively fail without breaking DOM" (`SpeechSynthesis API failed: Error: Driver unavailable`) and the deliberate double-submit assertions in `baseline_threshold_eval.test.ts`. Exit status is 0 for both the run and every test file.
+The suite count grew from the 29 files / 164 tests of the pre-deployment audit to 30 / 198 when the waitlist/Supabase work (`web/src/tests/waitlistFlow.test.ts`, 34 tests) landed, and then to 31 / 206 on 2026-10-16 when the synthetic-fixture file was added (§4.6). Two stderr blocks in the log are **intentional negative-path assertions**, not failures: `speech.test.ts` > "errors inside utterance/speak loop passively fail without breaking DOM" (`SpeechSynthesis API failed: Error: Driver unavailable`) and the deliberate double-submit assertions in `baseline_threshold_eval.test.ts`. Exit status is 0 for both the run and every test file.
 
 ### 5.2 Nothing in the payload is a secret
 
@@ -366,11 +425,11 @@ All six targets are inside the payload (or already tracked), so a clone of the d
 
 ## 6. Commit / history plan (Phase 6.3–6.4)
 
-1. **History first, unmodified — DONE 2026-10-16.** The destination was empty, so `git push new-origin main` was a plain branch creation carrying the single existing commit `aeed61c6b7796b0201326be8c715861849142645`; remote `refs/heads/main` now matches local HEAD exactly (verified). No force, no rebase, no history rewrite, no `filter-repo`. Nothing in the existing history contains a secret or a large file:
+1. **History first, unmodified — DONE 2026-10-16.** The destination was empty, so `git push new-origin main` was a plain branch creation carrying the single existing commit `aeed61c6b7796b0201326be8c715861849142645`; remote `refs/heads/main` is that commit. It is **no longer equal to local HEAD**, which has advanced to `7e0c741` and then `c17f1c3` (both local-only, §2.1). No force, no rebase, no history rewrite, no `filter-repo`. Nothing in the existing history contains a secret or a large file:
    * the 98 tracked files total **844,023 B (0.80 MiB)**, and the largest is 38.8 KiB (`ai/sign-recognition/training/run_experiment_01.py`) — no binary at all;
    * no `.env*`, no dataset, no checkpoint, no `.onnx`/`.glb` is tracked (all excluded by the pre-existing ignore rules);
    * §5.2 found no secret in the 486 text files of the payload, and the tracked set is a subset of that scan plus the already-scan-safe tracked files.
-2. **Then three commits, one per batch**, in the order A → B → C of §4.4. Each commit is self-contained; the message for each will state what landed and what deliberately did not.
+2. **Then one commit per remaining batch**, in the order B → C of §4.4 — Batch A is already committed as `7e0c741` + `c17f1c3`. Each commit is self-contained; the message will state what landed and what deliberately did not.
 3. **Before each commit** the staged set will be re-verified (`git status --short`, `git diff --cached --stat`, and a size check that nothing approaches 100 MiB) and §5.1 re-run for batch B (source changes only; the docs and config batches do not affect the build).
 4. **No force-push, ever.** `origin` and `old-origin` are never written to; `old-origin` is an empty repository and can be ignored entirely.
 
@@ -427,9 +486,40 @@ VITE_SPOTER_PILOT_URL=https://<host>/spoter_pilot.onnx      # .data must sit bes
 VITE_AVATAR_GLB_URL=https://<host>/SignVox_Female_Competition_Prototype.glb   # optional
 ```
 
-Two hosting requirements that follow from the code: (1) the graph and its **`.data` file must share the same base URL**, because the app derives the sidecar as `${modelUrl}.data`; (2) the host must send **`Access-Control-Allow-Origin`** for cross-origin reads, because the model is fetched by the browser from a different origin (the existing behaviour adds `Access-Control-Allow-Origin: *` for `/spoter_(.*)` — mirror that on the host). For very large single-file downloads, Range support and a long `Cache-Control` are also worth mirroring from `web/vercel.json`.
+#### 8.2.1 Exact objects to publish, and the hosting contract they require
 
-No URL was invented and nothing was uploaded to any service: this is a decision for the owner.
+Measured from the files on disk; **nothing was invented and nothing was uploaded**.
+
+| Object name to use at the host | Local source | Size | Content |
+|---|---|---|---|
+| `spoter_v2_model.onnx` | `web/public/spoter_v2_model.onnx` | 121,801 B | 79-class graph; declares 186 external-data tensors |
+| `spoter_v2_model.onnx.data` | `web/public/spoter_v2_model.onnx.data` | 187,711,488 B (179.0 MiB) | its weights |
+| `spoter_pilot.onnx` | `web/public/spoter_pilot.onnx` | 1,711,205 B | 3-class graph; declares 185 external-data tensors |
+| `spoter_pilot.onnx.data` | `web/public/spoter_pilot.onnx.data` | 187,580,416 B (178.9 MiB) | its weights |
+
+Requirements, each traced to the code that imposes it:
+
+1. **The four objects must share one base URL, and the sidecar name must be exactly `<graph name>.data`.** `web/src/lib/inference.ts` sets `sessionOptions.externalData = [{ path: `${modelName}.data`, data: `${modelUrl}.data` }]`, and `modelRegistry.ts` resolves the graph from `VITE_SPOTER_V2_URL` / `VITE_SPOTER_PILOT_URL` (`?.trim() || '/spoter_…'`). So a host serving `<base>/spoter_v2_model.onnx` **must** also serve `<base>/spoter_v2_model.onnx.data` — no renaming, no directory split.
+2. **HTTP `Range` support is required, not merely nice to have.** The graphs carry `location`/`offset`/`length` for every external-data tensor (verified: 186 entries in the 79-class graph, 185 in the pilot; the `location` string is exactly `spoter_v2_model.onnx.data` / `spoter_pilot.onnx.data`), so the runtime reads the sidecar by byte range instead of downloading it whole. The installed `onnxruntime-web` issues ranged requests (`Range` occurs in its bundler output, `dist/ort.bundle.min.mjs`). A host that ignores `Range` and always returns the whole 179 MiB body still works, but every tensor read then re-transfers the file. Responses must not be content-encoding-transformed.
+3. **CORS for the deployed origin.** `Access-Control-Allow-Origin` (mirror the `*` that `web/vercel.json` already sets for `/spoter_(.*)`, or echo the exact origin with `Vary: Origin`), plus `Access-Control-Expose-Headers: Content-Range, Content-Length, Accept-Ranges` so the ranged reads are readable by the page.
+4. **`Cache-Control: public, max-age=31536000, immutable`** — mirroring `web/vercel.json`. The bytes are version-pinned by filename, so no revalidation is needed; `ETag`/`Last-Modified` should stay enabled for conditional re-reads.
+5. **`Content-Type: application/octet-stream`** for all four objects.
+
+**Build-time variables for Vercel** (Vite inlines `VITE_*` at build time, so they must exist in the Vercel project environment *before* the build — and in `web/.env.local` for local work; never in Git):
+
+```
+VITE_SPOTER_V2_URL=https://<base>/spoter_v2_model.onnx
+VITE_SPOTER_PILOT_URL=https://<base>/spoter_pilot.onnx
+# VITE_AVATAR_GLB_URL stays UNSET: the production GLB is committed and served
+# same-origin, so its built-in default /avatar/SignVox_Female_Competition_Prototype.glb
+# is preserved exactly.
+```
+
+The Vercel **build** needs nothing from the host; only the browser at runtime does. The production GLB keeps its same-origin path in both cases: `vite build` copies it from `web/public/avatar/` into `dist/avatar/`, and `useSignVoxEngine.ts` uses `/avatar/SignVox_Female_Competition_Prototype.glb` unless `VITE_AVATAR_GLB_URL` overrides it — which is why the object list above contains **no** GLB.
+
+One documentation defect found while checking this: the committed `.env.example` comment says the two sidecars **and the ~48 MiB avatar GLB** are not committed. That is now wrong for the GLB — the production GLB **is** in Batch B (§1b), and the comment's own default path for it is correct. The comment was corrected on 2026-10-16 (§13, D2 applied): it now reads "the two ~179 MiB ONNX external-data sidecars are not committed (the ~48 MiB production avatar GLB is)", with every variable, default and commented-out override untouched.
+
+No URL was invented, no account was registered, no bucket was created and nothing was uploaded: the host and `<base>` are the owner's decision, and **deployment readiness is not claimed**.
 
 ### 8.3 Deployment strategy
 
@@ -445,7 +535,9 @@ No URL was invented and nothing was uploaded to any service: this is a decision 
 
 **Verified by direct measurement or inspection here:** the git state, remote state, destination emptiness and its visibility/permissions, the destination's zero refs, all `.gitignore` effects via `git check-ignore`, the payload's exact file list/count/sizes/extension and area distribution, the largest-file analysis, the `web/dist` size and content, the 16 cross-directory imports and their six resolved targets, the build/typecheck/test exits and summaries, the secret scan (with working positive controls), the `.env.local` variable names and absence of secret shapes, the override implementation in `modelRegistry.ts` / `inference.ts` / `useSignVoxEngine.ts`, the `.data` sidecar derivation, and the backup contents.
 
-**Not verified (cannot be, from here):** whether a push actually succeeds (B2 — the credential helper hangs, and the API says the account has no write access); whether the destination is private (it is not — B1); the live behaviour of any external asset host; Vercel's live project behaviour, build limits and plan status; GitHub's behaviour for the 47.4 MiB GLB specifically (documented thresholds are 50 MiB warning / 100 MiB block, so it is expected to pass with a warning); the un-backed-up binaries' integrity beyond the 28 recorded SHA-256 digests (nothing has been restored from the archive — it was verified by listing, `tar -tzf | wc -l` = 601, not by extraction); and any Python check, because no virtualenv was activated for this task.
+**Verified in the Batch B reconciliation (2026-10-16):** current git state (`HEAD` `c17f1c3`, 3 commits, 101 tracked files, 5 modified tracked, 505 untracked-non-ignored, **empty index**, `new-origin` = `aeed61c6…`); the manifest's arithmetic (508 = 17 + 139 + 340 + 8 + 4, every path present on disk, none of the five committed paths leaked, no duplicates) and the 508-path byte total; the four fixture-dependent tests and **every** fixture path they need, including the two `*.onnx` graphs the first pass missed; `tools/audit_out.txt` as generated output of `tools/tmp_audit_asl.py`; each graph's external-data metadata (`location`/`offset`/`length`, 186 and 185 tensors); `Range` in the installed `onnxruntime-web` bundle; vitest 2.1.8's `skipIf` on both `ChainableTestAPI` and `ChainableSuiteAPI`; and the full `app/package.json` delta including the fact that it is unchanged since the baseline commit.
+
+**Not verified (cannot be, from here):** the live behaviour of any external asset host — none exists, §8.2.1 is a plan and not a created resource; Vercel's live project behaviour, build limits and plan status; GitHub's behaviour for the 47.4 MiB GLB specifically (documented thresholds are 50 MiB warning / 100 MiB block, so it is expected to pass with a warning); the un-backed-up binaries' integrity beyond the 28 recorded SHA-256 digests (nothing has been restored from the archive — it was verified by listing, `tar -tzf | wc -l` = 601, not by extraction); whether a clean clone of the destination really builds and which of the four tests actually skip there (implied by §5.4 and §4.6, **not** exercised — no clone was made and no guard is applied); and any Python check, because no virtualenv was activated for this task. The earlier "push cannot be verified" entry is obsolete: the baseline push succeeded (§1.8) and the two later commits were never pushed.
 
 **Assumed from the pre-deployment audit (not re-measured here):** the `data/` dataset's 2.08 GiB / 1,845 files, the size of `.venv_pilot`, the Vercel CLI's 493.8 MiB upload measurement, and GitHub's/Vercel's documented limits (which the audit cites to their official pages).
 
@@ -470,24 +562,103 @@ Also worth recording: the audit's `web/README.md` staleness (O7) and the missing
 | `.gitignore` | **edited** — hygiene block appended, §3.1; corrected and extended during the Batch A review, §3.1.1 (pre-change copy preserved in the backup) |
 | `.env.example` | **edited** — the 3 documented `VITE_*` variables extended with the 7 overrides added commented-out, §3.1.1 |
 | `docs/REPOSITORY_MIGRATION_2026-10-16.md` | created — this document |
-| `docs/migration/planned-files-2026-10-16.txt` | created — the exact payload manifest (513 entries after the `data/` correction) |
+| `docs/migration/planned-files-2026-10-16.txt` | created — the exact payload manifest (513 entries after the `data/` correction; **520 after the 2026-10-16 synthetic-fixture addendum**) |
 | `docs/migration/local-only-assets-sha256.txt` | created — SHA-256 of the large files that stay local |
+| `docs/migration/batch-b-manifest-2026-10-16.txt` | created (Batch B reconciliation) — the revised 508-entry classification, the corrected reproducibility gap (§4.6) and the asset contract (§8.2.1); supersedes the batch split formerly in §4.4. **Reconciled to revision 2 on 2026-10-16**: 163-file Batch B (new §1c), the applied decisions (§8) and the 515-entry denominator |
+| `web/src/tests/syntheticFixtures.test.ts` | **created 2026-10-16** — 8 always-on structural tests over the tracked synthetic fixtures (§4.6) |
+| `web/src/tests/fixtures/generate_fixtures.mjs` + 5 fixture files | **created 2026-10-16** — the deterministic dependency-free generator and its 30,865 B of output (§4.6) |
+| `web/src/tests/{goodCandidate,reproduce_trace,baseline_threshold_eval,temporal_sampling_parity}.test.ts` | **edited 2026-10-16** — `skipIf` guards only; every pre-existing assertion byte-identical to the reviewed proposal (`cmp`-verified) |
 
 Outside the repository: `D:/Singvox/_signvox_migration_backup_2026-10-16/` (§2.5) and the new `new-origin` remote (§2.2).
 
-**Deliberately not done:** no `git add`/stage, `git commit`, `git fetch`, `git pull`, `git reset`, `git clean`, `git stash`, `git checkout`, `git rebase`, tag or branch change; no write of any kind to `origin` or `old-origin`; no deployment (preview or otherwise); no Supabase or database operation; no email; no file deleted, moved or renamed; no secret value printed or written. The **only** write to the destination so far is the owner-approved baseline push recorded in §1.8, which carried the pre-existing commit unchanged.
+**Still deliberately not done (2026-10-16 revision):** no `git add`/stage, `git commit`, `git push`, `git fetch`, `git pull`, `git reset`, `git clean`, `git stash`, `git checkout`, `git restore`, `git rebase`, tag, branch or remote change; no deployment (preview or otherwise); no cloud resource, bucket or account created and no asset uploaded; no Supabase or database operation; no email; no file deleted, moved or renamed; no secret value printed or written. **Now done, with owner approval:** the §4.6 guards and synthetic fixtures, their `.gitignore` negations, the §4.5 anchored rule and the §8.2.1 `.env.example` correction — applied to the working tree and verified (§13, D1–D3). The **only** write to any remote remains the baseline push recorded in §1.8.
 
 ---
 
 ## 12. Exact next action requiring owner approval
 
-> **Step 1 is done — the baseline commit is live on `new-origin`** (`aeed61c6b7796b0201326be8c715861849142645`, §1.8).
+> **Done so far:** the baseline commit is live on `new-origin` (`aeed61c6…`, §1.8); Batch A (the `.gitignore` and `.env.example` hygiene, this plan, `docs/migration/planned-files-2026-10-16.txt` and `docs/migration/local-only-assets-sha256.txt`) is committed locally as `7e0c741` + `c17f1c3`. **Both of those commits are unpushed**, so `new-origin` is two commits behind local `main`.
 >
-> **Waiting on your review now is Batch A — repository hygiene and safe configuration.** It is applied to the working tree but **not staged**:
-> - `.gitignore` — the `data/` → `/data/` correction (which un-hid `ai/sign-recognition/data/pilot_class_mapping.json`) plus the credentials and tool-cache rules (§3.1.1);
-> - `.env.example` — the 7 undocumented `VITE_*` overrides, added commented-out so no default is overridden (§3.1.1).
+> **Applied since (2026-10-16, owner-approved):** D1 (the four fixture guards plus the tracked synthetic fixtures and their generator), D2 (the `.env.example` one-liner) and D3 (the anchored `/tools/audit_out.txt` rule). Verified with `npx tsc -b --force` (exit 0) and `npx vitest run` (31 files / 206 tests, 0 skipped, exit 0); `git diff --cached` is still empty.
 >
-> Nothing else will be staged, committed or pushed without a further explicit go-ahead:
-> 1. ~~`git push new-origin main`~~ — **done**;
-> 2. `git add -- <batch A paths>` → commit → push (after owner review of this batch);
-> 3. the same for batch B, then batch C, with the §5.1 checks re-run against batch B before its commit.
+> **Waiting on your review now:** D4 (the four preserved owner changes) and D5 (this plan's own status lines), then the Batch B staging decision using the reconciled 163-file list in `docs/migration/batch-b-manifest-2026-10-16.txt`.
+>
+> Nothing will be staged, committed, pushed or deployed without a further explicit go-ahead:
+> 1. ~~`git push new-origin main`~~ — **done** (baseline only);
+> 2. resolve D1–D4 in §13 — for D1 and D3 that means showing, then applying, the prepared diffs;
+> 3. `git add -- <batch B paths>` → commit → re-run the §5.1 checks, reporting **skipped tests separately from passed and failed**, then push on a separate go-ahead;
+> 4. the same for Batch C, after which the two unpushed Batch A commits ride along with the documented history.
+
+---
+
+## 13. Decisions awaiting owner approval
+
+D1–D3 were **applied on 2026-10-16** with owner approval and now carry their verification; D4 and D5 remain open. `git diff --cached` is empty — nothing in this section is staged.
+
+| # | Decision | Prepared artifact | Recommendation |
+|---|---|---|---|
+| **D1** — **APPLIED 2026-10-16** | Four committed tests could not pass on a clean clone (§4.6): `goodCandidate`, `reproduce_trace`, `baseline_threshold_eval`, `temporal_sampling_parity`. | Option (b): one `fs.existsSync` guard per file feeding `it.skipIf` / `describe.skipIf`, so the test skips **only** when its fixture is absent and runs with every assertion intact when it is present; `temporal_sampling_parity` also lost its silent `return`. Plus tracked synthetic fixtures (`web/src/tests/fixtures/`, 30,865 B, deterministic generator) and `web/src/tests/syntheticFixtures.test.ts` (8 structural tests, no accuracy claim) so the same invariants are covered on every clone (§4.6). | Applied and verified: this checkout 31 files / 206 tests pass, 0 skipped, exit 0; a payload-only clone 27 files / 201 tests pass with 4 files / 5 tests skipped and 0 failed. Rejected alternatives: (a) commit the ~97 MiB of fixture inputs, or (c) drop the four files from the default suite. |
+| **D2** — **APPLIED 2026-10-16** | `.env.example` said the avatar GLB is not committed, which is wrong (§8.2.1). | A one-line reword that keeps every variable and default untouched. | Apply. `.env.example` is already committed (`7e0c741`), so this becomes a new modification of a tracked file. |
+| **D3** — **APPLIED 2026-10-16** (.gitignore line 165, `git check-ignore -v`-confirmed) | `tools/audit_out.txt` was untracked and deliberately not ignored (§4.5). | An anchored rule `/tools/audit_out.txt` plus a one-line comment naming `tools/tmp_audit_asl.py` as its writer. | Apply the anchored rule rather than a broad `*audit_out*` pattern — the exact path avoids repeating the over-broad-pattern mistake of §3.1.1. |
+| **D4** | The four preserved owner changes (§4.7) — in particular whether `app/package.json` joins Batch B. | None; this task must not edit them. | See §13.1 and §13.2. |
+| **D5** | This plan's own status lines (§4.5, §4.6, §5.1, §8.2.1, §11, §12, §13) still described the applied decisions as pending, and the Batch B manifest measured 156 files against a tree that now holds 163. | Reconciled in this revision (2026-10-16): the applied state is recorded inline and the manifest was moved to revision 2. | Keep the plan and the manifest agreeing; re-read both before staging. |
+
+### 13.1 `app/package.json` — complete diff, and why it matters
+
+The file is unchanged since the baseline commit (`git diff aeed61c HEAD -- app/package.json` is empty), so the working-tree delta below **is** the whole change:
+
+```diff
+diff --git a/app/package.json b/app/package.json
+index 5d2a8c6..a60813a 100644
+--- a/app/package.json
++++ b/app/package.json
+@@ -5,19 +5,32 @@
+   "scripts": {
+     "android": "react-native run-android",
+     "ios": "react-native run-ios",
+-    "start": "react-native start"
++    "start": "react-native start",
++    "test": "jest"
+   },
+   "dependencies": {
+     "react": "18.2.0",
+-    "react-native": "0.74.0",
+-    "react-native-vision-camera": "^4.0.0",
+-    "react-native-worklets-core": "^1.0.0",
+-    "react-native-reanimated": "^3.8.0"
++    "react-native-vision-camera": "4.6.4",
++    "react-native-worklets-core": "1.6.3",
++    "react-native-reanimated": "^3.8.0",
++    "react-native": "0.74.0"
+   },
+   "devDependencies": {
++    "@types/react-native": "^0.73.0",
+     "@babel/core": "^7.20.0",
++    "@babel/preset-env": "^7.20.0",
++    "@babel/runtime": "^7.20.0",
++    "@react-native/babel-preset": "0.74.81",
++    "@react-native/eslint-config": "0.74.81",
++    "@react-native/metro-config": "0.74.81",
++    "@react-native/typescript-config": "0.74.81",
+     "@types/react": "^18.2.6",
+-    "@types/react-native": "^0.73.0",
+-    "typescript": "^5.0.4"
++    "@types/react-test-renderer": "^18.0.0",
++    "babel-jest": "^29.6.3",
++    "eslint": "^8.19.0",
++    "jest": "^29.6.3",
++    "prettier": "2.8.8",
++    "react-test-renderer": "18.2.0",
++    "typescript": "5.0.4"
+   }
+```
+
+Facts read off the diff: 27 changed lines (+24/−7); **no dependency removed** (`react-native` and `@types/react-native` survive — they are reordered); no secret, no `postinstall`, no `resolutions`/`overrides`, no new registry, no private scope; the two previously loose ranges (`^4.0.0`, `^1.0.0`) are now **pinned** to `4.6.4` / `1.6.3`; and there is **no `app/package-lock.json`** on disk, so `app/` has no lockfile in or out of the payload.
+
+Why it is required for a reproducible build: `app/babel.config.js` loads `react-native-worklets-core/plugin` and `@react-native/babel-preset`; `app/metro.config.js` requires `@react-native/metro-config`; `app/tsconfig.json` extends `@react-native/typescript-config`. **None of those four packages exists in the committed `devDependencies`**, and the VisionCamera / worklets-core versions the new code depends on were only unconstrained `^` ranges. A clean `npm install` from the committed file therefore cannot resolve the toolchain the repository's own config files reference, so the React Native app — unlike `web/` — would not be reproducible. `"test": "jest"` likewise exposes the Jest setup that the new devDependencies bring.
+
+Safe inclusion, **if** approved: stage only this path, verbatim, from the working tree (`git add -- app/package.json`) after recording its pre-staging `git hash-object` so the exact bytes stay provable and restorable. Do **not** use `git checkout --` / `git restore`, `git add -p` slicing, or any file rewrite: the change is the owner's, so it lands as-is or not at all. It stays listed apart from Batch B until the owner says otherwise.
+
+### 13.2 The other three preserved changes
+
+`ai/sign-recognition/training/dataloaders.py` (15 lines), `app/App.tsx` (239 lines) and `docs/architecture/TECHNICAL_ARCHITECTURE.md` (7 lines) are equally untouched by this task. Each needs the same yes/no: include verbatim in a named batch (B for the first two, C for the third, as §4.4 originally proposed), or leave uncommitted. Whichever is chosen, §4.4 and manifest §4 must be updated **together** so the two documents keep agreeing.

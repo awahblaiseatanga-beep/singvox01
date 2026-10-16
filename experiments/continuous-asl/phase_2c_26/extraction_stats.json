@@ -1,0 +1,16 @@
+{
+  "total_videos": 1739,
+  "successfully_extracted": 1739,
+  "failed_extractions": 0,
+  "total_frames": 275233,
+  "elapsed_seconds": 20683.19,
+  "nan_infinity_sequences": 0,
+  "completely_missing_left_hand_clips": 28,
+  "completely_missing_right_hand_clips": 12,
+  "sequence_length_stats": {
+    "min": 3,
+    "max": 1761,
+    "mean": 158.27,
+    "median": 124.0
+  }
+}

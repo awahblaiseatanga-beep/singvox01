@@ -1,0 +1,45 @@
+{
+  "sign": "GOOD",
+  "asl_id": "ASL_002",
+  "class_index": 1,
+  "clip_name": "ASL_GOOD",
+  "status": "candidate — NOT expert-verified",
+  "production_assets_modified": [],
+  "sources": {
+    "vocabulary": "Singvox/docs/ai-ml/ASL_100_VOCABULARY_FROZEN.md (ASL_002 GOOD, frozen v1.0.0 — ID/label unchanged)",
+    "spec": "Singvox/docs/ai-ml/ASL_100_SIGN_SPECIFICATIONS_BATCH_01.md SV-ASL-002 (flat/open dominant hand; onset near lips/lower face; moves away/downward; one-handed common form)",
+    "reference_video": "8390777557102604-GOOD.mp4 (signer P22, per Singvox/docs/ai-ml/ASL_CITIZEN_TRAINING_DATA_AUDIT.md line 214 — verified on disk & feature cache; bytes not opened here, listed reference only)",
+    "mapping": "Singvox/ai/sign-recognition/config/asl100_asl_citizen_mapping.json (GOOD exact) + Singvox/ai/sign-recognition/data/class_index_mapping.json (index 1)",
+    "recognition_mapping_untouched": true
+  },
+  "method": {
+    "approach": "v2: retargeted from the avatar's own validated ASL_HELLO clip in Blender pose space (quaternion slerp neutral->salute-peak: onset 0.78, stroke 0.55; left side from mixamo rest), 30 fps, f0-f40. v1 hand-tuned XYZ eulers discarded (sent hand behind back on production bind pose, verified on-avatar). Landmark/feature data used as reference only — NOT fed into joints.",
+    "dominant_hand": "right",
+    "handshape": "flat/open: finger joints 0.0 (straight), thumb slight curl 0.1",
+    "frames": 40,
+    "fps": 30,
+    "duration_s": 1.33
+  },
+  "files": {
+    "clip_sidecar": "Singvox/experiments/avatar/pilot_good/ASL_GOOD.clip.json",
+    "blender_script": "Singvox/experiments/avatar/pilot_good/author_good_blender.py",
+    "glb_export_script": "Singvox/experiments/avatar/pilot_good/export_good_glb.py",
+    "candidate_glb": "Singvox/experiments/avatar/pilot_good/SignVox_GOOD_Candidate.glb",
+    "preview_harness": "Singvox/experiments/avatar/pilot_good/pilot_good_preview.html",
+    "on_avatar_harness": "Singvox/experiments/avatar/pilot_good/on_avatar_good_harness.html",
+    "candidate_test": "Singvox/web/src/tests/goodCandidate.test.ts",
+    "validation": "Singvox/experiments/avatar/pilot_good/GOOD_validation.md",
+    "manifest": "Singvox/experiments/avatar/pilot_good/GOOD_manifest.json"
+  },
+  "bake": {
+    "candidate_glb_bytes": 49800688,
+    "exporter": "Khronos glTF Blender I/O v4.2.57",
+    "animations": ["ASL_GOOD", "ASL_HELLO", "ASL_NO", "ASL_YES", "mixamo.com"],
+    "asl_good_tracks": 195,
+    "keys": 41,
+    "time_range_s": [0.0, 1.333],
+    "neutral_return_exact": true,
+    "tests": "goodCandidate.test.ts + glbPlayback.test.ts: 4/4 pass (2026-10-15)",
+    "open_item": "mid-stroke visual on avatar not yet screenshotted (numeric motion verified)"
+  }
+}

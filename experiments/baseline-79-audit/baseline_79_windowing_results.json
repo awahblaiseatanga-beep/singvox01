@@ -1,0 +1,486 @@
+{
+  "val_samples": 306,
+  "clip_frames": {
+    "min": 12,
+    "p25": 19,
+    "median": 23,
+    "p75": 38,
+    "max": 61,
+    "count_eq_60": 0,
+    "count_lt_60": 305,
+    "count_gt_60": 1
+  },
+  "accuracy": {
+    "A_fullseq_masked_pt": 0.8594771241830066,
+    "B_fullseq_nomask_pt": 0.8594771241830066,
+    "C_centre60_onnx": 0.5294117647058824,
+    "D_resample60_onnx": 0.826797385620915
+  },
+  "per_class_C_centre60": {
+    "AFRAID": "2/4",
+    "AGAIN": "3/4",
+    "ANGRY": "3/3",
+    "BAD": "0/4",
+    "BATHROOM": "3/3",
+    "BIG": "4/4",
+    "BROTHER": "3/3",
+    "CHILD": "1/5",
+    "CHURCH": "3/3",
+    "COLD": "3/4",
+    "COME": "2/3",
+    "COMPUTER": "4/4",
+    "DANGER": "0/5",
+    "DAY": "2/3",
+    "FAMILY": "3/3",
+    "FATHER": "2/3",
+    "FEEL": "2/4",
+    "FINISH": "2/3",
+    "FIRE": "3/3",
+    "FRIEND": "1/3",
+    "GIVE": "0/4",
+    "GO": "3/3",
+    "GOOD": "1/4",
+    "HAPPY": "0/4",
+    "HAVE": "4/4",
+    "HEARING": "0/4",
+    "HELLO": "4/4",
+    "HELP": "3/5",
+    "HERE": "3/3",
+    "HOME": "2/4",
+    "HOT": "1/4",
+    "HUNGRY": "0/4",
+    "IN": "0/5",
+    "KNOW": "3/4",
+    "LANGUAGE": "4/4",
+    "LEARN": "2/4",
+    "LIKE": "0/3",
+    "LOVE": "2/5",
+    "ME": "0/5",
+    "MEET": "2/3",
+    "MORE": "4/4",
+    "MORNING": "2/4",
+    "MOTHER": "2/3",
+    "NAME": "0/4",
+    "NEED": "2/3",
+    "NICE": "3/7",
+    "NO": "2/3",
+    "OUT": "4/4",
+    "PAIN": "8/8",
+    "PLEASE": "0/4",
+    "SAD": "4/4",
+    "SCHOOL": "2/3",
+    "SEE": "3/3",
+    "SICK": "3/4",
+    "SIGN": "3/4",
+    "SISTER": "3/5",
+    "SLEEP": "1/5",
+    "SLOW": "0/3",
+    "SMALL": "3/3",
+    "SORRY": "0/3",
+    "STOP": "2/3",
+    "STUDY": "1/3",
+    "TAKE": "1/3",
+    "TEACHER": "4/4",
+    "THERE": "3/4",
+    "THINK": "2/3",
+    "TODAY": "7/7",
+    "TOMORROW": "1/4",
+    "UNDERSTAND": "1/4",
+    "WAIT": "2/4",
+    "WATER": "0/4",
+    "WHEN": "1/4",
+    "WHERE": "0/4",
+    "WHO": "1/4",
+    "WHY": "2/4",
+    "WORK": "2/3",
+    "YES": "0/5",
+    "YESTERDAY": "3/3",
+    "YOU": "0/4"
+  },
+  "per_class_D_resample60": {
+    "AFRAID": "4/4",
+    "AGAIN": "3/4",
+    "ANGRY": "2/3",
+    "BAD": "4/4",
+    "BATHROOM": "3/3",
+    "BIG": "4/4",
+    "BROTHER": "3/3",
+    "CHILD": "4/5",
+    "CHURCH": "3/3",
+    "COLD": "3/4",
+    "COME": "3/3",
+    "COMPUTER": "4/4",
+    "DANGER": "3/5",
+    "DAY": "3/3",
+    "FAMILY": "3/3",
+    "FATHER": "3/3",
+    "FEEL": "3/4",
+    "FINISH": "3/3",
+    "FIRE": "3/3",
+    "FRIEND": "3/3",
+    "GIVE": "2/4",
+    "GO": "3/3",
+    "GOOD": "3/4",
+    "HAPPY": "0/4",
+    "HAVE": "4/4",
+    "HEARING": "2/4",
+    "HELLO": "4/4",
+    "HELP": "4/5",
+    "HERE": "3/3",
+    "HOME": "4/4",
+    "HOT": "3/4",
+    "HUNGRY": "1/4",
+    "IN": "2/5",
+    "KNOW": "4/4",
+    "LANGUAGE": "4/4",
+    "LEARN": "2/4",
+    "LIKE": "3/3",
+    "LOVE": "4/5",
+    "ME": "2/5",
+    "MEET": "2/3",
+    "MORE": "4/4",
+    "MORNING": "2/4",
+    "MOTHER": "3/3",
+    "NAME": "3/4",
+    "NEED": "2/3",
+    "NICE": "7/7",
+    "NO": "2/3",
+    "OUT": "4/4",
+    "PAIN": "8/8",
+    "PLEASE": "4/4",
+    "SAD": "4/4",
+    "SCHOOL": "2/3",
+    "SEE": "3/3",
+    "SICK": "3/4",
+    "SIGN": "4/4",
+    "SISTER": "5/5",
+    "SLEEP": "2/5",
+    "SLOW": "3/3",
+    "SMALL": "3/3",
+    "SORRY": "2/3",
+    "STOP": "3/3",
+    "STUDY": "3/3",
+    "TAKE": "1/3",
+    "TEACHER": "4/4",
+    "THERE": "4/4",
+    "THINK": "2/3",
+    "TODAY": "7/7",
+    "TOMORROW": "4/4",
+    "UNDERSTAND": "4/4",
+    "WAIT": "3/4",
+    "WATER": "4/4",
+    "WHEN": "3/4",
+    "WHERE": "4/4",
+    "WHO": "2/4",
+    "WHY": "2/4",
+    "WORK": "3/3",
+    "YES": "3/5",
+    "YESTERDAY": "3/3",
+    "YOU": "4/4"
+  },
+  "per_class_A_trainpath": {
+    "AFRAID": "4/4",
+    "AGAIN": "3/4",
+    "ANGRY": "3/3",
+    "BAD": "4/4",
+    "BATHROOM": "3/3",
+    "BIG": "4/4",
+    "BROTHER": "3/3",
+    "CHILD": "5/5",
+    "CHURCH": "3/3",
+    "COLD": "3/4",
+    "COME": "3/3",
+    "COMPUTER": "4/4",
+    "DANGER": "3/5",
+    "DAY": "3/3",
+    "FAMILY": "3/3",
+    "FATHER": "3/3",
+    "FEEL": "3/4",
+    "FINISH": "3/3",
+    "FIRE": "3/3",
+    "FRIEND": "3/3",
+    "GIVE": "2/4",
+    "GO": "2/3",
+    "GOOD": "4/4",
+    "HAPPY": "1/4",
+    "HAVE": "4/4",
+    "HEARING": "1/4",
+    "HELLO": "4/4",
+    "HELP": "4/5",
+    "HERE": "3/3",
+    "HOME": "4/4",
+    "HOT": "3/4",
+    "HUNGRY": "3/4",
+    "IN": "3/5",
+    "KNOW": "4/4",
+    "LANGUAGE": "4/4",
+    "LEARN": "2/4",
+    "LIKE": "3/3",
+    "LOVE": "4/5",
+    "ME": "2/5",
+    "MEET": "2/3",
+    "MORE": "4/4",
+    "MORNING": "2/4",
+    "MOTHER": "3/3",
+    "NAME": "3/4",
+    "NEED": "2/3",
+    "NICE": "7/7",
+    "NO": "2/3",
+    "OUT": "4/4",
+    "PAIN": "8/8",
+    "PLEASE": "4/4",
+    "SAD": "4/4",
+    "SCHOOL": "2/3",
+    "SEE": "3/3",
+    "SICK": "3/4",
+    "SIGN": "4/4",
+    "SISTER": "5/5",
+    "SLEEP": "3/5",
+    "SLOW": "3/3",
+    "SMALL": "3/3",
+    "SORRY": "2/3",
+    "STOP": "3/3",
+    "STUDY": "3/3",
+    "TAKE": "1/3",
+    "TEACHER": "4/4",
+    "THERE": "4/4",
+    "THINK": "3/3",
+    "TODAY": "7/7",
+    "TOMORROW": "4/4",
+    "UNDERSTAND": "4/4",
+    "WAIT": "3/4",
+    "WATER": "4/4",
+    "WHEN": "3/4",
+    "WHERE": "4/4",
+    "WHO": "3/4",
+    "WHY": "2/4",
+    "WORK": "3/3",
+    "YES": "5/5",
+    "YESTERDAY": "3/3",
+    "YOU": "4/4"
+  },
+  "live_sliding_window_simulation": {
+    "HELLO": [
+      {
+        "file": "05614933522741539-HELLO.mp4",
+        "frames": 18,
+        "dominant": [
+          [
+            "HELLO",
+            7
+          ],
+          [
+            "SICK",
+            6
+          ],
+          [
+            "DAY",
+            4
+          ]
+        ],
+        "contains_true": true
+      },
+      {
+        "file": "20675411351630046-HELLO.mp4",
+        "frames": 18,
+        "dominant": [
+          [
+            "HELLO",
+            11
+          ],
+          [
+            "SICK",
+            7
+          ]
+        ],
+        "contains_true": true
+      },
+      {
+        "file": "16493550450776628-HELLO.mp4",
+        "frames": 41,
+        "dominant": [
+          [
+            "HELLO",
+            20
+          ],
+          [
+            "YESTERDAY",
+            14
+          ],
+          [
+            "SICK",
+            5
+          ]
+        ],
+        "contains_true": true
+      },
+      {
+        "file": "020030442376253177-HELLO.mp4",
+        "frames": 17,
+        "dominant": [
+          [
+            "HELLO",
+            10
+          ],
+          [
+            "SICK",
+            7
+          ]
+        ],
+        "contains_true": true
+      }
+    ],
+    "YES": [
+      {
+        "file": "9161842981344352-YES.mp4",
+        "frames": 19,
+        "dominant": [
+          [
+            "DAY",
+            9
+          ],
+          [
+            "SICK",
+            5
+          ],
+          [
+            "YESTERDAY",
+            5
+          ]
+        ],
+        "contains_true": false
+      },
+      {
+        "file": "9715589334909431-YES.mp4",
+        "frames": 16,
+        "dominant": [
+          [
+            "NEED",
+            8
+          ],
+          [
+            "SICK",
+            4
+          ],
+          [
+            "YESTERDAY",
+            4
+          ]
+        ],
+        "contains_true": false
+      },
+      {
+        "file": "42327270691916885-YES.mp4",
+        "frames": 40,
+        "dominant": [
+          [
+            "YESTERDAY",
+            14
+          ],
+          [
+            "ME",
+            8
+          ],
+          [
+            "DAY",
+            8
+          ]
+        ],
+        "contains_true": false
+      },
+      {
+        "file": "26056519285644875-YES.mp4",
+        "frames": 36,
+        "dominant": [
+          [
+            "YESTERDAY",
+            20
+          ],
+          [
+            "COME",
+            11
+          ],
+          [
+            "SICK",
+            5
+          ]
+        ],
+        "contains_true": false
+      },
+      {
+        "file": "8977694836593926-YES.mp4",
+        "frames": 22,
+        "dominant": [
+          [
+            "YESTERDAY",
+            16
+          ],
+          [
+            "SICK",
+            6
+          ]
+        ],
+        "contains_true": false
+      }
+    ],
+    "NO": [
+      {
+        "file": "8323715285073319-NO.mp4",
+        "frames": 20,
+        "dominant": [
+          [
+            "SICK",
+            6
+          ],
+          [
+            "YESTERDAY",
+            6
+          ],
+          [
+            "DAY",
+            3
+          ]
+        ],
+        "contains_true": true
+      },
+      {
+        "file": "4656606080155459-NO.mp4",
+        "frames": 42,
+        "dominant": [
+          [
+            "NO",
+            20
+          ],
+          [
+            "YESTERDAY",
+            12
+          ],
+          [
+            "SICK",
+            5
+          ]
+        ],
+        "contains_true": true
+      },
+      {
+        "file": "8079226457278508-NO.mp4",
+        "frames": 23,
+        "dominant": [
+          [
+            "NEED",
+            11
+          ],
+          [
+            "SICK",
+            7
+          ],
+          [
+            "DAY",
+            5
+          ]
+        ],
+        "contains_true": false
+      }
+    ]
+  }
+}

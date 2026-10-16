@@ -1,0 +1,21 @@
+{
+  "model_inits": {
+    "42": {
+      "class_query": "1dcb696fdf05d05f959820af0014b64b",
+      "input_proj.weight": "9762129607335a2fea32a6d2955c0938"
+    },
+    "123": {
+      "class_query": "c1736be402fe9867b1120722ca5a147e",
+      "input_proj.weight": "aa513fbf0fc8bb21e4af391bbf4a9025"
+    },
+    "777": {
+      "class_query": "47685bba0bf28933b29a18df6162d3b6",
+      "input_proj.weight": "22a3afcf826d72d60442b54b803a478e"
+    }
+  },
+  "batch_hashes": {
+    "42": "33c67b24be4f76f6c9ac56b7bbfe86e5",
+    "123": "c698cd0358fac971b40d45d7c42d91f3",
+    "777": "0d537f5a10798dbef6dea64adb7d7350"
+  }
+}

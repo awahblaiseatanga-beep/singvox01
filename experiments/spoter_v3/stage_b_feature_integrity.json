@@ -1,0 +1,21 @@
+{
+  "total_feature_files": 2516,
+  "expected_feature_dimension": 366,
+  "dimension_mismatches": 0,
+  "nan_files_count": 0,
+  "inf_files_count": 0,
+  "total_frames": 67691,
+  "sequence_lengths": {
+    "min": 6,
+    "max": 222,
+    "mean": 26.904213036565977,
+    "median": 25.0
+  },
+  "classes_represented": 79,
+  "split_distribution": {
+    "test": 1011,
+    "train": 1199,
+    "val": 306
+  },
+  "integrity_status": "PASSED"
+}

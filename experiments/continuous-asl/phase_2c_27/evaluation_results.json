@@ -1,0 +1,111 @@
+{
+  "val_standard": {
+    "total_samples": 258,
+    "exact_match_count": 0,
+    "exact_match_pct": 0.0,
+    "empty_output_count": 0,
+    "empty_output_pct": 0.0,
+    "repetitive_output_count": 115,
+    "repetitive_output_pct": 44.57,
+    "bleu1": 6.27,
+    "bleu2": 2.1,
+    "bleu4": 1.14,
+    "brevity_penalty": 0.2464
+  },
+  "test_standard": {
+    "total_samples": 266,
+    "exact_match_count": 0,
+    "exact_match_pct": 0.0,
+    "empty_output_count": 0,
+    "empty_output_pct": 0.0,
+    "repetitive_output_count": 114,
+    "repetitive_output_pct": 42.86,
+    "bleu1": 5.28,
+    "bleu2": 1.96,
+    "bleu4": 1.15,
+    "brevity_penalty": 0.2399
+  },
+  "probes": {
+    "zeroed": {
+      "total_samples": 258,
+      "exact_match_count": 0,
+      "exact_match_pct": 0.0,
+      "empty_output_count": 0,
+      "empty_output_pct": 0.0,
+      "repetitive_output_count": 0,
+      "repetitive_output_pct": 0.0,
+      "bleu1": 0.19,
+      "bleu2": 0.11,
+      "bleu4": 0.09,
+      "brevity_penalty": 0.0076
+    },
+    "shuffled": {
+      "total_samples": 258,
+      "exact_match_count": 0,
+      "exact_match_pct": 0.0,
+      "empty_output_count": 0,
+      "empty_output_pct": 0.0,
+      "repetitive_output_count": 114,
+      "repetitive_output_pct": 44.19,
+      "bleu1": 6.3,
+      "bleu2": 2.1,
+      "bleu4": 1.14,
+      "brevity_penalty": 0.2474
+    },
+    "mismatched": {
+      "total_samples": 258,
+      "exact_match_count": 0,
+      "exact_match_pct": 0.0,
+      "empty_output_count": 0,
+      "empty_output_pct": 0.0,
+      "repetitive_output_count": 115,
+      "repetitive_output_pct": 44.57,
+      "bleu1": 6.27,
+      "bleu2": 2.15,
+      "bleu4": 1.15,
+      "brevity_penalty": 0.2464
+    }
+  },
+  "sample_predictions": [
+    {
+      "sample_idx": 0,
+      "reference": "When we feed them we want to make sure that they have a good appetite and that their fins are not torn, they're not in rough shape, they're not sitting at the bottom.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 1,
+      "reference": "A common problem with fish is Ick which is tiny white spots over the entire fish itself.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 2,
+      "reference": "A lot of ailments are caused by stress which can be water quality, temperature and fish stressing out other fish themselves.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 3,
+      "reference": "We have MELAFIX and PEMEFIX. MELAFIX is an anti-bacterial and PEMEFIX is an anti-fungal. What I like to do is use both of them together because its not an exact science of exactly what's going on with the fish so if there is a bacterial problem, we can take care of fungus as well if that happens to be part of the issue as well.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 4,
+      "reference": "Talking to you today about equipment and process and ingredients that go into making your own beer at your own home.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 5,
+      "reference": "In other words, there's no way that any kind of oil and or internal petroleums or lubricants can contact the beer or wine that you're moving through here.",
+      "hypothesis": "you you can the to the the the the"
+    },
+    {
+      "sample_idx": 6,
+      "reference": "Simply follow directions and it tells you exactly how much to use, when you should do a water change.",
+      "hypothesis": "you you can the to the the"
+    },
+    {
+      "sample_idx": 7,
+      "reference": "One thing that I like to start with if there is a regular ailment going on is using a natural product.",
+      "hypothesis": "you you can the to the the"
+    }
+  ]
+}

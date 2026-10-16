@@ -1,0 +1,33 @@
+# SingVox Vercel upload exclusions.
+# SCOPE: these rules are applied by the Vercel **CLI** when it uploads this directory as the
+# deployment source. They are inert for a Git-connected deployment (the chosen method, plan 8.3):
+# there, what is kept out of a deployment is what .gitignore keeps out of the repository, and the
+# batch manifests under docs/migration/ are the authoritative record of that.
+#
+# Runtime requires ONLY:
+#   public/avatar/SignVox_Female_Competition_Prototype.glb
+#   public/spoter_pilot.onnx[.data], public/spoter_v2_model.onnx[.data]   (hosted externally, plan 5)
+#   public/onnxruntime/*   (inference.ts pins /onnxruntime/ort-wasm-simd-threaded.wasm)
+#
+# The nine non-production GLBs below stay in the repository (history, experiments, fallback builds)
+# but are referenced by no production path. All nine are gitignored and belong to no batch, so they
+# are already absent from a Git-built deployment; they are listed here only so that an accidental
+# CLI upload does not ship 464.7 MiB of unusable avatars.
+#
+# NOT listed, on purpose: public/avatar/test_front.png, test_side.png and test_hand.png (0.23 MiB).
+# They are in Batch B and do ship in dist/avatar/. They were rendered by local Blender tooling
+# (tools/test_neutral_pose.py and tools/render_hands.py write to a different output directory), and
+# no application code, test or benchmark reads them, so they are left exactly as they are rather
+# than added to this list.
+public/avatar/SignVox_Female.glb
+public/avatar/SignVox_Female_backup.glb
+public/avatar/SignVox_Female_v2.glb
+public/avatar/SignVox_Female_v3.glb
+public/avatar/SignVox_Female_v5_HELLO.glb
+public/avatar/SignVox_Female_v4_HELLO.glb
+public/avatar/SignVox_Female_v4_Neutral.glb
+public/avatar/SignVox_Female_v5_Neutral.glb
+public/avatar/SignVox_Female_v6_Neutral.glb
+node_modules
+dist
+*.log

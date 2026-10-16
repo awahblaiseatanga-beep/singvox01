@@ -1,0 +1,16 @@
+{
+  "run_A": {
+    "init_batch_hash": "6f799e30b9f782f849d44b1bc96ba7c2",
+    "init_model_hash": "9762129607335a2fea32a6d2955c0938",
+    "best_model_hash": "978de113eabf5c5f99c9e6702e6e4898",
+    "best_epoch": 49,
+    "best_val_f1": 0.7049259608553408
+  },
+  "run_B": {
+    "init_batch_hash": "6f799e30b9f782f849d44b1bc96ba7c2",
+    "init_model_hash": "9762129607335a2fea32a6d2955c0938",
+    "best_model_hash": "978de113eabf5c5f99c9e6702e6e4898",
+    "best_epoch": 49,
+    "best_val_f1": 0.7049259608553408
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GOOD (ASL_002) — Candidate Motion Check · pilot_good</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #111; color: #eee; }
+  h1 { font-size: 18px; } .warn { color: #ffb454; } .ok { color: #7ee787; } .bad { color: #ff7b72; }
+  #wrap { display: flex; gap: 16px; flex-wrap: wrap; }
+  canvas { background: #1c1c1c; border: 1px solid #444; }
+  table { border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+  td, th { border: 1px solid #444; padding: 3px 8px; text-align: right; }
+  th { background: #222; } td.l { text-align: left; }
+  #readout { font-variant-numeric: tabular-nums; font-size: 13px; white-space: pre; background: #1c1c1c; padding: 8px; border: 1px solid #444; }
+  button { margin-right: 6px; }
+  small { color: #aaa; }
+</style>
+</head>
+<body>
+<h1>GOOD (ASL_002) — candidate keyframe motion check <span class="warn">[CANDIDATE — NOT expert-verified]</span></h1>
+<p><small>Drives the exact euler keyframes from <code>ASL_GOOD.clip.json</code> through 3D forward kinematics
+(arm 0.30 m / forearm 0.28 m / hand 0.18 m, Euler XYZ as R=Rx·Ry·Rz) and renders a 3/4-view projection.
+Proportions are estimates, not measured from the GLB — visual confirmation on the real avatar is still required.
+Production GLB / controller / vocab untouched.</small></p>
+<div id="wrap">
+  <div>
+    <canvas id="cv" width="520" height="460"></canvas><br>
+    <button id="play">⏸ pause</button>
+    <button data-f="0">f0 neutral</button>
+    <button data-f="10">f10 onset</button>
+    <button data-f="20">f20 stroke</button>
+    <button data-f="40">f40 neutral</button>
+  </div>
+  <div>
+    <div id="readout"></div>
+    <table id="checks"><tr><th>check</th><th>f0</th><th>f10</th><th>f20</th><th>f40</th><th>rule</th></tr></table>
+  </div>
+</div>
+<p><small>Checks: hand→lips distance (onset should be near face); min torso clearance (must stay &gt; 0);
+neutral-return exactness (f40 == f0 so AvatarController crossfade to ASL_NEUTRAL is clean);
+all angles finite.</small></p>
+<script>
+// ---- Authored keyframes, copied verbatim from ASL_GOOD.clip.json ----
+const KEYS = {
+  RightArm:     [[0,[0,0,1.2]],[10,[0.55,0.35,0.55]],[20,[0.9,0.1,0.45]],[40,[0,0,1.2]]],
+  RightForeArm: [[0,[0,0,0]],[10,[0,-0.5,1.9]],[20,[0,-0.1,0.7]],[40,[0,0,0]]],
+  RightHand:    [[0,[0,0,0]],[10,[0.4,-0.4,-0.4]],[20,[0.1,-0.15,-0.15]],[40,[0,0,0]]]
+};
+const L1=0.30, L2=0.28, L3=0.18;                 // segment lengths (m, estimated)
+const SHOULDER=[0.21,1.45,0];                    // right shoulder (m, estimated)
+const LIPS=[0.06,1.56,0.09];                     // lips/lower-face target (m, estimated)
+const TORSO={x:0.19,y0:0.95,y1:1.50,z:0.13};     // torso box half-extents (m, estimated)
+
+function matMul(A,B){const C=[[0,0,0],[0,0,0],[0,0,0]];for(let i=0;i<3;i++)for(let j=0;j<3;j++)for(let k=0;k<3;k++)C[i][j]+=A[i][k]*B[k][j];return C;}
+function Rx(a){const c=Math.cos(a),s=Math.sin(a);return [[1,0,0],[0,c,-s],[0,s,c]];}
+function Ry(a){const c=Math.cos(a),s=Math.sin(a);return [[c,0,s],[0,1,0],[-s,0,c]];}
+function Rz(a){const c=Math.cos(a),s=Math.sin(a);return [[c,-s,0],[s,c,0],[0,0,1]];}
+function eulerXYZ(e){return matMul(matMul(Rx(e[0]),Ry(e[1])),Rz(e[2]));}
+function matVec(M,v){return [M[0][0]*v[0]+M[0][1]*v[1]+M[0][2]*v[2],M[1][0]*v[0]+M[1][1]*v[1]+M[1][2]*v[2],M[2][0]*v[0]+M[2][1]*v[1]+M[2][2]*v[2]];}
+function add(a,b){return [a[0]+b[0],a[1]+b[1],a[2]+b[2]];}
+function scale(v,s){return [v[0]*s,v[1]*s,v[2]*s];}
+function dist(a,b){return Math.hypot(a[0]-b[0],a[1]-b[1],a[2]-b[2]);}
+
+function sampleTrack(track,f){
+  const k=track;
+  if(f<=k[0][0])return k[0][1];
+  for(let i=0;i<k.length-1;i++){
+    const a=k[i],b=k[i+1];
+    if(f<=b[0]){let t=(f-a[0])/(b[0]-a[0]);t=t*t*(3-2*t);
+      return [a[1][0]+(b[1][0]-a[1][0])*t,a[1][1]+(b[1][1]-a[1][1])*t,a[1][2]+(b[1][2]-a[1][2])*t];}
+  }
+  return k[k.length-1][1];
+}
+function fk(f){
+  const RA=eulerXYZ(sampleTrack(KEYS.RightArm,f));
+  const RF=matMul(RA,eulerXYZ(sampleTrack(KEYS.RightForeArm,f)));
+  const RH=matMul(RF,eulerXYZ(sampleTrack(KEYS.RightHand,f)));
+  const DOWN=[0,-1,0];
+  const elbow=add(SHOULDER,scale(matVec(RA,DOWN),L1));
+  const wrist=add(elbow,scale(matVec(RF,DOWN),L2));
+  const tip=add(wrist,scale(matVec(RH,DOWN),L3));
+  return {elbow,wrist,tip};
+}
+function boxDist(p){
+  const dx=Math.max(Math.abs(p[0])-TORSO.x,0);
+  const dy=p[1]<TORSO.y0?TORSO.y0-p[1]:(p[1]>TORSO.y1?p[1]-TORSO.y1:0);
+  const dz=Math.max(Math.abs(p[2])-TORSO.z,0);
+  return Math.hypot(dx,dy,dz);
+}
+function clearance(f){
+  const {elbow,wrist,tip}=fk(f);
+  let m=Infinity;
+  for(let i=0;i<=10;i++){const t=i/10;
+    for(const seg of [[SHOULDER,elbow],[elbow,wrist],[wrist,tip]]){
+      const p=add(seg[0],scale(add(seg[1],scale(seg[0],-1)),t));
+      m=Math.min(m,boxDist(p));
+    }}
+  return m;
+}
+// ---- render checks table ----
+const rows=[
+  ["hand→lips dist (m)", f=>dist(fk(f).tip,LIPS).toFixed(3), "f10 near face"],
+  ["torso clearance (m)", f=>clearance(f).toFixed(3), "> 0 always"],
+  ["neutral return Δ (rad)", f=>{const a=sampleTrack(KEYS.RightArm,f),b=sampleTrack(KEYS.RightArm,0);return Math.hypot(a[0]-b[0],a[1]-b[1],a[2]-b[2]).toFixed(3);}, "f40 = 0"]
+];
+const tbl=document.getElementById("checks");
+for(const [name,fn,rule] of rows){
+  const tr=document.createElement("tr");
+  tr.innerHTML=`<td class="l">${name}</td>`+[0,10,20,40].map(f=>`<td>${fn(f)}</td>`).join("")+`<td class="l">${rule}</td>`;
+  tbl.appendChild(tr);
+}
+// finite-angle sanity
+let finite=true;
+for(const t of Object.values(KEYS))for(const [,e] of t)for(const v of e)if(!isFinite(v))finite=false;
+const tr=document.createElement("tr");
+tr.innerHTML=`<td class="l">angles finite</td><td colspan="4" class="${finite?"ok":"bad"}">${finite?"PASS":"FAIL"}</td><td class="l">sanity</td>`;
+tbl.appendChild(tr);
+
+// ---- canvas animation ----
+const cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+function proj(p){return [260+(p[0]*0.85+p[2]*0.45)*560, 430-p[1]*250];}
+function limb(a,b,w,c){ctx.strokeStyle=c;ctx.lineWidth=w;ctx.lineCap="round";ctx.beginPath();const A=proj(a),B=proj(b);ctx.moveTo(A[0],A[1]);ctx.lineTo(B[0],B[1]);ctx.stroke();}
+let frame=0,playing=true;
+document.getElementById("play").onclick=e=>{playing=!playing;e.target.textContent=playing?"⏸ pause":"▶ play";};
+document.querySelectorAll("button[data-f]").forEach(b=>b.onclick=()=>{frame=+b.dataset.f;draw();});
+function draw(){
+  ctx.clearRect(0,0,520,460);
+  // torso + head (estimates)
+  ctx.strokeStyle="#666";ctx.lineWidth=2;
+  const t0=proj([-TORSO.x,TORSO.y0,0]),t1=proj([TORSO.x,TORSO.y1,0]);
+  ctx.strokeRect(Math.min(t0[0],t1[0]),t1[1],Math.abs(t1[0]-t0[0]),t0[1]-t1[1]);
+  const hc=proj([0,1.66,0]);ctx.beginPath();ctx.arc(hc[0],hc[1],30,0,7);ctx.stroke();
+  const lp=proj(LIPS);ctx.fillStyle="#ffb454";ctx.beginPath();ctx.arc(lp[0],lp[1],4,0,7);ctx.fill();
+  ctx.fillStyle="#aaa";ctx.fillText("lips target",lp[0]+8,lp[1]);
+  const {elbow,wrist,tip}=fk(frame);
+  limb(SHOULDER,elbow,10,"#e8b4ff");limb(elbow,wrist,8,"#9ee7ff");limb(wrist,tip,6,"#7ee787");
+  const tp=proj(tip);ctx.fillStyle="#7ee787";ctx.beginPath();ctx.arc(tp[0],tp[1],5,0,7);ctx.fill();
+  const e=sampleTrack(KEYS.RightArm,frame),w=sampleTrack(KEYS.RightForeArm,frame),h=sampleTrack(KEYS.RightHand,frame);
+  const f2=n=>n.toFixed(2);
+  document.getElementById("readout").textContent=
+    `frame ${frame.toFixed(1)}/40   ASL_GOOD  (flat right hand)\n`+
+    `R-Arm  [${e.map(f2)}]\nR-Fore [${w.map(f2)}]\nR-Hand [${h.map(f2)}]\n`+
+    `tip→lips ${dist(tip,LIPS).toFixed(3)} m   clearance ${clearance(frame).toFixed(3)} m`;
+}
+setInterval(()=>{if(playing){frame+=0.6;if(frame>40)frame=0;draw();}},33);
+draw();
+</script>
+</body>
+</html>

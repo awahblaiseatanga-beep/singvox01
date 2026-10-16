@@ -1,0 +1,793 @@
+# SignVox - Batch B candidate manifest (2026-10-16, revised)
+#
+# Source: docs/migration/planned-files-2026-10-16.txt (520, after the addendum in section 8)
+# minus the 5 entries already committed in 7e0c741 and c17f1c3, leaving 515.
+# NOTHING HERE IS STAGED.
+#
+# Revision 2 (2026-10-16, reconciled after the owner-approved fixture fix was applied):
+# section 1 grew from 156 to 163 files, section 7's gap is closed by explicit skips plus
+# tracked synthetic fixtures, and the evidence for the six applied decisions is in section 8.
+# The four preserved owner changes of section 4 are still untouched and unstaged.
+#
+# Owner classification applied in this revision:
+#   - the 8 scratch/generated files are EXCLUDED from every batch (section 3);
+#   - the 17 former 'Batch A remainder' config files are FOLDED INTO BATCH B (section 1a);
+#   - tools/ and experiments/ MOVE TO BATCH C (section 2).
+
+## 1. Batch B - application source to commit  (163 files)
+# 163 = 17 config (1a) + 139 application source (1b) + 7 synthetic fixtures (1c).
+# Total on disk: 131.8 MiB, of which 5 files >= 1 MiB (129.5 MiB).
+
+### 1a. Configuration required for a reproducible build/test/deploy  (17 files)
+# Each inspected individually: manifests, lockfiles, TypeScript/Vite/Vercel config and the
+# React Native app entry/build config. No secret, no generated config, no unrelated
+# scaffolding found in any of them.
+
+app/.eslintrc.js
+app/.prettierrc.js
+app/app.json
+app/babel.config.js
+app/index.js
+app/metro.config.js
+app/scripts/copy_mediapipe_models.py
+app/tsconfig.json
+avatar/package-lock.json
+avatar/package.json
+web/.vercelignore
+web/index.html
+web/package-lock.json
+web/package.json
+web/tsconfig.json
+web/vercel.json
+web/vite.config.ts
+
+### 1b. Application source  (139 files)
+
+ai/sign-recognition/data/pilot_class_mapping.json
+ai/sign-recognition/models/spoter_experiment_05b_scalars.json
+ai/sign-recognition/models/spoter_pilot_config.json
+ai/sign-recognition/training/export_to_onnx.py
+ai/sign-recognition/training/train_pilot_spoter.py
+app/android/app/build.gradle
+app/android/app/proguard-rules.pro
+app/android/app/src/debug/AndroidManifest.xml
+app/android/app/src/main/AndroidManifest.xml
+app/android/app/src/main/java/com/signvoxvisionlab/MainActivity.kt
+app/android/app/src/main/java/com/signvoxvisionlab/MainApplication.kt
+app/android/app/src/main/java/com/signvoxvisionlab/camera/SignVoxLandmarksFrameProcessorPlugin.kt
+app/android/app/src/main/res/drawable/rn_edit_text_material.xml
+app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+app/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+app/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+app/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+app/android/app/src/main/res/values/strings.xml
+app/android/app/src/main/res/values/styles.xml
+app/android/build.gradle
+app/android/gradle.properties
+app/android/gradle/wrapper/gradle-wrapper.jar
+app/android/gradle/wrapper/gradle-wrapper.properties
+app/android/gradlew
+app/android/gradlew.bat
+app/android/settings.gradle
+avatar/controller/AnatomicalAnchors.ts
+avatar/controller/ArmIKController.ts
+avatar/controller/AvatarController.ts
+avatar/controller/FingerController.ts
+avatar/controller/HandController.ts
+avatar/controller/HandModel.ts
+avatar/controller/ThumbController.ts
+avatar/controller/avatarCapabilities.ts
+avatar/controller/boneMap.ts
+web/README.md
+web/bench/clips/bench-signer-1.mp4
+web/bench/clips/bench-signer-2.mp4
+web/bench/recognition-bench.html
+web/build-ico.mjs
+web/clean_glb.cjs
+web/measure_ik.mjs
+web/public/avatar/SignVox_Female_Competition_Prototype.glb
+web/public/avatar/test_front.png
+web/public/avatar/test_hand.png
+web/public/avatar/test_side.png
+web/public/favicon.ico
+web/public/favicon.png
+web/public/onnxruntime/ort-wasm-simd-threaded.asyncify.mjs
+web/public/onnxruntime/ort-wasm-simd-threaded.asyncify.wasm
+web/public/onnxruntime/ort-wasm-simd-threaded.jsep.mjs
+web/public/onnxruntime/ort-wasm-simd-threaded.jsep.wasm
+web/public/onnxruntime/ort-wasm-simd-threaded.jspi.mjs
+web/public/onnxruntime/ort-wasm-simd-threaded.jspi.wasm
+web/public/onnxruntime/ort-wasm-simd-threaded.mjs
+web/public/onnxruntime/ort-wasm-simd-threaded.wasm
+web/src/App.tsx
+web/src/components/AvatarDiagnostic.tsx
+web/src/components/DiagnosticDashboard.tsx
+web/src/components/HandOverlay.tsx
+web/src/components/SignVoxHeader.tsx
+web/src/engine/useSignVoxEngine.ts
+web/src/lib/contracts.ts
+web/src/lib/diagnostics.ts
+web/src/lib/featureVector.test.ts
+web/src/lib/featureVector.ts
+web/src/lib/inference.ts
+web/src/lib/latencyProfiler.ts
+web/src/lib/mediapipe.ts
+web/src/lib/modelRegistry.ts
+web/src/lib/normalize.ts
+web/src/lib/overlayCoordinates.ts
+web/src/lib/recognitionGate.ts
+web/src/lib/sequenceBuffer.ts
+web/src/lib/signToText.ts
+web/src/lib/speech.ts
+web/src/lib/speechRecognition.ts
+web/src/lib/supabaseClient.ts
+web/src/lib/temporalSampler.test.ts
+web/src/lib/temporalSampler.ts
+web/src/lib/temporalStabilizer.ts
+web/src/lib/textToASL.ts
+web/src/lib/uiStatus.ts
+web/src/lib/vocab.ts
+web/src/lib/waitlist.ts
+web/src/main.tsx
+web/src/onnxruntime/ort-wasm-simd-threaded.asyncify.mjs
+web/src/onnxruntime/ort-wasm-simd-threaded.jsep.mjs
+web/src/onnxruntime/ort-wasm-simd-threaded.jspi.mjs
+web/src/onnxruntime/ort-wasm-simd-threaded.mjs
+web/src/pages/AvatarStudioPage.tsx
+web/src/pages/JoinPage.tsx
+web/src/pages/LiveTranslationPage.tsx
+web/src/pages/WelcomePage.tsx
+web/src/styles.css
+web/src/tests/analyze_baseline_drop.ts
+web/src/tests/audit_baseline_accuracy.ts
+web/src/tests/avatarLifecycle.test.tsx
+web/src/tests/baseline_idle_diagnostic.test.ts
+web/src/tests/baseline_threshold_eval.test.ts
+web/src/tests/camera_pipeline.test.ts
+web/src/tests/check_onnx.ts
+web/src/tests/consistency_diagnosis.test.ts
+web/src/tests/fingertipTracking.test.ts
+web/src/tests/glbPlayback.test.ts
+web/src/tests/goodCandidate.test.ts
+web/src/tests/latencyProfiler.test.ts
+web/src/tests/modelRegistry.test.ts
+web/src/tests/model_switch_lifecycle.test.ts
+web/src/tests/orientationIK.test.ts
+web/src/tests/overlayCoordinates.test.ts
+web/src/tests/recognitionGate.test.ts
+web/src/tests/reproduce_trace.test.ts
+web/src/tests/softmax_trace.test.ts
+web/src/tests/speech.test.ts
+web/src/tests/speechRecognition.test.ts
+web/src/tests/stabilizer.test.ts
+web/src/tests/stabilizer_confidence_filter.test.ts
+web/src/tests/targetFollowsIK.test.ts
+web/src/tests/targetResolution.test.ts
+web/src/tests/temporal_sampling_parity.test.ts
+web/src/tests/textToASL.test.ts
+web/src/tests/transcript.test.ts
+web/src/tests/waitlistFlow.test.ts
+web/test_glb_ik.mjs
+web/test_hierarchy.mjs
+web/test_hierarchy.ts
+web/test_ik_targets.mjs
+web/tests/armIk.test.ts
+web/tests/avatar.test.ts
+web/tests/handController.test.ts
+web/verify_assets.js
+web/verify_wasm.cjs
+
+### 1c. Deterministic synthetic test fixtures  (7 files, added 2026-10-16)
+# Produced by fixtures/generate_fixtures.mjs, which is dependency-free and deterministic:
+# the five binary outputs were regenerated into a second directory and hashed identically
+# (glb 4ff5a2e0..., 79-class 327096fc..., 3-class b9267221..., two empty sidecars e3b0c442...).
+# They carry NO trained weights and NO recorded signer data: 8,692 B of rig geometry and two
+# 274-byte ONNX Reshape+Slice graphs, each with the zero-byte .data sibling that inference.ts
+# requires (ORT opens `${modelUrl}.data` unconditionally). Total 30,865 B.
+# Tracked on purpose so every clone can run the structural suite; the five negations that
+# allow them are applied (.gitignore, section 8). Not production assets and not fixtures for
+# any accuracy claim - syntheticFixtures.test.ts asserts plumbing only.
+
+web/src/tests/fixtures/generate_fixtures.mjs
+web/src/tests/fixtures/signvox_synth_rig.glb
+web/src/tests/fixtures/synth_3.onnx
+web/src/tests/fixtures/synth_3.onnx.data
+web/src/tests/fixtures/synth_79.onnx
+web/src/tests/fixtures/synth_79.onnx.data
+web/src/tests/syntheticFixtures.test.ts
+
+## 2. Batch C candidates - documentation, migrations, research, tooling  (340 files)
+# tools/ and experiments/ are here by the owner rule: research, pilot scripts and their
+# supporting docs go to Batch C unless a verified application dependency needs them in B.
+# Verified none does - nothing under web/src, web/tests, web/bench, ai/ or avatar/controller
+# imports from tools/ or experiments/.
+
+docs/LAUNCH_REPORT_2026-10-15.md
+docs/PRE_DEPLOYMENT_AUDIT_2026-10-16.md
+docs/RECOGNITION_79_CLASS_RECOVERY_AUDIT.md
+docs/RECOGNITION_SPEED_OPTIMIZATION_REPORT.md
+docs/SUPABASE_WAITLIST_SETUP.md
+docs/ai-ml/ASL_CITIZEN_TRAINING_DATA_AUDIT.md
+docs/ai-ml/EXPERIMENT_01_RAW_RESULTS.json
+docs/ai-ml/EXPERIMENT_01_REPRESENTATION_SEPARATION.json
+docs/ai-ml/EXPERIMENT_02_VPN_RAW_RESULTS.json
+docs/ai-ml/EXPERIMENT_05_REG_RAW_RESULTS.json
+docs/ai-ml/PHASE_2_ACCEPTANCE_AUDIT.md
+docs/ai-ml/PHASE_2_PILOT_INTEGRATION_REPORT.md
+docs/ai-ml/PHASE_3_BASELINE_FIX_VERIFICATION.md
+docs/ai-ml/PHASE_3_BASELINE_RECOGNITION_AUDIT.md
+docs/ai-ml/PHASE_3_BASELINE_RUNTIME_FAILURE.md
+docs/ai-ml/PHASE_3_BASELINE_SWITCH_ROOT_CAUSE.md
+docs/ai-ml/PHASE_3_BASELINE_THRESHOLD_VALIDATION.md
+docs/ai-ml/PHASE_3_LIVE_DEMO_ACCEPTANCE.md
+docs/ai-ml/PHASE_3_PROGRESS_FREEZE.md
+docs/ai-ml/SIGNVOX_PROJECT_FREEZE_2026-10-10.md
+docs/ai-ml/SPOTER_GROUPNORM_MAGNITUDE_METRICS.json
+docs/ai-ml/SPOTER_V2_FINAL_TEST_RESULTS.json
+docs/ai-ml/SPOTER_V2_RAW_RESULTS.json
+docs/ai-ml/hybrid_fallback_stats.json
+docs/architecture/PHASE_4_WEB_DESIGN_LAYER_INTEGRATION.md
+docs/architecture/TWO_PAGE_PRODUCT_UI.md
+docs/architecture/WEB_LANDMARK_PIPELINE.md
+docs/avatar/ARM_IK.md
+docs/avatar/AVATAR_CONTROLLER.md
+docs/avatar/AVATAR_FOUNDATION.md
+docs/avatar/R4.3_Delivery_Report.md
+docs/blender/SIGNVOX_BLENDER_KNOWLEDGE_ASSESSMENT.md
+docs/blender/SIGNVOX_EVIDENCE_AUDIT.md
+docs/blender/SIGNVOX_HUMAN_HAND_ORIENTATION_RESEARCH.md
+docs/competition/SIGNVOX_30_SIGN_READINESS_AUDIT.md
+docs/competition/SIGNVOX_3_SIGN_PILOT_TRAINING_REPORT.md
+docs/decisions/2026-10-05-android-mediapipe-frame-processor.md
+docs/decisions/ASL_HELLO_PROTOTYPE_REPORT.md
+docs/decisions/SIGNVOX_AUDIT_REPORT.md
+docs/decisions/SIGNVOX_R4.3_FINGERTIP_STABILIZATION.md
+docs/research/PHASE_1_1_EVIDENCE_AUDIT_AND_ARCHITECTURE_DECISION.md
+docs/research/PHASE_1_2_CTC_EXPERIMENT_VALIDATION.md
+docs/research/PHASE_1_3_CONTINUOUS_DATA_PILOT_PROTOCOL.md
+docs/research/PHASE_1_4_RESEARCH_READINESS_REVIEW.md
+docs/research/PHASE_2B_NATURAL_SIGN_PILOT_READINESS.md
+docs/research/PHASE_2C_10_GENERALIZATION_DIAGNOSIS.md
+docs/research/PHASE_2C_11_GENERALIZATION_EVIDENCE.md
+docs/research/PHASE_2C_12_CONTROLLED_PIPELINE_VERIFICATION.md
+docs/research/PHASE_2C_13_FEATURE_DISCRIMINABILITY_REPORT.md
+docs/research/PHASE_2C_14_RESULTS_VERIFICATION.md
+docs/research/PHASE_2C_15_SPOTER_FAILURE_INVESTIGATION.md
+docs/research/PHASE_2C_16_TRAINING_DURATION_DIAGNOSTIC.md
+docs/research/PHASE_2C_17_1_EVIDENCE_INTEGRITY_AUDIT.md
+docs/research/PHASE_2C_17_2_CONTROLLED_REPRODUCTION_REPORT.md
+docs/research/PHASE_2C_17_3_FINAL_EVIDENCE_AND_CHECKPOINT_LOCK.md
+docs/research/PHASE_2C_17_4_HELD_OUT_TEST_EVALUATION.md
+docs/research/PHASE_2C_17_REPRODUCIBILITY_REPORT.md
+docs/research/PHASE_2C_18_CONTINUOUS_ASL_DATA_READINESS.md
+docs/research/PHASE_2C_18_EVIDENCE_INVENTORY.md
+docs/research/PHASE_2C_18_READINESS_DECISION.md
+docs/research/PHASE_2C_19_CONTINUOUS_RECORDING_PROTOCOL_DRAFT.md
+docs/research/PHASE_2C_19_DATA_ACQUISITION_OPTIONS.md
+docs/research/PHASE_2C_19_READINESS_GATES.md
+docs/research/PHASE_2C_1_SPECIFICATION_AUDIT.md
+docs/research/PHASE_2C_20_1_SAMPLE_ACQUISITION_REPORT.md
+docs/research/PHASE_2C_20_CONTINUOUS_DATA_ACQUISITION_PLAN.md
+docs/research/PHASE_2C_20_FIRST_CONTINUOUS_EXPERIMENT.md
+docs/research/PHASE_2C_21_SEQUENCE_DATALOADER_REPORT.md
+docs/research/PHASE_2C_22_EXTRACTOR_MIGRATION_REPORT.md
+docs/research/PHASE_2C_23_CONTINUOUS_DATALOADER_REPORT.md
+docs/research/PHASE_2C_24_CONTINUOUS_TRANSLATION_BASELINE_REPORT.md
+docs/research/PHASE_2C_25_FAILURE_ANALYSIS_AND_DATA_READINESS.md
+docs/research/PHASE_2C_26_DATASET_EXPANSION_REPORT.md
+docs/research/PHASE_2C_27_ATTENTION_TRANSLATION_REPORT.md
+docs/research/PHASE_2C_28_TEMPORAL_GROUNDING_AUDIT.md
+docs/research/PHASE_2C_29_RAPID_IMPROVEMENT_REPORT.md
+docs/research/PHASE_2C_2_FINAL_RECORDING_READINESS_REVIEW.md
+docs/research/PHASE_2C_3_GOVERNANCE_DECISION_REGISTER.md
+docs/research/PHASE_2C_3_GOVERNANCE_PREPARATION_REPORT.md
+docs/research/PHASE_2C_4_FEATURE_MINIMIZATION_AUDIT.md
+docs/research/PHASE_2C_4_GOVERNANCE_DECISION_UPDATE.md
+docs/research/PHASE_2C_4_STORAGE_READINESS_AUDIT.md
+docs/research/PHASE_2C_4_THIRD_PARTY_LICENSE_AUDIT.md
+docs/research/PHASE_2C_5_FEATURE_CONTRACT_VERIFICATION.md
+docs/research/PHASE_2C_5_PILOT_DATA_PROVENANCE_REPORT.md
+docs/research/PHASE_2C_5_STORAGE_VERIFICATION_REPORT.md
+docs/research/PHASE_2C_6_EXECUTION_REPORT.md
+docs/research/PHASE_2C_7_CTC_VERIFICATION_AND_TRAINING_READINESS.md
+docs/research/PHASE_2C_8_ISOLATED_ASL_BENCHMARK_REPORT.md
+docs/research/PHASE_2C_9_BENCHMARK_DIAGNOSTIC_REPORT.md
+docs/research/PHASE_2C_RECORDING_SESSION_AND_ANNOTATION_SPEC.md
+docs/research/PHASE_2D_1_PRETRAINED_MODEL_FEASIBILITY_REPORT.md
+docs/research/PHASE_2D_2_ZERO_BUDGET_FEASIBILITY_REPORT.md
+docs/research/SIGNVOX_STREAMING_TRANSLATION_REQUIREMENTS.md
+docs/research/SIGN_LANGUAGE_DATASET_AND_LICENSE_AUDIT.md
+docs/research/SL2T_TECHNICAL_ANALYSIS.md
+docs/research/STREAMING_TRANSLATION_ARCHITECTURE_COMPARISON.md
+docs/research/consent/SIGNVOX_COMMERCIAL_USE_AND_DATA_SHARING_REVIEW.md
+docs/research/consent/SIGNVOX_DATA_GOVERNANCE_AND_RETENTION_POLICY_DRAFT.md
+docs/research/consent/SIGNVOX_INFORMED_CONSENT_FORM_DRAFT.md
+docs/research/consent/SIGNVOX_PARTICIPANT_INFORMATION_SHEET_DRAFT.md
+docs/research/consent/SIGNVOX_RECORDING_AUTHORIZATION_CHECKLIST.md
+experiments/avatar/good/ASL_GOOD.clip.json
+experiments/avatar/good/GOOD_manifest.json
+experiments/avatar/good/GOOD_validation.md
+experiments/avatar/good/author_good_blender.py
+experiments/avatar/pilot_good/ASL_GOOD.clip.json
+experiments/avatar/pilot_good/GOOD_manifest.json
+experiments/avatar/pilot_good/GOOD_validation.md
+experiments/avatar/pilot_good/author_good_blender.py
+experiments/avatar/pilot_good/export_good_glb.py
+experiments/avatar/pilot_good/on_avatar_good_harness.html
+experiments/avatar/pilot_good/pilot_good_preview.html
+experiments/baseline-79-audit/analyze_windowing.py
+experiments/baseline-79-audit/baseline_79_offline_results.json
+experiments/baseline-79-audit/baseline_79_windowing_results.json
+experiments/baseline-79-audit/compare_models.py
+experiments/baseline-79-audit/coverage_matrix.md
+experiments/baseline-79-audit/eval_baseline_79.py
+experiments/baseline-79-audit/handedness_results.json
+experiments/baseline-79-audit/handedness_test.py
+experiments/baseline-79-audit/live_simulation_results.json
+experiments/baseline-79-audit/live_simulation_results_79.json
+experiments/baseline-79-audit/pilot_vs_baseline_results.json
+experiments/baseline-79-audit/simulate_live.py
+experiments/continuous-asl/phase_2c_21/feature_extractor.py
+experiments/continuous-asl/phase_2c_22/features/migration_stats.json
+experiments/continuous-asl/phase_2c_22/new_extractor.py
+experiments/continuous-asl/phase_2c_23/config.py
+experiments/continuous-asl/phase_2c_23/dataset.py
+experiments/continuous-asl/phase_2c_23/test_dataset.py
+experiments/continuous-asl/phase_2c_24/audit_analysis.py
+experiments/continuous-asl/phase_2c_24/baseline.py
+experiments/continuous-asl/phase_2c_24/baseline_results.json
+experiments/continuous-asl/phase_2c_24/data_split.py
+experiments/continuous-asl/phase_2c_24/evaluation_results.json
+experiments/continuous-asl/phase_2c_24/model.py
+experiments/continuous-asl/phase_2c_24/test.csv
+experiments/continuous-asl/phase_2c_24/tokenizer.py
+experiments/continuous-asl/phase_2c_24/train.csv
+experiments/continuous-asl/phase_2c_24/train.py
+experiments/continuous-asl/phase_2c_24/training_history.json
+experiments/continuous-asl/phase_2c_24/val.csv
+experiments/continuous-asl/phase_2c_24/vocab.json
+experiments/continuous-asl/phase_2c_26/acquire_validation_clips.py
+experiments/continuous-asl/phase_2c_26/acquisition_verification.json
+experiments/continuous-asl/phase_2c_26/build_manifest.py
+experiments/continuous-asl/phase_2c_26/dataset_manifest.csv
+experiments/continuous-asl/phase_2c_26/dataset_metrics.json
+experiments/continuous-asl/phase_2c_26/extract_landmarks.py
+experiments/continuous-asl/phase_2c_26/extraction_stats.json
+experiments/continuous-asl/phase_2c_26/verification_audit_summary.json
+experiments/continuous-asl/phase_2c_26/verify_dataset.py
+experiments/continuous-asl/phase_2c_27/check_lengths.py
+experiments/continuous-asl/phase_2c_27/check_splits.py
+experiments/continuous-asl/phase_2c_27/check_status.py
+experiments/continuous-asl/phase_2c_27/count_features.py
+experiments/continuous-asl/phase_2c_27/dataset.py
+experiments/continuous-asl/phase_2c_27/debug_step.py
+experiments/continuous-asl/phase_2c_27/debug_utf8.txt
+experiments/continuous-asl/phase_2c_27/evaluate.py
+experiments/continuous-asl/phase_2c_27/evaluation_results.json
+experiments/continuous-asl/phase_2c_27/micro_profile.py
+experiments/continuous-asl/phase_2c_27/model.py
+experiments/continuous-asl/phase_2c_27/profile_batch.py
+experiments/continuous-asl/phase_2c_27/profile_breakdown.py
+experiments/continuous-asl/phase_2c_27/read_log.py
+experiments/continuous-asl/phase_2c_27/test_speed.py
+experiments/continuous-asl/phase_2c_27/test_threads.py
+experiments/continuous-asl/phase_2c_27/time_batch.py
+experiments/continuous-asl/phase_2c_27/tokenizer.json
+experiments/continuous-asl/phase_2c_27/tokenizer.py
+experiments/continuous-asl/phase_2c_27/train.py
+experiments/continuous-asl/phase_2c_27/training_curves.json
+experiments/continuous-asl/phase_2c_28/attention_audit.py
+experiments/continuous-asl/phase_2c_28/attention_audit_results.json
+experiments/continuous-asl/phase_2c_28/audit_counts.py
+experiments/continuous-asl/phase_2c_28/hypothesis_feasibility.json
+experiments/continuous-asl/phase_2c_28/hypothesis_feasibility.py
+experiments/continuous-asl/phase_2c_28/semantic_dependence.py
+experiments/continuous-asl/phase_2c_28/semantic_dependence_results.json
+experiments/continuous-asl/phase_2c_28/test_dataset_load.py
+experiments/continuous-asl/phase_2c_28/trace_extraction_timestamps.py
+experiments/continuous-asl/phase_2c_29/baseline_eval.py
+experiments/continuous-asl/phase_2c_29/baseline_results.json
+experiments/continuous-asl/phase_2c_29/evaluate.py
+experiments/continuous-asl/phase_2c_29/evaluation_results.json
+experiments/continuous-asl/phase_2c_29/model.py
+experiments/continuous-asl/phase_2c_29/train.py
+experiments/continuous-asl/phase_2c_29/training_history.json
+experiments/continuous-asl/phase_2d_1/GITHUB_README.md
+experiments/continuous-asl/phase_2d_1/HF_README.md
+experiments/continuous-asl/phase_2d_1/README.md
+experiments/continuous-asl/phase_2d_1/adapter_config.json
+experiments/continuous-asl/phase_2d_1/check_adapter_and_base.py
+experiments/continuous-asl/phase_2d_1/env_audit.py
+experiments/continuous-asl/phase_2d_1/evaluate.py
+experiments/continuous-asl/phase_2d_1/fetch_author_scripts.py
+experiments/continuous-asl/phase_2d_1/inspect_model_card.py
+experiments/continuous-asl/phase_2d_1/inspect_pipeline.py
+experiments/continuous-asl/phase_2d_1/match_local_clips.py
+experiments/continuous-asl/phase_2d_1/matched_sample_clips.json
+experiments/continuous-asl/phase_2d_1/qwen3vl_testing.py
+experiments/continuous-asl/phase_2d_1/results.json
+experiments/continuous-asl/phase_2d_1/signer_cropper.py
+experiments/continuous-asl/phase_2d_1/test_cropper.py
+experiments/continuous-asl/phase_2d_1/vram_feasibility_test.py
+experiments/continuous-asl/phase_2d_2/README.md
+experiments/continuous-asl/phase_2d_2/evaluate.py
+experiments/continuous-asl/phase_2d_2/resource_audit.json
+experiments/continuous-asl/phase_2d_2/resource_audit.py
+experiments/continuous-asl/phase_2d_2/sign_language_bridge_zero_budget_eval.ipynb
+experiments/continuous-asl/phase_2d_2/verify_clips.py
+experiments/ctc-smoke-test/README.md
+experiments/ctc-smoke-test/ctc_results_report.md
+experiments/ctc-smoke-test/ctc_test.py
+experiments/isolated-asl-benchmark/diagnostics/controlled_verification.py
+experiments/isolated-asl-benchmark/diagnostics/eval_predictions.py
+experiments/isolated-asl-benchmark/diagnostics/overfit_diagnostic.py
+experiments/isolated-asl-benchmark/diagnostics/phase_2c_15/eval_train_val.py
+experiments/isolated-asl-benchmark/diagnostics/phase_2c_15/overfit_tiny_subset.py
+experiments/isolated-asl-benchmark/diagnostics/phase_2c_16/duration_history.json
+experiments/isolated-asl-benchmark/diagnostics/phase_2c_16/train_duration.py
+experiments/isolated-asl-benchmark/diagnostics/run_generalization.py
+experiments/isolated-asl-benchmark/diagnostics/verify_results_2c14.py
+experiments/isolated-asl-benchmark/lightweight_baseline.py
+experiments/isolated-asl-benchmark/phase_2c_17/README.md
+experiments/isolated-asl-benchmark/phase_2c_17/eval_logreg.py
+experiments/isolated-asl-benchmark/phase_2c_17/logreg_baseline.json
+experiments/isolated-asl-benchmark/phase_2c_17/multi_seed_summary.json
+experiments/isolated-asl-benchmark/phase_2c_17/run_reproducibility.py
+experiments/isolated-asl-benchmark/phase_2c_17/seed_123_history.json
+experiments/isolated-asl-benchmark/phase_2c_17/seed_42_history.json
+experiments/isolated-asl-benchmark/phase_2c_17/seed_777_history.json
+experiments/isolated-asl-benchmark/phase_2c_17_1/README.md
+experiments/isolated-asl-benchmark/phase_2c_17_1/audit_seed_hashes.json
+experiments/isolated-asl-benchmark/phase_2c_17_1/audit_seeds.py
+experiments/isolated-asl-benchmark/phase_2c_17_2/README.md
+experiments/isolated-asl-benchmark/phase_2c_17_2/logreg_baseline.json
+experiments/isolated-asl-benchmark/phase_2c_17_2/logreg_baseline.py
+experiments/isolated-asl-benchmark/phase_2c_17_2/multi_seed_summary.json
+experiments/isolated-asl-benchmark/phase_2c_17_2/preflight_audit.json
+experiments/isolated-asl-benchmark/phase_2c_17_2/preflight_audit.py
+experiments/isolated-asl-benchmark/phase_2c_17_2/run_reproducibility.py
+experiments/isolated-asl-benchmark/phase_2c_17_2/seed_123_history.json
+experiments/isolated-asl-benchmark/phase_2c_17_2/seed_42_history.json
+experiments/isolated-asl-benchmark/phase_2c_17_2/seed_777_history.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/README.md
+experiments/isolated-asl-benchmark/phase_2c_17_3/baseline_resolution.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/checkpoint_verification.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/exact_reproducibility.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/resolve_baseline.py
+experiments/isolated-asl-benchmark/phase_2c_17_3/run_A/history.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/run_B/history.json
+experiments/isolated-asl-benchmark/phase_2c_17_3/run_same_seed_test.py
+experiments/isolated-asl-benchmark/phase_2c_17_3/verify_checkpoints.py
+experiments/isolated-asl-benchmark/phase_2c_17_4/README.md
+experiments/isolated-asl-benchmark/phase_2c_17_4/held_out_test_metrics.json
+experiments/isolated-asl-benchmark/phase_2c_17_4/run_held_out_test.py
+experiments/isolated-asl-benchmark/phase_2c_20_1_acquisition.py
+experiments/isolated-asl-benchmark/train_isolated.py
+experiments/pilot-preprocessing/README.md
+experiments/pilot-preprocessing/pilot_extract.py
+experiments/pilot-preprocessing/pilot_manifest_TEMPLATE.csv
+experiments/spoter_v3/SPOTER_V3_READINESS_REPORT.md
+experiments/spoter_v3/audit_100_classes_deep.py
+experiments/spoter_v3/audit_feature_integrity.py
+experiments/spoter_v3/audit_full_asl_citizen.py
+experiments/spoter_v3/audit_landmark_pipeline.py
+experiments/spoter_v3/audit_manifest_features.py
+experiments/spoter_v3/check_missing_sources.py
+experiments/spoter_v3/check_splits_and_manifests.py
+experiments/spoter_v3/checkpoints/spoter_v3_groupnorm_scalars.json
+experiments/spoter_v3/config/asl100_v3_class_mapping.json
+experiments/spoter_v3/evaluation/compare_v2_v3.py
+experiments/spoter_v3/extract_missing_features.py
+experiments/spoter_v3/inspect_coverage.py
+experiments/spoter_v3/logs/training_history.json
+experiments/spoter_v3/manifests/spoter_v3_matched_manifest.csv
+experiments/spoter_v3/models/spoter_v3.py
+experiments/spoter_v3/notebooks/generate_colab_notebook.py
+experiments/spoter_v3/notebooks/spoter_v3_colab_training.ipynb
+experiments/spoter_v3/reports/extraction_supplement_report.json
+experiments/spoter_v3/reports/smoke_test_evaluation.json
+experiments/spoter_v3/reports/v2_v3_comparison.json
+experiments/spoter_v3/spoter_v3_test_results.json
+experiments/spoter_v3/stage_a_100_class_coverage.json
+experiments/spoter_v3/stage_a_dataset_audit.json
+experiments/spoter_v3/stage_b_feature_integrity.json
+experiments/spoter_v3/training/dataloaders_v3.py
+experiments/spoter_v3/training/evaluate_spoter_v3.py
+experiments/spoter_v3/training/train_spoter_v3.py
+experiments/spoter_v3/v2_v3_shared_test_comparison.json
+experiments/spoter_v3/verify_mapping.py
+supabase/migrations/20261016120000_create_waitlist_signups.sql
+supabase/tests/waitlist_signups_rls_test.sql
+tools/analyze_v3_axes.py
+tools/audit_arm_orientation.py
+tools/audit_dataset_strictly.py
+tools/author_hello.py
+tools/author_hello_euler.py
+tools/author_hello_ik.py
+tools/blender_ik_bake.py
+tools/blender_ik_retarget.py
+tools/blender_ik_retarget2.py
+tools/blender_trace_numpy.py
+tools/blender_trace_numpy_v2.py
+tools/build_hello.py
+tools/check_glb_anims.py
+tools/compare_clip_ends.mjs
+tools/correct_neutral_pose.py
+tools/coverage_audit.py
+tools/create_neutral_pose.py
+tools/export_glb.py
+tools/export_pilot_onnx.py
+tools/extract_pdf.py
+tools/headless_v2_to_v3.py
+tools/headless_v3_scrub.py
+tools/inspect_axes_neutral.py
+tools/inspect_glb.mjs
+tools/inspect_glb.py
+tools/inspect_glb_world.py
+tools/inspect_hello.py
+tools/inspect_keyframes.mjs
+tools/inspect_pose.mjs
+tools/inspect_poses.py
+tools/inspect_rig.py
+tools/inspect_tracks.mjs
+tools/inspect_v3_bones.mjs
+tools/landmark_to_rig.py
+tools/measure_z.py
+tools/optimize_neutral_pose.py
+tools/render_hands.py
+tools/render_twist_validation.py
+tools/smoke_test_pilot.py
+tools/test_browser_onnx_node.mjs
+tools/test_end_to_end_pilot.py
+tools/test_neutral_pose.py
+tools/v4_prototype.py
+tools/verify_pilot_data.py
+
+## 3. Excluded from every batch - scratch and generated  (8 files, owner decision)
+# Per-file purpose and evidence: plan section 4.5. Verified to have no test, benchmark or
+# production consumer. Files stay on disk; nothing is deleted.
+# tools/audit_out.txt is GENERATED by tools/tmp_audit_asl.py (itself ignored by tmp_*).
+# RESOLVED 2026-10-16: the anchored /tools/audit_out.txt rule is APPLIED (now .gitignore
+# line 165, plan 4.5 and 13, D3) and re-confirmed with git check-ignore -v.
+
+check_hierarchy.py
+find_data.py
+inspect_ch41.py
+inspect_fbx.py
+inspect_glb.py
+inspect_onnx.py
+tools/audit_out.txt
+tools/extracted_guide.txt
+
+## 4. Unrelated pre-existing user changes - DO NOT TOUCH  (4 files)
+# Preserved exactly, unstaged, unmodified by this task. Whether any of them joins a batch is
+# a PENDING OWNER DECISION (plan 4.7, 13.1 and 13.2, D4); plan 4.4 lists them as NOT in a
+# batch until that decision is made. Full diff of app/package.json: plan 13.1.
+
+ai/sign-recognition/training/dataloaders.py
+app/App.tsx
+app/package.json
+docs/architecture/TECHNICAL_ARCHITECTURE.md
+
+## 5. Essential assets requiring external hosting - NOT committed
+
+A. The two ONNX graph + external-data pairs (GitHub blocks any file over 100 MiB):
+     web/public/spoter_v2_model.onnx            121,801 B   graph, 79-class baseline
+     web/public/spoter_v2_model.onnx.data   187,711,488 B   weights sidecar
+     web/public/spoter_pilot.onnx             1,711,205 B   graph, 3-class pilot
+     web/public/spoter_pilot.onnx.data      187,580,416 B   weights sidecar
+
+B. Production avatar GLB - committable, so it is IN Batch B (section 1b), not hosting:
+     web/public/avatar/SignVox_Female_Competition_Prototype.glb   49,701,152 B (47.4 MiB)
+
+RESOLVED PLAN  (exact hosting contract, evidence and per-object table: plan 8.2.1)
+  1. Mechanism: an S3-compatible object store with free egress, serving the four ONNX files
+     from one public prefix. Recommended: Cloudflare R2 (zero egress fees). Same-catalogue
+     alternatives: Backblaze B2 and Wasabi (both S3-compatible). Supabase Storage is already
+     in this stack but its free egress is metered (~5 GB/month).
+  2. Layout: the four objects must share one base URL, because inference.ts builds the sidecar
+     URL as ${modelUrl}.data. So the bucket holds e.g. <base>/spoter_v2_model.onnx and
+     <base>/spoter_v2_model.onnx.data side by side. Object names must stay EXACTLY these -
+     the .data suffix is derived, never configured:
+       <base>/spoter_v2_model.onnx       <base>/spoter_v2_model.onnx.data
+       <base>/spoter_pilot.onnx          <base>/spoter_pilot.onnx.data
+  3. Cross-origin and range: the bucket must send Access-Control-Allow-Origin for the
+     deployed origin (mirroring the `*` web/vercel.json sets for /spoter_.*), plus
+     Access-Control-Expose-Headers: Content-Range, Content-Length, Accept-Ranges, and must
+     answer OPTIONS preflights for the Range header. Cache-Control: public,
+     max-age=31536000, immutable; Content-Type: application/octet-stream.
+     CORRECTED 2026-10-16 by the loopback contract test (docs/migration/
+     onnx-hosting-contract-test-2026-10-16.md 6.2 and 6.3): the earlier claim that RANGE/206 SUPPORT
+     IS REQUIRED because 'the installed onnxruntime-web issues ranged requests' is NOT supported by
+     measurement - with onnxruntime-web 1.30.0 and this explicit externalData configuration the
+     library fetched each graph and each whole .data sidecar with plain full GETs and sent no Range
+     header at all. Range/206 stays RECOMMENDED (resume/partial reads, future ORT behaviour), not
+     required. Likewise a preflight is not sent for every request shape: Chromium safelists a
+     single-range Range header and preflighted only the suffix form.
+  4. Environment variables (Vite inlines VITE_* at BUILD time, so set them in the Vercel
+     project before the build, and in web/.env.local for local work):
+       VITE_SPOTER_V2_URL=<base>/spoter_v2_model.onnx
+       VITE_SPOTER_PILOT_URL=<base>/spoter_pilot.onnx
+       VITE_AVATAR_GLB_URL   leave UNSET - the GLB is committed and served same-origin
+  5. Runtime URLs: the app fetches <VITE_SPOTER_V2_URL> and <VITE_SPOTER_V2_URL>.data, and
+     the same shape for the pilot pair. NO URL IS INVENTED - <base> is the owner's chosen
+     host (a custom domain is recommended; r2.dev URLs are documented as development-only).
+  6. Availability to Vercel: the Vercel build needs NOTHING from the host. Vite inlines the
+     two VITE_* values at build time and the browser fetches the ONNX pairs directly at
+     runtime. The committed GLB is copied from public/ into dist/ and served same-origin at
+     /avatar/SignVox_Female_Competition_Prototype.glb.
+  7. NOT claimed: deployment readiness. Nothing has been uploaded, no bucket exists, and the
+     request, CORS and Range behaviour has not been exercised against a real host.
+
+## 6. Local-only datasets, checkpoints and generated artifacts - NOT committed
+
+# 28 files pinned by docs/migration/local-only-assets-sha256.txt:
+
+ai/sign-recognition/checkpoints/spoter_exp02_vpn_best_val_acc.pt
+ai/sign-recognition/checkpoints/spoter_exp02_vpn_best_val_loss.pt
+ai/sign-recognition/checkpoints/spoter_exp02_vpn_latest.pt
+ai/sign-recognition/checkpoints/spoter_experiment_05_reg_best_val_acc.pt
+ai/sign-recognition/checkpoints/spoter_experiment_05_reg_best_val_loss.pt
+ai/sign-recognition/checkpoints/spoter_experiment_05b_dropout03_best_val_acc.pt
+ai/sign-recognition/checkpoints/spoter_experiment_05b_dropout03_best_val_loss.pt
+ai/sign-recognition/checkpoints/spoter_experiment_05b_dropout03_latest.pt
+ai/sign-recognition/checkpoints/spoter_v2_groupnorm_best_val_acc.pt
+ai/sign-recognition/checkpoints/spoter_v2_groupnorm_best_val_loss.pt
+ai/sign-recognition/checkpoints/spoter_v2_groupnorm_latest.pt
+web/public/spoter_v2_model.onnx
+web/public/spoter_v2_model.onnx.data
+web/public/spoter_pilot.onnx
+web/public/spoter_pilot.onnx.data
+avatar/SignVox_Female_Inspection.blend
+avatar/SignVox_Male_Inspection.blend
+avatar/Untitled.blend
+avatar/blender.blend
+avatar/SignVox_Male_Inspection.blend1
+avatar/blender.blend1
+avatar/models/Ch12_nonPBR.fbx
+avatar/models/Ch41_nonPBR.fbx
+avatar/exports/SignVox_Female_RigWork.blend
+avatar/exports/SignVox_Female_v2_clean.blend
+avatar/exports/SignVox_HELLO_BlendRepair.blend
+avatar/exports/SignVox_Female_v2_clean.blend1
+avatar/exports/SignVox_HELLO_BlendRepair.blend1
+
+# Excluded wholesale (git check-ignore-verified):
+  data/                                     2.08 GiB How2Sign validation video
+  .venv/  .venv_pilot/                      Python virtual environments
+  web/node_modules/  web/dist/              JS dependencies and vite build output
+  experiments/continuous-asl/**/features/  1,839 generated .npy landmark arrays
+  ai/sign-recognition/data/dataset_extracted/  ai/sign-recognition/data/processed_pilot/
+
+## 7. REPRODUCIBILITY GAP - CLOSED by explicit skips plus tracked synthetic fixtures (2026-10-16)
+# Was: four committed tests read gitignored assets, so a clean clone either FAILED (three
+# files) or silently no-opped (one file). APPLIED 2026-10-16 with owner approval: all four
+# guard at module scope with describe.skipIf(!fs.existsSync(...)), so a test skips ONLY when
+# its fixture is absent and otherwise runs with every assertion byte-identical - no assertion
+# relaxed, removed or wrapped, so a real failure can never become a skip. The structural
+# invariants those tests cover when their assets ARE present are additionally covered on every
+# clone, with no accuracy claim, by web/src/tests/syntheticFixtures.test.ts (section 1c).
+
+  web/src/tests/goodCandidate.test.ts
+      needs experiments/avatar/pilot_good/SignVox_GOOD_Candidate.glb - 49,800,688 B (47.5 MiB)
+      GUARDED: describe.skipIf(!HAVE_CANDIDATE); assertions unchanged
+
+  web/src/tests/reproduce_trace.test.ts
+      needs web/public/avatar/SignVox_Female.glb - 49,576,404 B (47.3 MiB)
+      GUARDED: describe.skipIf(!HAVE_MODEL); assertions unchanged
+
+  web/src/tests/baseline_threshold_eval.test.ts
+      needs ai/sign-recognition/data/asl100_training_manifest.csv (143,079 B),
+      ai/sign-recognition/data/{dataset_extracted,processed_pilot}/**_features.npy, and
+      web/public/spoter_v2_model.onnx + web/public/spoter_pilot.onnx - all gitignored
+      GUARDED: describe.skipIf(!HAVE_FIXTURES); assertions unchanged
+
+  web/src/tests/temporal_sampling_parity.test.ts
+      needs ai/sign-recognition/data/dataset_extracted/*_features.npy AND
+      web/public/spoter_v2_model.onnx - both gitignored
+      GUARDED: describe.skipIf(!HAVE_FIXTURES); the silent return is REMOVED
+
+# CORRECTION to the first pass above: the two ONNX-dependent tests also need the GRAPH files,
+# which *.onnx keeps out of the repository. The VITE_SPOTER_*_URL overrides do NOT help here -
+# both tests build an absolute filesystem path under web/public/, not an HTTP URL.
+# The other 26 of the 30 test files vitest runs are unaffected (e.g. modelRegistry.test.ts
+# reads only tracked/payload assets, so it stays reproducible).
+#
+# APPLIED 2026-10-16 (option b, owner-approved; exact diffs reviewed in plan 4.6 and 13, D1):
+# one module-scope fs.existsSync guard per file feeding vitest 2.1.8 it.skipIf /
+# describe.skipIf, so a test skips ONLY when its fixture is absent and otherwise runs with
+# every assertion unchanged. temporal_sampling_parity additionally lost its silent return.
+# Measured in the working tree after the apply:
+#   this checkout, all fixtures present   31 files / 206 tests PASS, 0 skipped, exit 0
+#   payload-only clone, assets absent     27 files / 201 tests PASS, 4 files / 5 tests
+#                                         SKIPPED, 0 failed
+# NOT claimed: reproducibility. Four files report as SKIPPED rather than passing when the
+# assets are absent, and this has not been validated in a genuine fresh clone (plan 13, D5).
+
+## 8. Applied since the previous revision (2026-10-16, owner-approved)
+# Verified in the working tree with the full suite and git check-ignore. NOTHING IS STAGED.
+
+  .gitignore
+      modified, +15 lines: the five negations of section 1c and the anchored
+      /tools/audit_out.txt rule. Every real local-only asset still matches its original rule
+      (*.glb:115, *.onnx:36, *.onnx.data:122, manifest:48, tmp_*:126) and all six fixture
+      paths are trackable - both directions confirmed with git check-ignore -v.
+  .env.example
+      modified, 4 lines: only the two ONNX sidecars are not committed; the production avatar
+      GLB is. No variable, default or comment-prefix changed.
+  web/src/tests/syntheticFixtures.test.ts            new, 8 structural tests (section 1c)
+  web/src/tests/fixtures/*                           new, 7 files incl. the generator (1c)
+  web/src/tests/goodCandidate.test.ts
+  web/src/tests/reproduce_trace.test.ts
+  web/src/tests/baseline_threshold_eval.test.ts
+  web/src/tests/temporal_sampling_parity.test.ts
+      guards added as section 7 describes; every pre-existing assertion is byte-identical to
+      the pre-approval copies (verified with cmp against the reviewed proposal).
+
+## 9. Remaining decisions for Batch B
+
+  D4  the four preserved owner changes of section 4 - in particular whether app/package.json
+      joins Batch B. Nothing is staged for any of them (plan 13.1, 13.2).
+  D5  the plan's own status lines (plan 4.5, 4.6, 5.1, 8.2.1, 11, 12, 13, D1-D3) read as if
+      the applied decisions were pending. RECONCILED in this same revision; needs only your
+      confirmation that the two documents may be committed as they now stand.
+  DC  which commit carries the migration documents themselves - docs/migration/planned-files
+      (tracked, modified), docs/migration/batch-b-manifest (untracked) and the plan (tracked,
+      modified). They belong to no batch yet, and Batch C is not part of this stage.
+  B3  the external host and <base> for the four ONNX objects (section 5) - owner choice.
+  B5  the deploy method (section 5; plan 8.3) - git-based Vercel is the recommendation.
+  B6  VITE_CONTACT_EMAIL and the Supabase variables belong in the deployment environment.
+      CONFIRMED 2026-10-16 (audit section 3.4): VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY
+      (web/src/lib/supabaseClient.ts:18-19) are required; VITE_SPOTER_V2_URL/VITE_SPOTER_PILOT_URL
+      are required for recognition once the ONNX pairs are hosted; VITE_AVATAR_GLB_URL stays UNSET.
+
+## 10. Deploy blockers found by the 2026-10-16 launch audit (see
+## docs/migration/vercel-launch-audit-2026-10-16.md for commands, measurements and diffs)
+
+# Revalidation of THIS list, rerun against disk and git: 163/163 paths exist, 0 duplicates,
+# 0 gitignored (including the six negation-guarded paths), 0 already tracked, 0 overlaps with
+# section 3 or section 4, 131.8 MiB. The task brief's "165 paths" is the pre-revision-2 figure;
+# revision 2 is 163 = 17 (1a) + 139 (1b) + 7 (1c). Exact list regenerated at
+# docs/migration/batch-b-staging-list-2026-10-16.txt.
+
+# V1  BLOCKER, VERIFIED. `npm run build` FAILS in a clone-equivalent tree (git-tracked files +
+#     the 163 paths, deps installed only under web/): tsc -b emits 11 x TS2307 'Cannot find
+#     module "three"' from avatar/controller/*.ts plus one cascading TS7006, so vite build never
+#     runs. Those files resolve three only through the gitignored avatar/node_modules.
+#     FIX PREPARED, NOT APPLIED (audit 6.1): baseUrl + paths in web/tsconfig.json. Verified in the
+#     same tree: tsc -b --force exit 0, npm run build exit 0.
+# V2  BLOCKER for recognition (not for the build). The four ONNX objects are gitignored and the
+#     two .onnx.data sidecars (179.02 and 178.89 MiB) exceed GitHub's 100 MiB per-file hard block,
+#     so a Git-built dist contains no model at all and the app 404s on /spoter_*.onnx[.data]
+#     until section 5's R2 proposal is actioned and VITE_SPOTER_*_URL is set.
+# V3  Vercel project settings that no file in this repo documents: Root Directory MUST be web/
+#     (otherwise web/vercel.json is never read) and 'Include source files outside of the Root
+#     Directory in the Build Step' MUST be on (useSignVoxEngine.ts:29 and AvatarDiagnostic.tsx:3-6
+#     import ../../../avatar/controller/*).
+# V4/V5  web/package.json has no engines.node (Vercel default 24.x works; jsdom 30 needs
+#     ^22.22.2 || ^24.15.0 || >=26, @supabase/supabase-js >=22) and vercel.json uses 'npm install'
+#     where 'npm ci' honours the lockfile. Both fixes prepared, not applied (audit 6.4).
+# NOT a blocker: there is NO vite/esbuild dependency conflict - npm ls shows one deduped
+#     vite@5.4.11 + esbuild@0.21.5; npm audit --omit=dev reports 0 vulnerabilities, and the five
+#     advisories are dev-server/test-tooling only (esbuild <=0.24.2, tinypool, @vitest/mocker).
+# NOT a blocker: 158.59 MiB clone-equivalent dist; Vercel's 100 MB / 15,000-file caps are
+#     documented as CLI-upload limits, with no documented build-output or per-file cap for
+#     Git-connected builds.
+# DEFERRAL RECOMMENDED (audit section 2): the 35 app/* paths in 1a/1b plus app/package.json's
+#     pending decision D4 would commit the React Native app half-formed - app/ has no lockfile
+#     at all while web/ and avatar/ do.
+  B4  9 non-production GLBs (464.7 MiB) still sit in web/public/avatar/ and are copied into
+      web/dist by the build; moving them needs the one-line path update in
+      reproduce_trace.test.ts noted in plan 7/B4.
+      REVISED 2026-10-16 (audit section 1): for the Git-based Vercel path this needs NO action -
+      all nine are gitignored and absent from every batch, so a clone-equivalent build
+      contains none of them (measured dist: 158.59 MiB, avatar/ 47.63 MiB = production GLB
+      + 3 test PNGs). web/.vercelignore is CLI-only. If they are ever committed, dist grows
+      by 464.66 MiB silently; the only GLB consumer is useSignVoxEngine.ts + AvatarDiagnostic.tsx
+      (production GLB) and reproduce_trace.test.ts (skipIf-guarded).

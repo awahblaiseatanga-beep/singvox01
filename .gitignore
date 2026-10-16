@@ -148,3 +148,18 @@ id_ed25519*
 # Tool caches and local CLI scratch state (regenerable, machine-specific)
 .eslintcache
 .vite/
+
+# Synthetic test fixtures tracked on purpose: the only *.glb / *.onnx /
+# *.onnx.data paths allowed into Git besides the production avatar GLB.
+# Committed tests load them so a clean clone can run the structural suite
+# without the local-only assets; regenerate with the script beside them.
+!web/src/tests/fixtures/signvox_synth_rig.glb
+!web/src/tests/fixtures/synth_79.onnx
+!web/src/tests/fixtures/synth_79.onnx.data
+!web/src/tests/fixtures/synth_3.onnx
+!web/src/tests/fixtures/synth_3.onnx.data
+
+# Generated audit scratch output (written by tools/tmp_audit_asl.py, itself
+# ignored by the tmp_* rule above): a one-off dataset audit report, excluded
+# by decision. An anchored rule, not a broad '*audit*' pattern.
+/tools/audit_out.txt

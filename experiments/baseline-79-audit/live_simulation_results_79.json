@@ -1,0 +1,4144 @@
+{
+  "config": {
+    "hold_frames": 25,
+    "fps": 10,
+    "seq_len": 60,
+    "baseline_stabilizer": {
+      "minimumCommitEvidence": 0.25,
+      "minimumStableEvidence": 0.15,
+      "dropThreshold": 0.1,
+      "minimumConfidence": 0.05
+    }
+  },
+  "per_class": {
+    "AFRAID": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9983635544776917,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "AGAIN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "OUT": 1
+      },
+      "max_conf": 0.9987745881080627,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "ANGRY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9988435506820679,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "BAD": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9945907592773438,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "BATHROOM": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9989633560180664,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "BIG": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9991156458854675,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "BROTHER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9987068176269531,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "CHILD": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9993526339530945,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "CHURCH": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9979939460754395,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "COLD": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "OUT": 1,
+        "BIG": 1,
+        "LANGUAGE": 1
+      },
+      "max_conf": 0.9979574680328369,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "COME": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9920719265937805,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "COMPUTER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9988840222358704,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "DANGER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "WORK": 1
+      },
+      "max_conf": 0.9859049916267395,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "DAY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9992117881774902,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FAMILY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.998965859413147,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FATHER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9939799308776855,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FEEL": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9974006414413452,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FINISH": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9977498650550842,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FIRE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9907618165016174,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "FRIEND": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9975724816322327,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "GIVE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "COME": 1,
+        "ME": 1
+      },
+      "max_conf": 0.9982588887214661,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "GO": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9986143112182617,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "GOOD": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9774885177612305,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HAPPY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 0,
+      "committed_wrong": 3,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 3,
+        "YESTERDAY": 3,
+        "ME": 3,
+        "SLEEP": 1,
+        "HUNGRY": 1,
+        "COME": 1,
+        "FEEL": 2
+      },
+      "max_conf": 0.998316764831543,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HAVE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9984068274497986,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HEARING": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 1,
+      "committed_wrong": 2,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 2,
+        "YESTERDAY": 2,
+        "ME": 4,
+        "SLEEP": 1,
+        "COME": 1
+      },
+      "max_conf": 0.9725587368011475,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HELLO": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9981594681739807,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HELP": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "DANGER": 1
+      },
+      "max_conf": 0.9853050112724304,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HERE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9977042078971863,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HOME": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9980029463768005,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HOT": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.998441755771637,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "HUNGRY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 0,
+      "committed_wrong": 3,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 3,
+        "YESTERDAY": 3,
+        "ME": 5,
+        "COME": 2,
+        "FEEL": 1,
+        "SORRY": 1,
+        "SLEEP": 1
+      },
+      "max_conf": 0.9966264963150024,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "IN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 1,
+      "committed_wrong": 2,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 2,
+        "YESTERDAY": 2,
+        "ME": 2,
+        "OUT": 2
+      },
+      "max_conf": 0.9985658526420593,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "KNOW": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "HOME": 1
+      },
+      "max_conf": 0.9954172372817993,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "LANGUAGE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.998704195022583,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "LEARN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 1,
+      "committed_wrong": 2,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 3,
+        "YESTERDAY": 2,
+        "ME": 2,
+        "HOME": 1,
+        "HELLO": 1,
+        "FATHER": 1
+      },
+      "max_conf": 0.9989504218101501,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "LIKE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "PLEASE": 1,
+        "FEEL": 1,
+        "HUNGRY": 1
+      },
+      "max_conf": 0.9875633716583252,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "LOVE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9960607886314392,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "ME": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9970613121986389,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "MEET": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "WHERE": 1
+      },
+      "max_conf": 0.998539924621582,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "MORE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9978904128074646,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "MORNING": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "SAD": 1
+      },
+      "max_conf": 0.998806357383728,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "MOTHER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9986627101898193,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "NAME": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "NEED": 1
+      },
+      "max_conf": 0.9969196319580078,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "NEED": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "YES": 1
+      },
+      "max_conf": 0.994805634021759,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "NICE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9986451268196106,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "NO": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "SLEEP": 1,
+        "WHERE": 1
+      },
+      "max_conf": 0.9934020638465881,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "OUT": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9979653358459473,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "PAIN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9996023774147034,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "PLEASE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9929874539375305,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SAD": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9977965354919434,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SCHOOL": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "DAY": 1,
+        "SLOW": 1
+      },
+      "max_conf": 0.9989472031593323,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SEE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9967504739761353,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SICK": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9993128776550293,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SIGN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9983464479446411,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SISTER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9868394732475281,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SLEEP": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9978392720222473,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SLOW": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.999082088470459,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SMALL": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9992110729217529,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "SORRY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 2,
+        "COME": 1
+      },
+      "max_conf": 0.9939993619918823,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "STOP": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9993752837181091,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "STUDY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9960485100746155,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "TAKE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 1,
+      "committed_wrong": 2,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 2,
+        "YESTERDAY": 2,
+        "ME": 2,
+        "SLEEP": 1,
+        "YES": 1,
+        "COME": 1,
+        "BATHROOM": 1
+      },
+      "max_conf": 0.998863935470581,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "TEACHER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9993821382522583,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "THERE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9992423057556152,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "THINK": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9954914450645447,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "TODAY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9991594552993774,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "TOMORROW": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9983505010604858,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "UNDERSTAND": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9936162233352661,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WAIT": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "SAD": 1
+      },
+      "max_conf": 0.9956833124160767,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WATER": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9981939196586609,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WHEN": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9957774877548218,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WHERE": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9990817308425903,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WHO": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 1,
+      "committed_wrong": 2,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 2,
+        "YESTERDAY": 2,
+        "YOU": 2,
+        "SORRY": 1,
+        "ME": 1,
+        "SLEEP": 1
+      },
+      "max_conf": 0.9897106289863586,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WHY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9975958466529846,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "WORK": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9992840886116028,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "YES": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 2,
+      "committed_wrong": 1,
+      "no_commit": 0,
+      "wrong_labels": {
+        "SICK": 1,
+        "YESTERDAY": 1,
+        "ME": 1,
+        "NEED": 1
+      },
+      "max_conf": 0.9839185476303101,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "YESTERDAY": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9978355765342712,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    },
+    "YOU": {
+      "clips": 3,
+      "committed": 3,
+      "committed_correct": 3,
+      "committed_wrong": 0,
+      "no_commit": 0,
+      "wrong_labels": {},
+      "max_conf": 0.9964168071746826,
+      "pilot_committed_correct": 0,
+      "pilot_clips": 0
+    }
+  },
+  "totals": {
+    "classes": 79,
+    "clips": 237,
+    "committed_correct": 205,
+    "committed_wrong": 32,
+    "no_commit": 0
+  },
+  "details": [
+    {
+      "file": "25163871214803346-BAD.mp4",
+      "true": "BAD",
+      "frames": 34,
+      "commits": [
+        "SICK",
+        "ME",
+        "SLEEP",
+        "BAD"
+      ],
+      "top_confidence": 0.9835,
+      "pilot_commits": []
+    },
+    {
+      "file": "4372505087382914-ME.mp4",
+      "true": "ME",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "ME",
+        "COME",
+        "HUNGRY"
+      ],
+      "top_confidence": 0.9624,
+      "pilot_commits": []
+    },
+    {
+      "file": "19418271966399425-WAIT.mp4",
+      "true": "WAIT",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WAIT"
+      ],
+      "top_confidence": 0.9523,
+      "pilot_commits": []
+    },
+    {
+      "file": "32838564647007873-SLEEP.mp4",
+      "true": "SLEEP",
+      "frames": 34,
+      "commits": [
+        "SICK",
+        "ME",
+        "SLEEP"
+      ],
+      "top_confidence": 0.9978,
+      "pilot_commits": []
+    },
+    {
+      "file": "03902304347683705-SISTER.mp4",
+      "true": "SISTER",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "ME",
+        "SISTER"
+      ],
+      "top_confidence": 0.9797,
+      "pilot_commits": []
+    },
+    {
+      "file": "7530258985595248-WATER.mp4",
+      "true": "WATER",
+      "frames": 34,
+      "commits": [
+        "SICK",
+        "ME",
+        "SLEEP",
+        "WATER"
+      ],
+      "top_confidence": 0.9757,
+      "pilot_commits": []
+    },
+    {
+      "file": "8534077485600235-HELP.mp4",
+      "true": "HELP",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DANGER"
+      ],
+      "top_confidence": 0.9622,
+      "pilot_commits": []
+    },
+    {
+      "file": "09691552256972735-HAPPY.mp4",
+      "true": "HAPPY",
+      "frames": 32,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "HUNGRY"
+      ],
+      "top_confidence": 0.9222,
+      "pilot_commits": []
+    },
+    {
+      "file": "40129207099438835-COLD.mp4",
+      "true": "COLD",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COLD"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "7863477546956994-IN.mp4",
+      "true": "IN",
+      "frames": 32,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT"
+      ],
+      "top_confidence": 0.9803,
+      "pilot_commits": []
+    },
+    {
+      "file": "7172221461609909-CLEAN.mp4",
+      "true": "NICE",
+      "frames": 24,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STOP",
+        "NICE"
+      ],
+      "top_confidence": 0.9919,
+      "pilot_commits": []
+    },
+    {
+      "file": "649126252898258-COMPUTER.mp4",
+      "true": "COMPUTER",
+      "frames": 24,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COMPUTER"
+      ],
+      "top_confidence": 0.9989,
+      "pilot_commits": []
+    },
+    {
+      "file": "9816583964493073-LANGUAGE.mp4",
+      "true": "LANGUAGE",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BIG",
+        "LANGUAGE"
+      ],
+      "top_confidence": 0.9987,
+      "pilot_commits": []
+    },
+    {
+      "file": "48764434217377106-TEACHER.mp4",
+      "true": "TEACHER",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TEACHER"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "8724961433813252-HUNGRY.mp4",
+      "true": "HUNGRY",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.9855,
+      "pilot_commits": []
+    },
+    {
+      "file": "7791424980867376-GOOD.mp4",
+      "true": "GOOD",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "GOOD"
+      ],
+      "top_confidence": 0.9723,
+      "pilot_commits": []
+    },
+    {
+      "file": "35455702192899774-LEARN.mp4",
+      "true": "LEARN",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME",
+        "SICK"
+      ],
+      "top_confidence": 0.8966,
+      "pilot_commits": []
+    },
+    {
+      "file": "7477453605531588-FEEL.mp4",
+      "true": "FEEL",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "FEEL",
+        "PLEASE"
+      ],
+      "top_confidence": 0.9945,
+      "pilot_commits": []
+    },
+    {
+      "file": "24752713514497837-HAVE.mp4",
+      "true": "HAVE",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HAVE"
+      ],
+      "top_confidence": 0.9888,
+      "pilot_commits": []
+    },
+    {
+      "file": "4096147054343935-PLEASE.mp4",
+      "true": "PLEASE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "ME",
+        "COME",
+        "PLEASE"
+      ],
+      "top_confidence": 0.9849,
+      "pilot_commits": []
+    },
+    {
+      "file": "7404223141679687-WHERE.mp4",
+      "true": "WHERE",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THERE",
+        "WHERE"
+      ],
+      "top_confidence": 0.9926,
+      "pilot_commits": []
+    },
+    {
+      "file": "3043245354055728-SAD.mp4",
+      "true": "SAD",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SAD"
+      ],
+      "top_confidence": 0.9969,
+      "pilot_commits": []
+    },
+    {
+      "file": "5938307461368451-HOME.mp4",
+      "true": "HOME",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME"
+      ],
+      "top_confidence": 0.9948,
+      "pilot_commits": []
+    },
+    {
+      "file": "08956501268165051-SICK.mp4",
+      "true": "SICK",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SICK"
+      ],
+      "top_confidence": 0.9961,
+      "pilot_commits": []
+    },
+    {
+      "file": "23597714310638485-KNOW.mp4",
+      "true": "KNOW",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "KNOW"
+      ],
+      "top_confidence": 0.9864,
+      "pilot_commits": []
+    },
+    {
+      "file": "8341336597329694-MORE.mp4",
+      "true": "MORE",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MORE"
+      ],
+      "top_confidence": 0.9972,
+      "pilot_commits": []
+    },
+    {
+      "file": "24758144482774802-WHO.mp4",
+      "true": "WHO",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "YOU",
+        "SORRY"
+      ],
+      "top_confidence": 0.8581,
+      "pilot_commits": []
+    },
+    {
+      "file": "42611117259039566-HEARING.mp4",
+      "true": "HEARING",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "ME"
+      ],
+      "top_confidence": 0.8425,
+      "pilot_commits": []
+    },
+    {
+      "file": "9132350980649417-SCARED.mp4",
+      "true": "AFRAID",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ANGRY",
+        "AFRAID"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "505746853598358-MORNING.mp4",
+      "true": "MORNING",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SAD"
+      ],
+      "top_confidence": 0.8958,
+      "pilot_commits": []
+    },
+    {
+      "file": "9717361996927067-UNDERSTAND.mp4",
+      "true": "UNDERSTAND",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME",
+        "UNDERSTAND"
+      ],
+      "top_confidence": 0.9892,
+      "pilot_commits": []
+    },
+    {
+      "file": "5439490417710435-NAME.mp4",
+      "true": "NAME",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "NAME"
+      ],
+      "top_confidence": 0.9937,
+      "pilot_commits": []
+    },
+    {
+      "file": "5646942405877946-PAIN.mp4",
+      "true": "PAIN",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "PAIN"
+      ],
+      "top_confidence": 0.9996,
+      "pilot_commits": []
+    },
+    {
+      "file": "6220173213417262-WHY.mp4",
+      "true": "WHY",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "WHY"
+      ],
+      "top_confidence": 0.8938,
+      "pilot_commits": []
+    },
+    {
+      "file": "05614933522741539-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "KNOW",
+        "HELLO"
+      ],
+      "top_confidence": 0.9229,
+      "pilot_commits": []
+    },
+    {
+      "file": "19039558672419843-WHEN.mp4",
+      "true": "WHEN",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "SIGN",
+        "WHEN"
+      ],
+      "top_confidence": 0.9912,
+      "pilot_commits": []
+    },
+    {
+      "file": "507695201823195-THERE.mp4",
+      "true": "THERE",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THERE"
+      ],
+      "top_confidence": 0.997,
+      "pilot_commits": []
+    },
+    {
+      "file": "6229294436435182-YOU.mp4",
+      "true": "YOU",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "YOU"
+      ],
+      "top_confidence": 0.9858,
+      "pilot_commits": []
+    },
+    {
+      "file": "12621992599115184-OUT.mp4",
+      "true": "OUT",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT"
+      ],
+      "top_confidence": 0.9925,
+      "pilot_commits": []
+    },
+    {
+      "file": "17739780073785405-HURT.mp4",
+      "true": "PAIN",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "PAIN"
+      ],
+      "top_confidence": 0.9989,
+      "pilot_commits": []
+    },
+    {
+      "file": "9456480662629465-SIGN.mp4",
+      "true": "SIGN",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SIGN"
+      ],
+      "top_confidence": 0.9971,
+      "pilot_commits": []
+    },
+    {
+      "file": "5329041608568317-BIG.mp4",
+      "true": "BIG",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "BIG"
+      ],
+      "top_confidence": 0.9991,
+      "pilot_commits": []
+    },
+    {
+      "file": "6939804871630404-DANGER.mp4",
+      "true": "DANGER",
+      "frames": 31,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WORK"
+      ],
+      "top_confidence": 0.945,
+      "pilot_commits": []
+    },
+    {
+      "file": "8609712353328145-IN.mp4",
+      "true": "IN",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT"
+      ],
+      "top_confidence": 0.9206,
+      "pilot_commits": []
+    },
+    {
+      "file": "668228182655314-AGAIN.mp4",
+      "true": "AGAIN",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT"
+      ],
+      "top_confidence": 0.9648,
+      "pilot_commits": []
+    },
+    {
+      "file": "23909248218883028-LOVE.mp4",
+      "true": "LOVE",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DANGER",
+        "LOVE"
+      ],
+      "top_confidence": 0.9425,
+      "pilot_commits": []
+    },
+    {
+      "file": "847617849239847-FIRE.mp4",
+      "true": "FIRE",
+      "frames": 45,
+      "commits": [
+        "MORNING",
+        "DAY",
+        "GIVE",
+        "FIRE"
+      ],
+      "top_confidence": 0.9602,
+      "pilot_commits": []
+    },
+    {
+      "file": "8525529504952978-HUNGRY.mp4",
+      "true": "HUNGRY",
+      "frames": 46,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FEEL",
+        "SORRY"
+      ],
+      "top_confidence": 0.9864,
+      "pilot_commits": []
+    },
+    {
+      "file": "1911359550569114-FIRE.mp4",
+      "true": "FIRE",
+      "frames": 28,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FIRE"
+      ],
+      "top_confidence": 0.943,
+      "pilot_commits": []
+    },
+    {
+      "file": "306250682526525-HUNGRY.mp4",
+      "true": "HUNGRY",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.9966,
+      "pilot_commits": []
+    },
+    {
+      "file": "8618976665727696-GOOD.mp4",
+      "true": "GOOD",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HAPPY",
+        "GOOD"
+      ],
+      "top_confidence": 0.9775,
+      "pilot_commits": []
+    },
+    {
+      "file": "3587550824558683-LEARN.mp4",
+      "true": "LEARN",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO",
+        "FATHER"
+      ],
+      "top_confidence": 0.9042,
+      "pilot_commits": []
+    },
+    {
+      "file": "21149948102918104-FEEL.mp4",
+      "true": "FEEL",
+      "frames": 24,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "FEEL"
+      ],
+      "top_confidence": 0.9828,
+      "pilot_commits": []
+    },
+    {
+      "file": "8919777181724133-YESTERDAY.mp4",
+      "true": "YESTERDAY",
+      "frames": 28,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YESTERDAY"
+      ],
+      "top_confidence": 0.9971,
+      "pilot_commits": []
+    },
+    {
+      "file": "8323715285073319-NO.mp4",
+      "true": "NO",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "WHERE"
+      ],
+      "top_confidence": 0.8624,
+      "pilot_commits": []
+    },
+    {
+      "file": "7861062216231951-SCHOOL.mp4",
+      "true": "SCHOOL",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY",
+        "SLOW"
+      ],
+      "top_confidence": 0.8912,
+      "pilot_commits": []
+    },
+    {
+      "file": "2187365398138117-MEET.mp4",
+      "true": "MEET",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MEET"
+      ],
+      "top_confidence": 0.9982,
+      "pilot_commits": []
+    },
+    {
+      "file": "05163066213189427-FRIEND.mp4",
+      "true": "FRIEND",
+      "frames": 26,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FRIEND"
+      ],
+      "top_confidence": 0.9805,
+      "pilot_commits": []
+    },
+    {
+      "file": "7300348171338833-LOVE.mp4",
+      "true": "LOVE",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "LOVE"
+      ],
+      "top_confidence": 0.9913,
+      "pilot_commits": []
+    },
+    {
+      "file": "4843579408025589-GOOD.mp4",
+      "true": "GOOD",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FEEL",
+        "GOOD"
+      ],
+      "top_confidence": 0.9268,
+      "pilot_commits": []
+    },
+    {
+      "file": "9349267580836926-LEARN.mp4",
+      "true": "LEARN",
+      "frames": 52,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "LEARN"
+      ],
+      "top_confidence": 0.999,
+      "pilot_commits": []
+    },
+    {
+      "file": "9861411419156798-FEEL.mp4",
+      "true": "FEEL",
+      "frames": 54,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FEEL"
+      ],
+      "top_confidence": 0.9974,
+      "pilot_commits": []
+    },
+    {
+      "file": "004997545233198508-YESTERDAY.mp4",
+      "true": "YESTERDAY",
+      "frames": 56,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YESTERDAY"
+      ],
+      "top_confidence": 0.9978,
+      "pilot_commits": []
+    },
+    {
+      "file": "2294900578606751-COME.mp4",
+      "true": "COME",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME"
+      ],
+      "top_confidence": 0.9921,
+      "pilot_commits": []
+    },
+    {
+      "file": "8895105417637403-HOT.mp4",
+      "true": "HOT",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOT"
+      ],
+      "top_confidence": 0.9969,
+      "pilot_commits": []
+    },
+    {
+      "file": "8308912697239315-GIVE.mp4",
+      "true": "GIVE",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "GIVE"
+      ],
+      "top_confidence": 0.9466,
+      "pilot_commits": []
+    },
+    {
+      "file": "09372722526789401-TAKE.mp4",
+      "true": "TAKE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "YES"
+      ],
+      "top_confidence": 0.8637,
+      "pilot_commits": []
+    },
+    {
+      "file": "28541392437861024-TOMORROW.mp4",
+      "true": "TOMORROW",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME",
+        "TOMORROW"
+      ],
+      "top_confidence": 0.9554,
+      "pilot_commits": []
+    },
+    {
+      "file": "6777361164611742-CHILD.mp4",
+      "true": "CHILD",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "CHILD"
+      ],
+      "top_confidence": 0.9994,
+      "pilot_commits": []
+    },
+    {
+      "file": "9161842981344352-YES.mp4",
+      "true": "YES",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YES"
+      ],
+      "top_confidence": 0.9839,
+      "pilot_commits": []
+    },
+    {
+      "file": "019466731254031755-BAD.mp4",
+      "true": "BAD",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "BAD"
+      ],
+      "top_confidence": 0.9946,
+      "pilot_commits": []
+    },
+    {
+      "file": "35429744496101856-ME.mp4",
+      "true": "ME",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.9971,
+      "pilot_commits": []
+    },
+    {
+      "file": "5419469718181713-WAIT.mp4",
+      "true": "WAIT",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SAD"
+      ],
+      "top_confidence": 0.9957,
+      "pilot_commits": []
+    },
+    {
+      "file": "4876077931735432-SLEEP.mp4",
+      "true": "SLEEP",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME",
+        "SLEEP"
+      ],
+      "top_confidence": 0.9621,
+      "pilot_commits": []
+    },
+    {
+      "file": "22679857147312932-SISTER.mp4",
+      "true": "SISTER",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SISTER"
+      ],
+      "top_confidence": 0.9487,
+      "pilot_commits": []
+    },
+    {
+      "file": "414141284745577-WATER.mp4",
+      "true": "WATER",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WATER"
+      ],
+      "top_confidence": 0.9948,
+      "pilot_commits": []
+    },
+    {
+      "file": "07732970042675213-HAPPY.mp4",
+      "true": "HAPPY",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "FEEL"
+      ],
+      "top_confidence": 0.8862,
+      "pilot_commits": []
+    },
+    {
+      "file": "01776429634261567-COLD.mp4",
+      "true": "COLD",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "COLD"
+      ],
+      "top_confidence": 0.9785,
+      "pilot_commits": []
+    },
+    {
+      "file": "0657726314663094-IN.mp4",
+      "true": "IN",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "IN"
+      ],
+      "top_confidence": 0.9986,
+      "pilot_commits": []
+    },
+    {
+      "file": "9125660174818455-COMPUTER.mp4",
+      "true": "COMPUTER",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COMPUTER"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "26971171953753537-LANGUAGE.mp4",
+      "true": "LANGUAGE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "LANGUAGE"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "6463873022358231-SLOW.mp4",
+      "true": "SLOW",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TAKE",
+        "SLOW"
+      ],
+      "top_confidence": 0.9991,
+      "pilot_commits": []
+    },
+    {
+      "file": "43876125183584724-BROTHER.mp4",
+      "true": "BROTHER",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BROTHER"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "3860077714893173-FINISH.mp4",
+      "true": "FINISH",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FINISH"
+      ],
+      "top_confidence": 0.9977,
+      "pilot_commits": []
+    },
+    {
+      "file": "9035254231738448-FATHER.mp4",
+      "true": "FATHER",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FATHER"
+      ],
+      "top_confidence": 0.9078,
+      "pilot_commits": []
+    },
+    {
+      "file": "16004917375203398-FAMILY.mp4",
+      "true": "FAMILY",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FAMILY"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "15179467641851585-SORRY.mp4",
+      "true": "SORRY",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.994,
+      "pilot_commits": []
+    },
+    {
+      "file": "5574672951229453-DAY.mp4",
+      "true": "DAY",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY"
+      ],
+      "top_confidence": 0.9141,
+      "pilot_commits": []
+    },
+    {
+      "file": "34434859291457975-HAVE.mp4",
+      "true": "HAVE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HAVE"
+      ],
+      "top_confidence": 0.9973,
+      "pilot_commits": []
+    },
+    {
+      "file": "42961246858695024-PLEASE.mp4",
+      "true": "PLEASE",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "FEEL",
+        "PLEASE"
+      ],
+      "top_confidence": 0.9642,
+      "pilot_commits": []
+    },
+    {
+      "file": "34697989347891944-WHERE.mp4",
+      "true": "WHERE",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WHERE"
+      ],
+      "top_confidence": 0.9856,
+      "pilot_commits": []
+    },
+    {
+      "file": "29913355059297864-SAD.mp4",
+      "true": "SAD",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SAD"
+      ],
+      "top_confidence": 0.9978,
+      "pilot_commits": []
+    },
+    {
+      "file": "4111158323472113-HOME.mp4",
+      "true": "HOME",
+      "frames": 14,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME"
+      ],
+      "top_confidence": 0.992,
+      "pilot_commits": []
+    },
+    {
+      "file": "47832051707828005-SICK.mp4",
+      "true": "SICK",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SICK"
+      ],
+      "top_confidence": 0.9987,
+      "pilot_commits": []
+    },
+    {
+      "file": "8084325176169471-KNOW.mp4",
+      "true": "KNOW",
+      "frames": 12,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "HOME"
+      ],
+      "top_confidence": 0.9583,
+      "pilot_commits": []
+    },
+    {
+      "file": "009299695590603507-MORE.mp4",
+      "true": "MORE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "MORE"
+      ],
+      "top_confidence": 0.997,
+      "pilot_commits": []
+    },
+    {
+      "file": "6586435517506106-THERE.mp4",
+      "true": "THERE",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THERE"
+      ],
+      "top_confidence": 0.965,
+      "pilot_commits": []
+    },
+    {
+      "file": "19643383002170656-YOU.mp4",
+      "true": "YOU",
+      "frames": 14,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "YOU"
+      ],
+      "top_confidence": 0.9729,
+      "pilot_commits": []
+    },
+    {
+      "file": "7113716796525962-OUT.mp4",
+      "true": "OUT",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "OUT"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "6440601854085655-HURT.mp4",
+      "true": "PAIN",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "PAIN"
+      ],
+      "top_confidence": 0.9995,
+      "pilot_commits": []
+    },
+    {
+      "file": "9392506529887468-SIGN.mp4",
+      "true": "SIGN",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "COME",
+        "SIGN"
+      ],
+      "top_confidence": 0.9811,
+      "pilot_commits": []
+    },
+    {
+      "file": "4225579791217846-BIG.mp4",
+      "true": "BIG",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "BIG"
+      ],
+      "top_confidence": 0.9883,
+      "pilot_commits": []
+    },
+    {
+      "file": "7837116050277355-NICE.mp4",
+      "true": "NICE",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NICE"
+      ],
+      "top_confidence": 0.9986,
+      "pilot_commits": []
+    },
+    {
+      "file": "5439748259827291-CHURCH.mp4",
+      "true": "CHURCH",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "CHURCH"
+      ],
+      "top_confidence": 0.9966,
+      "pilot_commits": []
+    },
+    {
+      "file": "04669408879006931-NEED.mp4",
+      "true": "NEED",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YES"
+      ],
+      "top_confidence": 0.9375,
+      "pilot_commits": []
+    },
+    {
+      "file": "6012173826569807-NOW.mp4",
+      "true": "TODAY",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TODAY"
+      ],
+      "top_confidence": 0.9781,
+      "pilot_commits": []
+    },
+    {
+      "file": "8042345903835753-LIKE.mp4",
+      "true": "LIKE",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "DAY",
+        "LIKE"
+      ],
+      "top_confidence": 0.9876,
+      "pilot_commits": []
+    },
+    {
+      "file": "556285767191335-AGAIN.mp4",
+      "true": "AGAIN",
+      "frames": 21,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "AGAIN"
+      ],
+      "top_confidence": 0.9988,
+      "pilot_commits": []
+    },
+    {
+      "file": "14984509683895952-CHURCH.mp4",
+      "true": "CHURCH",
+      "frames": 46,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "CHURCH"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "30879418056454777-NEED.mp4",
+      "true": "NEED",
+      "frames": 49,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NEED"
+      ],
+      "top_confidence": 0.9948,
+      "pilot_commits": []
+    },
+    {
+      "file": "8203203237125376-NOW.mp4",
+      "true": "TODAY",
+      "frames": 47,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TODAY"
+      ],
+      "top_confidence": 0.9992,
+      "pilot_commits": []
+    },
+    {
+      "file": "16373316542801275-LIKE.mp4",
+      "true": "LIKE",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FEEL",
+        "LIKE"
+      ],
+      "top_confidence": 0.9361,
+      "pilot_commits": []
+    },
+    {
+      "file": "6082022551291582-TODAY.mp4",
+      "true": "TODAY",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "TODAY"
+      ],
+      "top_confidence": 0.9992,
+      "pilot_commits": []
+    },
+    {
+      "file": "35996196778832323-DANGER.mp4",
+      "true": "DANGER",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DANGER"
+      ],
+      "top_confidence": 0.9795,
+      "pilot_commits": []
+    },
+    {
+      "file": "6866956732270757-STUDY.mp4",
+      "true": "STUDY",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STUDY"
+      ],
+      "top_confidence": 0.996,
+      "pilot_commits": []
+    },
+    {
+      "file": "6721385997956766-GO.mp4",
+      "true": "GO",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "GO"
+      ],
+      "top_confidence": 0.9972,
+      "pilot_commits": []
+    },
+    {
+      "file": "6037747479203328-HELP.mp4",
+      "true": "HELP",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELP"
+      ],
+      "top_confidence": 0.9853,
+      "pilot_commits": []
+    },
+    {
+      "file": "7266802248917938-MOTHER.mp4",
+      "true": "MOTHER",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MOTHER"
+      ],
+      "top_confidence": 0.9579,
+      "pilot_commits": []
+    },
+    {
+      "file": "8290350631082379-WORK.mp4",
+      "true": "WORK",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WORK"
+      ],
+      "top_confidence": 0.9754,
+      "pilot_commits": []
+    },
+    {
+      "file": "6506737411983545-WHO.mp4",
+      "true": "WHO",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "YOU"
+      ],
+      "top_confidence": 0.9642,
+      "pilot_commits": []
+    },
+    {
+      "file": "484821099377305-HEARING.mp4",
+      "true": "HEARING",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.9726,
+      "pilot_commits": []
+    },
+    {
+      "file": "04134100249427952-SCARED.mp4",
+      "true": "AFRAID",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "ANGRY",
+        "AFRAID"
+      ],
+      "top_confidence": 0.9984,
+      "pilot_commits": []
+    },
+    {
+      "file": "33958708655307857-MORNING.mp4",
+      "true": "MORNING",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "MORNING"
+      ],
+      "top_confidence": 0.9988,
+      "pilot_commits": []
+    },
+    {
+      "file": "8071758688201891-UNDERSTAND.mp4",
+      "true": "UNDERSTAND",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "UNDERSTAND"
+      ],
+      "top_confidence": 0.9856,
+      "pilot_commits": []
+    },
+    {
+      "file": "6442814975743945-NAME.mp4",
+      "true": "NAME",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "NAME"
+      ],
+      "top_confidence": 0.9969,
+      "pilot_commits": []
+    },
+    {
+      "file": "7508574803030745-WHY.mp4",
+      "true": "WHY",
+      "frames": 13,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "WHY",
+        "COME"
+      ],
+      "top_confidence": 0.8619,
+      "pilot_commits": []
+    },
+    {
+      "file": "20675411351630046-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO"
+      ],
+      "top_confidence": 0.9892,
+      "pilot_commits": []
+    },
+    {
+      "file": "08729017928642491-WHEN.mp4",
+      "true": "WHEN",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "WHEN"
+      ],
+      "top_confidence": 0.9958,
+      "pilot_commits": []
+    },
+    {
+      "file": "7516760417598645-HERE.mp4",
+      "true": "HERE",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HERE"
+      ],
+      "top_confidence": 0.9977,
+      "pilot_commits": []
+    },
+    {
+      "file": "4382853991304725-STOP.mp4",
+      "true": "STOP",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STOP"
+      ],
+      "top_confidence": 0.9994,
+      "pilot_commits": []
+    },
+    {
+      "file": "680337953755801-SEE.mp4",
+      "true": "SEE",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "SEE"
+      ],
+      "top_confidence": 0.9967,
+      "pilot_commits": []
+    },
+    {
+      "file": "954911942661782-THINK.mp4",
+      "true": "THINK",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THINK"
+      ],
+      "top_confidence": 0.9457,
+      "pilot_commits": []
+    },
+    {
+      "file": "1586194739868847-SMALL.mp4",
+      "true": "SMALL",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SMALL"
+      ],
+      "top_confidence": 0.9992,
+      "pilot_commits": []
+    },
+    {
+      "file": "6508736804510424-CLEAN.mp4",
+      "true": "NICE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TAKE",
+        "NICE"
+      ],
+      "top_confidence": 0.9986,
+      "pilot_commits": []
+    },
+    {
+      "file": "8089338121872236-TEACHER.mp4",
+      "true": "TEACHER",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TEACHER"
+      ],
+      "top_confidence": 0.9955,
+      "pilot_commits": []
+    },
+    {
+      "file": "2363946724780117-BATHROOM.mp4",
+      "true": "BATHROOM",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BATHROOM"
+      ],
+      "top_confidence": 0.9967,
+      "pilot_commits": []
+    },
+    {
+      "file": "776837683707674-ANGRY.mp4",
+      "true": "ANGRY",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "ANGRY"
+      ],
+      "top_confidence": 0.9745,
+      "pilot_commits": []
+    },
+    {
+      "file": "052047780303462465-TOMORROW.mp4",
+      "true": "TOMORROW",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TOMORROW"
+      ],
+      "top_confidence": 0.9245,
+      "pilot_commits": []
+    },
+    {
+      "file": "5204755360986577-CHILD.mp4",
+      "true": "CHILD",
+      "frames": 17,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "CHILD"
+      ],
+      "top_confidence": 0.9973,
+      "pilot_commits": []
+    },
+    {
+      "file": "9715589334909431-YES.mp4",
+      "true": "YES",
+      "frames": 16,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NEED"
+      ],
+      "top_confidence": 0.9043,
+      "pilot_commits": []
+    },
+    {
+      "file": "3488393161458545-TOMORROW.mp4",
+      "true": "TOMORROW",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TOMORROW"
+      ],
+      "top_confidence": 0.9984,
+      "pilot_commits": []
+    },
+    {
+      "file": "08822684142689163-CHILD.mp4",
+      "true": "CHILD",
+      "frames": 55,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "CHILD"
+      ],
+      "top_confidence": 0.9364,
+      "pilot_commits": []
+    },
+    {
+      "file": "42327270691916885-YES.mp4",
+      "true": "YES",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YES"
+      ],
+      "top_confidence": 0.957,
+      "pilot_commits": []
+    },
+    {
+      "file": "8541893071831477-SLEEP.mp4",
+      "true": "SLEEP",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "COME"
+      ],
+      "top_confidence": 0.9133,
+      "pilot_commits": []
+    },
+    {
+      "file": "947388841484097-SISTER.mp4",
+      "true": "SISTER",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY",
+        "SISTER"
+      ],
+      "top_confidence": 0.9868,
+      "pilot_commits": []
+    },
+    {
+      "file": "03174577769237463-WATER.mp4",
+      "true": "WATER",
+      "frames": 59,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WATER"
+      ],
+      "top_confidence": 0.9982,
+      "pilot_commits": []
+    },
+    {
+      "file": "3698632660671215-HAPPY.mp4",
+      "true": "HAPPY",
+      "frames": 53,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FEEL"
+      ],
+      "top_confidence": 0.9983,
+      "pilot_commits": []
+    },
+    {
+      "file": "39072948576699607-COLD.mp4",
+      "true": "COLD",
+      "frames": 57,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT",
+        "BIG",
+        "LANGUAGE"
+      ],
+      "top_confidence": 0.983,
+      "pilot_commits": []
+    },
+    {
+      "file": "04551864995837951-SAD.mp4",
+      "true": "SAD",
+      "frames": 61,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SAD"
+      ],
+      "top_confidence": 0.9937,
+      "pilot_commits": []
+    },
+    {
+      "file": "049094629596487804-HOME.mp4",
+      "true": "HOME",
+      "frames": 56,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOME"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "45273738498753846-SICK.mp4",
+      "true": "SICK",
+      "frames": 50,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SICK"
+      ],
+      "top_confidence": 0.9993,
+      "pilot_commits": []
+    },
+    {
+      "file": "5806315363119019-KNOW.mp4",
+      "true": "KNOW",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "KNOW"
+      ],
+      "top_confidence": 0.9954,
+      "pilot_commits": []
+    },
+    {
+      "file": "9000660794636397-MORE.mp4",
+      "true": "MORE",
+      "frames": 51,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MORE"
+      ],
+      "top_confidence": 0.9979,
+      "pilot_commits": []
+    },
+    {
+      "file": "5788460385097332-WHO.mp4",
+      "true": "WHO",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WHO"
+      ],
+      "top_confidence": 0.9897,
+      "pilot_commits": []
+    },
+    {
+      "file": "07582288076395338-HEARING.mp4",
+      "true": "HEARING",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HEARING"
+      ],
+      "top_confidence": 0.8973,
+      "pilot_commits": []
+    },
+    {
+      "file": "5935090923011812-SCARED.mp4",
+      "true": "AFRAID",
+      "frames": 52,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "AFRAID"
+      ],
+      "top_confidence": 0.9607,
+      "pilot_commits": []
+    },
+    {
+      "file": "5178361322749898-MORNING.mp4",
+      "true": "MORNING",
+      "frames": 54,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MORNING"
+      ],
+      "top_confidence": 0.9975,
+      "pilot_commits": []
+    },
+    {
+      "file": "7903893233633115-UNDERSTAND.mp4",
+      "true": "UNDERSTAND",
+      "frames": 39,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "UNDERSTAND"
+      ],
+      "top_confidence": 0.9936,
+      "pilot_commits": []
+    },
+    {
+      "file": "9031073980623976-NAME.mp4",
+      "true": "NAME",
+      "frames": 48,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NEED"
+      ],
+      "top_confidence": 0.9304,
+      "pilot_commits": []
+    },
+    {
+      "file": "5132756077874947-WHY.mp4",
+      "true": "WHY",
+      "frames": 41,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WHY"
+      ],
+      "top_confidence": 0.9976,
+      "pilot_commits": []
+    },
+    {
+      "file": "16493550450776628-HELLO.mp4",
+      "true": "HELLO",
+      "frames": 41,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELLO"
+      ],
+      "top_confidence": 0.9982,
+      "pilot_commits": []
+    },
+    {
+      "file": "5407096343613205-WHEN.mp4",
+      "true": "WHEN",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SIGN",
+        "WHEN"
+      ],
+      "top_confidence": 0.9783,
+      "pilot_commits": []
+    },
+    {
+      "file": "2510629421891437-THERE.mp4",
+      "true": "THERE",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THERE"
+      ],
+      "top_confidence": 0.9992,
+      "pilot_commits": []
+    },
+    {
+      "file": "35038040842137197-YOU.mp4",
+      "true": "YOU",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YOU"
+      ],
+      "top_confidence": 0.9964,
+      "pilot_commits": []
+    },
+    {
+      "file": "20841100427398462-OUT.mp4",
+      "true": "OUT",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT"
+      ],
+      "top_confidence": 0.9962,
+      "pilot_commits": []
+    },
+    {
+      "file": "4656606080155459-NO.mp4",
+      "true": "NO",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NO"
+      ],
+      "top_confidence": 0.9934,
+      "pilot_commits": []
+    },
+    {
+      "file": "24442962392359258-SCHOOL.mp4",
+      "true": "SCHOOL",
+      "frames": 43,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SCHOOL"
+      ],
+      "top_confidence": 0.9989,
+      "pilot_commits": []
+    },
+    {
+      "file": "808562905847142-MEET.mp4",
+      "true": "MEET",
+      "frames": 50,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MEET"
+      ],
+      "top_confidence": 0.9985,
+      "pilot_commits": []
+    },
+    {
+      "file": "29341979023390885-FRIEND.mp4",
+      "true": "FRIEND",
+      "frames": 41,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FRIEND"
+      ],
+      "top_confidence": 0.9976,
+      "pilot_commits": []
+    },
+    {
+      "file": "4225799509845236-AGAIN.mp4",
+      "true": "AGAIN",
+      "frames": 46,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "AGAIN"
+      ],
+      "top_confidence": 0.9968,
+      "pilot_commits": []
+    },
+    {
+      "file": "4596513387152761-DANGER.mp4",
+      "true": "DANGER",
+      "frames": 45,
+      "commits": [
+        "SICK",
+        "KNOW",
+        "DANGER"
+      ],
+      "top_confidence": 0.9859,
+      "pilot_commits": []
+    },
+    {
+      "file": "3278503258105816-STUDY.mp4",
+      "true": "STUDY",
+      "frames": 39,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STUDY"
+      ],
+      "top_confidence": 0.993,
+      "pilot_commits": []
+    },
+    {
+      "file": "3702604002311216-GO.mp4",
+      "true": "GO",
+      "frames": 41,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "GO"
+      ],
+      "top_confidence": 0.9986,
+      "pilot_commits": []
+    },
+    {
+      "file": "20482432773002457-LOVE.mp4",
+      "true": "LOVE",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "LOVE"
+      ],
+      "top_confidence": 0.9961,
+      "pilot_commits": []
+    },
+    {
+      "file": "6809556328325521-COME.mp4",
+      "true": "COME",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME"
+      ],
+      "top_confidence": 0.9918,
+      "pilot_commits": []
+    },
+    {
+      "file": "20951385475100537-HOT.mp4",
+      "true": "HOT",
+      "frames": 36,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOT"
+      ],
+      "top_confidence": 0.9984,
+      "pilot_commits": []
+    },
+    {
+      "file": "8287819563463323-GIVE.mp4",
+      "true": "GIVE",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "GIVE"
+      ],
+      "top_confidence": 0.9983,
+      "pilot_commits": []
+    },
+    {
+      "file": "4805934647756538-TAKE.mp4",
+      "true": "TAKE",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TAKE"
+      ],
+      "top_confidence": 0.9989,
+      "pilot_commits": []
+    },
+    {
+      "file": "06939945586940688-BAD.mp4",
+      "true": "BAD",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SLEEP",
+        "BAD"
+      ],
+      "top_confidence": 0.9783,
+      "pilot_commits": []
+    },
+    {
+      "file": "5724078705072562-ME.mp4",
+      "true": "ME",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.96,
+      "pilot_commits": []
+    },
+    {
+      "file": "5205785031120291-WAIT.mp4",
+      "true": "WAIT",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FIRE",
+        "WAIT"
+      ],
+      "top_confidence": 0.9436,
+      "pilot_commits": []
+    },
+    {
+      "file": "44817736125778374-HELP.mp4",
+      "true": "HELP",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HELP"
+      ],
+      "top_confidence": 0.9231,
+      "pilot_commits": []
+    },
+    {
+      "file": "06987277414141624-COMPUTER.mp4",
+      "true": "COMPUTER",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COMPUTER"
+      ],
+      "top_confidence": 0.9946,
+      "pilot_commits": []
+    },
+    {
+      "file": "8054077229465761-LANGUAGE.mp4",
+      "true": "LANGUAGE",
+      "frames": 45,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "LANGUAGE"
+      ],
+      "top_confidence": 0.9984,
+      "pilot_commits": []
+    },
+    {
+      "file": "29045877663385156-MOTHER.mp4",
+      "true": "MOTHER",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MOTHER"
+      ],
+      "top_confidence": 0.985,
+      "pilot_commits": []
+    },
+    {
+      "file": "46414416557148286-SLOW.mp4",
+      "true": "SLOW",
+      "frames": 47,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "OUT",
+        "SLOW"
+      ],
+      "top_confidence": 0.9989,
+      "pilot_commits": []
+    },
+    {
+      "file": "9554413278323899-BROTHER.mp4",
+      "true": "BROTHER",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BROTHER"
+      ],
+      "top_confidence": 0.9964,
+      "pilot_commits": []
+    },
+    {
+      "file": "24803980252556834-FINISH.mp4",
+      "true": "FINISH",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FINISH"
+      ],
+      "top_confidence": 0.9966,
+      "pilot_commits": []
+    },
+    {
+      "file": "7154896998335438-FATHER.mp4",
+      "true": "FATHER",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FATHER"
+      ],
+      "top_confidence": 0.989,
+      "pilot_commits": []
+    },
+    {
+      "file": "9733795834896177-FAMILY.mp4",
+      "true": "FAMILY",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FAMILY"
+      ],
+      "top_confidence": 0.9975,
+      "pilot_commits": []
+    },
+    {
+      "file": "6387762756061144-SORRY.mp4",
+      "true": "SORRY",
+      "frames": 45,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "SORRY"
+      ],
+      "top_confidence": 0.916,
+      "pilot_commits": []
+    },
+    {
+      "file": "5659674619021058-DAY.mp4",
+      "true": "DAY",
+      "frames": 42,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY"
+      ],
+      "top_confidence": 0.9992,
+      "pilot_commits": []
+    },
+    {
+      "file": "3970565843655667-HAVE.mp4",
+      "true": "HAVE",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HAVE"
+      ],
+      "top_confidence": 0.9984,
+      "pilot_commits": []
+    },
+    {
+      "file": "6330094542104612-PLEASE.mp4",
+      "true": "PLEASE",
+      "frames": 43,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "PLEASE"
+      ],
+      "top_confidence": 0.993,
+      "pilot_commits": []
+    },
+    {
+      "file": "6997365376367899-WHERE.mp4",
+      "true": "WHERE",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WHERE"
+      ],
+      "top_confidence": 0.9991,
+      "pilot_commits": []
+    },
+    {
+      "file": "21403791953028373-SIGN.mp4",
+      "true": "SIGN",
+      "frames": 43,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SIGN"
+      ],
+      "top_confidence": 0.9983,
+      "pilot_commits": []
+    },
+    {
+      "file": "06196342319478165-BIG.mp4",
+      "true": "BIG",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BIG"
+      ],
+      "top_confidence": 0.9983,
+      "pilot_commits": []
+    },
+    {
+      "file": "8850139907403236-HERE.mp4",
+      "true": "HERE",
+      "frames": 40,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HERE"
+      ],
+      "top_confidence": 0.997,
+      "pilot_commits": []
+    },
+    {
+      "file": "49400025068696496-STOP.mp4",
+      "true": "STOP",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STOP"
+      ],
+      "top_confidence": 0.9993,
+      "pilot_commits": []
+    },
+    {
+      "file": "9233469754453538-SEE.mp4",
+      "true": "SEE",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SEE"
+      ],
+      "top_confidence": 0.988,
+      "pilot_commits": []
+    },
+    {
+      "file": "6318484937161617-THINK.mp4",
+      "true": "THINK",
+      "frames": 38,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THINK"
+      ],
+      "top_confidence": 0.9955,
+      "pilot_commits": []
+    },
+    {
+      "file": "8815573731027433-SMALL.mp4",
+      "true": "SMALL",
+      "frames": 43,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SMALL"
+      ],
+      "top_confidence": 0.998,
+      "pilot_commits": []
+    },
+    {
+      "file": "31754143620287056-TEACHER.mp4",
+      "true": "TEACHER",
+      "frames": 50,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "TEACHER"
+      ],
+      "top_confidence": 0.9994,
+      "pilot_commits": []
+    },
+    {
+      "file": "3622050510913253-BATHROOM.mp4",
+      "true": "BATHROOM",
+      "frames": 46,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BATHROOM"
+      ],
+      "top_confidence": 0.999,
+      "pilot_commits": []
+    },
+    {
+      "file": "9167479595954919-ANGRY.mp4",
+      "true": "ANGRY",
+      "frames": 44,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "ANGRY"
+      ],
+      "top_confidence": 0.9988,
+      "pilot_commits": []
+    },
+    {
+      "file": "4328643376522927-WORK.mp4",
+      "true": "WORK",
+      "frames": 47,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WORK"
+      ],
+      "top_confidence": 0.9993,
+      "pilot_commits": []
+    },
+    {
+      "file": "3187350995521874-STUDY.mp4",
+      "true": "STUDY",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "AGAIN",
+        "STUDY"
+      ],
+      "top_confidence": 0.8555,
+      "pilot_commits": []
+    },
+    {
+      "file": "5587884729767747-GO.mp4",
+      "true": "GO",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "GO"
+      ],
+      "top_confidence": 0.9277,
+      "pilot_commits": []
+    },
+    {
+      "file": "21342128738229116-HERE.mp4",
+      "true": "HERE",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HERE"
+      ],
+      "top_confidence": 0.9963,
+      "pilot_commits": []
+    },
+    {
+      "file": "6405573667025386-BATHROOM.mp4",
+      "true": "BATHROOM",
+      "frames": 26,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BATHROOM"
+      ],
+      "top_confidence": 0.9981,
+      "pilot_commits": []
+    },
+    {
+      "file": "48220722485733747-ANGRY.mp4",
+      "true": "ANGRY",
+      "frames": 37,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "ANGRY"
+      ],
+      "top_confidence": 0.9987,
+      "pilot_commits": []
+    },
+    {
+      "file": "2401781217873089-MOTHER.mp4",
+      "true": "MOTHER",
+      "frames": 33,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "MOTHER"
+      ],
+      "top_confidence": 0.9987,
+      "pilot_commits": []
+    },
+    {
+      "file": "6072418103340411-WORK.mp4",
+      "true": "WORK",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY",
+        "WORK"
+      ],
+      "top_confidence": 0.988,
+      "pilot_commits": []
+    },
+    {
+      "file": "3649088726121359-SLOW.mp4",
+      "true": "SLOW",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "DAY",
+        "SLOW"
+      ],
+      "top_confidence": 0.9986,
+      "pilot_commits": []
+    },
+    {
+      "file": "33609542497284695-BROTHER.mp4",
+      "true": "BROTHER",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "BROTHER"
+      ],
+      "top_confidence": 0.9987,
+      "pilot_commits": []
+    },
+    {
+      "file": "8804372922780734-FINISH.mp4",
+      "true": "FINISH",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FINISH"
+      ],
+      "top_confidence": 0.9912,
+      "pilot_commits": []
+    },
+    {
+      "file": "9713909110606633-FATHER.mp4",
+      "true": "FATHER",
+      "frames": 28,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "FATHER"
+      ],
+      "top_confidence": 0.994,
+      "pilot_commits": []
+    },
+    {
+      "file": "7397889710801269-FAMILY.mp4",
+      "true": "FAMILY",
+      "frames": 28,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FAMILY"
+      ],
+      "top_confidence": 0.999,
+      "pilot_commits": []
+    },
+    {
+      "file": "9220637121525757-SORRY.mp4",
+      "true": "SORRY",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "SORRY"
+      ],
+      "top_confidence": 0.9251,
+      "pilot_commits": []
+    },
+    {
+      "file": "5403047656647011-DAY.mp4",
+      "true": "DAY",
+      "frames": 27,
+      "commits": [
+        "SICK",
+        "ME",
+        "DAY"
+      ],
+      "top_confidence": 0.9961,
+      "pilot_commits": []
+    },
+    {
+      "file": "7240649368253063-FIRE.mp4",
+      "true": "FIRE",
+      "frames": 24,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "FIRE"
+      ],
+      "top_confidence": 0.9908,
+      "pilot_commits": []
+    },
+    {
+      "file": "6138096732544365-CHURCH.mp4",
+      "true": "CHURCH",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "CHURCH"
+      ],
+      "top_confidence": 0.9878,
+      "pilot_commits": []
+    },
+    {
+      "file": "6330153558265055-NEED.mp4",
+      "true": "NEED",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NEED"
+      ],
+      "top_confidence": 0.9429,
+      "pilot_commits": []
+    },
+    {
+      "file": "9929552869204215-YESTERDAY.mp4",
+      "true": "YESTERDAY",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY"
+      ],
+      "top_confidence": 0.9961,
+      "pilot_commits": []
+    },
+    {
+      "file": "8079226457278508-NO.mp4",
+      "true": "NO",
+      "frames": 23,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "NO"
+      ],
+      "top_confidence": 0.9495,
+      "pilot_commits": []
+    },
+    {
+      "file": "02185976473813267-SCHOOL.mp4",
+      "true": "SCHOOL",
+      "frames": 26,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SCHOOL"
+      ],
+      "top_confidence": 0.9007,
+      "pilot_commits": []
+    },
+    {
+      "file": "1359379149172253-MEET.mp4",
+      "true": "MEET",
+      "frames": 30,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "WHERE"
+      ],
+      "top_confidence": 0.9912,
+      "pilot_commits": []
+    },
+    {
+      "file": "6298947790810541-FRIEND.mp4",
+      "true": "FRIEND",
+      "frames": 25,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "YOU",
+        "FRIEND"
+      ],
+      "top_confidence": 0.9641,
+      "pilot_commits": []
+    },
+    {
+      "file": "11163894424136789-LIKE.mp4",
+      "true": "LIKE",
+      "frames": 19,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "PLEASE",
+        "FEEL",
+        "HUNGRY"
+      ],
+      "top_confidence": 0.9313,
+      "pilot_commits": []
+    },
+    {
+      "file": "7757946316597986-STOP.mp4",
+      "true": "STOP",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "STOP"
+      ],
+      "top_confidence": 0.9937,
+      "pilot_commits": []
+    },
+    {
+      "file": "5342802354346374-THINK.mp4",
+      "true": "THINK",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "THINK"
+      ],
+      "top_confidence": 0.9426,
+      "pilot_commits": []
+    },
+    {
+      "file": "5307142627482293-SMALL.mp4",
+      "true": "SMALL",
+      "frames": 15,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "SMALL"
+      ],
+      "top_confidence": 0.9102,
+      "pilot_commits": []
+    },
+    {
+      "file": "24064885357062593-COME.mp4",
+      "true": "COME",
+      "frames": 22,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME"
+      ],
+      "top_confidence": 0.9422,
+      "pilot_commits": []
+    },
+    {
+      "file": "18049350165719025-HOT.mp4",
+      "true": "HOT",
+      "frames": 24,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "HOT"
+      ],
+      "top_confidence": 0.9814,
+      "pilot_commits": []
+    },
+    {
+      "file": "6968328028731545-TAKE.mp4",
+      "true": "TAKE",
+      "frames": 18,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "ME",
+        "COME",
+        "BATHROOM"
+      ],
+      "top_confidence": 0.8757,
+      "pilot_commits": []
+    },
+    {
+      "file": "6449291006787454-SEE.mp4",
+      "true": "SEE",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "SEE"
+      ],
+      "top_confidence": 0.9968,
+      "pilot_commits": []
+    },
+    {
+      "file": "8255103409999225-GIVE.mp4",
+      "true": "GIVE",
+      "frames": 20,
+      "commits": [
+        "SICK",
+        "YESTERDAY",
+        "COME",
+        "ME"
+      ],
+      "top_confidence": 0.9951,
+      "pilot_commits": []
+    }
+  ]
+}

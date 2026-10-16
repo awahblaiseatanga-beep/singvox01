@@ -1,0 +1,141 @@
+{
+  "checkpoint": "d:\\Singvox\\Singvox\\experiments\\continuous-asl\\phase_2c_29\\best_ctc_attention_model.pt",
+  "total_parameters": 3849297,
+  "validation_samples": 258,
+  "latency_ms": {
+    "mean": 35.45,
+    "median": 37.56,
+    "p95": 55.52
+  },
+  "conditions": {
+    "normal_attention": {
+      "bleu_1": 6.54,
+      "bleu_2": 2.98,
+      "bleu4": 1.64,
+      "bp": 0.2287,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 7.12,
+      "repetition_rate_pct": 0.0,
+      "levenshtein_token_accuracy_pct": 8.56,
+      "token_precision_pct": 28.12,
+      "token_recall_pct": 12.56,
+      "token_f1_pct": 17.36,
+      "sample_count": 258
+    },
+    "ctc_greedy": {
+      "bleu_1": 0.0,
+      "bleu_2": 0.0,
+      "bleu4": 0.0,
+      "bp": 0.0,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 0.0,
+      "repetition_rate_pct": 0.0,
+      "levenshtein_token_accuracy_pct": 0.0,
+      "token_precision_pct": 0.0,
+      "token_recall_pct": 0.0,
+      "token_f1_pct": 0.0,
+      "sample_count": 258
+    },
+    "zeroed": {
+      "bleu_1": 17.21,
+      "bleu_2": 7.12,
+      "bleu4": 2.75,
+      "bp": 0.8106,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 14.57,
+      "repetition_rate_pct": 0.0,
+      "levenshtein_token_accuracy_pct": 7.13,
+      "token_precision_pct": 21.1,
+      "token_recall_pct": 18.69,
+      "token_f1_pct": 19.82,
+      "sample_count": 258
+    },
+    "shuffled": {
+      "bleu_1": 6.53,
+      "bleu_2": 2.98,
+      "bleu4": 1.64,
+      "bp": 0.2278,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 7.11,
+      "repetition_rate_pct": 0.0,
+      "levenshtein_token_accuracy_pct": 8.5,
+      "token_precision_pct": 28.2,
+      "token_recall_pct": 12.55,
+      "token_f1_pct": 17.37,
+      "sample_count": 258
+    },
+    "mismatched": {
+      "bleu_1": 6.52,
+      "bleu_2": 3.01,
+      "bleu4": 1.65,
+      "bp": 0.2287,
+      "exact_match_pct": 0.0,
+      "mean_ref_len": 17.62,
+      "mean_hyp_len": 7.12,
+      "repetition_rate_pct": 0.0,
+      "levenshtein_token_accuracy_pct": 7.75,
+      "token_precision_pct": 28.12,
+      "token_recall_pct": 12.61,
+      "token_f1_pct": 17.42,
+      "sample_count": 258
+    }
+  },
+  "input_dependence": {
+    "shuffled_identical_output_pct": 87.6,
+    "zeroed_identical_output_pct": 0.0,
+    "matched_win_pct": 51.94,
+    "tie_pct": 1.94,
+    "mismatched_win_pct": 46.12
+  },
+  "attention_audit": {
+    "mean_normalized_entropy": 0.9097,
+    "mean_coverage_pct": 71.08,
+    "mean_center_of_mass_drift": -5.57
+  },
+  "sample_hypotheses": [
+    {
+      "idx": 0,
+      "ref": "Today we're going to talk about how to diagnose an ailment of your fish.",
+      "hyp_attention": "so you want to the",
+      "hyp_ctc": "",
+      "hyp_shuffled": "so you want to the",
+      "hyp_zeroed": "so you want to the a little bit of the and then you can"
+    },
+    {
+      "idx": 1,
+      "ref": "Part of keeping a fish is making sure that we visually inspect them everyday.",
+      "hyp_attention": "so you want to the a",
+      "hyp_ctc": "",
+      "hyp_shuffled": "so you want to the a",
+      "hyp_zeroed": "so you want to the a little bit of the and then you can"
+    },
+    {
+      "idx": 2,
+      "ref": "Simply follow directions and it tells you exactly how much to use, when you should do a water change.",
+      "hyp_attention": "so you want to the a little",
+      "hyp_ctc": "",
+      "hyp_shuffled": "so you want to the a little",
+      "hyp_zeroed": "so you want to the a little bit of the and then you can that you"
+    },
+    {
+      "idx": 3,
+      "ref": "Another thing that you can put in your tank is aquarium salt.",
+      "hyp_attention": "so you want to the a",
+      "hyp_ctc": "",
+      "hyp_shuffled": "so you want to the a",
+      "hyp_zeroed": "so you want to the a little bit of the and then you can"
+    },
+    {
+      "idx": 4,
+      "ref": "Aquarium salt raises the electrolytes in the tank and it also helps reduce stress.",
+      "hyp_attention": "so you want to the a little",
+      "hyp_ctc": "",
+      "hyp_shuffled": "so you want to the a little",
+      "hyp_zeroed": "so you want to the a little bit of the and then you can that you"
+    }
+  ]
+}

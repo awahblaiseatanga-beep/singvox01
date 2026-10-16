@@ -1,0 +1,53 @@
+{
+  "ram_total_gb": 15.85,
+  "ram_available_gb": 4.32,
+  "cpu_inference_feasible": false,
+  "ram_required_gb": 9.98,
+  "gap_gb": 5.66,
+  "packages": {
+    "transformers": "NOT INSTALLED",
+    "peft": "NOT INSTALLED",
+    "qwen_vl_utils": "NOT INSTALLED",
+    "accelerate": "NOT INSTALLED",
+    "mediapipe": "0.10.35",
+    "cv2": "5.0.0",
+    "numpy": "2.5.3"
+  },
+  "selected_clips": [
+    {
+      "filename": "-d5dN54tH2E_0-1-rgb_front.mp4",
+      "video_id": "-d5dN54tH2E",
+      "duration_sec": 7.88,
+      "reference": "We're going to work on a arm drill that will help you have graceful hand movements in front of you.",
+      "file_exists": true
+    },
+    {
+      "filename": "-f1_kdl050s_0-1-rgb_front.mp4",
+      "video_id": "-f1_kdl050s",
+      "duration_sec": 5.0,
+      "reference": "In this clip we are going to talk about dangers for these birds in the household and otherwise.",
+      "file_exists": true
+    },
+    {
+      "filename": "00dWJ4YRRSI_0_1-1-rgb_front.mp4",
+      "video_id": "00dWJ4YRRSI",
+      "duration_sec": 26.58,
+      "reference": "I hope this becomes very popular, here of late, is the circle hooks. Now, circle hooks has been used by Japanese fishermen and longliners for years and years, but in recent years, they've developed lighter, smaller, in shore type hooks, which are very well suited, particularly to folks that are in to the hook and release type fishing.",
+      "file_exists": true
+    },
+    {
+      "filename": "0oGfy530AuI_0-1-rgb_front.mp4",
+      "video_id": "0oGfy530AuI",
+      "duration_sec": 1.29,
+      "reference": "MICHAEL ROSENGART: Thrusters.",
+      "file_exists": true
+    },
+    {
+      "filename": "0pKzG0RRUz4_0-1-rgb_front.mp4",
+      "video_id": "0pKzG0RRUz4",
+      "duration_sec": 13.08,
+      "reference": "Another technique is you can braid the hair on first and then start wrapping cause some people have really short hair and we can create the look with adding the hair end.",
+      "file_exists": true
+    }
+  ]
+}

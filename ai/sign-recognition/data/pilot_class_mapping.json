@@ -1,0 +1,14 @@
+{
+  "0": {
+    "canonical_name": "HELLO",
+    "class_index": 0
+  },
+  "1": {
+    "canonical_name": "YES",
+    "class_index": 1
+  },
+  "2": {
+    "canonical_name": "NO",
+    "class_index": 2
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "checkpoint": "experiments\\spoter_v3\\checkpoints\\spoter_v3_best_val_acc_checkpoint.pt",
+  "split": "test",
+  "total_samples": 1011,
+  "overall_top1_accuracy": 0.0247,
+  "overall_top3_accuracy": 0.089,
+  "macro_average_accuracy": 0.0244,
+  "evaluated_classes_count": 79,
+  "total_classes": 100,
+  "per_class_metrics": [
+    {
+      "class_index": 0,
+      "asl_id": "ASL_001",
+      "canonical_name": "HELLO",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 1,
+      "asl_id": "ASL_002",
+      "canonical_name": "GOOD",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 2,
+      "asl_id": "ASL_003",
+      "canonical_name": "BAD",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 3,
+      "asl_id": "ASL_004",
+      "canonical_name": "PLEASE",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 4,
+      "asl_id": "ASL_005",
+      "canonical_name": "THANK-YOU",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 5,
+      "asl_id": "ASL_006",
+      "canonical_name": "SORRY",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 6,
+      "asl_id": "ASL_007",
+      "canonical_name": "HELP",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 7,
+      "asl_id": "ASL_008",
+      "canonical_name": "STOP",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 8,
+      "asl_id": "ASL_009",
+      "canonical_name": "WAIT",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 9,
+      "asl_id": "ASL_010",
+      "canonical_name": "UNDERSTAND",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 10,
+      "asl_id": "ASL_011",
+      "canonical_name": "YES",
+      "support": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 11,
+      "asl_id": "ASL_012",
+      "canonical_name": "NO",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 12,
+      "asl_id": "ASL_013",
+      "canonical_name": "AGAIN",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 13,
+      "asl_id": "ASL_014",
+      "canonical_name": "SLOW",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 14,
+      "asl_id": "ASL_015",
+      "canonical_name": "DON'T-UNDERSTAND",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 15,
+      "asl_id": "ASL_016",
+      "canonical_name": "NAME",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 16,
+      "asl_id": "ASL_017",
+      "canonical_name": "ME/PRO1",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 17,
+      "asl_id": "ASL_018",
+      "canonical_name": "YOU/PRO2",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 18,
+      "asl_id": "ASL_019",
+      "canonical_name": "FAMILY",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 19,
+      "asl_id": "ASL_020",
+      "canonical_name": "FRIEND",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 20,
+      "asl_id": "ASL_021",
+      "canonical_name": "MOTHER",
+      "support": 15,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 21,
+      "asl_id": "ASL_022",
+      "canonical_name": "FATHER",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 22,
+      "asl_id": "ASL_023",
+      "canonical_name": "BROTHER",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 23,
+      "asl_id": "ASL_024",
+      "canonical_name": "SISTER",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 24,
+      "asl_id": "ASL_025",
+      "canonical_name": "CHILD",
+      "support": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 25,
+      "asl_id": "ASL_026",
+      "canonical_name": "BABY",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 26,
+      "asl_id": "ASL_027",
+      "canonical_name": "TEACHER",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 27,
+      "asl_id": "ASL_028",
+      "canonical_name": "GO",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 28,
+      "asl_id": "ASL_029",
+      "canonical_name": "COME",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 29,
+      "asl_id": "ASL_030",
+      "canonical_name": "GIVE",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 30,
+      "asl_id": "ASL_031",
+      "canonical_name": "TAKE",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 31,
+      "asl_id": "ASL_032",
+      "canonical_name": "WANT",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 32,
+      "asl_id": "ASL_033",
+      "canonical_name": "NEED",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 33,
+      "asl_id": "ASL_034",
+      "canonical_name": "HAVE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 34,
+      "asl_id": "ASL_035",
+      "canonical_name": "KNOW",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 35,
+      "asl_id": "ASL_036",
+      "canonical_name": "LIKE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 36,
+      "asl_id": "ASL_037",
+      "canonical_name": "SEE",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 37,
+      "asl_id": "ASL_038",
+      "canonical_name": "THINK",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 38,
+      "asl_id": "ASL_039",
+      "canonical_name": "LEARN",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 39,
+      "asl_id": "ASL_040",
+      "canonical_name": "TEACH",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 40,
+      "asl_id": "ASL_041",
+      "canonical_name": "STUDY",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 41,
+      "asl_id": "ASL_042",
+      "canonical_name": "SCHOOL",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 42,
+      "asl_id": "ASL_043",
+      "canonical_name": "WORK",
+      "support": 15,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 43,
+      "asl_id": "ASL_044",
+      "canonical_name": "HOME",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 44,
+      "asl_id": "ASL_045",
+      "canonical_name": "STORE",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 45,
+      "asl_id": "ASL_046",
+      "canonical_name": "CHURCH",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 46,
+      "asl_id": "ASL_047",
+      "canonical_name": "HOSPITAL",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 47,
+      "asl_id": "ASL_048",
+      "canonical_name": "DOCTOR",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 48,
+      "asl_id": "ASL_049",
+      "canonical_name": "BATHROOM",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 49,
+      "asl_id": "ASL_050",
+      "canonical_name": "HERE",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 50,
+      "asl_id": "ASL_051",
+      "canonical_name": "THERE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 51,
+      "asl_id": "ASL_052",
+      "canonical_name": "IN",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 52,
+      "asl_id": "ASL_053",
+      "canonical_name": "OUT",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 53,
+      "asl_id": "ASL_054",
+      "canonical_name": "TODAY/NOW",
+      "support": 23,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 54,
+      "asl_id": "ASL_055",
+      "canonical_name": "YESTERDAY",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 55,
+      "asl_id": "ASL_056",
+      "canonical_name": "TOMORROW",
+      "support": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 56,
+      "asl_id": "ASL_057",
+      "canonical_name": "MORNING",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 57,
+      "asl_id": "ASL_058",
+      "canonical_name": "NIGHT",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 58,
+      "asl_id": "ASL_059",
+      "canonical_name": "DAY",
+      "support": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 59,
+      "asl_id": "ASL_060",
+      "canonical_name": "WHAT",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 60,
+      "asl_id": "ASL_061",
+      "canonical_name": "WHO",
+      "support": 14,
+      "correct": 13,
+      "accuracy": 0.9286
+    },
+    {
+      "class_index": 61,
+      "asl_id": "ASL_062",
+      "canonical_name": "WHERE",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 62,
+      "asl_id": "ASL_063",
+      "canonical_name": "WHEN",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 63,
+      "asl_id": "ASL_064",
+      "canonical_name": "WHY",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 64,
+      "asl_id": "ASL_065",
+      "canonical_name": "HOW",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 65,
+      "asl_id": "ASL_066",
+      "canonical_name": "FOOD",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 66,
+      "asl_id": "ASL_067",
+      "canonical_name": "EAT",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 67,
+      "asl_id": "ASL_068",
+      "canonical_name": "DRINK",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 68,
+      "asl_id": "ASL_069",
+      "canonical_name": "WATER",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 69,
+      "asl_id": "ASL_070",
+      "canonical_name": "HUNGRY",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 70,
+      "asl_id": "ASL_071",
+      "canonical_name": "SLEEP",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 71,
+      "asl_id": "ASL_072",
+      "canonical_name": "PAIN/HURT",
+      "support": 26,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 72,
+      "asl_id": "ASL_073",
+      "canonical_name": "SICK",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 73,
+      "asl_id": "ASL_074",
+      "canonical_name": "EMERGENCY",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 74,
+      "asl_id": "ASL_075",
+      "canonical_name": "DANGER",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 75,
+      "asl_id": "ASL_076",
+      "canonical_name": "FIRE",
+      "support": 13,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 76,
+      "asl_id": "ASL_077",
+      "canonical_name": "CALL/PHONE",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 77,
+      "asl_id": "ASL_078",
+      "canonical_name": "PHONE",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 78,
+      "asl_id": "ASL_079",
+      "canonical_name": "COMPUTER",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 79,
+      "asl_id": "ASL_080",
+      "canonical_name": "SIGN/SIGN-LANGUAGE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 80,
+      "asl_id": "ASL_081",
+      "canonical_name": "LANGUAGE",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 81,
+      "asl_id": "ASL_082",
+      "canonical_name": "COMMUNICATE",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 82,
+      "asl_id": "ASL_083",
+      "canonical_name": "DEAF",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 83,
+      "asl_id": "ASL_084",
+      "canonical_name": "HEARING",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 84,
+      "asl_id": "ASL_085",
+      "canonical_name": "SPEAK",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 85,
+      "asl_id": "ASL_086",
+      "canonical_name": "MEET",
+      "support": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 86,
+      "asl_id": "ASL_087",
+      "canonical_name": "FINE/OKAY",
+      "support": 0,
+      "correct": 0,
+      "accuracy": "N/A"
+    },
+    {
+      "class_index": 87,
+      "asl_id": "ASL_088",
+      "canonical_name": "MORE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 88,
+      "asl_id": "ASL_089",
+      "canonical_name": "FINISH/DONE",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 89,
+      "asl_id": "ASL_090",
+      "canonical_name": "LOVE",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 90,
+      "asl_id": "ASL_091",
+      "canonical_name": "HAPPY",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 91,
+      "asl_id": "ASL_092",
+      "canonical_name": "SAD",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 92,
+      "asl_id": "ASL_093",
+      "canonical_name": "ANGRY",
+      "support": 15,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 93,
+      "asl_id": "ASL_094",
+      "canonical_name": "AFRAID/SCARED",
+      "support": 14,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 94,
+      "asl_id": "ASL_095",
+      "canonical_name": "FEEL",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 95,
+      "asl_id": "ASL_096",
+      "canonical_name": "NICE/CLEAN",
+      "support": 24,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 96,
+      "asl_id": "ASL_097",
+      "canonical_name": "BIG",
+      "support": 12,
+      "correct": 12,
+      "accuracy": 1.0
+    },
+    {
+      "class_index": 97,
+      "asl_id": "ASL_098",
+      "canonical_name": "SMALL",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 98,
+      "asl_id": "ASL_099",
+      "canonical_name": "HOT",
+      "support": 11,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    {
+      "class_index": 99,
+      "asl_id": "ASL_100",
+      "canonical_name": "COLD",
+      "support": 12,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "total_samples": 1739,
+  "frames_T": {
+    "min": 3,
+    "median": 124.0,
+    "mean": 107.49,
+    "max": 150
+  },
+  "tokens_L": {
+    "min": 1,
+    "median": 21.0,
+    "mean": 24.83,
+    "max": 129
+  },
+  "ratio_T_over_L": {
+    "min": 1.16,
+    "median": 4.69,
+    "mean": 5.36
+  },
+  "ctc_feasibility": {
+    "stride_1_violations_pct": 0.0,
+    "stride_2_violations_pct": 1.84,
+    "stride_4_violations_pct": 32.03
+  }
+}

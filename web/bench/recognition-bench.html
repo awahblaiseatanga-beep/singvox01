@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SignVox recognition benchmark</title>
+    <style>
+      body { font: 13px/1.5 ui-monospace, monospace; background: #0b1120; color: #e2e8f0; margin: 0; padding: 16px; }
+      h1 { font-size: 16px; margin: 0 0 8px; }
+      video { width: 480px; background: #000; border-radius: 8px; }
+      canvas { display: none; }
+      button { font: inherit; padding: 6px 10px; margin-right: 6px; border-radius: 6px; border: 1px solid #334155; background: #1e293b; color: #e2e8f0; cursor: pointer; }
+      pre { background: #020617; border: 1px solid #1e293b; border-radius: 8px; padding: 10px; max-height: 52vh; overflow: auto; }
+      #status { color: #38bdf8; }
+    </style>
+  </head>
+  <body>
+    <h1>SignVox landmark + ONNX benchmark (recorded replay, not a live camera)</h1>
+    <p>
+      Loads the app's real MediaPipe options and the app's real ONNX session code, then replays
+      recorded frames through them comparing delegate (CPU/GPU) and processing size.
+      <button id="run">Run benchmark</button>
+    </p>
+    <p id="status">idle</p>
+    <video id="video" muted playsinline></video>
+    <canvas id="scratch"></canvas>
+    <pre id="out">results will appear here</pre>
+
+    <script type="module">
+      import {
+        FaceLandmarker,
+        FilesetResolver,
+        HandLandmarker,
+        PoseLandmarker,
+      } from '@mediapipe/tasks-vision';
+      import { mediaPipeConfig } from '/src/lib/mediapipe.ts';
+
+      const FRAMES = 40;
+      // Recorded replay clips live outside public/ so they are never shipped in a
+      // build; the Vite dev server serves them straight from the project root.
+      const CLIP = '/bench/clips/bench-signer-1.mp4';
+      /** Each variant is exactly one axis away from the app's current setting. */
+      const VARIANTS = [
+        { label: 'cpu-native', delegate: 'CPU', width: 0 },
+        { label: 'gpu-native', delegate: 'GPU', width: 0 },
+        { label: 'gpu-640x360', delegate: 'GPU', width: 640, height: 360 },
+        { label: 'cpu-640x360', delegate: 'CPU', width: 640, height: 360 },
+      ];
+
+      const out = document.getElementById('out');
+      const status = document.getElementById('status');
+      const video = document.getElementById('video');
+      const scratch = document.getElementById('scratch');
+
+      // MediaPipe VIDEO mode requires strictly increasing timestamps across every
+      // call on a given landmarker, so the timestamp counter is global, not per variant.
+      let tsCounterMs = 0;
+
+      const median = (values) => {
+        if (!values.length) return 0;
+        const sorted = [...values].sort((a, b) => a - b);
+        const mid = sorted.length >> 1;
+        return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+      };
+      const p95 = (values) => {
+        if (!values.length) return 0;
+        const sorted = [...values].sort((a, b) => a - b);
+        return sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.95))];
+      };
+      const round = (n) => Math.round(n * 10) / 10;
+
+      async function loadVideo(url) {
+        video.src = url;
+        await new Promise((resolve, reject) => {
+          video.onloadeddata = resolve;
+          video.onerror = () => reject(new Error('video failed to load: ' + url));
+        });
+        return { width: video.videoWidth, height: video.videoHeight };
+      }
+
+      async function seek(t) {
+        return new Promise((resolve) => {
+          video.onseeked = () => resolve();
+          video.currentTime = t;
+        });
+      }
+
+      function drawTo(width, height) {
+        scratch.width = width;
+        scratch.height = height;
+        const ctx = scratch.getContext('2d');
+        // cover-fit, matching how the app displays the camera preview
+        const scale = Math.max(width / video.videoWidth, height / video.videoHeight);
+        const dw = video.videoWidth * scale;
+        const dh = video.videoHeight * scale;
+        ctx.drawImage(video, (width - dw) / 2, (height - dh) / 2, dw, dh);
+        return scratch;
+      }
+
+      async function buildLandmarkers(delegate) {
+        const fileset = await FilesetResolver.forVisionTasks(mediaPipeConfig.wasmRoot);
+        const base = (modelAssetPath) => ({ modelAssetPath, delegate });
+        const [pose, hands, face] = await Promise.all([
+          PoseLandmarker.createFromOptions(fileset, {
+            baseOptions: base(mediaPipeConfig.poseModelUrl),
+            runningMode: 'VIDEO',
+            numPoses: 1,
+          }),
+          HandLandmarker.createFromOptions(fileset, {
+            baseOptions: base(mediaPipeConfig.handModelUrl),
+            runningMode: 'VIDEO',
+            numHands: 2,
+          }),
+          FaceLandmarker.createFromOptions(fileset, {
+            baseOptions: base(mediaPipeConfig.faceModelUrl),
+            runningMode: 'VIDEO',
+            numFaces: 1,
+            outputFaceBlendshapes: false,
+            outputFacialTransformationMatrixes: false,
+          }),
+        ]);
+        return { pose, hands, face };
+      }
+
+      /** Flattens landmark output so two variants can be compared value by value. */
+      const flatten = (landmarks) => {
+        if (!landmarks || !landmarks.length) return null;
+        const out = new Float32Array(landmarks.length * 3);
+        landmarks.forEach((lm, i) => {
+          out[i * 3] = lm.x;
+          out[i * 3 + 1] = lm.y;
+          out[i * 3 + 2] = lm.z;
+        });
+        return out;
+      };
+
+      /** Keeps the coordinates each variant produced, frame by frame. */
+      function captureFrame(store, i, poseResult, handResult) {
+        store.push({
+          pose: flatten(poseResult.landmarks?.[0]),
+          hands: (handResult.landmarks || []).map(flatten),
+        });
+      }
+
+      /**
+       * Mean/max absolute difference of normalized landmark coordinates between
+       * two variants on the same frames. Coordinates are resolution-independent
+       * (0..1), so any difference here is real detection drift, not pixel scale.
+       */
+      function compareLandmarks(a, b) {
+        const diffs = [];
+        let poseFrames = 0;
+        let handFrames = 0;
+        for (let i = 0; i < Math.min(a.length, b.length); i += 1) {
+          const pa = a[i].pose;
+          const pb = b[i].pose;
+          if (pa && pb && pa.length === pb.length) {
+            poseFrames += 1;
+            for (let k = 0; k < pa.length; k += 1) diffs.push(Math.abs(pa[k] - pb[k]));
+          }
+          const ha = a[i].hands;
+          const hb = b[i].hands;
+          if (ha.length && ha.length === hb.length) {
+            handFrames += 1;
+            for (let h = 0; h < ha.length; h += 1) {
+              if (ha[h].length !== hb[h].length) continue;
+              for (let k = 0; k < ha[h].length; k += 1) diffs.push(Math.abs(ha[h][k] - hb[h][k]));
+            }
+          }
+        }
+        if (!diffs.length) return { comparedFrames: 0, note: 'no comparable frames' };
+        const mean = diffs.reduce((x, y) => x + y, 0) / diffs.length;
+        return {
+          poseFramesCompared: poseFrames,
+          handFramesCompared: handFrames,
+          meanAbsDelta: Math.round(mean * 1e5) / 1e5,
+          maxAbsDelta: Math.round(Math.max(...diffs) * 1e5) / 1e5,
+          p95AbsDelta: Math.round(p95(diffs) * 1e5) / 1e5,
+        };
+      }
+
+      async function benchmarkVariant(landmarkers, variant, fps) {
+        const timings = { pose: [], hands: [], face: [], total: [] };
+        const store = [];
+        let poseHits = 0;
+        let handHits = 0;
+        let faceHits = 0;
+        let t = 0;
+        for (let i = 0; i < FRAMES; i += 1) {
+          t += 1 / fps;
+          await seek(Math.min(t, video.duration - 0.05));
+          const source = variant.width ? drawTo(variant.width, variant.height) : video;
+          tsCounterMs += 1000 / fps;
+          const ts = tsCounterMs;
+          const a = performance.now();
+          const poseResult = landmarkers.pose.detectForVideo(source, ts);
+          const b = performance.now();
+          const handResult = landmarkers.hands.detectForVideo(source, ts);
+          const c = performance.now();
+          const faceResult = landmarkers.face.detectForVideo(source, ts);
+          const d = performance.now();
+          timings.pose.push(b - a);
+          timings.hands.push(c - b);
+          timings.face.push(d - c);
+          timings.total.push(d - a);
+          if (poseResult.landmarks?.length) poseHits += 1;
+          if (handResult.landmarks?.length) handHits += 1;
+          if (faceResult.faceLandmarks?.length) faceHits += 1;
+          captureFrame(store, i, poseResult, handResult);
+        }
+        return {
+          _landmarks: store,
+          delegate: variant.delegate,
+          resolve: variant.width ? `${variant.width}x${variant.height}` : 'native',
+          frames: FRAMES,
+          poseMedianMs: round(median(timings.pose)),
+          poseP95Ms: round(p95(timings.pose)),
+          handsMedianMs: round(median(timings.hands)),
+          handsP95Ms: round(p95(timings.hands)),
+          faceMedianMs: round(median(timings.face)),
+          faceP95Ms: round(p95(timings.face)),
+          totalMedianMs: round(median(timings.total)),
+          totalP95Ms: round(p95(timings.total)),
+          effectiveFps: round(1000 / median(timings.total)),
+          poseFramesDetected: poseHits,
+          handFramesDetected: handHits,
+          faceFramesDetected: faceHits,
+        };
+      }
+
+      /**
+       * Measures how long the main thread is blocked while inferences are in
+       * flight. Uses a MessageChannel macrotask loop (fires even when the tab is
+       * not compositing, unlike requestAnimationFrame) and also records rAF gaps.
+       */
+      function startBlockWatch() {
+        const macro = [];
+        const raf = [];
+        const channel = new MessageChannel();
+        let alive = true;
+        let last = performance.now();
+        channel.port1.onmessage = () => {
+          const now = performance.now();
+          macro.push(now - last);
+          last = now;
+          if (alive) channel.port2.postMessage(0);
+        };
+        channel.port2.postMessage(0);
+        let rafAlive = true;
+        let rafLast = performance.now();
+        const tick = () => {
+          const now = performance.now();
+          raf.push(now - rafLast);
+          rafLast = now;
+          if (rafAlive) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        return {
+          stop() {
+            alive = false;
+            rafAlive = false;
+            channel.port1.close();
+            channel.port2.close();
+            const longest = (list) => (list.length ? Math.max(...list) : -1);
+            const blocked = (list) =>
+              Math.round(list.filter((g) => g > 32).reduce((a, b) => a + b - 16, 0) * 10) / 10;
+            return {
+              macroSamples: macro.length,
+              macroMaxGapMs: round(longest(macro)),
+              macroBlockedMs: blocked(macro),
+              rafSamples: raf.length,
+              rafMaxGapMs: round(longest(raf)),
+            };
+          },
+        };
+      }
+
+      async function benchmarkOnnx(proxyMode) {
+        const { configureOrtRuntime, SpoterInferenceSession } = await import('/src/lib/inference.ts');
+        const { getModelSpec } = await import('/src/lib/modelRegistry.ts');
+        const previous = configureOrtRuntime({ proxy: proxyMode });
+        const results = { requestedProxy: proxyMode };
+        try {
+          for (const id of ['baseline', 'pilot']) {
+            const spec = getModelSpec(id);
+            const t0 = performance.now();
+            const session = await SpoterInferenceSession.create(spec.modelUrl);
+            const createMs = performance.now() - t0;
+            const t1 = performance.now();
+            await session.warmup();
+            const warmupMs = performance.now() - t1;
+            const buffer = new Float32Array(60 * 366);
+            const runs = [];
+            const watch = startBlockWatch();
+            for (let i = 0; i < 12; i += 1) {
+              const t2 = performance.now();
+              const result = await session.predict(buffer, spec.vocab);
+              runs.push(performance.now() - t2);
+              if (result.logits.length !== spec.classCount) {
+                throw new Error(`${id}: expected ${spec.classCount} logits, got ${result.logits.length}`);
+              }
+            }
+            const blocking = watch.stop();
+            const steady = runs.slice(2);
+            results[id] = {
+              classes: spec.classCount,
+              provider: session.provider,
+              sessionCreateMs: round(createMs),
+              warmupMs: round(warmupMs),
+              inferenceMedianMs: round(median(steady)),
+              inferenceP95Ms: round(p95(steady)),
+              firstInferenceMs: round(runs[0]),
+              ...blocking,
+            };
+          }
+        } finally {
+          configureOrtRuntime(previous);
+        }
+        return results;
+      }
+
+      document.getElementById('run').addEventListener('click', async () => {
+        out.textContent = '';
+        const sizes = {};
+        window.__benchPartial = { sizes };
+        try {
+          status.textContent = 'loading recorded clip…';
+          const meta = await loadVideo(CLIP);
+          const fps = 25;
+          const cache = {};
+          for (const variant of VARIANTS) {
+            status.textContent = `replaying ${FRAMES} frames at ${variant.label}…`;
+            try {
+              const key = variant.delegate;
+              if (!cache[key]) cache[key] = await buildLandmarkers(variant.delegate);
+              sizes[variant.label] = await benchmarkVariant(cache[key], variant, fps);
+            } catch (error) {
+              // A delegate that cannot initialise must not hide the others' numbers.
+              sizes[variant.label] = { error: String(error && error.message ? error.message : error) };
+            }
+            window.__benchPartial = { source: meta, frames: FRAMES, sizes: { ...sizes } };
+            out.textContent = JSON.stringify({ source: meta, sizes }, null, 2);
+          }
+          const base = sizes['cpu-native'];
+          for (const label of ['gpu-native', 'gpu-640x360']) {
+            if (base?._landmarks && sizes[label]?._landmarks) {
+              sizes[label].landmarkAgreementVsCpuNative = compareLandmarks(base._landmarks, sizes[label]._landmarks);
+            }
+          }
+          for (const key of Object.keys(sizes)) delete sizes[key]._landmarks;
+          out.textContent = JSON.stringify({ source: meta, frames: FRAMES, sizes }, null, 2);
+
+          status.textContent = 'measuring ONNX sessions (in-page)…';
+          const onnx = await benchmarkOnnx(false);
+          out.textContent = JSON.stringify({ source: meta, sizes, onnx }, null, 2);
+          window.__benchPartial = { source: meta, frames: FRAMES, sizes, onnx };
+          status.textContent = 'measuring ONNX sessions (proxy worker)…';
+          const onnxProxy = await benchmarkOnnx(true);
+          const report = { source: meta, frames: FRAMES, sizes, onnx, onnxProxy };
+          out.textContent = JSON.stringify(report, null, 2);
+          window.__benchReport = report;
+          status.textContent = 'done';
+        } catch (error) {
+          status.textContent = 'failed: ' + error.message;
+          window.__benchError = String(error && error.stack ? error.stack : error);
+          // Never discard partial measurements: they are still valid evidence.
+          if (out.textContent === 'results will appear here') {
+            out.textContent = window.__benchError;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

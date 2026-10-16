@@ -104,15 +104,22 @@ def collate_fn(batch):
         "source_splits": source_splits
     }
 
-def get_dataloaders(manifest_path, features_dir, mapping_path, batch_size=32, num_workers=0):
-    set_seed(42)
+def get_dataloaders(manifest_path, features_dir, mapping_path, batch_size=32, num_workers=0, seed=None):
+    if seed is not None:
+        set_seed(seed)
     
     train_dataset = SignVoxDataset(manifest_path, features_dir, mapping_path, split="train")
     val_dataset = SignVoxDataset(manifest_path, features_dir, mapping_path, split="val")
     test_dataset = SignVoxDataset(manifest_path, features_dir, mapping_path, split="test")
     
-    # PyTorch natively preserves seed scopes but we instantiate workers safely to avoid MP leaks
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn, num_workers=num_workers)
+    # We create a torch generator to ensure the dataloader shuffle respects the requested seed if provided explicitly safely.
+    g = torch.Generator()
+    if seed is not None:
+        g.manual_seed(seed)
+    else:
+        g.manual_seed(torch.initial_seed() % (2**32))
+        
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn, num_workers=num_workers, generator=g)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, collate_fn=collate_fn, num_workers=num_workers)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, collate_fn=collate_fn, num_workers=num_workers)
     

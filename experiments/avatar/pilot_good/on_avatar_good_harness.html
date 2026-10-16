@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Isolated GOOD playback check. Loads ONLY the pilot candidate GLB
+     (SingVox_GOOD_Candidate.glb, this directory) with plain three.js and plays
+     the ASL_GOOD clip the same way AvatarController.playSignByLabel('GOOD')
+     does: play clip once, then return to neutral. Production assets untouched. -->
+<html lang="en">
+<head><meta charset="utf-8"><title>GOOD candidate — on-avatar playback</title>
+<style>body{font-family:system-ui;margin:12px;background:#111;color:#eee}canvas{border:1px solid #444;background:#1e1b2e}#log{white-space:pre;font-size:12px;background:#1c1c1c;padding:8px;border:1px solid #444;max-width:640px}.ok{color:#7ee787}.bad{color:#ff7b72}</style>
+<script type="importmap">{"imports":{"three":"/Singvox/web/node_modules/three/build/three.module.js","three/addons/":"/Singvox/web/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+<h3>GOOD (ASL_002) candidate — on-avatar playback <span style="color:#ffb454">[CANDIDATE]</span></h3>
+<canvas id="cv" width="480" height="480"></canvas>
+<div><button id="bGood">play ASL_GOOD</button> <button id="bRest">rest pose</button></div>
+<div id="log">booting…</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+const log = document.getElementById('log');
+const say = (m, cls) => { log.innerHTML += `\n<span class="${cls||''}">${m}</span>`; console.log('[harness]', m); };
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('cv'), antialias: true});
+renderer.setSize(480, 480);
+const scene = new THREE.Scene(); scene.background = new THREE.Color(0x1e1b2e);
+const cam = new THREE.PerspectiveCamera(35, 1, 0.01, 50); cam.position.set(0.35, 1.45, 3.3);
+const controls = new OrbitControls(cam, renderer.domElement);
+controls.target.set(0, 1.05, 0); controls.update();
+scene.add(new THREE.HemisphereLight(0xffffff, 0x334455, 1.6));
+const dl = new THREE.DirectionalLight(0xffffff, 1.4); dl.position.set(2, 3, 2); scene.add(dl);
+let mixer = null, clips = {}, neutral = null;
+function playGood() {
+  if (!mixer || !clips['ASL_GOOD']) { say('ASL_GOOD not loaded — cannot play', 'bad'); return; }
+  mixer.stopAllAction();
+  const a = mixer.clipAction(clips['ASL_GOOD']);
+  a.reset().setLoop(THREE.LoopOnce, 1); a.clampWhenFinished = true; a.play();
+  say(`playing ASL_GOOD (dur ${clips['ASL_GOOD'].duration.toFixed(2)}s)`, 'ok');
+  window.__goodPlayed = true;
+}
+function rest() {
+  if (!mixer) return; mixer.stopAllAction();
+  if (neutral) { const a = mixer.clipAction(neutral); a.reset().setLoop(THREE.LoopRepeat, Infinity).play(); say('rest: ' + neutral.name); }
+}
+document.getElementById('bGood').onclick = playGood;
+document.getElementById('bRest').onclick = rest;
+// fetch + parseAsync: avoids blob-URL texture failures seen with loader.load() in this sandbox.
+const _buf = await (await fetch('./SignVox_GOOD_Candidate.glb?v=' + Date.now(), {cache: 'no-store'})).arrayBuffer();
+const _gltf = await new GLTFLoader().parseAsync(_buf, '');
+((gltf) => {
+  scene.add(gltf.scene);
+  let joints = 0; gltf.scene.traverse(o => { if (o.isBone) joints++; });
+  say(`GLB loaded OK — scene children: ${gltf.scene.children.length}, bones: ${joints}`, 'ok');
+  say('animations: ' + (gltf.animations.map(a => `${a.name} (${a.duration.toFixed(2)}s)`).join(', ') || '(none)'));
+  for (const c of gltf.animations) clips[c.name] = c;
+  if (!clips['ASL_GOOD']) { say('FAIL: ASL_GOOD clip missing from candidate GLB', 'bad'); return; }
+  say('ASL_GOOD tracks: ' + clips['ASL_GOOD'].tracks.length, 'ok');
+  neutral = gltf.animations.find(c => /neutral|mixamo\.com/i.test(c.name)) || null;
+  mixer = new THREE.AnimationMixer(gltf.scene);
+  mixer.addEventListener('finished', (e) => { say('finished: ' + e.action.getClip().name + ' → rest'); rest(); });
+  window.__clips = Object.keys(clips);
+  window.__goodDuration = clips['ASL_GOOD'].duration;
+  const _pose = new URLSearchParams(location.search).get('pose');
+  if (_pose === 'mid' || _pose === 'onset') {
+    const frac = _pose === 'onset' ? 0.25 : 0.5; // f10 lips-onset / f20 stroke
+    mixer.stopAllAction();
+    const a = mixer.clipAction(clips['ASL_GOOD']);
+    a.reset().setLoop(THREE.LoopOnce, 1); a.play(); a.paused = true;
+    a.time = clips['ASL_GOOD'].duration * frac; mixer.update(0);
+    say(`held at GOOD ${_pose} (${frac * 100}%) for inspection`, 'ok');
+  } else playGood(); // autoplay once for evidence
+}) (_gltf);
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => { const d = clock.getDelta(); if (mixer) mixer.update(d); controls.update(); renderer.render(scene, cam); });
+</script>
+</body>
+</html>

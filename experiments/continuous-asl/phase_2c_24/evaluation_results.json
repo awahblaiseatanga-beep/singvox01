@@ -1,0 +1,56 @@
+{
+  "train": {
+    "exact_match_acc": 0.0,
+    "avg_bleu": 0.013823387393712928,
+    "examples": [
+      {
+        "ref": "They fly out your windows.",
+        "pred": "you are to be very careful with these birds are flighted"
+      },
+      {
+        "ref": "There is nothing that you can do about it and it is very quickly.",
+        "pred": "you are to be very careful with these birds are flighted"
+      },
+      {
+        "ref": "If these guys are flighted, you need to be really careful if you have them loose in your household.",
+        "pred": "you want to be very careful with these birds are flighted"
+      }
+    ]
+  },
+  "val": {
+    "exact_match_acc": 0.0,
+    "avg_bleu": 0.0,
+    "examples": [
+      {
+        "ref": "MICHAEL ROSENGART: Thrusters.",
+        "pred": "you dont want to be very careful with these birds are flighted"
+      },
+      {
+        "ref": "Right now, we're going to get into a more complicated exercise.",
+        "pred": "you dont want to be very careful with these birds are flighted"
+      },
+      {
+        "ref": "Jonesy is going to sit back.",
+        "pred": "you basically to be very careful with these birds are flighted"
+      }
+    ]
+  },
+  "test": {
+    "exact_match_acc": 0.0,
+    "avg_bleu": 0.0,
+    "examples": [
+      {
+        "ref": "Another technique is you can braid the hair on first and then start wrapping cause some people have really short hair and we can create the look with adding the hair end.",
+        "pred": "you dont want to be very careful with these birds are flighted"
+      },
+      {
+        "ref": "Another technique is you can braid the hair on first and then start wrapping cause some people have really short hair and we can create the look with adding the hair end.",
+        "pred": "and if they are not to be the and if you have them"
+      },
+      {
+        "ref": "So no matter what the length of your hair, long as it's long enough to add a, at the hair on, we can start by braiding it on, then braid, then wrap and you can make this as thick as you like, whatever size you like, whatever color you like.",
+        "pred": "you basically to be very careful with these birds are flighted"
+      }
+    ]
+  }
+}

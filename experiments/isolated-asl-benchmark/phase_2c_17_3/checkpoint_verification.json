@@ -1,0 +1,29 @@
+{
+  "42": {
+    "checkpoint_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_42_best_ep50.pt",
+    "tensor_hash": "e60fc9c44c2fb3e61ce35538ae2d1d62",
+    "recalculated_loss": 1.4302511394413469,
+    "recalculated_acc": 70.91503267973856,
+    "recalculated_f1": 0.6904460518384565,
+    "recalculated_bacc": 0.7073839662447258,
+    "unique_classes": 78
+  },
+  "123": {
+    "checkpoint_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_123_best_ep49.pt",
+    "tensor_hash": "62d8ced1285cfe7479a449ce7bed1095",
+    "recalculated_loss": 1.6694054463330437,
+    "recalculated_acc": 65.359477124183,
+    "recalculated_f1": 0.6379822443583854,
+    "recalculated_bacc": 0.6527275467148884,
+    "unique_classes": 75
+  },
+  "777": {
+    "checkpoint_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_777_best_ep50.pt",
+    "tensor_hash": "a6a014ac0bce598238beeeafcd4e5791",
+    "recalculated_loss": 1.6220216392691618,
+    "recalculated_acc": 66.99346405228758,
+    "recalculated_f1": 0.6570654649396269,
+    "recalculated_bacc": 0.6688667872212176,
+    "unique_classes": 77
+  }
+}

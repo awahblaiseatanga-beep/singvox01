@@ -1,0 +1,77 @@
+{
+  "dataset_name": "How2Sign Validation Expanded (Phase 2C.26)",
+  "total_annotated_in_csv": 1741,
+  "total_downloaded_videos": 1739,
+  "total_matched_samples": 1739,
+  "split_counts": {
+    "train": {
+      "videos": 83,
+      "clips": 1215,
+      "pct": 69.9
+    },
+    "val": {
+      "videos": 16,
+      "clips": 258,
+      "pct": 14.8
+    },
+    "test": {
+      "videos": 16,
+      "clips": 266,
+      "pct": 15.3
+    }
+  },
+  "target_sentence_lengths": {
+    "all": {
+      "mean": 17.58,
+      "median": 15,
+      "min": 1,
+      "max": 103
+    },
+    "train": {
+      "mean": 17.63,
+      "median": 15,
+      "min": 1,
+      "max": 103
+    },
+    "val": {
+      "mean": 17.62,
+      "median": 15,
+      "min": 1,
+      "max": 67
+    },
+    "test": {
+      "mean": 17.27,
+      "median": 15,
+      "min": 1,
+      "max": 75
+    }
+  },
+  "clip_durations_sec": {
+    "total_hours": 2.74,
+    "mean": 5.67,
+    "median": 4.73,
+    "min": 0.11,
+    "max": 53.22
+  },
+  "vocabulary_analysis": {
+    "train_vocab_size": 2582,
+    "val_vocab_size": 918,
+    "test_vocab_size": 886,
+    "total_vocab_size": 3217,
+    "val_oov_token_rate_pct": 13.04,
+    "val_oov_type_count": 345,
+    "test_oov_token_rate_pct": 10.9,
+    "test_oov_type_count": 309
+  },
+  "comparison_with_100_pilot": {
+    "pilot_train_clips": 61,
+    "expanded_train_clips": 1215,
+    "clip_expansion_factor": 19.9,
+    "pilot_train_vocab": 249,
+    "expanded_train_vocab": 2582,
+    "vocab_expansion_factor": 10.4,
+    "pilot_val_oov_rate": 31.8,
+    "expanded_val_oov_rate": 13.04,
+    "val_oov_rate_reduction": 18.76
+  }
+}

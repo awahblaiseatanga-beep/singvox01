@@ -1,0 +1,28 @@
+{
+  "manifest_total": 1739,
+  "features_present": 149,
+  "features_pending": 1590,
+  "features_corrupt": 0,
+  "features_shape_mismatch": 0,
+  "features_nan_inf": 0,
+  "sequence_frames": {
+    "min": 6,
+    "max": 638,
+    "mean": 126.46,
+    "median": 110.0,
+    "total_frames": 18842
+  },
+  "missing_hand_rates": {
+    "left_hand_absent_count": 2,
+    "left_hand_absent_pct": 1.34,
+    "right_hand_absent_count": 2,
+    "right_hand_absent_pct": 1.34,
+    "both_hands_absent_count": 1,
+    "both_hands_absent_pct": 0.67
+  },
+  "split_counts_extracted": {
+    "train": 107,
+    "val": 0,
+    "test": 42
+  }
+}

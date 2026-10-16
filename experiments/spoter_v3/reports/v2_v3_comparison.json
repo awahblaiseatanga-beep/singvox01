@@ -1,0 +1,30 @@
+{
+  "v2_checkpoint": "D:\\Singvox\\Singvox\\ai\\sign-recognition\\models\\spoter_groupnorm_best_val_acc_checkpoint.pt",
+  "v3_checkpoint": "D:\\Singvox\\Singvox\\experiments\\spoter_v3\\checkpoints\\spoter_v3_best_val_acc_checkpoint.pt",
+  "split_evaluated": "test",
+  "shared_classes_count": 100,
+  "v2_classes_count": 100,
+  "v3_classes_count": 100,
+  "v2_checkpoint_exists": true,
+  "v3_checkpoint_exists": true,
+  "metrics_summary": {
+    "v2_top1_acc_shared": null,
+    "v2_top3_acc_shared": null,
+    "v3_top1_acc_shared": null,
+    "v3_top3_acc_shared": null,
+    "v3_top1_acc_all_95": null
+  },
+  "readiness_summary": {
+    "v2_production_fallback_intact": true,
+    "v3_architecture_100_class_ready": true,
+    "cloud_colab_training_status": "BLOCKED_BY_PERMISSIONS",
+    "full_100_class_data_status": "BLOCKED_BY_MISSING_DATA",
+    "missing_classes": [
+      "STORE",
+      "FOOD",
+      "EMERGENCY",
+      "COMMUNICATE",
+      "SPEAK"
+    ]
+  }
+}

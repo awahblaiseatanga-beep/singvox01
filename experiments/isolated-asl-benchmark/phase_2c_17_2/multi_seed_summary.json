@@ -1,0 +1,35 @@
+{
+  "42": {
+    "best_epoch": 50,
+    "best_val_f1": 0.6904460518384565,
+    "best_val_acc": 70.91503267973856,
+    "best_val_loss": 1.4302511394413469,
+    "final_val_acc": 70.91503267973856,
+    "final_val_f1": 0.6904460518384565,
+    "history_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_42_history.json",
+    "best_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_42_best_ep50.pt",
+    "final_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_42_final_ep50.pt"
+  },
+  "123": {
+    "best_epoch": 49,
+    "best_val_f1": 0.6379822443583854,
+    "best_val_acc": 65.359477124183,
+    "best_val_loss": 1.6694054463330437,
+    "final_val_acc": 65.68627450980392,
+    "final_val_f1": 0.6312784410052894,
+    "history_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_123_history.json",
+    "best_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_123_best_ep49.pt",
+    "final_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_123_final_ep50.pt"
+  },
+  "777": {
+    "best_epoch": 50,
+    "best_val_f1": 0.6570654649396269,
+    "best_val_acc": 66.99346405228758,
+    "best_val_loss": 1.6220216392691618,
+    "final_val_acc": 66.99346405228758,
+    "final_val_f1": 0.6570654649396269,
+    "history_path": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_777_history.json",
+    "best_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_777_best_ep50.pt",
+    "final_ckpt": "d:\\Singvox\\Singvox\\experiments\\isolated-asl-benchmark\\phase_2c_17_2\\seed_777_final_ep50.pt"
+  }
+}

@@ -1,0 +1,2277 @@
+[
+  {
+    "idx": 1,
+    "asl_id": "ASL_001",
+    "canonical_name": "HELLO",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HELLO"
+    ],
+    "valid_matched_labels": [
+      "HELLO"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 2,
+    "asl_id": "ASL_002",
+    "canonical_name": "GOOD",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "GOOD"
+    ],
+    "valid_matched_labels": [
+      "GOOD"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 3,
+    "asl_id": "ASL_003",
+    "canonical_name": "BAD",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "BAD"
+    ],
+    "valid_matched_labels": [
+      "BAD"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 4,
+    "asl_id": "ASL_004",
+    "canonical_name": "PLEASE",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "PLEASE"
+    ],
+    "valid_matched_labels": [
+      "PLEASE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 5,
+    "asl_id": "ASL_005",
+    "canonical_name": "THANK-YOU",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "THANK YOU",
+      "THANKSGIVING",
+      "THANKYOU"
+    ],
+    "valid_matched_labels": [
+      "THANKYOU"
+    ],
+    "num_candidate_videos": 62,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "ASL Citizen formats compound as 'THANKYOU' without hyphen or space.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 6,
+    "asl_id": "ASL_006",
+    "canonical_name": "SORRY",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SORRY"
+    ],
+    "valid_matched_labels": [
+      "SORRY"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 7,
+    "asl_id": "ASL_007",
+    "canonical_name": "HELP",
+    "category": "Communication",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HELP"
+    ],
+    "valid_matched_labels": [
+      "HELP"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 8,
+    "asl_id": "ASL_008",
+    "canonical_name": "STOP",
+    "category": "Safety",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "STOP"
+    ],
+    "valid_matched_labels": [
+      "STOP"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 9,
+    "asl_id": "ASL_009",
+    "canonical_name": "WAIT",
+    "category": "Conversation",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WAIT"
+    ],
+    "valid_matched_labels": [
+      "WAIT"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 10,
+    "asl_id": "ASL_010",
+    "canonical_name": "UNDERSTAND",
+    "category": "Conversation",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "UNDERSTAND"
+    ],
+    "valid_matched_labels": [
+      "UNDERSTAND"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 11,
+    "asl_id": "ASL_011",
+    "canonical_name": "YES",
+    "category": "Conversation",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "YES"
+    ],
+    "valid_matched_labels": [
+      "YES"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 26,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 12,
+    "asl_id": "ASL_012",
+    "canonical_name": "NO",
+    "category": "Conversation",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "NO"
+    ],
+    "valid_matched_labels": [
+      "NO"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 13,
+    "asl_id": "ASL_013",
+    "canonical_name": "AGAIN",
+    "category": "Conversation",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "AGAIN"
+    ],
+    "valid_matched_labels": [
+      "AGAIN"
+    ],
+    "num_candidate_videos": 29,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 14,
+    "asl_id": "ASL_014",
+    "canonical_name": "SLOW",
+    "category": "Conversation",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SLOW"
+    ],
+    "valid_matched_labels": [
+      "SLOW"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 15,
+    "asl_id": "ASL_015",
+    "canonical_name": "DON'T-UNDERSTAND",
+    "category": "Conversation",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DONTUNDERSTAND",
+      "MISUNDERSTAND",
+      "NOTUNDERSTAND"
+    ],
+    "valid_matched_labels": [
+      "NOTUNDERSTAND"
+    ],
+    "num_candidate_videos": 61,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 26,
+    "ambiguity_notes": "ASL Citizen uses 'NOTUNDERSTAND' for negation of understand. Conceptually identical to DON'T-UNDERSTAND.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 16,
+    "asl_id": "ASL_016",
+    "canonical_name": "NAME",
+    "category": "Identity",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "NAME"
+    ],
+    "valid_matched_labels": [
+      "NAME"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 17,
+    "asl_id": "ASL_017",
+    "canonical_name": "ME/PRO1",
+    "category": "Indexing",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "I",
+      "ME",
+      "PRO1"
+    ],
+    "valid_matched_labels": [
+      "ME"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "ASL Citizen gloss is 'ME'.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 18,
+    "asl_id": "ASL_018",
+    "canonical_name": "YOU/PRO2",
+    "category": "Indexing",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "PRO2",
+      "YOU"
+    ],
+    "valid_matched_labels": [
+      "YOU"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "ASL Citizen gloss is 'YOU'.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 19,
+    "asl_id": "ASL_019",
+    "canonical_name": "FAMILY",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FAMILY"
+    ],
+    "valid_matched_labels": [
+      "FAMILY"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 20,
+    "asl_id": "ASL_020",
+    "canonical_name": "FRIEND",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FRIEND"
+    ],
+    "valid_matched_labels": [
+      "FRIEND"
+    ],
+    "num_candidate_videos": 29,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 21,
+    "asl_id": "ASL_021",
+    "canonical_name": "MOTHER",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "MOTHER"
+    ],
+    "valid_matched_labels": [
+      "MOTHER"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 22,
+    "asl_id": "ASL_022",
+    "canonical_name": "FATHER",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FATHER"
+    ],
+    "valid_matched_labels": [
+      "FATHER"
+    ],
+    "num_candidate_videos": 29,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 23,
+    "asl_id": "ASL_023",
+    "canonical_name": "BROTHER",
+    "category": "People",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "BROTHER"
+    ],
+    "valid_matched_labels": [
+      "BROTHER"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 24,
+    "asl_id": "ASL_024",
+    "canonical_name": "SISTER",
+    "category": "People",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SISTER"
+    ],
+    "valid_matched_labels": [
+      "SISTER"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 25,
+    "asl_id": "ASL_025",
+    "canonical_name": "CHILD",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "CHILD"
+    ],
+    "valid_matched_labels": [
+      "CHILD"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 26,
+    "asl_id": "ASL_026",
+    "canonical_name": "BABY",
+    "category": "People",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "BABY",
+      "BABY1",
+      "BABY2",
+      "BABYSITTER"
+    ],
+    "valid_matched_labels": [
+      "BABY1",
+      "BABY2"
+    ],
+    "num_candidate_videos": 92,
+    "num_valid_videos": 61,
+    "num_distinct_signers": 32,
+    "ambiguity_notes": "Variants BABY1 and BABY2 exist in ASL Citizen representing standard production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 27,
+    "asl_id": "ASL_027",
+    "canonical_name": "TEACHER",
+    "category": "Education",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "TEACHER"
+    ],
+    "valid_matched_labels": [
+      "TEACHER"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 28,
+    "asl_id": "ASL_028",
+    "canonical_name": "GO",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "GO"
+    ],
+    "valid_matched_labels": [
+      "GO"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 29,
+    "asl_id": "ASL_029",
+    "canonical_name": "COME",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "COME"
+    ],
+    "valid_matched_labels": [
+      "COME"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 26,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 30,
+    "asl_id": "ASL_030",
+    "canonical_name": "GIVE",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "GIVE"
+    ],
+    "valid_matched_labels": [
+      "GIVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 31,
+    "asl_id": "ASL_031",
+    "canonical_name": "TAKE",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "TAKE"
+    ],
+    "valid_matched_labels": [
+      "TAKE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 32,
+    "asl_id": "ASL_032",
+    "canonical_name": "WANT",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DONTWANT",
+      "WANT",
+      "WANT1",
+      "WANT2"
+    ],
+    "valid_matched_labels": [
+      "WANT1",
+      "WANT2"
+    ],
+    "num_candidate_videos": 93,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 34,
+    "ambiguity_notes": "WANT1 and WANT2 exist; DONTWANT excluded as negative polarity variant.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 33,
+    "asl_id": "ASL_033",
+    "canonical_name": "NEED",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "NEED"
+    ],
+    "valid_matched_labels": [
+      "NEED"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 34,
+    "asl_id": "ASL_034",
+    "canonical_name": "HAVE",
+    "category": "Actions",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HAVE"
+    ],
+    "valid_matched_labels": [
+      "HAVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 35,
+    "asl_id": "ASL_035",
+    "canonical_name": "KNOW",
+    "category": "Actions",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "KNOW"
+    ],
+    "valid_matched_labels": [
+      "KNOW"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 36,
+    "asl_id": "ASL_036",
+    "canonical_name": "LIKE",
+    "category": "Actions",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "LIKE"
+    ],
+    "valid_matched_labels": [
+      "LIKE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 37,
+    "asl_id": "ASL_037",
+    "canonical_name": "SEE",
+    "category": "Actions",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SEE"
+    ],
+    "valid_matched_labels": [
+      "SEE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 38,
+    "asl_id": "ASL_038",
+    "canonical_name": "THINK",
+    "category": "Actions",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "THINK"
+    ],
+    "valid_matched_labels": [
+      "THINK"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 39,
+    "asl_id": "ASL_039",
+    "canonical_name": "LEARN",
+    "category": "Education",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "LEARN"
+    ],
+    "valid_matched_labels": [
+      "LEARN"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 40,
+    "asl_id": "ASL_040",
+    "canonical_name": "TEACH",
+    "category": "Education",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "TEACH",
+      "TEACH1",
+      "TEACH2",
+      "TEACHER"
+    ],
+    "valid_matched_labels": [
+      "TEACH1",
+      "TEACH2"
+    ],
+    "num_candidate_videos": 93,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "TEACH1 and TEACH2 exist. TEACHER excluded to prevent noun/agent confusion with ASL_027 (TEACHER).",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 41,
+    "asl_id": "ASL_041",
+    "canonical_name": "STUDY",
+    "category": "Education",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "STUDY"
+    ],
+    "valid_matched_labels": [
+      "STUDY"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 42,
+    "asl_id": "ASL_042",
+    "canonical_name": "SCHOOL",
+    "category": "Places",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SCHOOL"
+    ],
+    "valid_matched_labels": [
+      "SCHOOL"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 43,
+    "asl_id": "ASL_043",
+    "canonical_name": "WORK",
+    "category": "Places/Activities",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WORK"
+    ],
+    "valid_matched_labels": [
+      "WORK"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 44,
+    "asl_id": "ASL_044",
+    "canonical_name": "HOME",
+    "category": "Places",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HOME"
+    ],
+    "valid_matched_labels": [
+      "HOME"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 45,
+    "asl_id": "ASL_045",
+    "canonical_name": "STORE",
+    "category": "Places",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "MISSING_DATA",
+    "candidates_considered": [
+      "GROCERY",
+      "MARKET",
+      "SHOP1",
+      "SHOP2",
+      "STORE"
+    ],
+    "valid_matched_labels": [],
+    "num_candidate_videos": 63,
+    "num_valid_videos": 0,
+    "num_distinct_signers": 0,
+    "ambiguity_notes": "",
+    "missing_reasons": "No gloss 'STORE' in ASL Citizen. 'SHOP1'/'SHOP2' exist but lexical equivalence to noun 'STORE' requires Deaf expert validation under constraint 4.",
+    "collection_requirements": "Record native ASL signers performing noun STORE (double downward/forward motion with O-hands).",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 46,
+    "asl_id": "ASL_046",
+    "canonical_name": "CHURCH",
+    "category": "Places",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "CHURCH"
+    ],
+    "valid_matched_labels": [
+      "CHURCH"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 47,
+    "asl_id": "ASL_047",
+    "canonical_name": "HOSPITAL",
+    "category": "Health",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HOSPITAL",
+      "HOSPITAL1",
+      "HOSPITAL2"
+    ],
+    "valid_matched_labels": [
+      "HOSPITAL1",
+      "HOSPITAL2"
+    ],
+    "num_candidate_videos": 63,
+    "num_valid_videos": 63,
+    "num_distinct_signers": 31,
+    "ambiguity_notes": "HOSPITAL1 and HOSPITAL2 exist as valid production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 48,
+    "asl_id": "ASL_048",
+    "canonical_name": "DOCTOR",
+    "category": "Health",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DOCTOR",
+      "DOCTOR1",
+      "DOCTOR2"
+    ],
+    "valid_matched_labels": [
+      "DOCTOR1",
+      "DOCTOR2"
+    ],
+    "num_candidate_videos": 61,
+    "num_valid_videos": 61,
+    "num_distinct_signers": 31,
+    "ambiguity_notes": "DOCTOR1 and DOCTOR2 exist as valid production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 49,
+    "asl_id": "ASL_049",
+    "canonical_name": "BATHROOM",
+    "category": "Needs",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "BATHROOM"
+    ],
+    "valid_matched_labels": [
+      "BATHROOM"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 50,
+    "asl_id": "ASL_050",
+    "canonical_name": "HERE",
+    "category": "Spatial",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HERE"
+    ],
+    "valid_matched_labels": [
+      "HERE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 51,
+    "asl_id": "ASL_051",
+    "canonical_name": "THERE",
+    "category": "Spatial",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "THERE"
+    ],
+    "valid_matched_labels": [
+      "THERE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 52,
+    "asl_id": "ASL_052",
+    "canonical_name": "IN",
+    "category": "Spatial",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "IN"
+    ],
+    "valid_matched_labels": [
+      "IN"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 53,
+    "asl_id": "ASL_053",
+    "canonical_name": "OUT",
+    "category": "Spatial",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "OUT"
+    ],
+    "valid_matched_labels": [
+      "OUT"
+    ],
+    "num_candidate_videos": 28,
+    "num_valid_videos": 28,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 54,
+    "asl_id": "ASL_054",
+    "canonical_name": "TODAY/NOW",
+    "category": "Time",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "NOW",
+      "TODAY"
+    ],
+    "valid_matched_labels": [
+      "NOW",
+      "TODAY"
+    ],
+    "num_candidate_videos": 60,
+    "num_valid_videos": 60,
+    "num_distinct_signers": 32,
+    "ambiguity_notes": "Both TODAY and NOW are accepted variants for this canonical time concept.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 55,
+    "asl_id": "ASL_055",
+    "canonical_name": "YESTERDAY",
+    "category": "Time",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "YESTERDAY"
+    ],
+    "valid_matched_labels": [
+      "YESTERDAY"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 56,
+    "asl_id": "ASL_056",
+    "canonical_name": "TOMORROW",
+    "category": "Time",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "TOMORROW"
+    ],
+    "valid_matched_labels": [
+      "TOMORROW"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 57,
+    "asl_id": "ASL_057",
+    "canonical_name": "MORNING",
+    "category": "Time",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "MORNING"
+    ],
+    "valid_matched_labels": [
+      "MORNING"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 58,
+    "asl_id": "ASL_058",
+    "canonical_name": "NIGHT",
+    "category": "Time",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "EVERYNIGHT",
+      "NIGHT",
+      "NIGHT1",
+      "NIGHT2",
+      "OVERNIGHT"
+    ],
+    "valid_matched_labels": [
+      "NIGHT1",
+      "NIGHT2"
+    ],
+    "num_candidate_videos": 123,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 32,
+    "ambiguity_notes": "NIGHT1 and NIGHT2 exist; compound phrases EVERYNIGHT/OVERNIGHT excluded.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 59,
+    "asl_id": "ASL_059",
+    "canonical_name": "DAY",
+    "category": "Time",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DAY"
+    ],
+    "valid_matched_labels": [
+      "DAY"
+    ],
+    "num_candidate_videos": 29,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 60,
+    "asl_id": "ASL_060",
+    "canonical_name": "WHAT",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WHAT",
+      "WHAT FOR",
+      "WHAT1",
+      "WHAT2"
+    ],
+    "valid_matched_labels": [
+      "WHAT1",
+      "WHAT2"
+    ],
+    "num_candidate_videos": 63,
+    "num_valid_videos": 63,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "WHAT1 and WHAT2 exist as production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 61,
+    "asl_id": "ASL_061",
+    "canonical_name": "WHO",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WHO"
+    ],
+    "valid_matched_labels": [
+      "WHO"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 62,
+    "asl_id": "ASL_062",
+    "canonical_name": "WHERE",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WHERE"
+    ],
+    "valid_matched_labels": [
+      "WHERE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 63,
+    "asl_id": "ASL_063",
+    "canonical_name": "WHEN",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WHEN"
+    ],
+    "valid_matched_labels": [
+      "WHEN"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 64,
+    "asl_id": "ASL_064",
+    "canonical_name": "WHY",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WHY"
+    ],
+    "valid_matched_labels": [
+      "WHY"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 65,
+    "asl_id": "ASL_065",
+    "canonical_name": "HOW",
+    "category": "Questions",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HOW",
+      "HOW1",
+      "HOW2"
+    ],
+    "valid_matched_labels": [
+      "HOW1",
+      "HOW2"
+    ],
+    "num_candidate_videos": 62,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 66,
+    "asl_id": "ASL_066",
+    "canonical_name": "FOOD",
+    "category": "Needs",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "MISSING_DATA",
+    "candidates_considered": [
+      "EAT1",
+      "EAT2",
+      "FOOD",
+      "MEAL"
+    ],
+    "valid_matched_labels": [],
+    "num_candidate_videos": 63,
+    "num_valid_videos": 0,
+    "num_distinct_signers": 0,
+    "ambiguity_notes": "",
+    "missing_reasons": "No 'FOOD' gloss in ASL Citizen. While FOOD/EAT are noun-verb pairs in ASL, merging FOOD into EAT violates constraint 4 (no inventing/merging labels) and collapses ASL_066 into ASL_067.",
+    "collection_requirements": "Record native ASL signers performing noun FOOD (double-tap to mouth with squished-O handshape).",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 67,
+    "asl_id": "ASL_067",
+    "canonical_name": "EAT",
+    "category": "Needs",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "EAT",
+      "EAT1",
+      "EAT2"
+    ],
+    "valid_matched_labels": [
+      "EAT1",
+      "EAT2"
+    ],
+    "num_candidate_videos": 63,
+    "num_valid_videos": 63,
+    "num_distinct_signers": 31,
+    "ambiguity_notes": "EAT1 and EAT2 exist as production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 68,
+    "asl_id": "ASL_068",
+    "canonical_name": "DRINK",
+    "category": "Needs",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DRINK",
+      "DRINK1",
+      "DRINK2"
+    ],
+    "valid_matched_labels": [
+      "DRINK1",
+      "DRINK2"
+    ],
+    "num_candidate_videos": 61,
+    "num_valid_videos": 61,
+    "num_distinct_signers": 32,
+    "ambiguity_notes": "DRINK1 and DRINK2 exist as production variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 69,
+    "asl_id": "ASL_069",
+    "canonical_name": "WATER",
+    "category": "Needs",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "WATER"
+    ],
+    "valid_matched_labels": [
+      "WATER"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 70,
+    "asl_id": "ASL_070",
+    "canonical_name": "HUNGRY",
+    "category": "Needs",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HUNGRY"
+    ],
+    "valid_matched_labels": [
+      "HUNGRY"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 71,
+    "asl_id": "ASL_071",
+    "canonical_name": "SLEEP",
+    "category": "Needs",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SLEEP"
+    ],
+    "valid_matched_labels": [
+      "SLEEP"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 72,
+    "asl_id": "ASL_072",
+    "canonical_name": "PAIN/HURT",
+    "category": "Health",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HURT",
+      "PAIN"
+    ],
+    "valid_matched_labels": [
+      "HURT",
+      "PAIN"
+    ],
+    "num_candidate_videos": 62,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 31,
+    "ambiguity_notes": "Both PAIN and HURT exist in ASL Citizen; verified as valid lexical variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 73,
+    "asl_id": "ASL_073",
+    "canonical_name": "SICK",
+    "category": "Health",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SICK"
+    ],
+    "valid_matched_labels": [
+      "SICK"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 74,
+    "asl_id": "ASL_074",
+    "canonical_name": "EMERGENCY",
+    "category": "Safety",
+    "difficulty": 3,
+    "priority": "Medium",
+    "mapping_status": "MISSING_DATA",
+    "candidates_considered": [
+      "CRISIS",
+      "EMERGENCY",
+      "URGENT"
+    ],
+    "valid_matched_labels": [],
+    "num_candidate_videos": 0,
+    "num_valid_videos": 0,
+    "num_distinct_signers": 0,
+    "ambiguity_notes": "",
+    "missing_reasons": "Zero occurrences of EMERGENCY or semantic synonyms in ASL Citizen.",
+    "collection_requirements": "Record native signers performing EMERGENCY (shaking E-handshape).",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 75,
+    "asl_id": "ASL_075",
+    "canonical_name": "DANGER",
+    "category": "Safety",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DANGER"
+    ],
+    "valid_matched_labels": [
+      "DANGER"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 76,
+    "asl_id": "ASL_076",
+    "canonical_name": "FIRE",
+    "category": "Safety",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FIRE"
+    ],
+    "valid_matched_labels": [
+      "FIRE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 77,
+    "asl_id": "ASL_077",
+    "canonical_name": "CALL/PHONE",
+    "category": "Technology",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "CALL",
+      "CALL1",
+      "CALL2",
+      "CALLATTENTION",
+      "CALLTTY",
+      "PHONE"
+    ],
+    "valid_matched_labels": [
+      "CALL1",
+      "CALL2"
+    ],
+    "num_candidate_videos": 152,
+    "num_valid_videos": 60,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "CALL1 and CALL2 exist in ASL Citizen representing directional verb to call/phone.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 78,
+    "asl_id": "ASL_078",
+    "canonical_name": "PHONE",
+    "category": "Technology",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "CELLPHONE",
+      "IPHONE",
+      "PHONE"
+    ],
+    "valid_matched_labels": [
+      "PHONE"
+    ],
+    "num_candidate_videos": 89,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "PHONE exists as noun sign for telephone.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 79,
+    "asl_id": "ASL_079",
+    "canonical_name": "COMPUTER",
+    "category": "Technology",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "COMPUTER"
+    ],
+    "valid_matched_labels": [
+      "COMPUTER"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 80,
+    "asl_id": "ASL_080",
+    "canonical_name": "SIGN/SIGN-LANGUAGE",
+    "category": "Technology/Language",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SIGN",
+      "SIGN-LANGUAGE"
+    ],
+    "valid_matched_labels": [
+      "SIGN",
+      "SIGNLANGUAGE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 60,
+    "num_distinct_signers": 33,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 81,
+    "asl_id": "ASL_081",
+    "canonical_name": "LANGUAGE",
+    "category": "Technology/Language",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "LANGUAGE"
+    ],
+    "valid_matched_labels": [
+      "LANGUAGE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 82,
+    "asl_id": "ASL_082",
+    "canonical_name": "COMMUNICATE",
+    "category": "Technology/Language",
+    "difficulty": 3,
+    "priority": "Medium",
+    "mapping_status": "MISSING_DATA",
+    "candidates_considered": [
+      "COMMUNICATE",
+      "COMMUNICATION",
+      "CONVERSATION"
+    ],
+    "valid_matched_labels": [],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 0,
+    "num_distinct_signers": 0,
+    "ambiguity_notes": "",
+    "missing_reasons": "Only nominal 'COMMUNICATION' exists. Mapping nominal form to verb COMMUNICATE requires Deaf validation.",
+    "collection_requirements": "Record native signers performing verb COMMUNICATE (alternating C-hands moving forward/backward).",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 83,
+    "asl_id": "ASL_083",
+    "canonical_name": "DEAF",
+    "category": "Identity",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DEAF",
+      "DEAF1",
+      "DEAF2",
+      "DEAFSCHOOL"
+    ],
+    "valid_matched_labels": [
+      "DEAF1",
+      "DEAF2"
+    ],
+    "num_candidate_videos": 93,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 31,
+    "ambiguity_notes": "DEAF1 and DEAF2 exist as standard ear-to-mouth / mouth-to-ear variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 84,
+    "asl_id": "ASL_084",
+    "canonical_name": "HEARING",
+    "category": "Identity",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HEARING"
+    ],
+    "valid_matched_labels": [
+      "HEARING"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 85,
+    "asl_id": "ASL_085",
+    "canonical_name": "SPEAK",
+    "category": "Communication",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "MISSING_DATA",
+    "candidates_considered": [
+      "SPEAK",
+      "SPEAKERS",
+      "TALK1",
+      "TALK2",
+      "VOICE"
+    ],
+    "valid_matched_labels": [],
+    "num_candidate_videos": 125,
+    "num_valid_videos": 0,
+    "num_distinct_signers": 0,
+    "ambiguity_notes": "",
+    "missing_reasons": "ASL Citizen has no 'SPEAK' gloss (only 'SPEAKERS' which refers to hardware audio speakers, and 'TALK1'/'TALK2').",
+    "collection_requirements": "Record native signers performing SPEAK/SPOKEN-LANGUAGE (index finger or 4-hand tapping chin/lips).",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 86,
+    "asl_id": "ASL_086",
+    "canonical_name": "MEET",
+    "category": "Communication",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "MEET"
+    ],
+    "valid_matched_labels": [
+      "MEET"
+    ],
+    "num_candidate_videos": 29,
+    "num_valid_videos": 29,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 87,
+    "asl_id": "ASL_087",
+    "canonical_name": "FINE/OKAY",
+    "category": "Communication",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FINE",
+      "FINE1",
+      "FINE2",
+      "OK",
+      "OKAY"
+    ],
+    "valid_matched_labels": [
+      "FINE1",
+      "FINE2"
+    ],
+    "num_candidate_videos": 93,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 32,
+    "ambiguity_notes": "FINE1 and FINE2 exist as standard thumb-to-chest 5-hand variants.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 88,
+    "asl_id": "ASL_088",
+    "canonical_name": "MORE",
+    "category": "Quantity",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "MORE"
+    ],
+    "valid_matched_labels": [
+      "MORE"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 89,
+    "asl_id": "ASL_089",
+    "canonical_name": "FINISH/DONE",
+    "category": "Conversation",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "DONE",
+      "FINISH"
+    ],
+    "valid_matched_labels": [
+      "FINISH"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 90,
+    "asl_id": "ASL_090",
+    "canonical_name": "LOVE",
+    "category": "Emotion",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "LOVE"
+    ],
+    "valid_matched_labels": [
+      "LOVE"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 91,
+    "asl_id": "ASL_091",
+    "canonical_name": "HAPPY",
+    "category": "Emotion",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HAPPY"
+    ],
+    "valid_matched_labels": [
+      "HAPPY"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 92,
+    "asl_id": "ASL_092",
+    "canonical_name": "SAD",
+    "category": "Emotion",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SAD"
+    ],
+    "valid_matched_labels": [
+      "SAD"
+    ],
+    "num_candidate_videos": 30,
+    "num_valid_videos": 30,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 93,
+    "asl_id": "ASL_093",
+    "canonical_name": "ANGRY",
+    "category": "Emotion",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "ANGRY"
+    ],
+    "valid_matched_labels": [
+      "ANGRY"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 94,
+    "asl_id": "ASL_094",
+    "canonical_name": "AFRAID/SCARED",
+    "category": "Emotion",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "AFRAID",
+      "SCARED"
+    ],
+    "valid_matched_labels": [
+      "SCARED"
+    ],
+    "num_candidate_videos": 32,
+    "num_valid_videos": 32,
+    "num_distinct_signers": 29,
+    "ambiguity_notes": "SCARED exists in ASL Citizen as standard synonym for AFRAID.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 95,
+    "asl_id": "ASL_095",
+    "canonical_name": "FEEL",
+    "category": "Emotion",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "FEEL"
+    ],
+    "valid_matched_labels": [
+      "FEEL"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 96,
+    "asl_id": "ASL_096",
+    "canonical_name": "NICE/CLEAN",
+    "category": "Description",
+    "difficulty": 2,
+    "priority": "Medium",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "CLEAN",
+      "NICE"
+    ],
+    "valid_matched_labels": [
+      "CLEAN",
+      "NICE"
+    ],
+    "num_candidate_videos": 62,
+    "num_valid_videos": 62,
+    "num_distinct_signers": 34,
+    "ambiguity_notes": "Both NICE and CLEAN exist in ASL Citizen as shared lexical forms.",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 97,
+    "asl_id": "ASL_097",
+    "canonical_name": "BIG",
+    "category": "Description",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "BIG"
+    ],
+    "valid_matched_labels": [
+      "BIG"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 30,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 98,
+    "asl_id": "ASL_098",
+    "canonical_name": "SMALL",
+    "category": "Description",
+    "difficulty": 1,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "SMALL"
+    ],
+    "valid_matched_labels": [
+      "SMALL"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 99,
+    "asl_id": "ASL_099",
+    "canonical_name": "HOT",
+    "category": "Description",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "HOT"
+    ],
+    "valid_matched_labels": [
+      "HOT"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 27,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  },
+  {
+    "idx": 100,
+    "asl_id": "ASL_100",
+    "canonical_name": "COLD",
+    "category": "Description",
+    "difficulty": 2,
+    "priority": "High",
+    "mapping_status": "VERIFIED_MATCH",
+    "candidates_considered": [
+      "COLD"
+    ],
+    "valid_matched_labels": [
+      "COLD"
+    ],
+    "num_candidate_videos": 31,
+    "num_valid_videos": 31,
+    "num_distinct_signers": 28,
+    "ambiguity_notes": "",
+    "missing_reasons": "",
+    "collection_requirements": "",
+    "license_cloud_transfer": "BLOCKED (MSR License \u00a72(e), \u00a73 prohibits cloud upload / third-party transfer of personal data)"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "sign": "GOOD",
+  "asl_id": "ASL_002",
+  "class_index": 1,
+  "clip_name": "ASL_GOOD",
+  "status": "candidate — NOT expert-verified",
+  "production_assets_modified": [],
+  "sources": {
+    "vocabulary": "Singvox/docs/ai-ml/ASL_100_VOCABULARY_FROZEN.md (ASL_002 GOOD, frozen v1.0.0 — ID/label unchanged)",
+    "spec": "Singvox/docs/ai-ml/ASL_100_SIGN_SPECIFICATIONS_BATCH_01.md SV-ASL-002 (flat/open dominant hand; begins near lips/lower face; moves away/downward; one-handed common form)",
+    "reference_video": "8390777557102604-GOOD.mp4 (signer P22, per Singvox/docs/ai-ml/ASL_CITIZEN_TRAINING_DATA_AUDIT.md line 214 — verified on disk & feature cache; video bytes NOT opened in this phase, used only as listed reference)",
+    "mapping": "Singvox/ai/sign-recognition/config/asl100_asl_citizen_mapping.json (ASL_002 GOOD exact) + Singvox/ai/sign-recognition/data/class_index_mapping.json (index 1)",
+    "recognition_mapping_untouched": true
+  },
+  "method": {
+    "approach": "Manually authored keyframes following tools/author_hello.py pattern (neutral in/out, 30 fps). No 366-dim feature vectors fed into joints.",
+    "dominant_hand": "right",
+    "handshape": "flat/open: all fingers curl=0, spread=0.1 (FingerController curl 0..1 convention)",
+    "frames": 40,
+    "fps": 30,
+    "duration_s": 1.33,
+    "neutral_pose": "LeftArm (0,0,-1.2), RightArm (0,0,1.2), forearms/hands (0,0,0) — matches author_hello.py frames 0/30"
+  },
+  "files": {
+    "clip_sidecar": "Singvox/experiments/avatar/good/ASL_GOOD.clip.json",
+    "blender_script": "Singvox/experiments/avatar/good/author_good_blender.py",
+    "validation": "Singvox/experiments/avatar/good/GOOD_validation.md",
+    "manifest": "Singvox/experiments/avatar/good/GOOD_manifest.json"
+  },
+  "known_limitations": [
+    "Sidecar only — production GLB SignVox_Female_Competition_Prototype.glb NOT modified and contains no ASL_GOOD clip yet; bake via author_good_blender.py or load sidecar in diagnostic route before playSignByLabel('GOOD') resolves.",
+    "Facial expression (neutral-to-positive per spec) not animated — avatar has no morph targets/face bones.",
+    "Two-handed emphatic variant not authored — only the common one-handed form.",
+    "Wrist/arm angles are hand-tuned estimates, not retargeted from reference video mocap; no signer review yet.",
+    "Terminal/blender unavailable in this environment (bash spawn failed), so no baked GLB and no live playback screenshot this phase."
+  ]
+}
