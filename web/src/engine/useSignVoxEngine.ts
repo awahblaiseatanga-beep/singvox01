@@ -5,6 +5,12 @@ import { assembleCanonicalFrame, countNonFinite } from '../lib/featureVector';
 import { BrowserLandmarkerPipeline, mediaPipeConfig } from '../lib/mediapipe';
 import { applyV2Normalization } from '../lib/normalize';
 import { SpoterInferenceSession, type InferenceResult } from '../lib/inference';
+import {
+  describeAssetFailure,
+  firstBlockingFailure,
+  preflightModelAssets,
+  probeAsset,
+} from '../lib/assetPreflight';
 import { TemporalStabilizer, type StabilizerState } from '../lib/temporalStabilizer';
 import {
   TemporalSampler,
@@ -210,10 +216,31 @@ export function useSignVoxEngine(avatarSurface: 'product' | 'diagnostics' | 'non
      const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
      camera.position.set(0, 1.25, 3.8);
 
-     const renderer = new THREE.WebGLRenderer({ antialias: true });
+     // WebGL is a hard requirement for this viewport. Three.js throws straight out
+     // of the constructor when no context can be created (GPU process blocked,
+     // hardware acceleration off, headless/remote browser), and an exception
+     // thrown inside this effect unmounts the page instead of showing anything.
+     // Report it as an avatar failure, which AvatarStudioPage renders visibly.
+     let renderer: THREE.WebGLRenderer;
+     try {
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+     } catch (cause) {
+        const detail = cause instanceof Error ? cause.message : String(cause);
+        console.error('[Avatar] WebGL renderer could not be created:', cause);
+        setAvatarStatus(`Error: 3D graphics (WebGL) are unavailable in this browser (${detail})`);
+        return;
+     }
      renderer.setSize(width, height);
      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
      container.appendChild(renderer.domElement);
+
+     // A context lost after start leaves a silent black viewport.
+     const handleContextLost = (event: Event) => {
+        event.preventDefault();
+        console.error('[Avatar] WebGL context lost.');
+        setAvatarStatus('Error: the 3D graphics context was lost. Reload the page to restore the avatar.');
+     };
+     renderer.domElement.addEventListener('webglcontextlost', handleContextLost);
 
      const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 2);
      hemiLight.position.set(0, 5, 0);
@@ -226,15 +253,24 @@ export function useSignVoxEngine(avatarSurface: 'product' | 'diagnostics' | 'non
      const ctrl = new AvatarController();
      setAvatarStatus('Loading GLB model…');
 
-     ctrl.loadGLB(AVATAR_GLB_URL)
+     // Probe first: a GLB that the host answers with the SPA document makes
+     // three.js fail with `Unexpected token '<'`, which reads like a broken model
+     // rather than a file that was never deployed. The resolved URL is included
+     // because a stale VITE_AVATAR_GLB_URL is the usual cause.
+     probeAsset('avatar model (GLB)', AVATAR_GLB_URL)
+        .then((probe) => {
+           if (!probe.ok && probe.conclusive) throw new Error(describeAssetFailure(probe));
+           return ctrl.loadGLB(AVATAR_GLB_URL);
+        })
         .then(() => {
            if (ctrl.rootScene) scene.add(ctrl.rootScene);
            avatarCtrlRef.current = ctrl;
            setAvatarStatus('Ready');
         })
         .catch(err => {
+           const detail = err instanceof Error ? err.message : String(err);
            console.error('[Avatar] GLB load failure:', err);
-           setAvatarStatus(`Error: ${err.message}`);
+           setAvatarStatus(`Error: ${detail} (${AVATAR_GLB_URL})`);
         });
 
      const clock = new THREE.Clock();
@@ -276,6 +312,7 @@ export function useSignVoxEngine(avatarSurface: 'product' | 'diagnostics' | 'non
         animLoopAlive = false;
         window.removeEventListener('resize', handleResize);
         containerObserver.disconnect();
+        renderer.domElement.removeEventListener('webglcontextlost', handleContextLost);
         avatarRemeasureRef.current = null;
         avatarCtrlRef.current = null;
         if (container.contains(renderer.domElement)) {
@@ -439,8 +476,20 @@ export function useSignVoxEngine(avatarSurface: 'product' | 'diagnostics' | 'non
       globalProfiler.markColdStartBegin('mediaPipeInit');
       globalProfiler.markColdStartBegin('onnxInit');
 
-      // 1. Asynchronous ONNX load and one-time kernel warmup (non-blocking for camera & hand tracking)
-      const onnxPromise = SpoterInferenceSession.create(modelUrl)
+      // 1. Preflight the model assets, then load ONNX and warm the kernels up.
+      //    Neither graph can be committed: `spoter_v2_model.onnx.data` is 187 MB
+      //    and GitHub blocks files over 100 MB. A deployment that has not been
+      //    given VITE_SPOTER_V2_URL / VITE_SPOTER_PILOT_URL therefore requests
+      //    `/spoter_v2_model.onnx`, which web/vercel.json rewrites to index.html —
+      //    HTTP 200 and `text/html`. ONNX Runtime then tries to parse the SPA
+      //    document as a protobuf graph and its error reads like a code fault.
+      //    Probe first so the cause is unambiguous instead of inferred.
+      const onnxPromise = preflightModelAssets(spec.displayName, modelUrl)
+        .then((probes) => {
+          const failure = firstBlockingFailure(probes);
+          if (failure) throw new Error(`Sign model asset missing — ${describeAssetFailure(failure)}`);
+          return SpoterInferenceSession.create(modelUrl);
+        })
         .then(async (session) => {
           globalProfiler.markColdStartEnd('onnxInitMs', 'onnxInit');
           console.log(`[App] ONNX session created for ${modelUrl}. Running one-time kernel warm-up...`);

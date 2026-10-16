@@ -38,7 +38,11 @@ export function deriveLiveStatus(input: LiveStatusInput): LiveStatus {
   const raw = status.toLowerCase();
 
   if (error) {
-    return { phase: 'error', label: 'Camera unavailable', detail: 'The camera or recognition pipeline could not start.' };
+    // Report the *actual* failure. A missing model file is not a camera problem:
+    // the camera and landmarks can be running perfectly, and labelling that as
+    // "Camera unavailable" sends the user to fix the wrong thing.
+    const friendly = friendlyError(error);
+    return { phase: 'error', label: friendly.chip, detail: friendly.hint };
   }
 
   if (raw.includes('requesting') || raw.includes('initializing')) {
@@ -67,6 +71,8 @@ export function deriveLiveStatus(input: LiveStatusInput): LiveStatus {
 export interface FriendlyError {
   title: string;
   hint: string;
+  /** Two-to-three-word form of `title` for the narrow status chip. */
+  chip: string;
 }
 
 /** Map technical camera/pipeline failures onto plain-language guidance. */
@@ -76,20 +82,65 @@ export function friendlyError(rawError: string): FriendlyError {
   if (raw.includes('permission') || raw.includes('notallowed') || raw.includes('denied')) {
     return {
       title: 'Camera access is blocked',
+      chip: 'Camera blocked',
       hint: 'Allow camera access for this site in your browser settings, then press Start translation again.',
     };
   }
   if (raw.includes('notfound') || raw.includes('no camera') || raw.includes('devicesnotfound')) {
-    return { title: 'No camera found', hint: 'Connect a camera or open SignVox on a device that has one, then try again.' };
+    return {
+      title: 'No camera found',
+      chip: 'No camera',
+      hint: 'Connect a camera or open SignVox on a device that has one, then try again.',
+    };
   }
   if (raw.includes('notreadable') || raw.includes('could not start') || raw.includes('trackstart')) {
-    return { title: 'Camera is busy', hint: 'Another application or tab is using the camera. Close it and press Start translation again.' };
+    return {
+      title: 'Camera is busy',
+      chip: 'Camera busy',
+      hint: 'Another application or tab is using the camera. Close it and press Start translation again.',
+    };
   }
-  if (raw.includes('secure') || raw.includes('https')) {
-    return { title: 'A secure connection is required', hint: 'Browsers only allow camera access over HTTPS or on localhost.' };
+  // A page without a secure context exposes no `navigator.mediaDevices`, so the
+  // failure reaches us as a missing `getUserMedia`, not as a named DOMException.
+  //
+  // This branch used to test for the substring `https`, which mislabelled *every*
+  // error that quoted an https URL — including the model and avatar asset URLs
+  // this app prints in its own diagnostics — as a TLS problem. Match the actual
+  // secure-context symptoms instead.
+  if (
+    raw.includes('secure context') ||
+    raw.includes('insecure') ||
+    raw.includes('mediadevices') ||
+    raw.includes('getusermedia')
+  ) {
+    return {
+      title: 'A secure connection is required',
+      chip: 'Needs HTTPS',
+      hint: 'Browsers only allow camera access over HTTPS or on localhost.',
+    };
+  }
+  // The model files are far too large to commit, so a deployment that has not
+  // been given `VITE_SPOTER_V2_URL` / `VITE_SPOTER_PILOT_URL` answers the model
+  // URL with its own index.html. That is a hosting problem, not a connectivity or
+  // code problem, and the user cannot act on it — say so instead of blaming the
+  // connection. Matched on the token the asset preflight prefixes (lib/assetPreflight).
+  if (raw.includes('sign model asset missing')) {
+    return {
+      title: 'Sign recognition is unavailable in this build',
+      chip: 'Recognition unavailable',
+      hint: 'The sign model file is missing from this deployment, so signs cannot be translated right now. Please try again later.',
+    };
   }
   if (raw.includes('onnx') || raw.includes('model')) {
-    return { title: 'Sign model could not load', hint: 'Check your connection, then stop and start the session again.' };
+    return {
+      title: 'Sign model could not load',
+      chip: 'Sign model unavailable',
+      hint: 'Check your connection, then stop and start the session again.',
+    };
   }
-  return { title: 'Camera could not start', hint: 'Check that a camera is available and permitted, then try again.' };
+  return {
+    title: 'Camera could not start',
+    chip: 'Camera unavailable',
+    hint: 'Check that a camera is available and permitted, then try again.',
+  };
 }
